@@ -1,0 +1,35 @@
+<?php
+
+namespace EasyTransac\Entities;
+
+class FindUserBy extends Entity
+{
+    /** @map:Email  **/
+    protected $email  = null;
+    /** @map:Id   **/
+    protected $id   = null;
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+        return $this;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+}
+
+?>
