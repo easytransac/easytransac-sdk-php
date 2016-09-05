@@ -2,8 +2,6 @@
 
 namespace EasyTransac\Core;
 
-use \EasyTransac\Entities\Entity;
-
 class CommentParser
 {
     protected $class = null;

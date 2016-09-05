@@ -47,15 +47,8 @@ class Services
         if ($params)
             curl_setopt($this->curlInstance, CURLOPT_POSTFIELDS, http_build_query($params));
 
-        // $response = curl_exec($this->curlInstance);
-$response = '{
-    "Code": 0,
-    "Signature": "752c14ea195c460bac3c3b7896975ee9fd15eeb7",
-    "Result": {
-        "Id": "28861561",
-        "Message": "User john@doe.com added"
-    }
-}';
+        $response = curl_exec($this->curlInstance);
+
         if (($errno = curl_errno($this->curlInstance)))
             throw new \RuntimeException("Curl trouble during the call, please check the error code with Curl documentation", $errno);
 
