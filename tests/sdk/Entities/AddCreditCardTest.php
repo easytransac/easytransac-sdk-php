@@ -1,6 +1,6 @@
 <?php
 
-require_once(dirname(__FILE__).'/../../../lib/EasyTransac/autoload.php');
+require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
 
 class AddCreditCardTest extends PHPUnit_Framework_TestCase
 {
