@@ -2,7 +2,7 @@
 
 spl_autoload_register(function($className){
 
-    $basepath = dirname(__FILE__).DIRECTORY_SEPARATOR;
+    $basepath = __DIR__.DIRECTORY_SEPARATOR;
 
     if (strpos($className, 'EasyTransac\\') !== 0)
         return;

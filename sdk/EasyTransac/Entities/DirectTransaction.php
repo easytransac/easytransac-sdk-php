@@ -2,6 +2,11 @@
 
 namespace EasyTransac\Entities;
 
+/**
+ * Represents arguments of the request "DirectPayment"
+ * @author klyde
+ * @copyright EasyTransac
+ */
 class DirectTransaction extends Entity
 {
     /** @map:Amount **/

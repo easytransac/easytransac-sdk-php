@@ -1,10 +1,10 @@
 <?php
 
-require_once(dirname(__FILE__).'/../sdk/EasyTransac/autoload.php');
+require_once(__DIR__.'/../sdk/EasyTransac/autoload.php');
 
-use \EasyTransac\Core\Services;
-use \EasyTransac\Entities\PaymentStatus;
-use \EasyTransac\Requests\PaymentStatus;
+use EasyTransac\Core\Services;
+use EasyTransac\Entities\PaymentStatus;
+use EasyTransac\Requests\PaymentStatus;
 
 Services::getInstance()->setDebug(true);
 Services::getInstance()->provideAPIKey('a1b2c3d4');

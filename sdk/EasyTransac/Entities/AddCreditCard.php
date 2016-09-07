@@ -2,6 +2,11 @@
 
 namespace EasyTransac\Entities;
 
+/**
+ * Represents arguments of the request "AddCreditCard"
+ * @author Klyde
+ * @copyright EasyTransac
+ */
 class AddCreditCard extends Entity
 {
     /** @object:Customer **/

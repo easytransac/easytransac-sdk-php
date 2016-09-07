@@ -7,8 +7,18 @@ use \EasyTransac\Entities\Entity;
 use \EasyTransac\Responses\StandardResponse;
 use \EasyTransac\Core\CommentParser;
 
+/**
+ * Gerenic request
+ * @author Klyde
+ * @copyright EasyTransac
+ */
 abstract class Request
 {
+	/**
+	 * Call a EasyTransac API function
+	 * @param String $funcName
+	 * @param Entity $entity
+	 */
     protected function call($funcName, Entity $entity)
     {
         try
@@ -37,6 +47,11 @@ abstract class Request
         }
     }
 
+    /**
+     * Makes the relation between API field names and entity attributes and hydrates the correct entity
+     * @param \stdClass $fields
+     * @return \EasyTransac\Responses\StandardResponse
+     */
     protected function mapResponse($fields)
     {
         $sr = new StandardResponse();
