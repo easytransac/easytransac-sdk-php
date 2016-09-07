@@ -1,12 +1,12 @@
 <?php
 
-require_once(dirname(__FILE__).'/../sdk/EasyTransac/autoload.php');
+require_once(__DIR__.'/../sdk/EasyTransac/autoload.php');
 
-use \EasyTransac\Core\Services;
-use \EasyTransac\Entities\DirectTransaction;
-use \EasyTransac\Entities\Customer;
-use \EasyTransac\Entities\CreditCard;
-use \EasyTransac\Requests\DirectPayment;
+use EasyTransac\Core\Services;
+use EasyTransac\Entities\DirectTransaction;
+use EasyTransac\Entities\Customer;
+use EasyTransac\Entities\CreditCard;
+use EasyTransac\Requests\DirectPayment;
 
 Services::getInstance()->setDebug(true);
 Services::getInstance()->provideAPIKey('a1b2c3d4');

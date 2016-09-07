@@ -2,6 +2,11 @@
 
 namespace EasyTransac\Entities;
 
+/**
+ * Represents the response of the request "cancellation"
+ * @author klyde
+ * @copyright EasyTransac
+ */
 class CancellationInfos extends Entity
 {
     /** @map:OriginalPaymentTid **/

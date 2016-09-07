@@ -2,8 +2,19 @@
 
 namespace EasyTransac\Core;
 
+/**
+ * Security tools 
+ * @author Klyde
+ * @copyright EasyTransac
+ */
 class Security
 {
+	/**
+	 * Returns the signature from a params list and api key for a request
+	 * @param Array $params 		
+	 * @param String $apiKey
+	 * @return String
+	 */
     public static function getSignature($params, $apiKey)
     {
         $signature = '';

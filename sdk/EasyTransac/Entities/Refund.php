@@ -2,6 +2,11 @@
 
 namespace EasyTransac\Entities;
 
+/**
+ * Represents arguments of the request "PaymentRefund"
+ * @author klyde
+ * @copyright EasyTransac
+ */
 class Refund extends Entity
 {
     /** @map:Tid **/

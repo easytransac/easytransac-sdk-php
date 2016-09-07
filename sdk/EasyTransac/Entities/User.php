@@ -2,6 +2,11 @@
 
 namespace EasyTransac\Entities;
 
+/**
+ * Represents arguments for the request "AddUser" and "UpdateUser"
+ * @author klyde
+ * @copyright EasyTransac
+ */
 class User extends Entity
 {
     /** @map:Id **/

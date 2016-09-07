@@ -4,6 +4,11 @@ namespace EasyTransac\Core;
 
 use \EasyTransac\Core\Security;
 
+/**
+ * Singleton, allows to call EasyTransac API with API key
+ * @author Klyde
+ * @copyright EasyTransac
+ */
 class Services
 {
     public $debug = false;
@@ -12,26 +17,55 @@ class Services
     protected $curlInstance = null;
     private static $instance = null;
 
+    /**
+     * Define the time out of the request
+     * @param int $timeout
+     * @return \EasyTransac\Core\Services
+     */
     public function setRequestTimeout($timeout)
     {
         $this->timeout = $timeout;
+        return $this;
     }
 
+    /**
+     * Define the API key
+     * @param String $key
+     * @return \EasyTransac\Core\Services
+     */
     public function provideAPIKey($key)
     {
         $this->key = $key;
+        return $this;
     }
 
+    /**
+     * Returns if debug mode is active
+     * @return Boolean
+     */
     public function isDebug()
     {
         return $this->debug;
     }
 
+    /**
+     * Define the debug mode
+     * @param Boolean $debugMode
+     * @return \EasyTransac\Core\Services
+     */
     public function setDebug($debugMode)
     {
         $this->debug = $debugMode;
+        return $this;
     }
 
+    /**
+     * Calls the specified EasyTransac function 
+     * @param String $funcName
+     * @param array $params
+     * @return \EasyTransac\Responses\StandardResponse
+     * @throws \RuntimeException
+     */
     public function call($funcName, array $params)
     {
         if (empty($this->key))
@@ -55,6 +89,10 @@ class Services
         return $response;
     }
 
+    /**
+     * Returns the single instance of the Services class
+     * @return \EasyTransac\Core\Services
+     */
     public static function getInstance()
     {
         if (self::$instance == null)
@@ -79,6 +117,9 @@ class Services
 
     }
 
+    /**
+     * Init the curl caller with options we need to contact safely the EasyTransac API
+     */
     protected function initCurl()
     {
         $this->curlInstance = curl_init();
@@ -93,7 +134,7 @@ class Services
         ));
 
         if ($this->timeout != null)
-            curl_setopt($ch, CURLOPT_TIMEOUT, $this->timeout);
+            curl_setopt($this->curlInstance, CURLOPT_TIMEOUT, $this->timeout);
     }
 }
 

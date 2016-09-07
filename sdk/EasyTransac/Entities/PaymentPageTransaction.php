@@ -2,6 +2,11 @@
 
 namespace EasyTransac\Entities;
 
+/**
+ * Represents arguments for the request "PaymentPage"
+ * @author klyde
+ * @copyright EasyTransac
+ */
 class PaymentPageTransaction extends Entity
 {
     /** @map:SendEmail **/

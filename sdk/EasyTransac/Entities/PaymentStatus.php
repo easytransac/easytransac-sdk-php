@@ -2,6 +2,11 @@
 
 namespace EasyTransac\Entities;
 
+/**
+ * Represents arguments of the request "PaymentStatus" 
+ * @author klyde
+ * @copyright EasyTransac
+ */
 class PaymentStatus extends Entity
 {
     /** @map:Tid **/

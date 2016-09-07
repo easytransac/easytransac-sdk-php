@@ -2,6 +2,11 @@
 
 namespace EasyTransac\Entities;
 
+/**
+ * Represents credit cards list (response of AddCreditCard and CreditCardsList requests)
+ * @author klyde
+ * @copyright EasyTransac
+ */
 class CreditCardsList extends Entity
 {
     /** @array:CreditCard **/

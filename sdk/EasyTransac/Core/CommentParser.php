@@ -2,6 +2,11 @@
 
 namespace EasyTransac\Core;
 
+/**
+ * Analyses the tag in comments of the current entity class
+ * @author Klyde
+ * @copyright EasyTransac
+ */
 class CommentParser
 {
     protected $class = null;
@@ -11,6 +16,10 @@ class CommentParser
         $this->class = $class;
     }
 
+    /**
+     * Returns an array with comment tag info for each class attribute
+     * @return Generator
+     */
     public function parse()
     {
         $r = new \ReflectionClass($this->class);

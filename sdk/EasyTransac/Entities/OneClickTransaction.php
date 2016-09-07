@@ -2,6 +2,11 @@
 
 namespace EasyTransac\Entities;
 
+/**
+ * Represents arguments of the request "OneClickPayment"
+ * @author klyde
+ * @copyright EasyTransac
+ */
 class OneClickTransaction extends Entity
 {
     /** @map:Amount **/
