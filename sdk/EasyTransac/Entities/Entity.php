@@ -4,6 +4,7 @@ namespace EasyTransac\Entities;
 
 use \EasyTransac\Core\CommentParser;
 use \EasyTransac\Core\Services;
+use EasyTransac\Core\Logger;
 
 /**
  * Generic entity
@@ -30,8 +31,7 @@ abstract class Entity
         else if(is_object($fields))
             $this->hydrateWidthObject($fields);
 
-        if (Services::getInstance()->isDebug())
-            var_dump($this->toArray());
+        Logger::getInstance()->write($this->toArray());
     }
 
     /**
