@@ -11,7 +11,6 @@ use \EasyTransac\Core\Security;
  */
 class Services
 {
-    public $debug = false;
     protected $key = null;
     protected $timeout = null;
     protected $curlInstance = null;
@@ -45,7 +44,7 @@ class Services
      */
     public function isDebug()
     {
-        return $this->debug;
+        return Logger::getInstance()->isActive();
     }
 
     /**
@@ -55,7 +54,7 @@ class Services
      */
     public function setDebug($debugMode)
     {
-        $this->debug = $debugMode;
+        Logger::getInstance()->setActive($debugMode);
         return $this;
     }
 
@@ -63,7 +62,7 @@ class Services
      * Calls the specified EasyTransac function 
      * @param String $funcName
      * @param array $params
-     * @return \EasyTransac\Responses\StandardResponse
+     * @return String
      * @throws \RuntimeException
      */
     public function call($funcName, array $params)
@@ -75,8 +74,7 @@ class Services
 
         $params['Signature'] = Security::getSignature($params, $this->key);
 
-        if ($this->isDebug())
-            var_dump($params);
+        Logger::getInstance()->write($params);
 
         if ($params)
             curl_setopt($this->curlInstance, CURLOPT_POSTFIELDS, http_build_query($params));
@@ -86,6 +84,8 @@ class Services
         if (($errno = curl_errno($this->curlInstance)))
             throw new \RuntimeException("Curl trouble during the call, please check the error code with Curl documentation", $errno);
 
+        Logger::getInstance()->write($response);
+            
         return $response;
     }
 
