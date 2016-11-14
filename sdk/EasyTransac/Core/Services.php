@@ -35,6 +35,10 @@ class Services
     public function provideAPIKey($key)
     {
         $this->key = $key;
+        
+        if ($this->curlInstance)
+        	curl_setopt($this->curlInstance, CURLOPT_HTTPHEADER, array('EASYTRANSAC-API-KEY:'.$this->key));
+        
         return $this;
     }
 
