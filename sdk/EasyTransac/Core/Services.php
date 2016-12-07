@@ -11,13 +11,86 @@ use \EasyTransac\Core\Security;
  */
 class Services
 {
-    protected $key = null;
-    protected $timeout = null;
-    protected $curlInstance = null;
     private static $instance = null;
+    private $key = null;
+    private $caller = null;
+    private $modifier;
+    private $url = 'https://www.easytransac.com/api';
+    private $timeout = 5;
 
     /**
-     * Define the time out of the request
+     * Add a modifier for the caller
+     * @param ICallerModifier $modifier
+     * @return \EasyTransac\Core\Services
+     */
+    public function setModifier(ICallerModifier $modifier)
+    {
+    	$this->modifier = $modifier;
+    	return $this;
+    }
+    
+    /**
+     * Returns the current modifier
+     * @return \EasyTransac\Core\ICallerModifier
+     */
+    public function getModifier()
+    {
+    	return $this->modifier;
+    }
+    
+    /**
+     * Defines the caller
+     * @param ICaller $caller
+     * @return \EasyTransac\Core\Services
+     */
+    public function setCaller(ICaller $caller)
+    {
+    	$this->caller = $caller;
+    	return $this;
+    }
+    
+    /**
+     * Remove the current Modifier
+     * @return \EasyTransac\Core\Services
+     */
+    public function removeModifier()
+    {
+    	$this->modifier = null;
+    	return $this;
+    }
+
+    /**
+     * Remove the current caller
+     * @return \EasyTransac\Core\Services
+     */
+    public function removeCaller()
+    {
+    	$this->caller = null;
+    	return $this;
+    }
+    
+    /**
+     * Get the caller
+     * @return \EasyTransac\Core\ICaller
+     */
+    public function getCaller()
+    {
+    	return $this->caller;
+    }
+    
+    /**
+     * Set the url for the request
+     * @param String $url
+     * @return \EasyTransac\Core\Services
+     */
+    public function setUrl($url)
+    {
+    	$this->url = $url;
+    	return $this;
+    }
+    
+    /**
+     * Defines the time out of the request
      * @param int $timeout
      * @return \EasyTransac\Core\Services
      */
@@ -28,16 +101,13 @@ class Services
     }
 
     /**
-     * Define the API key
+     * Defines the API key
      * @param String $key
      * @return \EasyTransac\Core\Services
      */
     public function provideAPIKey($key)
     {
         $this->key = $key;
-        
-        if ($this->curlInstance)
-        	curl_setopt($this->curlInstance, CURLOPT_HTTPHEADER, array('EASYTRANSAC-API-KEY:'.$this->key));
         
         return $this;
     }
@@ -52,7 +122,7 @@ class Services
     }
 
     /**
-     * Define the debug mode
+     * Defines the debug mode
      * @param Boolean $debugMode
      * @return \EasyTransac\Core\Services
      */
@@ -74,23 +144,44 @@ class Services
         if (empty($this->key))
             throw new \RuntimeException("API key not supplied");
 
-        curl_setopt($this->curlInstance, CURLOPT_URL, 'https://www.easytransac.com/api'.$funcName);
-
+        if (empty($this->caller))
+            throw new \RuntimeException("Caller not supplied");
+            
+        $this->caller->setTimeout($this->timeout);
+        $this->caller->setHeaders(array('EASYTRANSAC-API-KEY:'.$this->key));
+        
+        if (!empty($this->modifier))
+        {
+        	try 
+        	{
+        		$this->modifier->execute($this, $funcName, $params);
+	        	$target = $this->modifier->getFuncName();
+	        	$params = $this->modifier->getParams();
+        	}
+        	catch (\RuntimeException $e)
+        	{
+        		Logger::getInstance()->write('Exception: '.$e->getMessage());
+        		throw $e;
+        	}
+        }
+        else
+        	$target = $this->url.$funcName;
+        
         $params['Signature'] = Security::getSignature($params, $this->key);
-
+        
+        Logger::getInstance()->write('Called url: '.$target);
         Logger::getInstance()->write($params);
 
-        if ($params)
-            curl_setopt($this->curlInstance, CURLOPT_POSTFIELDS, http_build_query($params));
-
-        $response = curl_exec($this->curlInstance);
-
-        if (($errno = curl_errno($this->curlInstance)))
-            throw new \RuntimeException("Curl trouble during the call, please check the error code with Curl documentation", $errno);
-
-        Logger::getInstance()->write($response);
-            
-        return $response;
+		try 
+		{
+			$response = $this->caller->call($target, $params);
+			Logger::getInstance()->write($response);
+			return $response;
+		}
+		catch (\RuntimeException $e)
+		{
+			throw $e;
+		}
     }
 
     /**
@@ -105,40 +196,31 @@ class Services
         return self::$instance;
     }
 
+    /**
+     * Destruct, kill the caller
+     */
     public function __destruct()
     {
-        if ($this->curlInstance != null)
-            curl_close($this->curlInstance);
-    }
-
-    private function __construct()
-    {
-        $this->initCurl();
-    }
-
-    private function __clone()
-    {
-
+    	$this->caller = null;
     }
 
     /**
-     * Init the curl caller with options we need to contact safely the EasyTransac API
+     * Init the base caller
      */
-    protected function initCurl()
+    private function __construct()
     {
-        $this->curlInstance = curl_init();
+    	$this->caller = new CurlCaller();
+    	
+    	if (!$this->caller->isAvailable())
+    		$this->caller = new FgcCaller();
+    }
 
-        curl_setopt_array($this->curlInstance, array(
-            CURLOPT_HTTPHEADER => array('EASYTRANSAC-API-KEY:'.$this->key),
-            CURLOPT_POST => true,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_SSLVERSION => CURL_SSLVERSION_TLSv1,
-            CURLOPT_SSL_VERIFYHOST =>  false,
-            CURLOPT_SSL_VERIFYPEER =>  false
-        ));
+    /**
+     * Clone not available for this singleton
+     */
+    private function __clone()
+    {
 
-        if ($this->timeout != null)
-            curl_setopt($this->curlInstance, CURLOPT_TIMEOUT, $this->timeout);
     }
 }
 

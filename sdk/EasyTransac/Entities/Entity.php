@@ -23,6 +23,7 @@ abstract class Entity
     /**
      * Allows to fill the entity with data returned by the EasyTransac API
      * @param Mixed $fields Array or \stdClass
+     * @return \EasyTransac\Entities\Entity
      */
     public function hydrate($fields)
     {
@@ -32,6 +33,8 @@ abstract class Entity
             $this->hydrateWidthObject($fields);
 
         Logger::getInstance()->write($this->toArray());
+        
+        return $this;
     }
 
     /**
@@ -54,8 +57,6 @@ abstract class Entity
                 else if ($out[$value['name']] == 'no')
                     $out[$value['name']] = false;
             }
-            else if ($value['type'] == 'object')
-                $out += $this->{$key}->toArray();
             else if ($value['type'] == 'array')
             {
                 $list = array();
@@ -63,6 +64,8 @@ abstract class Entity
                     $list[] = $c->toArray();
                 $out[$value['name']] = $list;
             }
+            else if ($value['type'] == 'object')
+                $out += $this->{$key}->toArray();
         }
 
         return $out;
@@ -104,12 +107,19 @@ abstract class Entity
             if ($value['type'] == 'map' && isset($fields->{$value['name']}))
             {
                 $this->{$key} = $fields->{$value['name']};
+                
                 if ($this->{$key} == 'yes')
                     $this->{$key} = true;
-                if ($this->{$key} == 'no')
+                else if ($this->{$key} == 'no')
                     $this->{$key} = false;
             }
-    
+            else if($value['type'] == 'object' && isset($fields->{$value['name']}))
+            {
+            	$className = '\\EasyTransac\\Entities\\'.$value['name'];
+            	$e = new $className();
+            	$e->hydrate($fields->{$value['name']});
+            	$this->{$key} = $e;
+            }
         }
     }
 

@@ -32,13 +32,13 @@ class PaymentPageInfos extends Entity
 
     public function setRequestId($value)
     {
-        $this->uid = $value;
+        $this->requestId = $value;
         return $this;
     }
 
     public function getRequestId()
     {
-        return $this->uid;
+        return $this->requestId;
     }
 
     public function getStatus()

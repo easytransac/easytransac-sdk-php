@@ -62,6 +62,29 @@ class Logger
 		return $this;
 	}
 	
+	/**
+	 * Returns the log file path
+	 * @return String
+	 */
+	public function getFilePath()
+	{
+		return $this->filePath;
+	}
+	
+	/**
+	 * Delete the log file
+	 */
+	public function delete()
+	{
+		if (file_exists($this->getFilePath().$this->logName))
+			unlink($this->getFilePath().$this->logName);
+	}
+	
+	/**
+	 * Write the file log with the specified message
+	 * @param Mixed $message
+	 * @return void|\EasyTransac\Core\Logger
+	 */
 	public function write($message)
 	{
 		if (!$this->active)
@@ -72,7 +95,7 @@ class Logger
 		if (is_array($message) || is_object($message))
 			$message = print_r($message, true);
 			
-		file_put_contents($this->filePath.$this->logName, $date.$message.PHP_EOL.PHP_EOL, FILE_APPEND);
+		file_put_contents($this->getFilePath().$this->logName, $date.$message.PHP_EOL.PHP_EOL, FILE_APPEND);
 		
 		return $this;
 	}
