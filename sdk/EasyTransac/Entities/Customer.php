@@ -26,7 +26,7 @@ class Customer extends Entity
     /** @map:Address **/
     protected $address = null;
     /** @map:ZipCode **/
-    protected $zipcode = null;
+    protected $zipCode = null;
     /** @map:City **/
     protected $city = null;
     /** @map:Uid **/

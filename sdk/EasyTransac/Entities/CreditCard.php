@@ -29,7 +29,7 @@ class CreditCard extends Entity
     protected $type = null;
     /** @map:CardCountry **/
     protected $country = null;
-    /** @map:lastAccessed **/
+    /** @map:LastAccessed **/
     protected $lastAccessed = null;
 
     public function setLastAccessed($value)

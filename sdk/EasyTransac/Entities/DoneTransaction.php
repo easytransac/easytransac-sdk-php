@@ -50,7 +50,7 @@ class DoneTransaction extends Entity
     /** @map:AdditionalError **/
     protected $additionalError = null;
     /** @map:3DSecureUrl **/
-    protected $securUrl = null;
+    protected $secureUrl = null;
 
     public function setSecureUrl($value)
     {

@@ -3,7 +3,7 @@
 namespace EasyTransac\Entities;
 
 /**
- * Represents credit cards list (response of AddCreditCard and CreditCardsList requests)
+ * Represents a credit cards list (response of AddCreditCard and CreditCardsList requests)
  * @author klyde
  * @copyright EasyTransac
  */
