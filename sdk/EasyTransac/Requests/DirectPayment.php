@@ -14,11 +14,10 @@ class DirectPayment extends Request
     /** @object:DoneTransaction **/
     protected $response;
 
-    /**
-     * Calls the API function
-     * @param Entity $entity
-     * @return \EasyTransac\Responses\StandardResponse
-     */
+   /**
+    * {@inheritDoc}
+    * @see \EasyTransac\Requests\Request::execute()
+    */
     public function execute(Entity $entity)
     {
         return parent::call('/payment/direct', $entity);
