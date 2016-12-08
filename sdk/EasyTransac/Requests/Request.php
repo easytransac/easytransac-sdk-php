@@ -14,6 +14,14 @@ use \EasyTransac\Core\CommentParser;
  */
 abstract class Request
 {
+	
+	/**
+	 * Calls the API function
+	 * @param Entity $entity
+	 * @return \EasyTransac\Responses\StandardResponse
+	 */
+	abstract public function execute(Entity $entity);
+	
 	/**
 	 * Call a EasyTransac API function
 	 * @param String $funcName

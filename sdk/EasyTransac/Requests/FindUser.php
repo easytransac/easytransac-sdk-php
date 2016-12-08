@@ -15,9 +15,8 @@ class FindUser extends Request
     protected $response;
 
     /**
-     * Calls the API function
-     * @param Entity $entity
-     * @return \EasyTransac\Responses\StandardResponse
+     * {@inheritDoc}
+     * @see \EasyTransac\Requests\Request::execute()
      */
     public function execute(Entity $entity)
     {
