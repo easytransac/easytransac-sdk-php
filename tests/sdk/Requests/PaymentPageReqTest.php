@@ -71,7 +71,7 @@ class PaymentPageReqTest extends PHPUnit_Framework_TestCase
 	
 		$this->assertTrue($response instanceof \EasyTransac\Responses\StandardResponse);
 		$this->assertFalse($response->isSuccess());
-		$this->assertNotEmpty($response->getErrorMessage());var_dump($response->getErrorMessage());
+		$this->assertNotEmpty($response->getErrorMessage());
 		$this->assertEquals($response->getErrorCode(), 123);
 	}
 }
