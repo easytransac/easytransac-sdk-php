@@ -527,7 +527,7 @@
                                             <a id="method_hydrate"></a>
                         <div class="element clickable method public  method_hydrate inherited" data-toggle="collapse" data-target=".method_hydrate .collapse">
                             <h2>Allows to fill the entity with data returned by the EasyTransac API</h2>
-                            <pre>hydrate(Mixed $fields) </pre>
+                            <pre>hydrate(Mixed $fields, Boolean $checkRequired = false) : \EasyTransac\Entities\Entity</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -537,13 +537,6 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
                                                                             </table>
 
                                                                             <h3>Arguments</h3>
@@ -551,7 +544,13 @@
                                                 <h4>$fields</h4>
                                                 <code>Mixed</code><p><p>Array or \stdClass</p></p>
                                             </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$checkRequired</h4>
+                                                <code>Boolean</code><p></p>
+                                            </div>
                                                                             
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/EasyTransac.Entities.Entity.html">\EasyTransac\Entities\Entity</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -559,7 +558,7 @@
                                             <a id="method_hydrateWidthObject"></a>
                         <div class="element clickable method protected  method_hydrateWidthObject inherited" data-toggle="collapse" data-target=".method_hydrateWidthObject .collapse">
                             <h2>Fill the entity with the API json response</h2>
-                            <pre>hydrateWidthObject(\stdClass $fields) </pre>
+                            <pre>hydrateWidthObject(\stdClass $fields, Boolean $checkRequired = false) </pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -583,6 +582,10 @@
                                                 <h4>$fields</h4>
                                                 <code>\stdClass</code><p></p>
                                             </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$checkRequired</h4>
+                                                <code>Boolean</code><p></p>
+                                            </div>
                                                                             
                                                                     </div>
                             </div>
@@ -591,7 +594,7 @@
                                             <a id="method_hydrateWithArray"></a>
                         <div class="element clickable method protected  method_hydrateWithArray inherited" data-toggle="collapse" data-target=".method_hydrateWithArray .collapse">
                             <h2>Fill the entity with an list of entity (see: CreditCardList with comment tag @array)</h2>
-                            <pre>hydrateWithArray(\EasyTransac\Entities\Array&lt;Entity&gt; $itemsList) </pre>
+                            <pre>hydrateWithArray(\EasyTransac\Entities\Array&lt;Entity&gt; $itemsList, Boolean $checkRequired = false) </pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -614,6 +617,10 @@
                                                                                     <div class="subelement argument">
                                                 <h4>$itemsList</h4>
                                                 <code>\EasyTransac\Entities\Array<Entity></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$checkRequired</h4>
+                                                <code>Boolean</code><p></p>
                                             </div>
                                                                             
                                                                     </div>
@@ -1163,7 +1170,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 07 Sep 2016 14:16:39 +0200.<br/>
+            generated on Fri, 09 Dec 2016 14:38:59 +0100.<br/>
     </footer>
     </body>
 </html>

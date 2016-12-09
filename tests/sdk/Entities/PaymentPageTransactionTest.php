@@ -30,6 +30,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setSecure($f['3DS']);
     	$c->setSendEmail($f['SendEmail']);
     	$c->setUserAgent($f['UserAgent']);
+    	$c->setVersion($f['Version']);
     	
     	$this->assertEquals($c->getAmount(), $f['Amount']);
     	$this->assertEquals($c->getCancelUrl(), $f['CancelUrl']);
@@ -48,6 +49,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getSecure(), $f['3DS']);
     	$this->assertEquals($c->getSendEmail(), $f['SendEmail']);
     	$this->assertEquals($c->getUserAgent(), $f['UserAgent']);
+    	$this->assertEquals($c->getVersion(), $f['Version']);
     }
 
     public function testToArray()
@@ -76,6 +78,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setSecure($f['3DS']);
     	$c->setSendEmail($f['SendEmail']);
     	$c->setUserAgent($f['UserAgent']);
+    	$c->setVersion($f['Version']);
     	
     	$this->assertEquals($c->toArray(), $this->getFixture(true));
     }
@@ -86,6 +89,12 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$c->hydrate(json_decode(json_encode($this->getFixture())));
     	
     	$this->assertEquals($c->toArray(), $this->getFixture(true));
+    }
+    
+    public function testUserAgent()
+    {
+    	$c = new \EasyTransac\Entities\PaymentPageTransaction();
+    	$this->assertEquals($c->getUserAgent(), 'USER_AGENT');
     }
     
     protected function getFixture($rendered = false)
@@ -112,6 +121,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     			'PayToEmail' => null,
     			'UserAgent' => null,
     			'Language' => 'FRE',
+    			'Version' => 123
     		];
     	}
     	else
@@ -128,6 +138,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     			'Firstname' => 'Mich',
    				'MultiplePayments' => false,
     			'Language' => 'FRE',
+    			'Version' => 123
     		];
     	}
     }

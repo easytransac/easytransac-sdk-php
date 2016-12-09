@@ -20,7 +20,7 @@ class AddCreditCardTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($c->getCustomer(), $cust);
         $this->assertEquals($c->getCreditCard(), $card);
     }
-
+    
     public function testToArray()
     {
         $cust = (new \EasyTransac\Entities\Customer())->setEmail("test@test.com");

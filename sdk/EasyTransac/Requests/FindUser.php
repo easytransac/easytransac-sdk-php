@@ -20,7 +20,14 @@ class FindUser extends Request
      */
     public function execute(Entity $entity)
     {
-        return parent::call('/user/find', $entity);
+    	$this->requiredFields = [
+    		'Id',
+    		'Email',
+    		'Firstname',
+    		'Lastname',
+    	];
+    	
+        return $this->call('/user/find', $entity);
     }
 }
 

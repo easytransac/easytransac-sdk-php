@@ -20,7 +20,7 @@ class AddUser extends Request
      */
     public function execute(Entity $entity)
     {
-        return parent::call('/user/add', $entity);
+        return $this->call('/user/add', $entity);
     }
 }
 

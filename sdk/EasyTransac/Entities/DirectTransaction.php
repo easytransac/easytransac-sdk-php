@@ -28,6 +28,14 @@ class DirectTransaction extends Entity
     /** @object:CreditCard **/
     protected $creditCard = null;
 
+    public function __construct()
+    {
+    	parent::__construct();
+    	 
+    	if (isset($_SERVER['REMOVE_ADDR']) && !empty($_SERVER['REMOVE_ADDR']))
+    		$this->setClientIp($_SERVER['REMOVE_ADDR']);
+    }
+    
     public function setCreditCard(CreditCard $value)
     {
         $this->creditCard = $value;

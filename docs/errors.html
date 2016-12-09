@@ -116,13 +116,21 @@
                                                                                                     <li><a href="#Requests\PaymentRefund.php"><i class="icon-file"></i> Requests\PaymentRefund.php</a></li>
                                                                                                     <li><a href="#Entities\DirectTransaction.php"><i class="icon-file"></i> Entities\DirectTransaction.php</a></li>
                                                                                                     <li><a href="#Requests\AddUser.php"><i class="icon-file"></i> Requests\AddUser.php</a></li>
+                                                                                                    <li><a href="#Core\FgcCaller.php"><i class="icon-file"></i> Core\FgcCaller.php</a></li>
                                                                                                     <li><a href="#Entities\FindUserBy.php"><i class="icon-file"></i> Entities\FindUserBy.php</a></li>
                                                                                                     <li><a href="#Requests\CreditCardsList.php"><i class="icon-file"></i> Requests\CreditCardsList.php</a></li>
                                                                                                     <li><a href="#Entities\CreditCard.php"><i class="icon-file"></i> Entities\CreditCard.php</a></li>
                                                                                                     <li><a href="#Entities\OneClickTransaction.php"><i class="icon-file"></i> Entities\OneClickTransaction.php</a></li>
                                                                                                     <li><a href="#Requests\Request.php"><i class="icon-file"></i> Requests\Request.php</a></li>
+                                                                                                    <li><a href="#Core\PaymentNotification.php"><i class="icon-file"></i> Core\PaymentNotification.php</a></li>
+                                                                                                    <li><a href="#Entities\Client.php"><i class="icon-file"></i> Entities\Client.php</a></li>
                                                                                                     <li><a href="#Entities\Cancellation.php"><i class="icon-file"></i> Entities\Cancellation.php</a></li>
+                                                                                                    <li><a href="#Core\Logger.php"><i class="icon-file"></i> Core\Logger.php</a></li>
+                                                                                                    <li><a href="#Core\LimitedModifier.php"><i class="icon-file"></i> Core\LimitedModifier.php</a></li>
                                                                                                     <li><a href="#Entities\PaymentPageTransaction.php"><i class="icon-file"></i> Entities\PaymentPageTransaction.php</a></li>
+                                                                                                    <li><a href="#Core\ICallerModifier.php"><i class="icon-file"></i> Core\ICallerModifier.php</a></li>
+                                                                                                    <li><a href="#Entities\Notification.php"><i class="icon-file"></i> Entities\Notification.php</a></li>
+                                                                                                    <li><a href="#Core\ICaller.php"><i class="icon-file"></i> Core\ICaller.php</a></li>
                                                                                                     <li><a href="#Entities\AddCreditCard.php"><i class="icon-file"></i> Entities\AddCreditCard.php</a></li>
                                                                                                     <li><a href="#Core\Services.php"><i class="icon-file"></i> Core\Services.php</a></li>
                                                                                                     <li><a href="#Requests\AddCreditCard.php"><i class="icon-file"></i> Requests\AddCreditCard.php</a></li>
@@ -141,6 +149,7 @@
                                                                                                     <li><a href="#Requests\Cancellation.php"><i class="icon-file"></i> Requests\Cancellation.php</a></li>
                                                                                                     <li><a href="#Core\CommentParser.php"><i class="icon-file"></i> Core\CommentParser.php</a></li>
                                                                                                     <li><a href="#autoload.php"><i class="icon-file"></i> autoload.php</a></li>
+                                                                                                    <li><a href="#Core\CurlCaller.php"><i class="icon-file"></i> Core\CurlCaller.php</a></li>
                                                                                                     <li><a href="#Entities\PaymentStatus.php"><i class="icon-file"></i> Entities\PaymentStatus.php</a></li>
                                                                                                     <li><a href="#Entities\CreditCardsList.php"><i class="icon-file"></i> Entities\CreditCardsList.php</a></li>
                                                                                                     <li><a href="#Entities\Customer.php"><i class="icon-file"></i> Entities\Customer.php</a></li>
@@ -264,12 +273,12 @@
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>17</td>
+                                        <td>18</td>
                                         <td>No summary for method __construct()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>15</td>
+                                        <td>16</td>
                                         <td>No summary for property $mapping</td>
                                     </tr>
                                                             </tbody>
@@ -281,7 +290,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Requests\FindUser.php
-                            <span class="pull-right badge badge-info">2</span>
+                            <span class="pull-right badge badge-info">3</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -297,6 +306,11 @@
                                         <td>error</td>
                                         <td>0</td>
                                         <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>Argument $entity is missing from the Docblock of execute</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
@@ -312,7 +326,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Requests\PaymentRefund.php
-                            <span class="pull-right badge badge-info">2</span>
+                            <span class="pull-right badge badge-info">3</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -328,6 +342,11 @@
                                         <td>error</td>
                                         <td>0</td>
                                         <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>Argument $entity is missing from the Docblock of execute</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
@@ -343,7 +362,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Entities\DirectTransaction.php
-                            <span class="pull-right badge badge-info">37</span>
+                            <span class="pull-right badge badge-info">38</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -363,136 +382,141 @@
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>31</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>39</td>
                                         <td>Argument $value is missing from the Docblock of setCreditCard</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>31</td>
+                                        <td>39</td>
                                         <td>No summary for method setCreditCard()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>37</td>
+                                        <td>45</td>
                                         <td>No summary for method getCreditCard()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>42</td>
+                                        <td>50</td>
                                         <td>Argument $value is missing from the Docblock of setCustomer</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>42</td>
+                                        <td>50</td>
                                         <td>No summary for method setCustomer()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>48</td>
+                                        <td>56</td>
                                         <td>No summary for method getCustomer()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>53</td>
+                                        <td>61</td>
                                         <td>Argument $value is missing from the Docblock of setMultiplePayments</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>53</td>
+                                        <td>61</td>
                                         <td>No summary for method setMultiplePayments()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>59</td>
+                                        <td>67</td>
                                         <td>No summary for method getMultiplePayments()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>64</td>
+                                        <td>72</td>
                                         <td>Argument $value is missing from the Docblock of setDownPayment</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>64</td>
+                                        <td>72</td>
                                         <td>No summary for method setDownPayment()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>70</td>
+                                        <td>78</td>
                                         <td>No summary for method getDownPayment()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>75</td>
+                                        <td>83</td>
                                         <td>Argument $value is missing from the Docblock of setSecure</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>75</td>
+                                        <td>83</td>
                                         <td>No summary for method setSecure()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>81</td>
+                                        <td>89</td>
                                         <td>No summary for method getSecure()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>86</td>
+                                        <td>94</td>
                                         <td>Argument $value is missing from the Docblock of setClientIp</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>86</td>
+                                        <td>94</td>
                                         <td>No summary for method setClientIp()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>92</td>
+                                        <td>100</td>
                                         <td>No summary for method getClientIp()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>97</td>
+                                        <td>105</td>
                                         <td>Argument $value is missing from the Docblock of setDescription</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>97</td>
+                                        <td>105</td>
                                         <td>No summary for method setDescription()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>103</td>
+                                        <td>111</td>
                                         <td>No summary for method getDescription()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>108</td>
+                                        <td>116</td>
                                         <td>Argument $value is missing from the Docblock of setOrderId</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>108</td>
+                                        <td>116</td>
                                         <td>No summary for method setOrderId()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>114</td>
+                                        <td>122</td>
                                         <td>No summary for method getOrderId()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>119</td>
+                                        <td>127</td>
                                         <td>Argument $value is missing from the Docblock of setAmount</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>119</td>
+                                        <td>127</td>
                                         <td>No summary for method setAmount()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>125</td>
+                                        <td>133</td>
                                         <td>No summary for method getAmount()</td>
                                     </tr>
                                                                     <tr class="error">
@@ -549,7 +573,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Requests\AddUser.php
-                            <span class="pull-right badge badge-info">2</span>
+                            <span class="pull-right badge badge-info">3</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -568,8 +592,79 @@
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
+                                        <td>21</td>
+                                        <td>Argument $entity is missing from the Docblock of execute</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
                                         <td>15</td>
                                         <td>No summary for property $response</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Core\FgcCaller.php" id="Core\FgcCaller.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Core\FgcCaller.php
+                            <span class="pull-right badge badge-info">9</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>14</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>23</td>
+                                        <td>Argument $headers is missing from the Docblock of setHeaders</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>41</td>
+                                        <td>Argument $second is missing from the Docblock of setTimeout</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>59</td>
+                                        <td>Argument $url is missing from the Docblock of call</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>59</td>
+                                        <td>Argument $params is missing from the Docblock of call</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>101</td>
+                                        <td>Argument $headers is missing from the Docblock of addHeaders</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>11</td>
+                                        <td>No summary for property $timeout</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>12</td>
+                                        <td>No summary for property $headers</td>
                                     </tr>
                                                             </tbody>
                             </table>
@@ -646,7 +741,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Requests\CreditCardsList.php
-                            <span class="pull-right badge badge-info">2</span>
+                            <span class="pull-right badge badge-info">3</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -662,6 +757,11 @@
                                         <td>error</td>
                                         <td>0</td>
                                         <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>Argument $entity is missing from the Docblock of execute</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
@@ -923,7 +1023,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Entities\OneClickTransaction.php
-                            <span class="pull-right badge badge-info">25</span>
+                            <span class="pull-right badge badge-info">26</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -943,91 +1043,96 @@
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>25</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>33</td>
                                         <td>Argument $value is missing from the Docblock of setAlias</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>25</td>
+                                        <td>33</td>
                                         <td>No summary for method setAlias()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>31</td>
+                                        <td>39</td>
                                         <td>No summary for method getAlias()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>36</td>
+                                        <td>44</td>
                                         <td>Argument $value is missing from the Docblock of setClientIp</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>36</td>
+                                        <td>44</td>
                                         <td>No summary for method setClientIp()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>42</td>
+                                        <td>50</td>
                                         <td>No summary for method getClientIp()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>47</td>
+                                        <td>55</td>
                                         <td>Argument $value is missing from the Docblock of setDescription</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>47</td>
+                                        <td>55</td>
                                         <td>No summary for method setDescription()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>53</td>
+                                        <td>61</td>
                                         <td>No summary for method getDescription()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>58</td>
+                                        <td>66</td>
                                         <td>Argument $value is missing from the Docblock of setOrderId</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>58</td>
+                                        <td>66</td>
                                         <td>No summary for method setOrderId()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>64</td>
+                                        <td>72</td>
                                         <td>No summary for method getOrderId()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>69</td>
+                                        <td>77</td>
                                         <td>Argument $value is missing from the Docblock of setUid</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>69</td>
+                                        <td>77</td>
                                         <td>No summary for method setUid()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>75</td>
+                                        <td>83</td>
                                         <td>No summary for method getUid()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>80</td>
+                                        <td>88</td>
                                         <td>Argument $value is missing from the Docblock of setAmount</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>80</td>
+                                        <td>88</td>
                                         <td>No summary for method setAmount()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>86</td>
+                                        <td>94</td>
                                         <td>No summary for method getAmount()</td>
                                     </tr>
                                                                     <tr class="error">
@@ -1069,7 +1174,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Requests\Request.php
-                            <span class="pull-right badge badge-info">1</span>
+                            <span class="pull-right badge badge-info">2</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -1085,6 +1190,228 @@
                                         <td>error</td>
                                         <td>0</td>
                                         <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>17</td>
+                                        <td>No summary for property $requiredFields</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Core\PaymentNotification.php" id="Core\PaymentNotification.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Core\PaymentNotification.php
+                            <span class="pull-right badge badge-info">2</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>16</td>
+                                        <td>Argument $data is missing from the Docblock of getContent</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Entities\Client.php" id="Entities\Client.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Entities\Client.php
+                            <span class="pull-right badge badge-info">33</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>29</td>
+                                        <td>No summary for method getId()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>34</td>
+                                        <td>Argument $id is missing from the Docblock of setId</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>34</td>
+                                        <td>No summary for method setId()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>40</td>
+                                        <td>No summary for method getEmail()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>45</td>
+                                        <td>Argument $email is missing from the Docblock of setEmail</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>45</td>
+                                        <td>No summary for method setEmail()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>51</td>
+                                        <td>No summary for method getFirstname()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>56</td>
+                                        <td>Argument $firstname is missing from the Docblock of setFirstname</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>56</td>
+                                        <td>No summary for method setFirstname()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>62</td>
+                                        <td>No summary for method getLastname()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>67</td>
+                                        <td>Argument $lastname is missing from the Docblock of setLastname</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>67</td>
+                                        <td>No summary for method setLastname()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>73</td>
+                                        <td>No summary for method getPhone()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>78</td>
+                                        <td>Argument $phone is missing from the Docblock of setPhone</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>78</td>
+                                        <td>No summary for method setPhone()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>84</td>
+                                        <td>No summary for method getAddress()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>89</td>
+                                        <td>Argument $address is missing from the Docblock of setAddress</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>89</td>
+                                        <td>No summary for method setAddress()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>95</td>
+                                        <td>No summary for method getZipCode()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>100</td>
+                                        <td>Argument $zipCode is missing from the Docblock of setZipCode</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>100</td>
+                                        <td>No summary for method setZipCode()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>106</td>
+                                        <td>No summary for method getCity()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>111</td>
+                                        <td>Argument $city is missing from the Docblock of setCity</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>111</td>
+                                        <td>No summary for method setCity()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>13</td>
+                                        <td>No summary for property $id</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>15</td>
+                                        <td>No summary for property $email</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>17</td>
+                                        <td>No summary for property $firstname</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>19</td>
+                                        <td>No summary for property $lastname</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>No summary for property $phone</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>23</td>
+                                        <td>No summary for property $address</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>25</td>
+                                        <td>No summary for property $zipCode</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>27</td>
+                                        <td>No summary for property $city</td>
                                     </tr>
                                                             </tbody>
                             </table>
@@ -1157,11 +1484,11 @@
                         </div>
                                     </div>
                             <div class="package-contents">
-                                            <a name="Entities\PaymentPageTransaction.php" id="Entities\PaymentPageTransaction.php"></a>
+                                            <a name="Core\Logger.php" id="Core\Logger.php"></a>
                         <h3>
                             <i class="icon-file"></i>
-                            Entities\PaymentPageTransaction.php
-                            <span class="pull-right badge badge-info">69</span>
+                            Core\Logger.php
+                            <span class="pull-right badge badge-info">8</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -1180,257 +1507,389 @@
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>47</td>
-                                        <td>No summary for method getSendEmail()</td>
+                                        <td>16</td>
+                                        <td>No summary for method __construct()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>52</td>
-                                        <td>Argument $sendEmail is missing from the Docblock of setSendEmail</td>
+                                        <td>21</td>
+                                        <td>No summary for method __clone()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>52</td>
-                                        <td>No summary for method setSendEmail()</td>
+                                        <td>26</td>
+                                        <td>No summary for method getInstance()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>11</td>
+                                        <td>No summary for property $active</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>12</td>
+                                        <td>No summary for property $logName</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>13</td>
+                                        <td>No summary for property $filePath</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>14</td>
+                                        <td>No summary for property $instance</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Core\LimitedModifier.php" id="Core\LimitedModifier.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Core\LimitedModifier.php
+                            <span class="pull-right badge badge-info">6</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>18</td>
+                                        <td>Argument $services is missing from the Docblock of execute</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>18</td>
+                                        <td>Argument $funcName is missing from the Docblock of execute</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>18</td>
+                                        <td>Argument $params is missing from the Docblock of execute</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>11</td>
+                                        <td>No summary for property $funcName</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>12</td>
+                                        <td>No summary for property $params</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Entities\PaymentPageTransaction.php" id="Entities\PaymentPageTransaction.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Entities\PaymentPageTransaction.php
+                            <span class="pull-right badge badge-info">74</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>49</td>
+                                        <td>No summary for method __construct()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>59</td>
-                                        <td>No summary for method getOrderId()</td>
+                                        <td>No summary for method getSendEmail()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>64</td>
-                                        <td>Argument $orderId is missing from the Docblock of setOrderId</td>
+                                        <td>Argument $sendEmail is missing from the Docblock of setSendEmail</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>64</td>
-                                        <td>No summary for method setOrderId()</td>
+                                        <td>No summary for method setSendEmail()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>71</td>
+                                        <td>No summary for method getVersion()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>76</td>
+                                        <td>Argument $version is missing from the Docblock of setVersion</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>76</td>
+                                        <td>No summary for method setVersion()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>83</td>
+                                        <td>No summary for method getOrderId()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>88</td>
+                                        <td>Argument $orderId is missing from the Docblock of setOrderId</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>88</td>
+                                        <td>No summary for method setOrderId()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>95</td>
                                         <td>No summary for method getDescription()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>76</td>
+                                        <td>100</td>
                                         <td>Argument $description is missing from the Docblock of setDescription</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>76</td>
+                                        <td>100</td>
                                         <td>No summary for method setDescription()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>82</td>
+                                        <td>106</td>
                                         <td>No summary for method getAmount()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>87</td>
+                                        <td>111</td>
                                         <td>Argument $amount is missing from the Docblock of setAmount</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>87</td>
+                                        <td>111</td>
                                         <td>No summary for method setAmount()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>93</td>
+                                        <td>117</td>
                                         <td>No summary for method getClientIP()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>98</td>
+                                        <td>122</td>
                                         <td>Argument $clientIP is missing from the Docblock of setClientIP</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>98</td>
+                                        <td>122</td>
                                         <td>No summary for method setClientIP()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>104</td>
+                                        <td>128</td>
                                         <td>No summary for method getSecure()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>109</td>
+                                        <td>133</td>
                                         <td>Argument $secure is missing from the Docblock of setSecure</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>109</td>
+                                        <td>133</td>
                                         <td>No summary for method setSecure()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>115</td>
+                                        <td>139</td>
                                         <td>No summary for method getReturnUrl()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>120</td>
+                                        <td>144</td>
                                         <td>Argument $returnUrl is missing from the Docblock of setReturnUrl</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>120</td>
+                                        <td>144</td>
                                         <td>No summary for method setReturnUrl()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>126</td>
+                                        <td>150</td>
                                         <td>No summary for method getCancelUrl()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>131</td>
+                                        <td>155</td>
                                         <td>Argument $cancelUrl is missing from the Docblock of setCancelUrl</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>131</td>
+                                        <td>155</td>
                                         <td>No summary for method setCancelUrl()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>137</td>
+                                        <td>161</td>
                                         <td>No summary for method getCustomer()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>142</td>
+                                        <td>166</td>
                                         <td>Argument $customer is missing from the Docblock of setCustomer</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>142</td>
+                                        <td>166</td>
                                         <td>No summary for method setCustomer()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>148</td>
+                                        <td>172</td>
                                         <td>No summary for method getMultiplePayments()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>153</td>
+                                        <td>177</td>
                                         <td>Argument $multiplePayments is missing from the Docblock of setMultiplePayments</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>153</td>
+                                        <td>177</td>
                                         <td>No summary for method setMultiplePayments()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>159</td>
+                                        <td>183</td>
                                         <td>No summary for method getMultiplePaymentsRepeat()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>164</td>
+                                        <td>188</td>
                                         <td>Argument $multiplePaymentsRepeat is missing from the Docblock of setMultiplePaymentsRepeat</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>164</td>
+                                        <td>188</td>
                                         <td>No summary for method setMultiplePaymentsRepeat()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>170</td>
+                                        <td>194</td>
                                         <td>No summary for method getDownPayment()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>175</td>
+                                        <td>199</td>
                                         <td>Argument $downPayment is missing from the Docblock of setDownPayment</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>175</td>
+                                        <td>199</td>
                                         <td>No summary for method setDownPayment()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>181</td>
+                                        <td>205</td>
                                         <td>No summary for method getRebill()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>186</td>
+                                        <td>210</td>
                                         <td>Argument $Rebill is missing from the Docblock of setRebill</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>186</td>
+                                        <td>210</td>
                                         <td>No summary for method setRebill()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>192</td>
+                                        <td>216</td>
                                         <td>No summary for method getRecurrence()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>197</td>
+                                        <td>221</td>
                                         <td>Argument $recurrence is missing from the Docblock of setRecurrence</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>197</td>
+                                        <td>221</td>
                                         <td>No summary for method setRecurrence()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>203</td>
+                                        <td>227</td>
                                         <td>No summary for method getPayToEmail()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>208</td>
+                                        <td>232</td>
                                         <td>Argument $payToEmail is missing from the Docblock of setPayToEmail</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>208</td>
+                                        <td>232</td>
                                         <td>No summary for method setPayToEmail()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>214</td>
+                                        <td>238</td>
                                         <td>No summary for method getUserAgent()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>219</td>
+                                        <td>243</td>
                                         <td>Argument $userAgent is missing from the Docblock of setUserAgent</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>219</td>
+                                        <td>243</td>
                                         <td>No summary for method setUserAgent()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>225</td>
+                                        <td>249</td>
                                         <td>No summary for method getLanguage()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>230</td>
+                                        <td>254</td>
                                         <td>Argument $language is missing from the Docblock of setLanguage</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>230</td>
+                                        <td>254</td>
                                         <td>No summary for method setLanguage()</td>
                                     </tr>
                                                                     <tr class="error">
@@ -1518,6 +1977,454 @@
                                         <td>45</td>
                                         <td>No summary for property $language</td>
                                     </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>47</td>
+                                        <td>No summary for property $version</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Core\ICallerModifier.php" id="Core\ICallerModifier.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Core\ICallerModifier.php
+                            <span class="pull-right badge badge-info">1</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Entities\Notification.php" id="Entities\Notification.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Entities\Notification.php
+                            <span class="pull-right badge badge-info">73</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>49</td>
+                                        <td>No summary for method getOperationType()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>54</td>
+                                        <td>Argument $operationType is missing from the Docblock of setOperationType</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>54</td>
+                                        <td>No summary for method setOperationType()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>60</td>
+                                        <td>No summary for method getRequestId()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>65</td>
+                                        <td>Argument $requestId is missing from the Docblock of setRequestId</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>65</td>
+                                        <td>No summary for method setRequestId()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>71</td>
+                                        <td>No summary for method getTid()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>76</td>
+                                        <td>Argument $tid is missing from the Docblock of setTid</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>76</td>
+                                        <td>No summary for method setTid()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>82</td>
+                                        <td>No summary for method getUid()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>87</td>
+                                        <td>Argument $uid is missing from the Docblock of setUid</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>87</td>
+                                        <td>No summary for method setUid()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>93</td>
+                                        <td>No summary for method getOrderId()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>98</td>
+                                        <td>Argument $orderId is missing from the Docblock of setOrderId</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>98</td>
+                                        <td>No summary for method setOrderId()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>104</td>
+                                        <td>No summary for method getStatus()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>109</td>
+                                        <td>Argument $status is missing from the Docblock of setStatus</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>109</td>
+                                        <td>No summary for method setStatus()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>115</td>
+                                        <td>No summary for method getDate()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>120</td>
+                                        <td>Argument $date is missing from the Docblock of setDate</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>120</td>
+                                        <td>No summary for method setDate()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>126</td>
+                                        <td>No summary for method getAmount()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>131</td>
+                                        <td>Argument $amount is missing from the Docblock of setAmount</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>131</td>
+                                        <td>No summary for method setAmount()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>137</td>
+                                        <td>No summary for method getCurrency()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>142</td>
+                                        <td>Argument $currency is missing from the Docblock of setCurrency</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>142</td>
+                                        <td>No summary for method setCurrency()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>148</td>
+                                        <td>No summary for method getFixFees()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>153</td>
+                                        <td>Argument $fixFees is missing from the Docblock of setFixFees</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>153</td>
+                                        <td>No summary for method setFixFees()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>159</td>
+                                        <td>No summary for method getMessage()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>164</td>
+                                        <td>Argument $message is missing from the Docblock of setMessage</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>164</td>
+                                        <td>No summary for method setMessage()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>170</td>
+                                        <td>No summary for method getSecure()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>175</td>
+                                        <td>Argument $secure is missing from the Docblock of setSecure</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>175</td>
+                                        <td>No summary for method setSecure()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>181</td>
+                                        <td>No summary for method getOneClick()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>186</td>
+                                        <td>Argument $oneClick is missing from the Docblock of setOneClick</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>186</td>
+                                        <td>No summary for method setOneClick()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>192</td>
+                                        <td>No summary for method getAlias()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>197</td>
+                                        <td>Argument $alias is missing from the Docblock of setAlias</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>197</td>
+                                        <td>No summary for method setAlias()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>203</td>
+                                        <td>No summary for method getCardNumber()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>208</td>
+                                        <td>Argument $cardNumber is missing from the Docblock of setCardNumber</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>208</td>
+                                        <td>No summary for method setCardNumber()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>214</td>
+                                        <td>No summary for method getTest()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>219</td>
+                                        <td>Argument $test is missing from the Docblock of setTest</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>219</td>
+                                        <td>No summary for method setTest()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>225</td>
+                                        <td>No summary for method getSignature()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>230</td>
+                                        <td>Argument $signature is missing from the Docblock of setSignature</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>230</td>
+                                        <td>No summary for method setSignature()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>236</td>
+                                        <td>No summary for method getClient()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>241</td>
+                                        <td>Argument $client is missing from the Docblock of setClient</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>241</td>
+                                        <td>No summary for method setClient()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>13</td>
+                                        <td>No summary for property $operationType</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>15</td>
+                                        <td>No summary for property $requestId</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>17</td>
+                                        <td>No summary for property $tid</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>19</td>
+                                        <td>No summary for property $uid</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>No summary for property $orderId</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>23</td>
+                                        <td>No summary for property $status</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>25</td>
+                                        <td>No summary for property $date</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>27</td>
+                                        <td>No summary for property $amount</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>29</td>
+                                        <td>No summary for property $currency</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>31</td>
+                                        <td>No summary for property $fixFees</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>33</td>
+                                        <td>No summary for property $message</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>35</td>
+                                        <td>No summary for property $secure</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>37</td>
+                                        <td>No summary for property $oneClick</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>39</td>
+                                        <td>No summary for property $alias</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>41</td>
+                                        <td>No summary for property $cardNumber</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>43</td>
+                                        <td>No summary for property $test</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>45</td>
+                                        <td>No summary for property $signature</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>47</td>
+                                        <td>No summary for property $client</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Core\ICaller.php" id="Core\ICaller.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Core\ICaller.php
+                            <span class="pull-right badge badge-info">2</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>26</td>
+                                        <td>Argument $second is missing from the Docblock of setTimeout</td>
+                                    </tr>
                                                             </tbody>
                             </table>
                         </div>
@@ -1527,7 +2434,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Entities\AddCreditCard.php
-                            <span class="pull-right badge badge-info">17</span>
+                            <span class="pull-right badge badge-info">18</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -1547,61 +2454,66 @@
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>21</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>29</td>
                                         <td>No summary for method getCustomer()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>26</td>
+                                        <td>34</td>
                                         <td>Argument $customer is missing from the Docblock of setCustomer</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>26</td>
+                                        <td>34</td>
                                         <td>No summary for method setCustomer()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>32</td>
+                                        <td>40</td>
                                         <td>No summary for method getCreditCard()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>37</td>
+                                        <td>45</td>
                                         <td>Argument $creditCard is missing from the Docblock of setCreditCard</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>37</td>
+                                        <td>45</td>
                                         <td>No summary for method setCreditCard()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>43</td>
+                                        <td>51</td>
                                         <td>No summary for method getLanguage()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>48</td>
+                                        <td>56</td>
                                         <td>Argument $language is missing from the Docblock of setLanguage</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>48</td>
+                                        <td>56</td>
                                         <td>No summary for method setLanguage()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>54</td>
+                                        <td>62</td>
                                         <td>No summary for method getClientIp()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>59</td>
+                                        <td>67</td>
                                         <td>Argument $clientIp is missing from the Docblock of setClientIp</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>59</td>
+                                        <td>67</td>
                                         <td>No summary for method setClientIp()</td>
                                     </tr>
                                                                     <tr class="error">
@@ -1633,7 +2545,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Core\Services.php
-                            <span class="pull-right badge badge-info">9</span>
+                            <span class="pull-right badge badge-info">7</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -1652,23 +2564,8 @@
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>104</td>
-                                        <td>No summary for method __destruct()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>110</td>
-                                        <td>No summary for method __construct()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>115</td>
-                                        <td>No summary for method __clone()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
                                         <td>14</td>
-                                        <td>No summary for property $debug</td>
+                                        <td>No summary for property $instance</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
@@ -1678,17 +2575,22 @@
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>16</td>
-                                        <td>No summary for property $timeout</td>
+                                        <td>No summary for property $caller</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>17</td>
-                                        <td>No summary for property $curlInstance</td>
+                                        <td>No summary for property $modifier</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>18</td>
-                                        <td>No summary for property $instance</td>
+                                        <td>No summary for property $url</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>19</td>
+                                        <td>No summary for property $timeout</td>
                                     </tr>
                                                             </tbody>
                             </table>
@@ -1730,7 +2632,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Requests\DirectPayment.php
-                            <span class="pull-right badge badge-info">2</span>
+                            <span class="pull-right badge badge-info">3</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -1746,6 +2648,11 @@
                                         <td>error</td>
                                         <td>0</td>
                                         <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>Argument $entity is missing from the Docblock of execute</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
@@ -1761,7 +2668,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Requests\PaymentStatus.php
-                            <span class="pull-right badge badge-info">2</span>
+                            <span class="pull-right badge badge-info">3</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -1777,6 +2684,11 @@
                                         <td>error</td>
                                         <td>0</td>
                                         <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>Argument $entity is missing from the Docblock of execute</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
@@ -2564,7 +3476,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Responses\StandardResponse.php
-                            <span class="pull-right badge badge-info">5</span>
+                            <span class="pull-right badge badge-info">6</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -2601,6 +3513,11 @@
                                         <td>17</td>
                                         <td>No summary for property $success</td>
                                     </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>18</td>
+                                        <td>No summary for property $sameSignature</td>
+                                    </tr>
                                                             </tbody>
                             </table>
                         </div>
@@ -2610,7 +3527,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Requests\UpdateUser.php
-                            <span class="pull-right badge badge-info">2</span>
+                            <span class="pull-right badge badge-info">3</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -2626,6 +3543,11 @@
                                         <td>error</td>
                                         <td>0</td>
                                         <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>Argument $entity is missing from the Docblock of execute</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
@@ -3234,7 +4156,7 @@
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>53</td>
-                                        <td>No summary for property $securUrl</td>
+                                        <td>No summary for property $secureUrl</td>
                                     </tr>
                                                             </tbody>
                             </table>
@@ -3245,7 +4167,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Requests\PaymentPage.php
-                            <span class="pull-right badge badge-info">2</span>
+                            <span class="pull-right badge badge-info">3</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -3261,6 +4183,11 @@
                                         <td>error</td>
                                         <td>0</td>
                                         <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>Argument $entity is missing from the Docblock of execute</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
@@ -3276,7 +4203,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Requests\OneClickPayment.php
-                            <span class="pull-right badge badge-info">2</span>
+                            <span class="pull-right badge badge-info">3</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -3292,6 +4219,11 @@
                                         <td>error</td>
                                         <td>0</td>
                                         <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>Argument $entity is missing from the Docblock of execute</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
@@ -3307,7 +4239,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Requests\Cancellation.php
-                            <span class="pull-right badge badge-info">2</span>
+                            <span class="pull-right badge badge-info">3</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -3323,6 +4255,11 @@
                                         <td>error</td>
                                         <td>0</td>
                                         <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>Argument $entity is missing from the Docblock of execute</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
@@ -3395,6 +4332,82 @@
                                         <td>error</td>
                                         <td>0</td>
                                         <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Core\CurlCaller.php" id="Core\CurlCaller.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Core\CurlCaller.php
+                            <span class="pull-right badge badge-info">11</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>15</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>20</td>
+                                        <td>No summary for method __destruct()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>30</td>
+                                        <td>Argument $headers is missing from the Docblock of setHeaders</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>48</td>
+                                        <td>Argument $second is missing from the Docblock of setTimeout</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>66</td>
+                                        <td>Argument $url is missing from the Docblock of call</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>66</td>
+                                        <td>Argument $params is missing from the Docblock of call</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>118</td>
+                                        <td>Argument $headers is missing from the Docblock of addHeaders</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>11</td>
+                                        <td>No summary for property $curlInstance</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>12</td>
+                                        <td>No summary for property $timeout</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>13</td>
+                                        <td>No summary for property $headers</td>
                                     </tr>
                                                             </tbody>
                             </table>
@@ -3742,7 +4755,7 @@
                                                                     <tr class="error">
                                         <td>error</td>
                                         <td>29</td>
-                                        <td>No summary for property $zipcode</td>
+                                        <td>No summary for property $zipCode</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
@@ -3766,7 +4779,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 07 Sep 2016 14:16:41 +0200.<br/>
+            generated on Fri, 09 Dec 2016 14:39:01 +0100.<br/>
     </footer>
     </body>
 </html>

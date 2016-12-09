@@ -135,11 +135,11 @@ class Services
     /**
      * Calls the specified EasyTransac function 
      * @param String $funcName
-     * @param array $params
+     * @param array &$params
      * @return String
      * @throws \RuntimeException
      */
-    public function call($funcName, array $params)
+    public function call($funcName, array &$params)
     {
         if (empty($this->key))
             throw new \RuntimeException("API key not supplied");

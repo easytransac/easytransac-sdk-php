@@ -20,7 +20,18 @@ class OneClickPayment extends Request
      */
     public function execute(Entity $entity)
     {
-        return parent::call('/payment/oneclick', $entity);
+    	$this->requiredFields = [
+    		'Tid',
+    		'Status',
+    		'Date',
+    		'Amount',
+    		'FixFees',
+    		'Message',
+    		'3DSecure',
+    		'OneClick',
+    	];
+    	
+        return $this->call('/payment/oneclick', $entity);
     }
 }
 

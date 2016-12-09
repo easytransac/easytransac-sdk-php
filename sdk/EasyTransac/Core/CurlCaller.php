@@ -2,6 +2,10 @@
 
 namespace EasyTransac\Core;
 
+/**
+ * Caller using Curl
+ * @author klyde
+ */
 class CurlCaller implements ICaller
 {
 	protected $curlInstance = null;

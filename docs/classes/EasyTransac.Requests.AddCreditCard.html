@@ -119,7 +119,7 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>
-                                                                                                                                                            <li class="method public">
+                                                                                                                                                                                                                    <li class="method public inherited">
         <a href="#method_execute" title="execute :: Calls the API function">
             <span class="description">Calls the API function</span><pre>execute</pre>
         </a>
@@ -134,7 +134,7 @@
                                 <span class="description">Call a EasyTransac API function</span><pre>call</pre>
                             </a>
                         </li>
-                                                                                                                    <li class="method protected inherited">
+                                                                                                                                                        <li class="method protected inherited">
                             <a href="#method_mapResponse" title="mapResponse :: Makes the relation between API field names and entity attributes and hydrates the correct entity">
                                 <span class="description">Makes the relation between API field names and entity attributes and hydrates the correct entity</span><pre>mapResponse</pre>
                             </a>
@@ -143,7 +143,12 @@
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                        </ul>
+                                                                                                                <li class="method private inherited">
+                            <a href="#method_checkRequiredFields" title="checkRequiredFields :: Returns true if all required fields are in the json response">
+                                <span class="description">Returns true if all required fields are in the json response</span><pre>checkRequiredFields</pre>
+                            </a>
+                        </li>
+                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -233,12 +238,39 @@
                             </div>
 
                         </div>
+                                            <a id="method_checkRequiredFields"></a>
+                        <div class="element clickable method private  method_checkRequiredFields inherited" data-toggle="collapse" data-target=".method_checkRequiredFields .collapse">
+                            <h2>Returns true if all required fields are in the json response</h2>
+                            <pre>checkRequiredFields(Array|\EasyTransac\Requests\stdClass $json) : boolean</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$json</h4>
+                                                <code>Array|\EasyTransac\Requests\stdClass</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_execute"></a>
-                        <div class="element clickable method public  method_execute" data-toggle="collapse" data-target=".method_execute .collapse">
+                        <div class="element clickable method public  method_execute inherited" data-toggle="collapse" data-target=".method_execute .collapse">
                             <h2>Calls the API function</h2>
                             <pre>execute(\EasyTransac\Entities\Entity $entity) : \EasyTransac\Responses\StandardResponse</pre>
                             <div class="labels">
-                                                                                                                                                                                            </div>
+                                <span class="label">inherited</span>                                                                                                <span class="label">abstract</span>                                                            </div>
 
                             
                             <div class="row collapse">
@@ -323,6 +355,31 @@
                                                                             </div>
                                 </div>
                             </div>
+                                                    <a id="property_requiredFields"> </a>
+                            <div class="element clickable property  protected property_requiredFields inherited" data-toggle="collapse" data-target=".property_requiredFields .collapse">
+                                <h2>requiredFields</h2>
+                                <pre>requiredFields : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
                                                             </div>
             </div>
             <a id="\EasyTransac\Requests\AddCreditCard"></a>
@@ -343,7 +400,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 07 Sep 2016 14:16:40 +0200.<br/>
+            generated on Fri, 09 Dec 2016 14:39:00 +0100.<br/>
     </footer>
     </body>
 </html>

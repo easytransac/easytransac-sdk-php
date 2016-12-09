@@ -2,6 +2,10 @@
 
 namespace EasyTransac\Core;
 
+/**
+ * Caller using file_get_contents
+ * @author klyde
+ */
 class FgcCaller implements ICaller
 {
 	protected $timeout = null;

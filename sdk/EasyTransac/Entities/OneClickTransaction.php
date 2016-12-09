@@ -22,6 +22,14 @@ class OneClickTransaction extends Entity
     /** @map:Alias **/
     protected $alias = null;
 
+    public function __construct()
+    {
+    	parent::__construct();
+    	 
+    	if (isset($_SERVER['REMOVE_ADDR']) && !empty($_SERVER['REMOVE_ADDR']))
+    		$this->setClientIp($_SERVER['REMOVE_ADDR']);
+    }
+    
     public function setAlias($value)
     {
         $this->alias = $value;
