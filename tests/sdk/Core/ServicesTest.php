@@ -39,6 +39,7 @@ class ServicesTest extends PHPUnit_Framework_TestCase
 	{
 		$this->setExpectedException(\RuntimeException::class);
 		$args = [];
+		\EasyTransac\Core\Services::getInstance()->provideAPIKey(null);
 		\EasyTransac\Core\Services::getInstance()->call('test', $args);
 	}
 
