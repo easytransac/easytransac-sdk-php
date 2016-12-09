@@ -43,7 +43,19 @@ class PaymentPageTransaction extends Entity
     protected $userAgent = null;
     /** @map:Language **/
     protected $language = null;
+    /** @map:Version **/
+    protected $version = null;
 
+    public function __construct()
+    {
+    	parent::__construct();
+    	 
+    	if (isset($_SERVER['REMOVE_ADDR']) && !empty($_SERVER['REMOVE_ADDR']))
+    		$this->setClientIp($_SERVER['REMOVE_ADDR']);
+    	
+    	$this->setUserAgent('USER_AGENT');
+    }
+    
     public function getSendEmail()
     {
         return $this->sendEmail;
@@ -52,6 +64,18 @@ class PaymentPageTransaction extends Entity
     public function setSendEmail($sendEmail)
     {
         $this->sendEmail = $sendEmail;
+
+        return $this;
+    }
+
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    public function setVersion($version)
+    {
+        $this->version = $version;
 
         return $this;
     }

@@ -20,7 +20,19 @@ class PaymentRefund extends Request
      */
     public function execute(Entity $entity)
     {
-        return parent::call('/payment/refund', $entity);
+    	$this->requiredFields = [
+    		'Tid',
+    		'Status',
+    		'Date',
+    		'Amount',
+    		'FixFees',
+    		'Message',
+    		'3DSecure',
+    		'OneClick',
+    		'Alias',
+    	];
+    	
+        return $this->call('/payment/refund', $entity);
     }
 }
 

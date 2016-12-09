@@ -14,6 +14,7 @@ use \EasyTransac\Core\CommentParser;
  */
 abstract class Request
 {
+	protected $requiredFields = []; 
 	
 	/**
 	 * Calls the API function
@@ -31,7 +32,8 @@ abstract class Request
     {
         try
         {
-            $response = Services::getInstance()->call($funcName, $entity->toArray());
+        	$params = $entity->toArray();
+            $response = Services::getInstance()->call($funcName, $params);
 
             $json = json_decode($response);
             if (!$json)
@@ -39,7 +41,16 @@ abstract class Request
                 return (new StandardResponse())
                     ->setErrorMessage('Unable to json decode, response is malformed or empty');
             }
-
+            
+            $sameSignature = isset($params['Signature']) && property_exists($json, 'Signature') &&
+            	$json->Signature == $params['Signature'];
+            
+            if (!$sameSignature)
+            {
+            	return (new StandardResponse())
+            		->setErrorMessage('The signatures of the request and the response are not the same');
+            }
+            	
             if ($json->Code != '0')
             {
                 return (new StandardResponse())
@@ -47,14 +58,22 @@ abstract class Request
                     ->setErrorCode($json->Code);
             }
             else
-                return $this->mapResponse($json->Result);
+            {
+            	if (!$this->checkRequiredFields($json->Result))
+            	{
+            		return (new StandardResponse())
+            			->setErrorMessage('One or more required fields in the response are missing');
+            	}
+            	
+            	return $this->mapResponse($json->Result);;
+            }
         }
         catch (Exception $e)
         {
             return (new StandardResponse())->setErrorMessage($e->getMessage());
         }
     }
-
+    
     /**
      * Makes the relation between API field names and entity attributes and hydrates the correct entity
      * @param \stdClass $fields
@@ -74,7 +93,7 @@ abstract class Request
             {
                 $className = '\\EasyTransac\\Entities\\'.$result['name'];
                 $entity = new $className();
-                $entity->hydrate($fields);
+                $entity->hydrate($fields, true);
                 break;
             }
         }
@@ -82,6 +101,25 @@ abstract class Request
         $sr->setContent($entity);
 
         return $sr;
+    }
+    
+    /**
+     * Returns true if all required fields are in the json response
+     * @param Array|stdClass $json
+     * @return boolean
+     */
+    private function checkRequiredFields($json)
+    {
+    	foreach ($this->requiredFields as $field)
+    	{
+    		if ((is_string($field) && is_object($json) && !property_exists($json, $field)) || 
+    			(!is_string($field) && (!$this->checkRequiredFields($field))))
+    		{
+    			return false;
+    		}
+    	}
+    	 
+    	return true;
     }
 }
 

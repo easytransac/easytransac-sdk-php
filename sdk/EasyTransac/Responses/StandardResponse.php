@@ -15,7 +15,28 @@ class StandardResponse
     protected $errorMessage;
     protected $errorCode;
     protected $success = false;
-
+    protected $sameSignature = false;
+    
+    /**
+     * Defines is the signature request/response is the same
+     * @param Boolean $same
+     * @return \EasyTransac\Responses\StandardResponse
+     */
+    public function setSameSignature($same)
+    {
+    	$this->sameSignature = $same;
+    	return $this;
+    }
+    
+    /**
+     * Returns true if the signature request/response is the same
+     * @return boolean|Boolean
+     */
+    public function isSameSignature()
+    {
+    	return $this->sameSignature;
+    }
+    
     /**
      * Returns if the response is OK
      * @return boolean

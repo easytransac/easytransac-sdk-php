@@ -23,14 +23,15 @@ abstract class Entity
     /**
      * Allows to fill the entity with data returned by the EasyTransac API
      * @param Mixed $fields Array or \stdClass
+     * @param Boolean $checkRequired
      * @return \EasyTransac\Entities\Entity
      */
-    public function hydrate($fields)
+    public function hydrate($fields, $checkRequired = false)
     {
         if (is_array($fields))
-            $this->hydrateWithArray($fields);
+            $this->hydrateWithArray($fields, $checkRequired);
         else if(is_object($fields))
-            $this->hydrateWidthObject($fields);
+            $this->hydrateWidthObject($fields, $checkRequired);
 
         Logger::getInstance()->write($this->toArray());
         
@@ -74,8 +75,9 @@ abstract class Entity
     /**
      * Fill the entity with an list of entity (see: CreditCardList with comment tag @array)
      * @param Array<Entity> $itemsList
+     * @param Boolean $checkRequired
      */
-    protected function hydrateWithArray($itemsList)
+    protected function hydrateWithArray($itemsList, $checkRequired = false)
     {
         $field = null;
         foreach ($this->mapping as $key => $value)
@@ -99,12 +101,13 @@ abstract class Entity
     /**
      * Fill the entity with the API json response
      * @param \stdClass $fields
+     * @param Boolean $checkRequired
      */
-    protected function hydrateWidthObject($fields)
+    protected function hydrateWidthObject($fields, $checkRequired = false)
     {
         foreach ($this->mapping as $key => $value)
         {
-            if ($value['type'] == 'map' && isset($fields->{$value['name']}))
+            if ($value['type'] == 'map' && property_exists($fields, $value['name']))
             {
                 $this->{$key} = $fields->{$value['name']};
                 
@@ -113,7 +116,7 @@ abstract class Entity
                 else if ($this->{$key} == 'no')
                     $this->{$key} = false;
             }
-            else if($value['type'] == 'object' && isset($fields->{$value['name']}))
+            else if($value['type'] == 'object' && property_exists($fields, $value['name']))
             {
             	$className = '\\EasyTransac\\Entities\\'.$value['name'];
             	$e = new $className();

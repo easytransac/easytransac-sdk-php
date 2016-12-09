@@ -20,7 +20,18 @@ class DirectPayment extends Request
     */
     public function execute(Entity $entity)
     {
-        return parent::call('/payment/direct', $entity);
+    	$this->requiredFields = [
+    		'Tid',
+    		'Status',
+    		'Date',
+    		'Amount',
+    		'FixFees',
+    		'Message',
+    		'3DSecure',
+    		'OneClick',
+    	];
+    	
+        return $this->call('/payment/direct', $entity);
     }
 }
 

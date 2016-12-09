@@ -20,7 +20,7 @@ class UpdateUser extends Request
      */
     public function execute(Entity $entity)
     {
-        return parent::call('/user/update', $entity);
+        return $this->call('/user/update', $entity);
     }
 }
 

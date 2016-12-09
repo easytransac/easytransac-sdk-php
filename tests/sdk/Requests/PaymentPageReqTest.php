@@ -12,7 +12,7 @@ class PaymentPageReqTest extends PHPUnit_Framework_TestCase
 		
 		$mockCaller->expects($this->once())
 			->method('call')
-			->willReturn('{"Code":0,"Signature":"752c14ea195c460bac3c3b7896975ee9fd15eeb7","Result":{"RequestId":"a1b2c3d4e5f6","Status":"pending","Date":"2015-11-2616:12:01","Amount":"29.99","FixFees":"0.01","3DSecure":"yes","PageUrl":"https://www.easytransac.com/pay/a1b2c3d4e5f6","MailSent":"yes","Email":"john@doe.com"}}');
+			->willReturn('{"Code":0,"Signature":"34419f91e080e64caddc429fde0ac1ac965012fe","Result":{"RequestId":"a1b2c3d4e5f6","Status":"pending","Date":"2015-11-2616:12:01","Amount":"29.99","FixFees":"0.01","3DSecure":"yes","PageUrl":"https://www.easytransac.com/pay/a1b2c3d4e5f6","MailSent":"yes","Email":"john@doe.com","Language":"FRE"}}');
 		
 		\EasyTransac\Core\Services::getInstance()->setCaller($mockCaller);
 		\EasyTransac\Core\Services::getInstance()->removeModifier();
@@ -59,7 +59,7 @@ class PaymentPageReqTest extends PHPUnit_Framework_TestCase
 	
 		$mockCaller->expects($this->once())
 			->method('call')
-			->willReturn('{"Code":123,"Error":"bad request"}');
+			->willReturn('{"Code":123,"Error":"bad request","Signature":"34419f91e080e64caddc429fde0ac1ac965012fe"}');
 	
 		\EasyTransac\Core\Services::getInstance()->setCaller($mockCaller);
 		\EasyTransac\Core\Services::getInstance()->removeModifier();
@@ -71,7 +71,7 @@ class PaymentPageReqTest extends PHPUnit_Framework_TestCase
 	
 		$this->assertTrue($response instanceof \EasyTransac\Responses\StandardResponse);
 		$this->assertFalse($response->isSuccess());
-		$this->assertNotEmpty($response->getErrorMessage());
+		$this->assertNotEmpty($response->getErrorMessage());var_dump($response->getErrorMessage());
 		$this->assertEquals($response->getErrorCode(), 123);
 	}
 }

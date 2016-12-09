@@ -20,7 +20,20 @@ class PaymentPage extends Request
      */
     public function execute(Entity $entity)
     {
-        return parent::call('/payment/page', $entity);
+    	$this->requiredFields = [
+    		'RequestId',
+    		'Status',
+    		'Date',
+    		'Amount',
+    		'FixFees',
+    		'3DSecure',
+    		'PageUrl',
+    		'MailSent',
+    		'Email',
+    		'Language',
+    	];
+    	
+        return $this->call('/payment/page', $entity);
     }
 }
 

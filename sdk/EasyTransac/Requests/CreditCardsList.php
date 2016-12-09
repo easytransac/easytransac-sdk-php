@@ -20,7 +20,18 @@ class CreditCardsList extends Request
      */
     public function execute(Entity $entity)
     {
-        return parent::call('/payment/listcards', $entity);
+    	$this->requiredFields = [
+    		'ClientId',
+    		'Alias',
+    		'CardNumber',
+    		'CardMonth',
+    		'CardYear',
+    		'CardType',
+    		'CardCountry',
+    		'LastAccessed',
+    	];
+    	
+        return $this->call('/payment/listcards', $entity);
     }
 }
 

@@ -38,7 +38,8 @@ class ServicesTest extends PHPUnit_Framework_TestCase
 	public function testCallExceptionApiKey()
 	{
 		$this->setExpectedException(\RuntimeException::class);
-		\EasyTransac\Core\Services::getInstance()->call('test', []);
+		$args = [];
+		\EasyTransac\Core\Services::getInstance()->call('test', $args);
 	}
 
 	public function testCallExceptionCaller()
@@ -46,7 +47,8 @@ class ServicesTest extends PHPUnit_Framework_TestCase
 		$this->setExpectedException(\RuntimeException::class);
 		\EasyTransac\Core\Services::getInstance()->provideAPIKey('test');
 		\EasyTransac\Core\Services::getInstance()->removeCaller();
-		\EasyTransac\Core\Services::getInstance()->call('test', []);
+		$args = [];
+		\EasyTransac\Core\Services::getInstance()->call('test', $args);
 	}
 	
 	public function testCallWithoutModifier()
@@ -63,7 +65,8 @@ class ServicesTest extends PHPUnit_Framework_TestCase
 		\EasyTransac\Core\Services::getInstance()->provideAPIKey('test');
 		\EasyTransac\Core\Services::getInstance()->removeModifier();
 		
-		$response = \EasyTransac\Core\Services::getInstance()->call('test', []);
+		$args = [];
+		$response = \EasyTransac\Core\Services::getInstance()->call('test', $args);
 		$this->assertEquals($response, '{"Code":0}');
 	}
 
@@ -82,7 +85,8 @@ class ServicesTest extends PHPUnit_Framework_TestCase
 		\EasyTransac\Core\Services::getInstance()->removeModifier();
 		
 		$this->setExpectedException(\RuntimeException::class);
-		\EasyTransac\Core\Services::getInstance()->call('test', []);
+		$args = [];
+		\EasyTransac\Core\Services::getInstance()->call('test', $args);
 	}
 
 	public function testCallWithModifierLimitedWithNotAuthorizedUrl()
@@ -92,7 +96,8 @@ class ServicesTest extends PHPUnit_Framework_TestCase
 		\EasyTransac\Core\Services::getInstance()->setModifier(new \EasyTransac\Core\LimitedModifier());
 		
 		$this->setExpectedException(\RuntimeException::class);
-		\EasyTransac\Core\Services::getInstance()->call('test', []);
+		$args = [];
+		\EasyTransac\Core\Services::getInstance()->call('test', $args);
 	}
 
 	public function testCallWithModifierLimitedWithAuthorizedUrl()
@@ -109,7 +114,8 @@ class ServicesTest extends PHPUnit_Framework_TestCase
 		\EasyTransac\Core\Services::getInstance()->provideAPIKey('test');
 		\EasyTransac\Core\Services::getInstance()->setModifier(new \EasyTransac\Core\LimitedModifier());
 		
-		$response = \EasyTransac\Core\Services::getInstance()->call('/payment/oneclick', []);
+		$args = [];
+		$response = \EasyTransac\Core\Services::getInstance()->call('/payment/oneclick', $args);
 		
 		$this->assertEquals($response, '{"Code":0}');
 	}

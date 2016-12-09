@@ -20,7 +20,11 @@ class Cancellation extends Request
      */
     public function execute(Entity $entity)
     {
-        return parent::call('/payment/cancel', $entity);
+    	$this->requiredFields = [
+    		'Date',
+    	];
+    	
+        return $this->call('/payment/cancel', $entity);
     }
 }
 
