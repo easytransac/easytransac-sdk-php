@@ -256,7 +256,6 @@ class PaymentPageTransaction extends Entity
         $this->language = $language;
         return $this;
     }
-
 }
 
 ?>

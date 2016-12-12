@@ -15,6 +15,9 @@ class OneClickTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setDescription($f['Description']);
     	$c->setOrderId($f['OrderId']);
     	$c->setUid($f['Uid']);
+    	$c->setLanguage($f['Language']);
+    	$c->setUserAgent($f['UserAgent']);
+    	$c->setPayToEmail($f['PayToEmail']);
     	
     	$this->assertEquals($c->getAlias(), $f['Alias']);
     	$this->assertEquals($c->getAmount(), $f['Amount']);
@@ -22,6 +25,9 @@ class OneClickTransactionTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getDescription(), $f['Description']);
     	$this->assertEquals($c->getOrderId(), $f['OrderId']);
     	$this->assertEquals($c->getUid(), $f['Uid']);
+    	$this->assertEquals($c->getLanguage(), $f['Language']);
+    	$this->assertEquals($c->getUserAgent(), $f['UserAgent']);
+    	$this->assertEquals($c->getPayToEmail(), $f['PayToEmail']);
     }
 
     public function testToArray()
@@ -35,6 +41,9 @@ class OneClickTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setDescription($f['Description']);
     	$c->setOrderId($f['OrderId']);
     	$c->setUid($f['Uid']);
+    	$c->setLanguage($f['Language']);
+    	$c->setUserAgent($f['UserAgent']);
+    	$c->setPayToEmail($f['PayToEmail']);
     	
     	$this->assertEquals($c->toArray(), $f);
     }
@@ -56,6 +65,9 @@ class OneClickTransactionTest extends PHPUnit_Framework_TestCase
     		'Description' => 345,
     		'ClientIp' => '127.0.0.1',
     		'Alias' => 546,
+    		'Language' => 'FRE',
+    		'UserAgent' => 'Firefox',
+    		'PayToEmail' => 'test@test.com'
     	];
     }
 }

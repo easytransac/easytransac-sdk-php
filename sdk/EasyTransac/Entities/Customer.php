@@ -31,6 +31,10 @@ class Customer extends Entity
     protected $city = null;
     /** @map:Uid **/
     protected $uid = null;
+    /** @map:ClientId **/
+    protected $clientId = null;
+    /** @map:Country **/
+    protected $country = null;
 
     public function setUid($value)
     {
@@ -152,7 +156,28 @@ class Customer extends Entity
     {
         return $this->email;
     }
-
+    
+	public function getClientId() 
+	{
+		return $this->clientId;
+	}
+	
+	public function setClientId($clientId) 
+	{
+		$this->clientId = $clientId;
+		return $this;
+	}
+	
+	public function getCountry() 
+	{
+		return $this->country;
+	}
+	
+	public function setCountry($country) 
+	{
+		$this->country = $country;
+		return $this;
+	}
 }
 
 ?>

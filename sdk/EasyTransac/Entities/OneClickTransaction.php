@@ -21,6 +21,12 @@ class OneClickTransaction extends Entity
     protected $clientIp = null;
     /** @map:Alias **/
     protected $alias = null;
+    /** @map:PayToEmail **/
+    protected $payToEmail = null;
+    /** @map:UserAgent **/
+    protected $userAgent = null;
+    /** @map:Language **/
+    protected $language = null;
 
     public function __construct()
     {
@@ -28,6 +34,8 @@ class OneClickTransaction extends Entity
     	 
     	if (isset($_SERVER['REMOVE_ADDR']) && !empty($_SERVER['REMOVE_ADDR']))
     		$this->setClientIp($_SERVER['REMOVE_ADDR']);
+    	
+    	$this->setUserAgent('USER_AGENT');
     }
     
     public function setAlias($value)
@@ -95,6 +103,39 @@ class OneClickTransaction extends Entity
     {
         return $this->amount;
     }
+    
+	public function getPayToEmail() 
+	{
+		return $this->payToEmail;
+	}
+	
+	public function setPayToEmail($payToEmail) 
+	{
+		$this->payToEmail = $payToEmail;
+		return $this;
+	}
+	
+	public function getUserAgent() 
+	{
+		return $this->userAgent;
+	}
+	
+	public function setUserAgent($userAgent) 
+	{
+		$this->userAgent = $userAgent;
+		return $this;
+	}
+	
+	public function getLanguage() 
+	{
+		return $this->language;
+	}
+	
+	public function setLanguage($language) 
+	{
+		$this->language = $language;
+		return $this;
+	}
 }
 
 ?>

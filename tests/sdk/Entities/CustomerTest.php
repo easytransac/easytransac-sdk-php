@@ -20,6 +20,8 @@ class CustomerTest extends PHPUnit_Framework_TestCase
     	$c->setPhone($f['Phone']);
     	$c->setUid($f['Uid']);
     	$c->setZipCode($f['ZipCode']);
+    	$c->setCountry($f['Country']);
+    	$c->setClientId($f['ClientId']);
     	
     	$this->assertEquals($c->getAddress(), $f['Address']);
     	$this->assertEquals($c->getBirthDate(), $f['BirthDate']);
@@ -32,6 +34,8 @@ class CustomerTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getPhone(), $f['Phone']);
     	$this->assertEquals($c->getUid(), $f['Uid']);
     	$this->assertEquals($c->getZipCode(), $f['ZipCode']);
+    	$this->assertEquals($c->getCountry(), $f['Country']);
+    	$this->assertEquals($c->getClientId(), $f['ClientId']);
     }
 
     public function testToArray()
@@ -50,6 +54,8 @@ class CustomerTest extends PHPUnit_Framework_TestCase
     	$c->setPhone($f['Phone']);
     	$c->setUid($f['Uid']);
     	$c->setZipCode($f['ZipCode']);
+    	$c->setCountry($f['Country']);
+    	$c->setClientId($f['ClientId']);
     	
     	$this->assertEquals($c->toArray(), $this->getFixture());
     }
@@ -76,6 +82,8 @@ class CustomerTest extends PHPUnit_Framework_TestCase
     		'ZipCode' => '67000',
     		'City' => 'Strasbourg',
     		'Uid' => '1234',
+    		'ClientId' => '12',
+    		'Country' => 'FRA'
     	];
     }
 }
