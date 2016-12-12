@@ -24,6 +24,12 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setMultiplePayments($f['MultiplePayments']);
     	$c->setOrderId($f['OrderId']);
     	$c->setSecure($f['3DS']);
+    	$c->setUserAgent($f['UserAgent']);
+    	$c->setLanguage($f['Language']);
+    	$c->setPayToEmail($f['PayToEmail']);
+    	$c->setRecurrence($f['Recurrence']);
+    	$c->setRebill($f['Rebill']);
+    	$c->setMultiplePaymentsRepeat($f['MultiplePaymentsRepeat']);
     	
     	$this->assertEquals($c->getAmount(), $f['Amount']);
     	$this->assertEquals($c->getClientIp(), $f['ClientIp']);
@@ -34,6 +40,12 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getMultiplePayments(), $f['MultiplePayments']);
     	$this->assertEquals($c->getOrderId(), $f['OrderId']);
     	$this->assertEquals($c->getSecure(), $f['3DS']);
+    	$this->assertEquals($c->getUserAgent(), $f['UserAgent']);
+    	$this->assertEquals($c->getLanguage(), $f['Language']);
+    	$this->assertEquals($c->getPayToEmail(), $f['PayToEmail']);
+    	$this->assertEquals($c->getRecurrence(), $f['Recurrence']);
+    	$this->assertEquals($c->getRebill(), $f['Rebill']);
+    	$this->assertEquals($c->getMultiplePaymentsRepeat(), $f['MultiplePaymentsRepeat']);
     }
 
     public function testToArray()
@@ -56,6 +68,12 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setMultiplePayments($f['MultiplePayments']);
     	$c->setOrderId($f['OrderId']);
     	$c->setSecure($f['3DS']);
+    	$c->setUserAgent($f['UserAgent']);
+    	$c->setLanguage($f['Language']);
+    	$c->setPayToEmail($f['PayToEmail']);
+    	$c->setRecurrence($f['Recurrence']);
+    	$c->setRebill($f['Rebill']);
+    	$c->setMultiplePaymentsRepeat($f['MultiplePaymentsRepeat']);
     	
     	$this->assertEquals($c->toArray(), $this->getFixture(true));
     }
@@ -80,12 +98,18 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
 	    		'3DS' => false,
 	    		'DownPayment' => 3500,
 	    		'MultiplePayments' => 3,
+	    		'MultiplePaymentsRepeat' => 3,
 	    		'Customer' => [
 	    			'Lastname' => 'mich'
 	    		],
 	    		'CreditCard' => [
 	    			'CardNumber' => '1234567891234567'
 	    		],
+	    		'Rebill' => true,
+	    		'Recurrence' => 'monthly',
+	    		'PayToEmail' => 'test@test.com',
+	    		'UserAgent' => 'ua',
+	    		'Language' => 'FRE'
 	    	];
     	}
     	else
@@ -98,8 +122,14 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
     			'3DS' => false,
     			'DownPayment' => 3500,
     			'MultiplePayments' => 3,
+    			'MultiplePaymentsRepeat' => 3,
     			'Lastname' => 'mich',
-    			'CardNumber' => '1234567891234567'
+    			'CardNumber' => '1234567891234567',
+    			'Rebill' => true,
+    			'Recurrence' => 'monthly',
+    			'PayToEmail' => 'test@test.com',
+    			'UserAgent' => 'ua',
+    			'Language' => 'FRE'
     		];
     	}
     }

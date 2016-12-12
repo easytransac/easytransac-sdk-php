@@ -23,6 +23,18 @@ class DirectTransaction extends Entity
     protected $downPayment = null;
     /** @map:MultiplePayments **/
     protected $multiplePayments = null;
+    /** @map:MultiplePaymentsRepeat **/
+    protected $multiplePaymentsRepeat = null;
+    /** @map:Rebill **/
+    protected $rebill = null;
+    /** @map:Recurrence **/
+    protected $recurrence = null;
+    /** @map:PayToEmail **/
+    protected $payToEmail = null;
+    /** @map:UserAgent **/
+    protected $userAgent = null;
+    /** @map:Language **/
+    protected $language = null;
     /** @object:Customer **/
     protected $customer = null;
     /** @object:CreditCard **/
@@ -34,6 +46,8 @@ class DirectTransaction extends Entity
     	 
     	if (isset($_SERVER['REMOVE_ADDR']) && !empty($_SERVER['REMOVE_ADDR']))
     		$this->setClientIp($_SERVER['REMOVE_ADDR']);
+    	
+    	$this->setUserAgent('USER_AGENT');
     }
     
     public function setCreditCard(CreditCard $value)
@@ -134,6 +148,71 @@ class DirectTransaction extends Entity
     {
         return $this->amount;
     }
+    
+	public function getMultiplePaymentsRepeat() 
+	{
+		return $this->multiplePaymentsRepeat;
+	}
+	
+	public function setMultiplePaymentsRepeat($multiplePaymentsRepeat) 
+	{
+		$this->multiplePaymentsRepeat = $multiplePaymentsRepeat;
+		return $this;
+	}
+	
+	public function getRebill() 
+	{
+		return $this->rebill;
+	}
+	
+	public function setRebill($rebill) 
+	{
+		$this->rebill = $rebill;
+		return $this;
+	}
+	
+	public function getRecurrence() 
+	{
+		return $this->recurrence;
+	}
+	
+	public function setRecurrence($recurrence) 
+	{
+		$this->recurrence = $recurrence;
+		return $this;
+	}
+	
+	public function getPayToEmail() 
+	{
+		return $this->payToEmail;
+	}
+	
+	public function setPayToEmail($payToEmail) 
+	{
+		$this->payToEmail = $payToEmail;
+		return $this;
+	}
+	
+	public function getUserAgent() 
+	{
+		return $this->userAgent;
+	}
+	
+	public function setUserAgent($userAgent) 
+	{
+		$this->userAgent = $userAgent;
+		return $this;
+	}
+	
+	public function getLanguage() 
+	{
+		return $this->language;
+	}
+	
+	public function setLanguage($language) {
+		$this->language = $language;
+		return $this;
+	}
 }
 
 ?>
