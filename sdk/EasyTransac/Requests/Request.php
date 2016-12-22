@@ -41,15 +41,6 @@ abstract class Request
                 return (new StandardResponse())
                     ->setErrorMessage('Unable to json decode, response is malformed or empty');
             }
-            
-            $sameSignature = isset($params['Signature']) && property_exists($json, 'Signature') &&
-            	$json->Signature == $params['Signature'];
-            
-            if (!$sameSignature)
-            {
-            	return (new StandardResponse())
-            		->setErrorMessage('The signatures of the request and the response are not the same');
-            }
             	
             if ($json->Code != '0')
             {
@@ -59,6 +50,15 @@ abstract class Request
             }
             else
             {
+	            $sameSignature = isset($params['Signature']) && property_exists($json, 'Signature') &&
+	            	$json->Signature == $params['Signature'];
+	            
+	            if (!$sameSignature)
+	            {
+	            	return (new StandardResponse())
+	            		->setErrorMessage('The signatures of the request and the response are not the same');
+	            }
+	            
             	if (!$this->checkRequiredFields($json->Result))
             	{
             		return (new StandardResponse())
