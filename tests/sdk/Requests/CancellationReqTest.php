@@ -12,8 +12,8 @@ class CancellationReqTest extends PHPUnit_Framework_TestCase
 		
 		$mockCaller->expects($this->once())
 			->method('call')
-			->willReturn('{"Code":0,"Signature":"a9993e364706816aba3e25717850c26c9cd0d89d","Result":{"OriginalPaymentTid":"xCww78db","Date":"2016-01-2616:12:01","Message":"Recurringtransactioncancelled"}}');
-		
+			->willReturn('{"Code":0,"Signature":"8b8d68408e3edb0ca88d265b4b34a4081544dabf","Result":{"OriginalPaymentTid":"xCww78db","Date":"2016-01-2616:12:01","Message":"Recurringtransactioncancelled"}}');
+			
 		\EasyTransac\Core\Services::getInstance()->setCaller($mockCaller);
 		\EasyTransac\Core\Services::getInstance()->removeModifier();
 		\EasyTransac\Core\Services::getInstance()->provideAPIKey('abc');

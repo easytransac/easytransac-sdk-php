@@ -26,6 +26,9 @@ class Security
             ksort($params);
             foreach ($params as $name => $valeur)
             {
+            	if (is_object($valeur))
+            		$valeur = (array) $valeur;
+            	
                 if (strcasecmp($name, 'signature') != 0)
                 {
                     if (is_array($valeur))
