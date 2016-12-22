@@ -111,6 +111,15 @@ class Services
         
         return $this;
     }
+    
+    /**
+     * Returns the api key provided
+     * @return String
+     */
+    public function getAPIKey()
+    {
+    	return $this->key;
+    }
 
     /**
      * Returns if debug mode is active

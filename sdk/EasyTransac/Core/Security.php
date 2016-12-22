@@ -17,6 +17,9 @@ class Security
 	 */
     public static function getSignature($params, $apiKey)
     {
+    	if (is_object($params))
+    		$params = (array) $params;
+    	
         $signature = '';
         if (is_array($params))
         {

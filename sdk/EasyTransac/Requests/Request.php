@@ -6,6 +6,7 @@ use \EasyTransac\Core\Services;
 use \EasyTransac\Entities\Entity;
 use \EasyTransac\Responses\StandardResponse;
 use \EasyTransac\Core\CommentParser;
+use EasyTransac\Core\Security;
 
 /**
  * Gerenic request
@@ -50,8 +51,8 @@ abstract class Request
             }
             else
             {
-	            $sameSignature = isset($params['Signature']) && property_exists($json, 'Signature') &&
-	            	$json->Signature == $params['Signature'];
+	            $sameSignature = property_exists($json, 'Signature') 
+	            	&& $json->Signature == Security::getSignature($json->Result, \EasyTransac\Core\Services::getInstance()->getAPIKey());
 	            
 	            if (!$sameSignature)
 	            {
