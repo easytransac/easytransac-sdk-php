@@ -12,8 +12,8 @@ class PaymentPageReqTest extends PHPUnit_Framework_TestCase
 		
 		$mockCaller->expects($this->once())
 			->method('call')
-			->willReturn('{"Code":0,"Signature":"34419f91e080e64caddc429fde0ac1ac965012fe","Result":{"RequestId":"a1b2c3d4e5f6","Status":"pending","Date":"2015-11-2616:12:01","Amount":"29.99","FixFees":"0.01","3DSecure":"yes","PageUrl":"https://www.easytransac.com/pay/a1b2c3d4e5f6","MailSent":"yes","Email":"john@doe.com","Language":"FRE"}}');
-		
+			->willReturn('{"Code":0,"Signature":"8f3a03000b77e723f6b124b9eb7b78ee0dcfeab9","Result":{"RequestId":"a1b2c3d4e5f6","Status":"pending","Date":"2015-11-2616:12:01","Amount":"29.99","FixFees":"0.01","3DSecure":"yes","PageUrl":"https://www.easytransac.com/pay/a1b2c3d4e5f6","MailSent":"yes","Email":"john@doe.com","Language":"FRE"}}');
+			
 		\EasyTransac\Core\Services::getInstance()->setCaller($mockCaller);
 		\EasyTransac\Core\Services::getInstance()->removeModifier();
 		\EasyTransac\Core\Services::getInstance()->provideAPIKey('abc');

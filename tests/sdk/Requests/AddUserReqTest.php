@@ -12,8 +12,8 @@ class AddUserReqTest extends PHPUnit_Framework_TestCase
 		
 		$mockCaller->expects($this->once())
 			->method('call')
-			->willReturn('{"Code":0,"Signature":"a9993e364706816aba3e25717850c26c9cd0d89d","Result":{"Id":"28861561","Message":"Userjohn@doe.comadded"}}');
-		
+			->willReturn('{"Code":0,"Signature":"8f0c9a3ef3fa2d862497de78ec0a2892005f6802","Result":{"Id":"28861561","Message":"Userjohn@doe.com"}}');
+			
 		\EasyTransac\Core\Services::getInstance()->setCaller($mockCaller);
 		\EasyTransac\Core\Services::getInstance()->removeModifier();
 		\EasyTransac\Core\Services::getInstance()->provideAPIKey('abc');
