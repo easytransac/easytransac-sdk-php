@@ -72,7 +72,10 @@ class CurlCaller implements ICaller
 			curl_setopt($this->curlInstance, CURLOPT_HTTPHEADER, $this->headers);
 			
 		if ($this->timeout != null)
+		{
 			curl_setopt($this->curlInstance, CURLOPT_TIMEOUT, $this->timeout);
+			curl_setopt($this->curlInstance, CURLOPT_CONNECTTIMEOUT, $this->timeout);
+		}
 			
 		curl_setopt($this->curlInstance, CURLOPT_URL, $url);
 		

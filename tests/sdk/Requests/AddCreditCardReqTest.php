@@ -12,7 +12,7 @@ class AddCreditCardReqTest extends PHPUnit_Framework_TestCase
 		
 		$mockCaller->expects($this->once())
 			->method('call')
-			->willReturn('{"Code":0,"Signature":"a5ac24b84a0d13b4199ecbd084bcb54a6351400f","Result":[{"Alias":"a1b2c3d4","CardNumber":"4234********4321","CardMonth":"09","CardYear":"2020","CardType":"visa","CardCountry":"FRA","LastAccessed":"2015-11-2617:26:25"}]}');
+			->willReturn('{"Code":0,"Signature":"a5ac24b84a0d13b4199ecbd084bcb54a6351400f","Result":{"Alias":"a1b2c3d4","CardNumber":"4234********4321","CardMonth":"09","CardYear":"2020","CardType":"visa","CardCountry":"FRA","LastAccessed":"2015-11-2617:26:25"}}');
 			
 		\EasyTransac\Core\Services::getInstance()->setCaller($mockCaller);
 		\EasyTransac\Core\Services::getInstance()->removeModifier();
@@ -25,7 +25,7 @@ class AddCreditCardReqTest extends PHPUnit_Framework_TestCase
 		
 		$this->assertTrue($response instanceof \EasyTransac\Responses\StandardResponse);
 		$this->assertTrue($response->isSuccess());
-		$this->assertTrue($response->getContent() instanceof \EasyTransac\Entities\CreditCardsList);
+		$this->assertTrue($response->getContent() instanceof \EasyTransac\Entities\CreditCard);
 		$this->assertTrue(count($response->getContent()->toArray()) > 0);
 	}
 	
