@@ -16,7 +16,7 @@ class Services
     private $caller = null;
     private $modifier;
     private $url = 'https://www.easytransac.com/api';
-    private $timeout = 5;
+    private $timeout = 10;
 
     /**
      * Add a modifier for the caller
