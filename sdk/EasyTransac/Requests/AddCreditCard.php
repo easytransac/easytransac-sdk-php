@@ -11,7 +11,7 @@ use \EasyTransac\Entities\Entity;
  */
 class AddCreditCard extends Request
 {
-    /** @object:CreditCardsList **/
+    /** @object:CreditCard **/
     protected $response;
 
     /**
@@ -22,13 +22,11 @@ class AddCreditCard extends Request
     public function execute(Entity $entity)
     {
     	$this->requiredFields = [
-    		'ClientId',
     		'Alias',
     		'CardNumber',
    			'CardMonth',
    			'CardYear',
     		'CardType',
-    		'CardCountry',
     		'LastAccessed',
     	];
     	
