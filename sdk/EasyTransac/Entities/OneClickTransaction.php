@@ -27,6 +27,8 @@ class OneClickTransaction extends Entity
     protected $userAgent = null;
     /** @map:Language **/
     protected $language = null;
+    /** @map:ClientId **/
+    protected $clientId = null;
 
     public function __construct()
     {
@@ -136,6 +138,18 @@ class OneClickTransaction extends Entity
 		$this->language = $language;
 		return $this;
 	}
+	
+	public function getClientId() 
+	{
+		return $this->clientId;
+	}
+	
+	public function setClientId($clientId) 
+	{
+		$this->clientId = $clientId;
+		return $this;
+	}
+	
 }
 
 ?>
