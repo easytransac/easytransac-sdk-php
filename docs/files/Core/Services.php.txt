@@ -1,0 +1,141 @@
+<?php
+
+namespace EasyTransac\Core;
+
+use \EasyTransac\Core\Security;
+
+/**
+ * Singleton, allows to call EasyTransac API with API key
+ * @author Klyde
+ * @copyright EasyTransac
+ */
+class Services
+{
+    public $debug = false;
+    protected $key = null;
+    protected $timeout = null;
+    protected $curlInstance = null;
+    private static $instance = null;
+
+    /**
+     * Define the time out of the request
+     * @param int $timeout
+     * @return \EasyTransac\Core\Services
+     */
+    public function setRequestTimeout($timeout)
+    {
+        $this->timeout = $timeout;
+        return $this;
+    }
+
+    /**
+     * Define the API key
+     * @param String $key
+     * @return \EasyTransac\Core\Services
+     */
+    public function provideAPIKey($key)
+    {
+        $this->key = $key;
+        return $this;
+    }
+
+    /**
+     * Returns if debug mode is active
+     * @return Boolean
+     */
+    public function isDebug()
+    {
+        return $this->debug;
+    }
+
+    /**
+     * Define the debug mode
+     * @param Boolean $debugMode
+     * @return \EasyTransac\Core\Services
+     */
+    public function setDebug($debugMode)
+    {
+        $this->debug = $debugMode;
+        return $this;
+    }
+
+    /**
+     * Calls the specified EasyTransac function 
+     * @param String $funcName
+     * @param array $params
+     * @return \EasyTransac\Responses\StandardResponse
+     * @throws \RuntimeException
+     */
+    public function call($funcName, array $params)
+    {
+        if (empty($this->key))
+            throw new \RuntimeException("API key not supplied");
+
+        curl_setopt($this->curlInstance, CURLOPT_URL, 'https://www.easytransac.com/api'.$funcName);
+
+        $params['Signature'] = Security::getSignature($params, $this->key);
+
+        if ($this->isDebug())
+            var_dump($params);
+
+        if ($params)
+            curl_setopt($this->curlInstance, CURLOPT_POSTFIELDS, http_build_query($params));
+
+        $response = curl_exec($this->curlInstance);
+
+        if (($errno = curl_errno($this->curlInstance)))
+            throw new \RuntimeException("Curl trouble during the call, please check the error code with Curl documentation", $errno);
+
+        return $response;
+    }
+
+    /**
+     * Returns the single instance of the Services class
+     * @return \EasyTransac\Core\Services
+     */
+    public static function getInstance()
+    {
+        if (self::$instance == null)
+            self::$instance = new self();
+
+        return self::$instance;
+    }
+
+    public function __destruct()
+    {
+        if ($this->curlInstance != null)
+            curl_close($this->curlInstance);
+    }
+
+    private function __construct()
+    {
+        $this->initCurl();
+    }
+
+    private function __clone()
+    {
+
+    }
+
+    /**
+     * Init the curl caller with options we need to contact safely the EasyTransac API
+     */
+    protected function initCurl()
+    {
+        $this->curlInstance = curl_init();
+
+        curl_setopt_array($this->curlInstance, array(
+            CURLOPT_HTTPHEADER => array('EASYTRANSAC-API-KEY:'.$this->key),
+            CURLOPT_POST => true,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSLVERSION => CURL_SSLVERSION_TLSv1,
+            CURLOPT_SSL_VERIFYHOST =>  false,
+            CURLOPT_SSL_VERIFYPEER =>  false
+        ));
+
+        if ($this->timeout != null)
+            curl_setopt($this->curlInstance, CURLOPT_TIMEOUT, $this->timeout);
+    }
+}
+
+?>
