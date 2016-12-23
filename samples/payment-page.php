@@ -16,7 +16,8 @@ $customer = (new Customer())
 $transaction = (new PaymentPageTransaction())
     ->setAmount(1234)
     ->setClientIP('127.0.0.1')
-    ->setCustomer($customer);
+    ->setCustomer($customer)
+    ->setReturnUrl('https://www.easytransac.com');
 
 $request = new PaymentPage();
 $response = $request->execute($transaction);

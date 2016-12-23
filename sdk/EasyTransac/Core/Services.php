@@ -187,8 +187,9 @@ class Services
 			Logger::getInstance()->write($response);
 			return $response;
 		}
-		catch (\RuntimeException $e)
+		catch (\Exception $e)
 		{
+			Logger::getInstance()->write('Exception: '.$e->getMessage().', Code: '.$e->getCode());
 			throw $e;
 		}
     }

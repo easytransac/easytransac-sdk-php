@@ -35,43 +35,43 @@ abstract class Request
         {
         	$params = $entity->toArray();
             $response = Services::getInstance()->call($funcName, $params);
-
-            $json = json_decode($response);
-            if (!$json)
-            {
-                return (new StandardResponse())
-                    ->setErrorMessage('Unable to json decode, response is malformed or empty');
-            }
-            	
-            if ($json->Code != '0')
-            {
-                return (new StandardResponse())
-                    ->setErrorMessage($json->Error)
-                    ->setErrorCode($json->Code);
-            }
-            else
-            {
-	            $sameSignature = property_exists($json, 'Signature') 
-	            	&& $json->Signature == Security::getSignature($json->Result, \EasyTransac\Core\Services::getInstance()->getAPIKey());
-	            
-	            if (!$sameSignature)
-	            {
-	            	return (new StandardResponse())
-	            		->setErrorMessage('The signatures of the request and the response are not the same');
-	            }
-	            
-            	if (!$this->checkRequiredFields($json->Result))
-            	{
-            		return (new StandardResponse())
-            			->setErrorMessage('One or more required fields in the response are missing');
-            	}
-            	
-            	return $this->mapResponse($json->Result);;
-            }
+	        $json = json_decode($response);
+        
+	        if (!$json)
+	        {
+	        	return (new StandardResponse())
+	        		->setErrorMessage('Unable to json decode, response is malformed or empty');
+	        }
+	         
+	        if ($json->Code != '0')
+	        {
+	        	return (new StandardResponse())
+		        	->setErrorMessage($json->Error)
+		        	->setErrorCode($json->Code);
+	        }
+	        else
+	        {
+	        	$sameSignature = property_exists($json, 'Signature')
+	        		&& $json->Signature == Security::getSignature($json->Result, \EasyTransac\Core\Services::getInstance()->getAPIKey());
+	        	 
+	        	if (!$sameSignature)
+	        	{
+	        		return (new StandardResponse())
+	        			->setErrorMessage('The signatures of the request and the response are not the same');
+	        	}
+	        	 
+	        	if (!$this->checkRequiredFields($json->Result))
+	        	{
+	        		return (new StandardResponse())
+	        			->setErrorMessage('One or more required fields in the response are missing');
+	        	}
+	        	 
+	        	return $this->mapResponse($json->Result);;
+	        }
         }
-        catch (Exception $e)
+        catch (\Exception $e)
         {
-            return (new StandardResponse())->setErrorMessage($e->getMessage());
+        	return (new StandardResponse())->setErrorMessage($e->getMessage());
         }
     }
     
