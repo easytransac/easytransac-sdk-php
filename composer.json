@@ -1,5 +1,5 @@
 {
-    "name": "EasyTransac/EasyTransacSDK-PHP",
+    "name": "easytransac/easytransac-sdk-php",
     "description": "A SDK to make payment with the EasyTransac API",
     "require": {
         "php": ">=5.4"
