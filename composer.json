@@ -1,0 +1,12 @@
+{
+    "name": "EasyTransac/EasyTransacSDK-PHP",
+    "description": "A SDK to make payment with the EasyTransac API",
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": { 
+        	"EasyTransac\\": "EasyTransac/" 
+    	}
+	}
+}
