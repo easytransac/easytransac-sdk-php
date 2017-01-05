@@ -18,7 +18,7 @@ Installation
 
 ### By composer
 
-You can write in you terminal in your project repository: 
+Execute this command on you terminal in your project folder: 
 
     composer require easytransac/easytransac-sdk-php
   
@@ -31,18 +31,17 @@ Or add in your *composer.json*:
     
 ### Manually
 
-Download the SDK and put it in your projet.
-For use it, you just need to require the autoload file in *easytransac/easytransac-sdk-php/sdk/EasyTransac/autoload.php*.
+In order to use it, you only need to require the autoload file *easytransac/easytransac-sdk-php/sdk/EasyTransac/autoload.php*.
 
 Unit Testing
 ------------
 
-Our test cases are written under PHPUnit 4.4.1, also if you want launch tests, please check your version for methods compatibility.
+Our test cases are written under PHPUnit 4.4.1, also if you want to launch tests, please check your PHPUnit version for methods compatibility.
 
 Samples
 -------
 
-If you need, samples are provided with the SDK.
+Samples are provided with the SDK.
 
 ### Set up the configuration
 ```php
@@ -112,7 +111,7 @@ else
 ### Push payment notification
 ```php
 // EasyTransac notifies you for the payment status
-// Then in your website, you have to create a script to receipt the notification
+// Then in your website, you have to create a script to receive the notification
 $response = \EasyTransac\Core\PaymentNotification::getContent($_POST);
 
 // Response of type \EasyTransac\Entities\Notification
