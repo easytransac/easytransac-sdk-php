@@ -1,6 +1,8 @@
 EasyTransac SDK (PHP)
 =====================
 
+[![Latest Stable Version](https://poser.pugx.org/easytransac/easytransac-sdk-php/version)](https://packagist.org/packages/easytransac/easytransac-sdk-php)
+
 Make your EasyTransac API implementation easier with our SDK.
 
 The EasyTransac SDK is a tool to process payments with the [EasyTransac API](https://www.easytransac.com/).
