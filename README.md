@@ -1,7 +1,8 @@
 EasyTransac SDK (PHP)
 =====================
-
+[![Build Status](https://travis-ci.org/easytransac/easytransac-sdk-php.svg?branch=master)](https://travis-ci.org/easytransac/easytransac-sdk-php)
 [![Latest Stable Version](https://poser.pugx.org/easytransac/easytransac-sdk-php/version)](https://packagist.org/packages/easytransac/easytransac-sdk-php)
+[![Coverage Status](https://coveralls.io/repos/github/easytransac/easytransac-sdk-php/badge.svg?branch=master)](https://coveralls.io/github/easytransac/easytransac-sdk-php?branch=master)
 
 Make your EasyTransac API implementation easier with our SDK.
 
