@@ -7,7 +7,8 @@ EasyTransac SDK (PHP)
 Make your EasyTransac API implementation easier with our SDK.
 
 The EasyTransac SDK is a tool to process payments with the [EasyTransac API](https://www.easytransac.com/).
-Currently it processes credit cards and SEPA debit.
+
+Currently it processes credit cards and SEPA Direct Debit (SDD).
 
 Requirements
 ------------
