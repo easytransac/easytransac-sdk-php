@@ -13,7 +13,7 @@ class PaymentNotification
 	 * Returns a notification entity
 	 * @return boolean|\EasyTransac\Entities\Notification
 	 */
-	public static function getContent(array $data = [])
+	public static function getContent(array $data = [], $apiKey)
 	{
 		if (empty($data))
 			$data = $_POST;
@@ -24,9 +24,13 @@ class PaymentNotification
 		if (!self::checkRequiredFields($data))
 			return false;
 			
-		$fields = json_decode(json_encode($data));
 		$notif = new \EasyTransac\Entities\Notification();
-		$notif->hydrate($fields);
+		$notif->hydrate(json_decode(json_encode($data)));
+		
+		if ($notif->getSignature() != Security::getSignature($data, $apiKey))
+		{
+			throw new \RuntimeException('The signature is incorrect', 12);
+		}
 		
 		return $notif;
 	}

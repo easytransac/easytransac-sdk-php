@@ -34,8 +34,8 @@ class OneClickTransaction extends Entity
     {
     	parent::__construct();
     	 
-    	if (isset($_SERVER['REMOVE_ADDR']) && !empty($_SERVER['REMOVE_ADDR']))
-    		$this->setClientIp($_SERVER['REMOVE_ADDR']);
+    	if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR']))
+    		$this->setClientIp($_SERVER['REMOTE_ADDR']);
     	
     	$this->setUserAgent('USER_AGENT');
     }

@@ -51,6 +51,8 @@ class DoneTransaction extends Entity
     protected $additionalError = null;
     /** @map:3DSecureUrl **/
     protected $secureUrl = null;
+    /** @object:Client **/
+    protected $client = null;
 
     public function setSecureUrl($value)
     {
@@ -281,6 +283,17 @@ class DoneTransaction extends Entity
     public function getRequestId()
     {
         return $this->requestId;
+    }
+    
+    public function getClient()
+    {
+    	return $this->client;
+    }
+    
+    public function setClient(Client $client)
+    {
+    	$this->client = $client;
+    	return $this;
     }
 }
 
