@@ -53,10 +53,6 @@ abstract class Entity
             if ($value['type'] == 'map')
             {
                 $out[$value['name']] = $this->{$key};
-                if ($out[$value['name']] == 'yes')
-                    $out[$value['name']] = true;
-                else if ($out[$value['name']] == 'no')
-                    $out[$value['name']] = false;
             }
             else if ($value['type'] == 'array')
             {
@@ -110,11 +106,6 @@ abstract class Entity
             if ($value['type'] == 'map' && property_exists($fields, $value['name']))
             {
                 $this->{$key} = $fields->{$value['name']};
-                
-                if ($this->{$key} == 'yes')
-                    $this->{$key} = true;
-                else if ($this->{$key} == 'no')
-                    $this->{$key} = false;
             }
             else if($value['type'] == 'object' && property_exists($fields, $value['name']))
             {
