@@ -285,6 +285,10 @@ class DoneTransaction extends Entity
         return $this->requestId;
     }
     
+	/**
+	 * Returns the transaction client.
+	 * @return Client
+	 */
     public function getClient()
     {
     	return $this->client;
