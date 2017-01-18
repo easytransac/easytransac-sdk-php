@@ -6,7 +6,7 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 {
 	public function testGetContent()
 	{
-		$response = \EasyTransac\Core\PaymentNotification::getContent($this->getFixture());
+		$response = \EasyTransac\Core\PaymentNotification::getContent($this->getFixture(), 'myApiKey');
 		$this->assertEquals($response->toArray(), $this->getFixture(true));
 	}
 
@@ -14,7 +14,7 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 	{
 		$f = $this->getFixture();
 		unset($f['Tid']);
-		$response = \EasyTransac\Core\PaymentNotification::getContent($f);
+		$response = \EasyTransac\Core\PaymentNotification::getContent($f, 'myApiKey');
 		$this->assertFalse($response);
 	}
 	
@@ -49,7 +49,7 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 					'ZipCode' => '67100',
 					'City' => 'STRASB' 
 				),
-				'Signature' => 'cbae1c3017bb2d53c6915afbad1398c0976e6739' 
+				'Signature' => '1e4b2037014d77e654043d97fea20e69757eaa0f' 
 			);
 		}
 		else
@@ -79,7 +79,7 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 				'Address' => '204 av vosges',
 				'ZipCode' => '67100',
 				'City' => 'STRASB',
-				'Signature' => 'cbae1c3017bb2d53c6915afbad1398c0976e6739'
+				'Signature' => '1e4b2037014d77e654043d97fea20e69757eaa0f'
 			);
 		}
 	}
