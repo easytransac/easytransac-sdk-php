@@ -12,10 +12,11 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 
 	public function testGetContentFailed()
 	{
+		$this->setExpectedException(\RuntimeException::class);
+		
 		$f = $this->getFixture();
 		unset($f['Tid']);
 		$response = \EasyTransac\Core\PaymentNotification::getContent($f, 'myApiKey');
-		$this->assertFalse($response);
 	}
 	
 	protected function getFixture($rendered = false)

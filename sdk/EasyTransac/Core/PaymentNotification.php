@@ -19,18 +19,16 @@ class PaymentNotification
 			$data = $_POST;
 		
 		if (empty($data))
-			return false;
+			throw new \RuntimeException('$data is empty');
 		
 		if (!self::checkRequiredFields($data))
-			return false;
+			throw new \RuntimeException('Missing required fields');
 			
 		$notif = new \EasyTransac\Entities\Notification();
 		$notif->hydrate(json_decode(json_encode($data)));
 		
 		if ($notif->getSignature() != Security::getSignature($data, $apiKey))
-		{
 			throw new \RuntimeException('The signature is incorrect', 12);
-		}
 		
 		return $notif;
 	}
@@ -44,7 +42,6 @@ class PaymentNotification
 	{
 		$requiredFields = [
 			'OperationType',
-			'RequestId',
 			'Tid',
 			'Uid',
 			'OrderId',
