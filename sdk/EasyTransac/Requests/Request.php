@@ -57,7 +57,7 @@ abstract class Request
 	        	if (!$sameSignature)
 	        	{
 	        		return (new StandardResponse())
-	        			->setErrorMessage('The signatures of the request and the response are not the same');
+	        			->setErrorMessage('The signature is incorrect');
 	        	}
 	        	 
 	        	if (!$this->checkRequiredFields($json->Result))
