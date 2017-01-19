@@ -91,12 +91,6 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->toArray(), $this->getFixture(true));
     }
     
-    public function testUserAgent()
-    {
-    	$c = new \EasyTransac\Entities\PaymentPageTransaction();
-    	$this->assertEquals($c->getUserAgent(), 'USER_AGENT');
-    }
-    
     protected function getFixture($rendered = false)
     {
     	if (!$rendered)
