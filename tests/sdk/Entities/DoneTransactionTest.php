@@ -6,8 +6,12 @@ class DoneTransactionTest extends PHPUnit_Framework_TestCase
 {
     public function testSettersGetters()
     {
+    	
     	$c = new \EasyTransac\Entities\DoneTransaction();
     	$f = $this->getFixture();
+
+    	$client = new \EasyTransac\Entities\Client();
+    	$client->hydrate($f['Client']);
     	
     	$c->setAdditionalError($f['AdditionalError']);
     	$c->setAlias($f['Alias']);
@@ -30,6 +34,7 @@ class DoneTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setStatus($f['Status']);
     	$c->setTid($f['Tid']);
     	$c->setUid($f['Uid']);
+    	$c->setClient($client);
     	
     	$this->assertEquals($c->getAdditionalError(), $f['AdditionalError']);
     	$this->assertEquals($c->getAlias(), $f['Alias']);
@@ -52,6 +57,7 @@ class DoneTransactionTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getStatus(), $f['Status']);
     	$this->assertEquals($c->getTid(), $f['Tid']);
     	$this->assertEquals($c->getUid(), $f['Uid']);
+    	$this->assertEquals($c->getClient(), $client);
     }
 
     public function testToArray()
@@ -59,6 +65,9 @@ class DoneTransactionTest extends PHPUnit_Framework_TestCase
     	$c = new \EasyTransac\Entities\DoneTransaction();
     	$f = $this->getFixture();
     	 
+    	$client = new \EasyTransac\Entities\Client();
+    	$client->hydrate(json_decode(json_encode($f['Client'])));
+
     	$c->setAdditionalError($f['AdditionalError']);
     	$c->setAlias($f['Alias']);
     	$c->setAmount($f['Amount']);
@@ -80,6 +89,7 @@ class DoneTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setStatus($f['Status']);
     	$c->setTid($f['Tid']);
     	$c->setUid($f['Uid']);
+    	$c->setClient($client);
     	
     	$this->assertEquals($c->toArray(), $this->getFixture(true));
     }
@@ -119,7 +129,17 @@ class DoneTransactionTest extends PHPUnit_Framework_TestCase
 	    		'Alias' => 789,
 	    		'Error' => null,
 	    		'AdditionalError' => null,
-	    		'securUrl' => null
+	    		'securUrl' => null,
+    			'Client' => array (
+    				'Id' => 'DZxemv4',
+    				'Email' => 'johann@movidone.com',
+    				'Firstname' => 'Pit',
+    				'Lastname' => 'BULL',
+    				'Phone' => '0388000000',
+    				'Address' => '204 av vosges',
+    				'ZipCode' => '67100',
+   					'City' => 'STRASB'
+    			),
 	    	];
     	}
     	else
@@ -142,6 +162,14 @@ class DoneTransactionTest extends PHPUnit_Framework_TestCase
    				'OriginalPaymentTid' => 678,
    				'OriginalPaymentTid' => 678,
    				'Alias' => 789,
+    			'Id' => 'DZxemv4',
+    			'Email' => 'johann@movidone.com',
+   				'Firstname' => 'Pit',
+  				'Lastname' => 'BULL',
+    			'Phone' => '0388000000',
+    			'Address' => '204 av vosges',
+   				'ZipCode' => '67100',
+   				'City' => 'STRASB'
     		];
     	}
     }

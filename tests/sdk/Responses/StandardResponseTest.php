@@ -36,6 +36,17 @@ class StandardResponseTest extends PHPUnit_Framework_TestCase
 	
 		$this->assertEquals($c->getErrorMessage(), 'message');
 	}
+	
+	public function testIsSameSignature()
+	{
+		$c = new \EasyTransac\Responses\StandardResponse();
+
+		$c->setSameSignature(true);
+		$this->assertTrue($c->isSameSignature());
+
+		$c->setSameSignature(false);
+		$this->assertFalse($c->isSameSignature());
+	}
 }
 
 ?>

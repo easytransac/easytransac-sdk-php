@@ -66,7 +66,7 @@ abstract class Request
 	        			->setErrorMessage('One or more required fields in the response are missing');
 	        	}
 	        	 
-	        	return $this->mapResponse($json->Result);;
+	        	return $this->mapResponse($json->Result);
 	        }
         }
         catch (\Exception $e)
