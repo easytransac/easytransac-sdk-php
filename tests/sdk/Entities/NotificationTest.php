@@ -48,6 +48,7 @@ class NotificationTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getTest(), $f['Test']);
     	$this->assertEquals($c->getTid(), $f['Tid']);
     	$this->assertEquals($c->getUid(), $f['Uid']);
+    	$this->assertEquals($c->getCurrency(), $f['Currency']);
     }
 
     public function testToArray()
