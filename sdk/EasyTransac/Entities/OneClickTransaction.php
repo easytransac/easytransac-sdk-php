@@ -29,6 +29,8 @@ class OneClickTransaction extends Entity
     protected $language = null;
     /** @map:ClientId **/
     protected $clientId = null;
+    /** @map:Version **/
+    protected $version = null;
 
     public function __construct()
     {
@@ -150,7 +152,15 @@ class OneClickTransaction extends Entity
 		$this->clientId = $clientId;
 		return $this;
 	}
-	
+	function getVersion()
+	{
+		return $this->version;
+	}
+
+	function setVersion($version)
+	{
+		$this->version = $version;
+	}
 }
 
 ?>
