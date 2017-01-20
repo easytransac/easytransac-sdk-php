@@ -299,6 +299,16 @@ class DoneTransaction extends Entity
     	$this->client = $client;
     	return $this;
     }
+	
+	public function isCaptured()
+	{
+		return $this->status === 'captured';
+	}
+	
+	public function isPending()
+	{
+		return $this->status === 'pending';
+	}
 }
 
 ?>
