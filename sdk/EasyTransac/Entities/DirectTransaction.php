@@ -47,7 +47,8 @@ class DirectTransaction extends Entity
     	if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR']))
     		$this->setClientIp($_SERVER['REMOTE_ADDR']);
     	
-    	$this->setUserAgent($_SERVER['HTTP_USER_AGENT']);
+    	if (isset($_SERVER['HTTP_USER_AGENT']) && !empty($_SERVER['HTTP_USER_AGENT']))
+    		$this->setUserAgent($_SERVER['HTTP_USER_AGENT']);
     }
     
     public function setCreditCard(CreditCard $value)
