@@ -61,14 +61,7 @@ class PaymentNotification
 		];
 		
 		$requiredFieldsClient = [
-			'Id',
 			'Email',
-			'Firstname',
-			'Lastname',
-			'Phone',
-			'Address',
-			'ZipCode',
-			'City',
 		];
 		
 		foreach ($requiredFields as $key)
