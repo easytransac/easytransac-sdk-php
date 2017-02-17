@@ -152,6 +152,7 @@ class OneClickTransaction extends Entity
 		$this->clientId = $clientId;
 		return $this;
 	}
+	
 	function getVersion()
 	{
 		return $this->version;

@@ -89,23 +89,23 @@ $response = $dp->execute($transaction);
 
 if ($response->isSuccess())
 {
-    $transactionItem = $response->getContent();
+	$transactionItem = $response->getContent();
     
-    // Check if the 3DSecure is forced by the server on this transaction, 
-    // if yes, then we must use the 3DS url to finish the transaction
-    if ($transactionItem->getSecure())
-    {
-        // Using of the 3DS url
-        // You have to call this url to proceed the 3DS process
-        // $transactionItem->getSecureUrl();
-        
-    }
-    else
-    {
-        // Shows the transaction status and id      
-        var_dump($transactionItem->getStatus());
-        var_dump($transactionItem->getTid());
-    }
+	// Check if the 3DSecure is forced by the server on this transaction, 
+	// if yes, then we must use the 3DS url to finish the transaction
+	if ($transactionItem->getSecure())
+	{
+	    // Using of the 3DS url
+	    // You have to call this url to proceed the 3DS process
+	    // $transactionItem->getSecureUrl();
+	    
+	}
+	else
+	{
+	    // Shows the transaction status and id      
+	    var_dump($transactionItem->getStatus());
+	    var_dump($transactionItem->getTid());
+	}
 }
 else
 {
@@ -118,7 +118,7 @@ else
 ```php
 // EasyTransac notifies you for the payment status
 // Then in your website, you have to create a script to receive the notification
-$response = \EasyTransac\Core\PaymentNotification::getContent($_POST);
+$response = \EasyTransac\Core\PaymentNotification::getContent($_POST, $myApiKey);
 
 // Response of type \EasyTransac\Entities\Notification
 var_dump($response->toArray());

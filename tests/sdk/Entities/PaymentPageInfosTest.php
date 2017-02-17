@@ -63,7 +63,7 @@ class PaymentPageInfosTest extends PHPUnit_Framework_TestCase
     protected function getFixture()
     {
     	return [
-    		'Status' => 'Captured',
+    		'Status' => 'captured',
     		'Date' => '2016-12-06 12:23',
     		'Amount' => 12000,
     		'FixFees' => 1000,
