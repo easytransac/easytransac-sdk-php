@@ -53,6 +53,8 @@ class DoneTransaction extends Entity
     protected $secureUrl = null;
     /** @object:Client **/
     protected $client = null;
+    /** @map:MandateUrl **/
+    protected $mandateUrl = null;
 
     public function setSecureUrl($value)
     {
@@ -283,6 +285,17 @@ class DoneTransaction extends Entity
     public function getRequestId()
     {
         return $this->requestId;
+    }
+
+    public function setMandateUrl($value)
+    {
+        $this->mandateUrl = $value;
+        return $this;
+    }
+
+    public function getMandateUrl()
+    {
+        return $this->mandateUrl;
     }
     
 	/**
