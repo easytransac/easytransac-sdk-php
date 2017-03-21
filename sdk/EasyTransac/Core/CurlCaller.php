@@ -85,7 +85,7 @@ class CurlCaller implements ICaller
         $response = curl_exec($this->curlInstance);
         
         if (($errno = curl_errno($this->curlInstance)))
-        	throw new \RuntimeException("Curl trouble during the call, please check the error code with Curl documentation", $errno);
+        	throw new \RuntimeException("Curl trouble during the call: ".curl_error($this->curlInstance), $errno);
         
         return $response;
 	}
@@ -103,7 +103,8 @@ class CurlCaller implements ICaller
 			CURLOPT_SSL_VERIFYHOST =>  false,
 			CURLOPT_SSL_VERIFYPEER =>  false
 		));
-	}
+	}
+
 	/**
 	 * {@inheritDoc}
 	 * @see \EasyTransac\Core\ICaller::isTLS12()
@@ -111,7 +112,8 @@ class CurlCaller implements ICaller
 	public function isTLSv12Available() 
 	{
 		return defined('CURL_SSLVERSION_TLSv1_2');
-	}
+	}
+
 	/**
 	 * {@inheritDoc}
 	 * @see \EasyTransac\Core\ICaller::addHeaders()
