@@ -13,7 +13,7 @@ class PaymentPageTransaction extends Entity
     protected $sendEmail = null;
     /** @map:OrderId **/
     protected $orderId = null;
-    /** @map:description **/
+    /** @map:Description **/
     protected $description = null;
     /** @map:Amount **/
     protected $amount = null;
