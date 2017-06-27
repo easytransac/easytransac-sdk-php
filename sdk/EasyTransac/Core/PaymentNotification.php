@@ -44,7 +44,6 @@ class PaymentNotification
 			'OperationType',
 			'Tid',
 			'Uid',
-			'OrderId',
 			'Status',
 			'Date',
 			'Amount',
