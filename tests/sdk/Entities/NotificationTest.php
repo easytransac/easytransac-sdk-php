@@ -30,6 +30,7 @@ class NotificationTest extends PHPUnit_Framework_TestCase
     	$c->setTest($f['Test']);
     	$c->setTid($f['Tid']);
     	$c->setUid($f['Uid']);
+    	$c->setError($f['Error']);
     	
     	$this->assertEquals($c->getAlias(), $f['Alias']);
     	$this->assertEquals($c->getAmount(), $f['Amount']);
@@ -49,6 +50,7 @@ class NotificationTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getTid(), $f['Tid']);
     	$this->assertEquals($c->getUid(), $f['Uid']);
     	$this->assertEquals($c->getCurrency(), $f['Currency']);
+    	$this->assertEquals($c->getError(), $f['Error']);
     }
 
     public function testToArray()
@@ -77,6 +79,7 @@ class NotificationTest extends PHPUnit_Framework_TestCase
     	$c->setTest($f['Test']);
     	$c->setTid($f['Tid']);
     	$c->setUid($f['Uid']);
+    	$c->setError($f['Error']);
     	
     	$this->assertEquals($c->toArray(), $this->getFixture(true));
     }
@@ -110,6 +113,7 @@ class NotificationTest extends PHPUnit_Framework_TestCase
 	    		'Alias' => 'abcdef',
 	    		'CardNumber' => '789456123',
 	    		'Test' => false,
+	    		'Error' => 'Error test',
 	    		'Client' => [
 	    			'Firstname' => 'mich'
 	    		],
@@ -136,6 +140,7 @@ class NotificationTest extends PHPUnit_Framework_TestCase
     			'CardNumber' => '789456123',
    				'Test' => false,
    				'Firstname' => 'mich',
+   				'Error' => 'Error test',
     			'Signature' => 'abc123'
     		];
     	}
