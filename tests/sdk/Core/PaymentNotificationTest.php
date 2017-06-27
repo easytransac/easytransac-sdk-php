@@ -40,6 +40,7 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 				'Alias' => '412J33',
 				'CardNumber' => '************0025',
 				'Test' => 'yes',
+				'Error' => 'Error test',
 				'Client' => array (
 					'Id' => 'DZxemv4',
 					'Email' => 'johann@movidone.com',
@@ -50,7 +51,7 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 					'ZipCode' => '67100',
 					'City' => 'STRASB' 
 				),
-				'Signature' => '1e4b2037014d77e654043d97fea20e69757eaa0f' 
+				'Signature' => '025a8c33ae62d715ead24176460d9617959f086f' 
 			);
 		}
 		else
@@ -80,7 +81,8 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 				'Address' => '204 av vosges',
 				'ZipCode' => '67100',
 				'City' => 'STRASB',
-				'Signature' => '1e4b2037014d77e654043d97fea20e69757eaa0f'
+				'Error' => 'Error test',
+				'Signature' => '025a8c33ae62d715ead24176460d9617959f086f'
 			);
 		}
 	}
