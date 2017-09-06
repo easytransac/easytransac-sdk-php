@@ -41,26 +41,9 @@ class PaymentNotification
 	protected static function checkRequiredFields($fields)
 	{
 		$requiredFields = [
-			'OperationType',
 			'Tid',
-			'Uid',
 			'Status',
-			'Date',
-			'Amount',
-			'Currency',
-			'FixFees',
-			'Message',
-			'3DSecure',
-			'OneClick',
-			'Alias',
-			'CardNumber',
-			'Test',
 			'Signature',
-			'Client'
-		];
-		
-		$requiredFieldsClient = [
-			'Email',
 		];
 		
 		foreach ($requiredFields as $key)
@@ -69,12 +52,6 @@ class PaymentNotification
 				return false;
 		}
 
-		foreach ($requiredFieldsClient as $key)
-		{
-			if (!isset($fields['Client'][$key]))
-				return false;
-		}
-		
 		return true;
 	}
 }
