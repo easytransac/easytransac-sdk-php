@@ -21,6 +21,8 @@ class DirectTransaction extends Entity
     protected $secure = null;
     /** @map:DownPayment **/
     protected $downPayment = null;
+    /** @map:ReturnUrl **/
+    protected $returnUrl = null;
     /** @map:MultiplePayments **/
     protected $multiplePayments = null;
     /** @map:MultiplePaymentsRepeat **/
@@ -212,6 +214,17 @@ class DirectTransaction extends Entity
 	
 	public function setLanguage($language) {
 		$this->language = $language;
+		return $this;
+	}
+	
+	public function getReturnUrl()
+	{
+		return $this->returnUrl;
+	}
+	
+	public function setReturnUrl($returnUrl)
+	{
+		$this->returnUrl = $returnUrl;
 		return $this;
 	}
 }
