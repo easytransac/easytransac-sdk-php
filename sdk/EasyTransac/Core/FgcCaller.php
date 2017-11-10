@@ -83,7 +83,8 @@ class FgcCaller implements ICaller
 			throw new \RuntimeException('The request has failed');
 		
 		return $response;
-	}
+	}
+
 	/**
 	 * {@inheritDoc}
 	 * @see \EasyTransac\Core\ICaller::isTLS12()
