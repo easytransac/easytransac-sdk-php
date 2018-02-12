@@ -56,6 +56,11 @@ abstract class Request
 	        	 
 	        	if (!$sameSignature)
 	        	{
+	        		\EasyTransac\Core\Logger::getInstance()->write('Signature diff failed');
+	        		\EasyTransac\Core\Logger::getInstance()->write('Response: ');
+	        		\EasyTransac\Core\Logger::getInstance()->write($json);
+	        		\EasyTransac\Core\Logger::getInstance()->write('Used api key: '.\EasyTransac\Core\Services::getInstance()->getAPIKey());
+	        		
 	        		return (new StandardResponse())
 	        			->setErrorMessage('The signature is incorrect');
 	        	}

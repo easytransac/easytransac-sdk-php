@@ -27,8 +27,6 @@ class OneClickPayment extends Request
     		'Amount',
     		'FixFees',
     		'Message',
-    		'3DSecure',
-    		'OneClick',
     	];
     	
         return $this->call('/payment/oneclick', $entity);
