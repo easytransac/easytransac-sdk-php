@@ -23,8 +23,6 @@ class PaymentPageInfos extends Entity
     protected $secure = null;
     /** @map:PageUrl **/
     protected $pageUrl = null;
-    /** @map:MailSent **/
-    protected $mailSent = null;
     /** @map:Email **/
     protected $email = null;
     /** @map:Language **/
@@ -104,17 +102,6 @@ class PaymentPageInfos extends Entity
     public function setPageUrl($pageUrl)
     {
         $this->pageUrl = $pageUrl;
-        return $this;
-    }
-
-    public function getMailSent()
-    {
-        return $this->mailSent;
-    }
-
-    public function setMailSent($mailSent)
-    {
-        $this->mailSent = $mailSent;
         return $this;
     }
 

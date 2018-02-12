@@ -27,8 +27,6 @@ class DirectPayment extends Request
     		'Amount',
     		'FixFees',
     		'Message',
-    		'3DSecure',
-    		'OneClick',
     	];
     	
         return $this->call('/payment/direct', $entity);
