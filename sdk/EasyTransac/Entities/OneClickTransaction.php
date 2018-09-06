@@ -31,6 +31,12 @@ class OneClickTransaction extends Entity
     protected $clientId = null;
     /** @map:Version **/
     protected $version = null;
+	/** @map:3DS **/
+	protected $secure = null;
+	/** @map:ReturnUrl **/
+	protected $returnUrl = null;
+	/** @map:CardCVV **/
+	protected $CVV = null;
 
     public function __construct()
     {
@@ -162,6 +168,39 @@ class OneClickTransaction extends Entity
 	{
         $this->version = $version;
         return $this;
+	}
+
+	public function setSecure($value)
+	{
+		$this->secure = $value;
+		return $this;
+	}
+
+	public function getSecure()
+	{
+		return $this->secure;
+	}
+
+	public function getReturnUrl()
+	{
+		return $this->returnUrl;
+	}
+
+	public function setReturnUrl($returnUrl)
+	{
+		$this->returnUrl = $returnUrl;
+		return $this;
+	}
+
+	public function setCVV($value)
+	{
+		$this->CVV = $value;
+		return $this;
+	}
+
+	public function getCVV()
+	{
+		return $this->CVV;
 	}
 }
 
