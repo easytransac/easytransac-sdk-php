@@ -21,10 +21,6 @@ class CreditCard extends Entity
     protected $owner = null;
     /** @map:Alias **/
     protected $alias = null;
-    /** @map:EOM **/
-    protected $eom = null;
-    /** @map:KSN **/
-    protected $ksn = null;
     /** @map:CardType **/
     protected $type = null;
     /** @map:CardCountry **/
@@ -63,28 +59,6 @@ class CreditCard extends Entity
     public function getType()
     {
         return $this->type;
-    }
-
-    public function setKsn($value)
-    {
-        $this->ksn = $value;
-        return $this;
-    }
-
-    public function getKsn()
-    {
-        return $this->ksn;
-    }
-
-    public function setEom($value)
-    {
-        $this->eom = $value;
-        return $this;
-    }
-
-    public function getEom()
-    {
-        return $this->eom;
     }
 
     public function setAlias($value)
