@@ -11,6 +11,10 @@ class PaymentStatus extends Entity
 {
     /** @map:Tid **/
     protected $tid = null;
+	/** @map:OrderId **/
+	protected $orderId = null;
+	/** @map:RequestId **/
+	protected $requestId = null;
     /** @map:Language **/
     protected $language = null;
 
@@ -35,6 +39,28 @@ class PaymentStatus extends Entity
     {
         return $this->tid;
     }
+
+	public function setOrderId($value)
+	{
+		$this->orderId = $value;
+		return $this;
+	}
+
+	public function getOrderId()
+	{
+		return $this->orderId;
+	}
+
+	public function setRequestId($value)
+	{
+		$this->requestId = $value;
+		return $this;
+	}
+
+	public function getRequestId()
+	{
+		return $this->requestId;
+	}
 }
 
 ?>
