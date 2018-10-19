@@ -11,10 +11,14 @@ class PaymentPageInfos extends Entity
 {
     /** @map:RequestId **/
     protected $requestId = null;
+	/** @map:OperationType **/
+	protected $operationType = null;
     /** @map:Status **/
     protected $status = null;
     /** @map:Date **/
     protected $date = null;
+	/** @map:DateSent **/
+	protected $dateSent = null;
     /** @map:Amount **/
     protected $amount = null;
     /** @map:FixFees **/
@@ -39,6 +43,17 @@ class PaymentPageInfos extends Entity
         return $this->requestId;
     }
 
+	public function setOperationType($operationType)
+	{
+		$this->operationType = $operationType;
+		return $this;
+	}
+
+	public function getOperationType()
+	{
+		return $this->operationType;
+	}
+
     public function getStatus()
     {
         return $this->status;
@@ -60,6 +75,17 @@ class PaymentPageInfos extends Entity
         $this->date = $date;
         return $this;
     }
+
+	public function getDateSent()
+	{
+		return $this->dateSent;
+	}
+
+	public function setDateSent($date)
+	{
+		$this->dateSent = $date;
+		return $this;
+	}
 
     public function getAmount()
     {
@@ -126,7 +152,6 @@ class PaymentPageInfos extends Entity
         $this->language = $language;
         return $this;
     }
-
 }
 
 ?>
