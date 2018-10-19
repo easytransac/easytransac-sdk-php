@@ -11,8 +11,14 @@ class PaymentPageTransaction extends Entity
 {
     /** @map:SendEmail **/
     protected $sendEmail = null;
+	/** @map:SendSMS **/
+	protected $sendSMS = null;
     /** @map:OrderId **/
+	protected $sendLater = null;
+	/** @map:SendLater **/
     protected $orderId = null;
+	/** @map:OperationType **/
+	protected $operationType = null;
     /** @map:Description **/
     protected $description = null;
     /** @map:Amount **/
@@ -65,9 +71,30 @@ class PaymentPageTransaction extends Entity
     public function setSendEmail($sendEmail)
     {
         $this->sendEmail = $sendEmail;
-
         return $this;
     }
+
+	public function getSendSMS()
+	{
+		return $this->sendSMS;
+	}
+
+	public function setSendSMS($sendSMS)
+	{
+		$this->sendSMS = $sendSMS;
+		return $this;
+	}
+
+	public function getSendLater()
+	{
+		return $this->sendLater;
+	}
+
+	public function setSendLater($date)
+	{
+		$this->sendLater = $date;
+		return $this;
+	}
 
     public function getVersion()
     {
@@ -77,7 +104,6 @@ class PaymentPageTransaction extends Entity
     public function setVersion($version)
     {
         $this->version = $version;
-
         return $this;
     }
 
@@ -89,9 +115,19 @@ class PaymentPageTransaction extends Entity
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
-
         return $this;
     }
+
+	public function setOperationType($operationType)
+	{
+		$this->operationType = $operationType;
+		return $this;
+	}
+
+	public function getOperationType()
+	{
+		return $this->operationType;
+	}
 
     public function getDescription()
     {
