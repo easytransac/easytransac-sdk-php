@@ -11,14 +11,14 @@ class PaymentPageTransaction extends Entity
 {
     /** @map:SendEmail **/
     protected $sendEmail = null;
-	/** @map:SendSMS **/
-	protected $sendSMS = null;
+    /** @map:SendSMS **/
+    protected $sendSMS = null;
+    /** @map:SendLater **/
+    protected $sendLater = null;
     /** @map:OrderId **/
-	protected $sendLater = null;
-	/** @map:SendLater **/
     protected $orderId = null;
-	/** @map:OperationType **/
-	protected $operationType = null;
+    /** @map:OperationType **/
+    protected $operationType = null;
     /** @map:Description **/
     protected $description = null;
     /** @map:Amount **/
