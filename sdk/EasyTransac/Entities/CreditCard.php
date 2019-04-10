@@ -21,6 +21,8 @@ class CreditCard extends Entity
     protected $owner = null;
     /** @map:Alias **/
     protected $alias = null;
+    /** @map:ClientId **/
+    protected $clientId = null;
     /** @map:CardType **/
     protected $type = null;
     /** @map:CardCountry **/
@@ -70,6 +72,17 @@ class CreditCard extends Entity
     public function getAlias()
     {
         return $this->alias;
+    }
+    
+    public function setClientId($value)
+    {
+        $this->clientId = $value;
+        return $this;
+    }
+
+    public function getClientId()
+    {
+        return $this->clientId;
     }
 
     public function setOwner($value)
