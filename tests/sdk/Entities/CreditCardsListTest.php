@@ -49,8 +49,6 @@ class CreditCardsListTest extends PHPUnit_Framework_TestCase
     		'CardCVV' => '123',
     		'CardOwner' => 'Mich',
     		'Alias' => 'a1b2c3d4',
-    		'EOM' => '123oem',
-    		'KSN' => '123ksn',
     		'CardType' => 'visa',
     		'CardCountry' => 'FR',
     		'LastAccessed' => '2016-12-01 10:00:00',

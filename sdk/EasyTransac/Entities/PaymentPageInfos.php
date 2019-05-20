@@ -11,10 +11,14 @@ class PaymentPageInfos extends Entity
 {
     /** @map:RequestId **/
     protected $requestId = null;
+	/** @map:OperationType **/
+	protected $operationType = null;
     /** @map:Status **/
     protected $status = null;
     /** @map:Date **/
     protected $date = null;
+	/** @map:DateSent **/
+	protected $dateSent = null;
     /** @map:Amount **/
     protected $amount = null;
     /** @map:FixFees **/
@@ -23,8 +27,6 @@ class PaymentPageInfos extends Entity
     protected $secure = null;
     /** @map:PageUrl **/
     protected $pageUrl = null;
-    /** @map:MailSent **/
-    protected $mailSent = null;
     /** @map:Email **/
     protected $email = null;
     /** @map:Language **/
@@ -40,6 +42,17 @@ class PaymentPageInfos extends Entity
     {
         return $this->requestId;
     }
+
+	public function setOperationType($operationType)
+	{
+		$this->operationType = $operationType;
+		return $this;
+	}
+
+	public function getOperationType()
+	{
+		return $this->operationType;
+	}
 
     public function getStatus()
     {
@@ -62,6 +75,17 @@ class PaymentPageInfos extends Entity
         $this->date = $date;
         return $this;
     }
+
+	public function getDateSent()
+	{
+		return $this->dateSent;
+	}
+
+	public function setDateSent($date)
+	{
+		$this->dateSent = $date;
+		return $this;
+	}
 
     public function getAmount()
     {
@@ -107,17 +131,6 @@ class PaymentPageInfos extends Entity
         return $this;
     }
 
-    public function getMailSent()
-    {
-        return $this->mailSent;
-    }
-
-    public function setMailSent($mailSent)
-    {
-        $this->mailSent = $mailSent;
-        return $this;
-    }
-
     public function getEmail()
     {
         return $this->email;
@@ -139,7 +152,6 @@ class PaymentPageInfos extends Entity
         $this->language = $language;
         return $this;
     }
-
 }
 
 ?>

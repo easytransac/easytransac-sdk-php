@@ -1,0 +1,27 @@
+<?php
+
+namespace EasyTransac\Requests;
+
+use \EasyTransac\Entities\Entity;
+
+/**
+ * API function /kyc/get, get a document
+ * @author Klyde
+ * @copyright EasyTransac
+ */
+class GetDocument extends Request
+{
+    /** @object:Document **/
+    protected $response;
+
+    /**
+     * {@inheritDoc}
+     * @see \EasyTransac\Requests\Request::execute()
+     */
+    public function execute(Entity $entity)
+    {
+        return $this->call('/kyc/get', $entity);
+    }
+}
+
+?>

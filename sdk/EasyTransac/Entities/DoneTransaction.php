@@ -51,6 +51,10 @@ class DoneTransaction extends Entity
     protected $additionalError = null;
     /** @map:3DSecureUrl **/
     protected $secureUrl = null;
+    /** @object:Client **/
+    protected $client = null;
+    /** @map:MandateUrl **/
+    protected $mandateUrl = null;
 
     public function setSecureUrl($value)
     {
@@ -282,6 +286,42 @@ class DoneTransaction extends Entity
     {
         return $this->requestId;
     }
+
+    public function setMandateUrl($value)
+    {
+        $this->mandateUrl = $value;
+        return $this;
+    }
+
+    public function getMandateUrl()
+    {
+        return $this->mandateUrl;
+    }
+    
+	/**
+	 * Returns the transaction client.
+	 * @return Client
+	 */
+    public function getClient()
+    {
+    	return $this->client;
+    }
+    
+    public function setClient(Client $client)
+    {
+    	$this->client = $client;
+    	return $this;
+    }
+	
+	public function isCaptured()
+	{
+		return $this->status === 'captured';
+	}
+	
+	public function isPending()
+	{
+		return $this->status === 'pending';
+	}
 }
 
 ?>

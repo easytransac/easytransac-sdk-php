@@ -24,13 +24,7 @@ class PaymentPage extends Request
     		'RequestId',
     		'Status',
     		'Date',
-    		'Amount',
-    		'FixFees',
-    		'3DSecure',
     		'PageUrl',
-    		'MailSent',
-    		'Email',
-    		'Language',
     	];
     	
         return $this->call('/payment/page', $entity);

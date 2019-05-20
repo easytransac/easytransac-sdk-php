@@ -27,8 +27,6 @@ class DebitPayment extends Request
    			'Amount',
     		'FixFees',
     		'Message',
-    		'3DSecure',
-  			'OneClick',
     	];
     	
         return $this->call('/payment/debit', $entity);

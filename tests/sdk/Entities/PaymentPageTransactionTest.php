@@ -17,7 +17,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setCancelUrl($f['CancelUrl']);
     	$c->setClientIP($f['ClientIP']);
     	$c->setCustomer($cust);
-    	$c->setDescription($f['description']);
+    	$c->setDescription($f['Description']);
     	$c->setDownPayment($f['DownPayment']);
     	$c->setLanguage($f['Language']);
     	$c->setMultiplePayments($f['MultiplePayments']);
@@ -36,7 +36,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getCancelUrl(), $f['CancelUrl']);
     	$this->assertEquals($c->getClientIP(), $f['ClientIP']);
     	$this->assertEquals($c->getCustomer(), $cust);
-    	$this->assertEquals($c->getDescription(), $f['description']);
+    	$this->assertEquals($c->getDescription(), $f['Description']);
     	$this->assertEquals($c->getDownPayment(), $f['DownPayment']);
     	$this->assertEquals($c->getLanguage(), $f['Language']);
     	$this->assertEquals($c->getMultiplePayments(), $f['MultiplePayments']);
@@ -65,7 +65,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setCancelUrl($f['CancelUrl']);
     	$c->setClientIP($f['ClientIP']);
     	$c->setCustomer($cust);
-    	$c->setDescription($f['description']);
+    	$c->setDescription($f['Description']);
     	$c->setDownPayment($f['DownPayment']);
     	$c->setLanguage($f['Language']);
     	$c->setMultiplePayments($f['MultiplePayments']);
@@ -91,12 +91,6 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->toArray(), $this->getFixture(true));
     }
     
-    public function testUserAgent()
-    {
-    	$c = new \EasyTransac\Entities\PaymentPageTransaction();
-    	$this->assertEquals($c->getUserAgent(), 'USER_AGENT');
-    }
-    
     protected function getFixture($rendered = false)
     {
     	if (!$rendered)
@@ -104,7 +98,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     		return [
     			'SendEmail' => true,
     			'OrderId' => 123,
-    			'description' => 'Test description',
+    			'Description' => 'Test description',
     			'Amount' => 12000,
    				'ClientIP' => '127.0.0.1',
    				'3DS' => false,
@@ -129,7 +123,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     		return [
     			'SendEmail' => true,
     			'OrderId' => 123,
-    			'description' => 'Test description',
+    			'Description' => 'Test description',
     			'Amount' => 12000,
    				'ClientIP' => '127.0.0.1',
    				'3DS' => false,

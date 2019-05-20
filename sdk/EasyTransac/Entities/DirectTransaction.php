@@ -21,6 +21,8 @@ class DirectTransaction extends Entity
     protected $secure = null;
     /** @map:DownPayment **/
     protected $downPayment = null;
+    /** @map:ReturnUrl **/
+    protected $returnUrl = null;
     /** @map:MultiplePayments **/
     protected $multiplePayments = null;
     /** @map:MultiplePaymentsRepeat **/
@@ -44,10 +46,11 @@ class DirectTransaction extends Entity
     {
     	parent::__construct();
     	 
-    	if (isset($_SERVER['REMOVE_ADDR']) && !empty($_SERVER['REMOVE_ADDR']))
-    		$this->setClientIp($_SERVER['REMOVE_ADDR']);
+    	if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR']))
+    		$this->setClientIp($_SERVER['REMOTE_ADDR']);
     	
-    	$this->setUserAgent('USER_AGENT');
+    	if (isset($_SERVER['HTTP_USER_AGENT']) && !empty($_SERVER['HTTP_USER_AGENT']))
+    		$this->setUserAgent($_SERVER['HTTP_USER_AGENT']);
     }
     
     public function setCreditCard(CreditCard $value)
@@ -211,6 +214,17 @@ class DirectTransaction extends Entity
 	
 	public function setLanguage($language) {
 		$this->language = $language;
+		return $this;
+	}
+	
+	public function getReturnUrl()
+	{
+		return $this->returnUrl;
+	}
+	
+	public function setReturnUrl($returnUrl)
+	{
+		$this->returnUrl = $returnUrl;
 		return $this;
 	}
 }

@@ -29,15 +29,24 @@ class OneClickTransaction extends Entity
     protected $language = null;
     /** @map:ClientId **/
     protected $clientId = null;
+    /** @map:Version **/
+    protected $version = null;
+	/** @map:3DS **/
+	protected $secure = null;
+	/** @map:ReturnUrl **/
+	protected $returnUrl = null;
+	/** @map:CardCVV **/
+	protected $CVV = null;
 
     public function __construct()
     {
     	parent::__construct();
     	 
-    	if (isset($_SERVER['REMOVE_ADDR']) && !empty($_SERVER['REMOVE_ADDR']))
-    		$this->setClientIp($_SERVER['REMOVE_ADDR']);
+    	if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR']))
+    		$this->setClientIp($_SERVER['REMOTE_ADDR']);
     	
-    	$this->setUserAgent('USER_AGENT');
+    	if (isset($_SERVER['HTTP_USER_AGENT']) && !empty($_SERVER['HTTP_USER_AGENT']))
+    		$this->setUserAgent($_SERVER['HTTP_USER_AGENT']);
     }
     
     public function setAlias($value)
@@ -150,6 +159,49 @@ class OneClickTransaction extends Entity
 		return $this;
 	}
 	
+	function getVersion()
+	{
+		return $this->version;
+	}
+
+	function setVersion($version)
+	{
+        $this->version = $version;
+        return $this;
+	}
+
+	public function setSecure($value)
+	{
+		$this->secure = $value;
+		return $this;
+	}
+
+	public function getSecure()
+	{
+		return $this->secure;
+	}
+
+	public function getReturnUrl()
+	{
+		return $this->returnUrl;
+	}
+
+	public function setReturnUrl($returnUrl)
+	{
+		$this->returnUrl = $returnUrl;
+		return $this;
+	}
+
+	public function setCVV($value)
+	{
+		$this->CVV = $value;
+		return $this;
+	}
+
+	public function getCVV()
+	{
+		return $this->CVV;
+	}
 }
 
 ?>

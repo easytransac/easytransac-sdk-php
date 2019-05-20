@@ -56,8 +56,13 @@ abstract class Request
 	        	 
 	        	if (!$sameSignature)
 	        	{
+	        		\EasyTransac\Core\Logger::getInstance()->write('Signature diff failed');
+	        		\EasyTransac\Core\Logger::getInstance()->write('Response: ');
+	        		\EasyTransac\Core\Logger::getInstance()->write($json);
+	        		\EasyTransac\Core\Logger::getInstance()->write('Used api key: '.\EasyTransac\Core\Services::getInstance()->getAPIKey());
+	        		
 	        		return (new StandardResponse())
-	        			->setErrorMessage('The signatures of the request and the response are not the same');
+	        			->setErrorMessage('The signature is incorrect');
 	        	}
 	        	 
 	        	if (!$this->checkRequiredFields($json->Result))
@@ -66,7 +71,7 @@ abstract class Request
 	        			->setErrorMessage('One or more required fields in the response are missing');
 	        	}
 	        	 
-	        	return $this->mapResponse($json->Result);;
+	        	return $this->mapResponse($json->Result);
 	        }
         }
         catch (\Exception $e)
