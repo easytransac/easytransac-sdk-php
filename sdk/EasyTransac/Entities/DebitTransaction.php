@@ -46,10 +46,11 @@ class DebitTransaction extends Entity
     {
     	parent::__construct();
     	 
-    	if (isset($_SERVER['REMOVE_ADDR']) && !empty($_SERVER['REMOVE_ADDR']))
-    		$this->setClientIp($_SERVER['REMOVE_ADDR']);
+    	if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR']))
+    		$this->setClientIp($_SERVER['REMOTE_ADDR']);
     	
-    	$this->setUserAgent('USER_AGENT');
+    	if (isset($_SERVER['HTTP_USER_AGENT']) && !empty($_SERVER['HTTP_USER_AGENT']))
+    		$this->setUserAgent($_SERVER['HTTP_USER_AGENT']);
     }
     
     public function setCustomer(Customer $value)

@@ -11,9 +11,15 @@ class PaymentPageTransaction extends Entity
 {
     /** @map:SendEmail **/
     protected $sendEmail = null;
+    /** @map:SendSMS **/
+    protected $sendSMS = null;
+    /** @map:SendLater **/
+    protected $sendLater = null;
     /** @map:OrderId **/
     protected $orderId = null;
-    /** @map:description **/
+    /** @map:OperationType **/
+    protected $operationType = null;
+    /** @map:Description **/
     protected $description = null;
     /** @map:Amount **/
     protected $amount = null;
@@ -50,10 +56,11 @@ class PaymentPageTransaction extends Entity
     {
     	parent::__construct();
     	 
-    	if (isset($_SERVER['REMOVE_ADDR']) && !empty($_SERVER['REMOVE_ADDR']))
-    		$this->setClientIp($_SERVER['REMOVE_ADDR']);
+    	if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR']))
+    		$this->setClientIp($_SERVER['REMOTE_ADDR']);
     	
-    	$this->setUserAgent('USER_AGENT');
+    	if (isset($_SERVER['HTTP_USER_AGENT']) && !empty($_SERVER['HTTP_USER_AGENT']))
+    		$this->setUserAgent($_SERVER['HTTP_USER_AGENT']);
     }
     
     public function getSendEmail()
@@ -64,9 +71,30 @@ class PaymentPageTransaction extends Entity
     public function setSendEmail($sendEmail)
     {
         $this->sendEmail = $sendEmail;
-
         return $this;
     }
+
+	public function getSendSMS()
+	{
+		return $this->sendSMS;
+	}
+
+	public function setSendSMS($sendSMS)
+	{
+		$this->sendSMS = $sendSMS;
+		return $this;
+	}
+
+	public function getSendLater()
+	{
+		return $this->sendLater;
+	}
+
+	public function setSendLater($date)
+	{
+		$this->sendLater = $date;
+		return $this;
+	}
 
     public function getVersion()
     {
@@ -76,7 +104,6 @@ class PaymentPageTransaction extends Entity
     public function setVersion($version)
     {
         $this->version = $version;
-
         return $this;
     }
 
@@ -88,9 +115,19 @@ class PaymentPageTransaction extends Entity
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
-
         return $this;
     }
+
+	public function setOperationType($operationType)
+	{
+		$this->operationType = $operationType;
+		return $this;
+	}
+
+	public function getOperationType()
+	{
+		return $this->operationType;
+	}
 
     public function getDescription()
     {

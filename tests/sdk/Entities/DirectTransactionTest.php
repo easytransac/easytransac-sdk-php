@@ -29,6 +29,7 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setPayToEmail($f['PayToEmail']);
     	$c->setRecurrence($f['Recurrence']);
     	$c->setRebill($f['Rebill']);
+    	$c->setReturnUrl($f['ReturnUrl']);
     	$c->setMultiplePaymentsRepeat($f['MultiplePaymentsRepeat']);
     	
     	$this->assertEquals($c->getAmount(), $f['Amount']);
@@ -46,6 +47,7 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getRecurrence(), $f['Recurrence']);
     	$this->assertEquals($c->getRebill(), $f['Rebill']);
     	$this->assertEquals($c->getMultiplePaymentsRepeat(), $f['MultiplePaymentsRepeat']);
+    	$this->assertEquals($c->getReturnUrl(), $f['ReturnUrl']);
     }
 
     public function testToArray()
@@ -74,6 +76,7 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setRecurrence($f['Recurrence']);
     	$c->setRebill($f['Rebill']);
     	$c->setMultiplePaymentsRepeat($f['MultiplePaymentsRepeat']);
+    	$c->setReturnUrl($f['ReturnUrl']);
     	
     	$this->assertEquals($c->toArray(), $this->getFixture(true));
     }
@@ -109,7 +112,8 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
 	    		'Recurrence' => 'monthly',
 	    		'PayToEmail' => 'test@test.com',
 	    		'UserAgent' => 'ua',
-	    		'Language' => 'FRE'
+	    		'Language' => 'FRE',
+	    		'ReturnUrl' => 'https://toto.com'
 	    	];
     	}
     	else
@@ -129,7 +133,8 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
     			'Recurrence' => 'monthly',
     			'PayToEmail' => 'test@test.com',
     			'UserAgent' => 'ua',
-    			'Language' => 'FRE'
+    			'Language' => 'FRE',
+    			'ReturnUrl' => 'https://toto.com'
     		];
     	}
     }

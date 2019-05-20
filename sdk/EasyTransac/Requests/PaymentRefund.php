@@ -27,8 +27,6 @@ class PaymentRefund extends Request
     		'Amount',
     		'FixFees',
     		'Message',
-    		'3DSecure',
-    		'OneClick',
     		'Alias',
     	];
     	

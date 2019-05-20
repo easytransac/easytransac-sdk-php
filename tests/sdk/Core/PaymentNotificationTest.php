@@ -6,16 +6,17 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 {
 	public function testGetContent()
 	{
-		$response = \EasyTransac\Core\PaymentNotification::getContent($this->getFixture());
+		$response = \EasyTransac\Core\PaymentNotification::getContent($this->getFixture(), 'myApiKey');
 		$this->assertEquals($response->toArray(), $this->getFixture(true));
 	}
 
 	public function testGetContentFailed()
 	{
+		$this->setExpectedException(\RuntimeException::class);
+		
 		$f = $this->getFixture();
 		unset($f['Tid']);
-		$response = \EasyTransac\Core\PaymentNotification::getContent($f);
-		$this->assertFalse($response);
+		$response = \EasyTransac\Core\PaymentNotification::getContent($f, 'myApiKey');
 	}
 	
 	protected function getFixture($rendered = false)
@@ -39,6 +40,7 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 				'Alias' => '412J33',
 				'CardNumber' => '************0025',
 				'Test' => 'yes',
+				'Error' => 'Error test',
 				'Client' => array (
 					'Id' => 'DZxemv4',
 					'Email' => 'johann@movidone.com',
@@ -49,7 +51,7 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 					'ZipCode' => '67100',
 					'City' => 'STRASB' 
 				),
-				'Signature' => 'cbae1c3017bb2d53c6915afbad1398c0976e6739' 
+				'Signature' => '025a8c33ae62d715ead24176460d9617959f086f' 
 			);
 		}
 		else
@@ -66,11 +68,11 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 				'Currency' => 'EUR',
 				'FixFees' => '0.83',
 				'Message' => 'Payment was successful',
-				'3DSecure' => false,
-				'OneClick' => false,
+				'3DSecure' => 'no',
+				'OneClick' => 'no',
 				'Alias' => '412J33',
 				'CardNumber' => '************0025',
-				'Test' => true,
+				'Test' => 'yes',
 				'Id' => 'DZxemv4',
 				'Email' => 'johann@movidone.com',
 				'Firstname' => 'Pit',
@@ -79,7 +81,8 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 				'Address' => '204 av vosges',
 				'ZipCode' => '67100',
 				'City' => 'STRASB',
-				'Signature' => 'cbae1c3017bb2d53c6915afbad1398c0976e6739'
+				'Error' => 'Error test',
+				'Signature' => '025a8c33ae62d715ead24176460d9617959f086f'
 			);
 		}
 	}

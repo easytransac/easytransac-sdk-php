@@ -12,8 +12,6 @@ class CreditCardTest extends PHPUnit_Framework_TestCase
         $c->setAlias($f['Alias']);
         $c->setCountry($f['CardCountry']);
         $c->setCVV($f['CardCVV']);
-        $c->setEom($f['EOM']);
-        $c->setKsn($f['KSN']);
         $c->setMonth($f['CardMonth']);
         $c->setNumber($f['CardNumber']);
         $c->setOwner($f['CardOwner']);
@@ -24,8 +22,6 @@ class CreditCardTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($c->getAlias(), $f['Alias']);
         $this->assertEquals($c->getCountry(), $f['CardCountry']);
         $this->assertEquals($c->getCVV(), $f['CardCVV']);
-        $this->assertEquals($c->getEom(), $f['EOM']);
-        $this->assertEquals($c->getKsn(), $f['KSN']);
         $this->assertEquals($c->getMonth(), $f['CardMonth']);
         $this->assertEquals($c->getNumber(), $f['CardNumber']);
         $this->assertEquals($c->getOwner(), $f['CardOwner']);
@@ -42,8 +38,6 @@ class CreditCardTest extends PHPUnit_Framework_TestCase
     	$c->setAlias($f['Alias']);
     	$c->setCountry($f['CardCountry']);
     	$c->setCVV($f['CardCVV']);
-    	$c->setEom($f['EOM']);
-    	$c->setKsn($f['KSN']);
     	$c->setMonth($f['CardMonth']);
     	$c->setNumber($f['CardNumber']);
     	$c->setOwner($f['CardOwner']);
@@ -70,8 +64,6 @@ class CreditCardTest extends PHPUnit_Framework_TestCase
     		'CardCVV' => '123',
     		'CardOwner' => 'Mich',
     		'Alias' => 'a1b2c3d4',
-    		'EOM' => '123oem',
-    		'KSN' => '123ksn',
     		'CardType' => 'visa',
     		'CardCountry' => 'FR',
     		'LastAccessed' => '2016-12-01 10:00:00',

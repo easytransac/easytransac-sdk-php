@@ -13,20 +13,28 @@ class PaymentNotification
 	 * Returns a notification entity
 	 * @return boolean|\EasyTransac\Entities\Notification
 	 */
-	public static function getContent(array $data = [])
+	public static function getContent(array $data = [], $apiKey)
 	{
 		if (empty($data))
 			$data = $_POST;
 		
 		if (empty($data))
-			return false;
+			throw new \RuntimeException('$data is empty');
 		
 		if (!self::checkRequiredFields($data))
-			return false;
+			throw new \RuntimeException('Missing required fields');
 			
-		$fields = json_decode(json_encode($data));
 		$notif = new \EasyTransac\Entities\Notification();
-		$notif->hydrate($fields);
+		$notif->hydrate(json_decode(json_encode($data)));
+		
+		if ($notif->getSignature() != Security::getSignature($data, $apiKey))
+		{
+			Logger::getInstance()->write('Signature diff failed');
+			Logger::getInstance()->write('Notification: ');
+			Logger::getInstance()->write($data);
+			Logger::getInstance()->write('Used api key: '.$apiKey);
+			throw new \RuntimeException('The signature is incorrect', 12);
+		}
 		
 		return $notif;
 	}
@@ -39,35 +47,9 @@ class PaymentNotification
 	protected static function checkRequiredFields($fields)
 	{
 		$requiredFields = [
-			'OperationType',
-			'RequestId',
 			'Tid',
-			'Uid',
-			'OrderId',
 			'Status',
-			'Date',
-			'Amount',
-			'Currency',
-			'FixFees',
-			'Message',
-			'3DSecure',
-			'OneClick',
-			'Alias',
-			'CardNumber',
-			'Test',
 			'Signature',
-			'Client'
-		];
-		
-		$requiredFieldsClient = [
-			'Id',
-			'Email',
-			'Firstname',
-			'Lastname',
-			'Phone',
-			'Address',
-			'ZipCode',
-			'City',
 		];
 		
 		foreach ($requiredFields as $key)
@@ -76,12 +58,6 @@ class PaymentNotification
 				return false;
 		}
 
-		foreach ($requiredFieldsClient as $key)
-		{
-			if (!isset($fields['Client'][$key]))
-				return false;
-		}
-		
 		return true;
 	}
 }
