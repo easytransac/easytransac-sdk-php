@@ -71,7 +71,7 @@ class FindUserReqTest extends PHPUnit_Framework_TestCase
 		
 		$this->assertTrue($response instanceof \EasyTransac\Responses\StandardResponse);
 		$this->assertFalse($response->isSuccess());
-		
+		var_dump($response);
 		$this->assertEquals($response->getErrorMessage(), "One or more required fields in the response are missing");
 	}
 	

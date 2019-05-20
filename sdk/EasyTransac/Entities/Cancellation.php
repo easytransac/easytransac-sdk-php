@@ -13,6 +13,8 @@ class Cancellation extends Entity
     protected $tid = null;
     /** @map:Language **/
     protected $language = null;
+    /** @map:RequestId **/
+    protected $requestId = null;
 
     public function getTid()
     {
@@ -33,6 +35,17 @@ class Cancellation extends Entity
     public function setLanguage($language)
     {
         $this->language = $language;
+        return $this;
+    }
+    
+    public function getRequestId()
+    {
+        return $this->requestId;
+    }
+
+    public function setRequestId($requestId)
+    {
+        $this->requestId = $requestId;
         return $this;
     }
 }

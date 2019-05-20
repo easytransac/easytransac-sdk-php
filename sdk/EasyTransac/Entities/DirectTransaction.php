@@ -41,6 +41,8 @@ class DirectTransaction extends Entity
     protected $customer = null;
     /** @object:CreditCard **/
     protected $creditCard = null;
+    /** @PreAuth **/
+    protected $preAuth = null;
 
     public function __construct()
     {
@@ -73,17 +75,6 @@ class DirectTransaction extends Entity
     public function getCustomer()
     {
         return $this->customer;
-    }
-
-    public function setMultiplePayments($value)
-    {
-        $this->multiplePayments = $value;
-        return $this;
-    }
-
-    public function getMultiplePayments()
-    {
-        return $this->multiplePayments;
     }
 
     public function setDownPayment($value)
@@ -152,6 +143,17 @@ class DirectTransaction extends Entity
         return $this->amount;
     }
     
+    public function getMultiplePayments()
+    {
+    	return $this->multiplePayments;
+    }
+    
+    public function setMultiplePayments($multiplePayments)
+    {
+    	$this->multiplePayments = $multiplePayments;
+    	return $this;
+    }
+    
 	public function getMultiplePaymentsRepeat() 
 	{
 		return $this->multiplePaymentsRepeat;
@@ -212,8 +214,20 @@ class DirectTransaction extends Entity
 		return $this->language;
 	}
 	
-	public function setLanguage($language) {
+	public function setLanguage($language) 
+	{
 		$this->language = $language;
+		return $this;
+	}
+	
+	public function getPreAuth() 
+	{
+		return $this->preAuth;
+	}
+	
+	public function setPreAuth($value) 
+	{
+		$this->preAuth = $value;
 		return $this;
 	}
 	

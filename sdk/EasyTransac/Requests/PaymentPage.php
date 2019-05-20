@@ -20,13 +20,6 @@ class PaymentPage extends Request
      */
     public function execute(Entity $entity)
     {
-    	$this->requiredFields = [
-    		'RequestId',
-    		'Status',
-    		'Date',
-    		'PageUrl',
-    	];
-    	
         return $this->call('/payment/page', $entity);
     }
 }

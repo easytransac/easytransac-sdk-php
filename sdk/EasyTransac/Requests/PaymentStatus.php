@@ -20,15 +20,6 @@ class PaymentStatus extends Request
      */
     public function execute(Entity $entity)
     {
-    	$this->requiredFields = [
-    		'Tid',
-    		'Status',
-    		'Date',
-   			'Amount',
-   			'FixFees',
-    		'Message',
-    	];
-    	
         return $this->call('/payment/status', $entity);
     }
 }

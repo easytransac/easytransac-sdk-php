@@ -41,6 +41,12 @@ class DebitTransaction extends Entity
     protected $iban = null;
     /** @object:Customer **/
     protected $customer = null;
+    /** @map:AccountOwner **/
+    protected $accountOwner = null;
+    /** @map:ReturnUrl **/
+    protected $returnUrl = null;
+    /** @map:Rebill **/
+    protected $Rebill = null;
 
     public function __construct()
     {
@@ -51,6 +57,17 @@ class DebitTransaction extends Entity
     	
     	if (isset($_SERVER['HTTP_USER_AGENT']) && !empty($_SERVER['HTTP_USER_AGENT']))
     		$this->setUserAgent($_SERVER['HTTP_USER_AGENT']);
+    }
+    
+    public function getReturnUrl()
+    {
+    	return $this->returnUrl;
+    }
+    
+    public function setReturnUrl($returnUrl)
+    {
+    	$this->returnUrl = $returnUrl;
+    	return $this;
     }
     
     public function setCustomer(Customer $value)

@@ -51,6 +51,12 @@ class PaymentPageTransaction extends Entity
     protected $language = null;
     /** @map:Version **/
     protected $version = null;
+    /** @map:AskAmount **/
+    protected $askAmount = null;
+    /** @map:AskInvoiceNumber **/
+    protected $askInvoiceNumber = null;
+    /** @map:PreAuth **/
+    protected $preAuth = null;
 
     public function __construct()
     {
@@ -291,6 +297,39 @@ class PaymentPageTransaction extends Entity
     public function setLanguage($language)
     {
         $this->language = $language;
+        return $this;
+    }
+    
+    public function getAskAmount()
+    {
+    	return $this->askAmount;
+    }
+
+    public function setAskAmount($askAmount)
+    {
+    	$this->askAmount = $askAmount;
+        return $this;
+    }
+    
+    public function getAskInvoiceNumber()
+    {
+    	return $this->askInvoiceNumber;
+    }
+
+    public function setAskInvoiceNumber($askInvoiceNumber)
+    {
+    	$this->askInvoiceNumber = $askInvoiceNumber;
+        return $this;
+    }
+    
+    public function getPreAuth()
+    {
+    	return $this->preAuth;
+    }
+
+    public function setPreAuth($preAuth)
+    {
+    	$this->preAuth = $preAuth;
         return $this;
     }
 }
