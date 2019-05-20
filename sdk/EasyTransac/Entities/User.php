@@ -61,6 +61,18 @@ class User extends Entity
     protected $tester = null;
     /** @map:CompanyLogo **/
     protected $companyLogo = null;
+    /** @map:CompanyType **/
+    protected $companyType = null;
+    /** @map:CompanyCountry **/
+    protected $companyCountry = null;
+    /** @map:Gender **/
+    protected $gender = null;
+    /** @map:Country **/
+    protected $country = null;
+    /** @map:WelcomeEmail **/
+    protected $welcomeEmail = null;
+    /** @map:SetCompany **/
+    protected $setCompany = null;
 
     public function getId()
     {
@@ -345,6 +357,72 @@ class User extends Entity
     public function setCompanyLogo($companyLogo)
     {
         $this->companyLogo = $companyLogo;
+        return $this;
+    }
+    
+    public function getCompanyType()
+    {
+        return $this->companyType;
+    }
+
+    public function setCompanyType($companyType)
+    {
+        $this->companyType = $companyType;
+        return $this;
+    }
+    
+    public function getCompanyCountry()
+    {
+        return $this->companyCountry;
+    }
+
+    public function setCompanyCountry($companyCountry)
+    {
+        $this->companyCountry = $companyCountry;
+        return $this;
+    }
+    
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+        return $this;
+    }
+    
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    public function setCountry($country)
+    {
+        $this->country = $country;
+        return $this;
+    }
+    
+    public function getWelcomeEmail()
+    {
+    	return $this->welcomeEmail;
+    }
+
+    public function setWelcomeEmail($welcomeEmail)
+    {
+    	$this->welcomeEmail = $welcomeEmail;
+        return $this;
+    }
+    
+    public function getSetCompany()
+    {
+    	return $this->setCompany;
+    }
+
+    public function setSetCompany($setCompany)
+    {
+    	$this->setCompany = $setCompany;
         return $this;
     }
 }

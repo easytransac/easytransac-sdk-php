@@ -13,11 +13,34 @@ use EasyTransac\Core\Logger;
  */
 abstract class Entity
 {
-    protected $mapping = array();
+    protected $mapping = [];
+    protected $additionalFields = [];
 
     public function __construct()
     {
         $this->makeMapping();
+    }
+    
+    /**
+     * Allows to set a value not yet implemented in the SDK but available in the API
+     * @param String $name Name of the parameter to set
+     * @param Array $arguments
+     * @return mixed
+     */
+    public function __call($name, $arguments) 
+    {
+    	if (preg_match('#^get(.*)$#', $name, $matches))
+    	{
+    		if (array_key_exists($matches[1], $this->additionalFields))
+    			return $this->additionalFields[$matches[1]];
+    		else
+    			return null;
+    	}
+    	else if (preg_match('#^set(.*)$#', $name, $matches) && count($arguments) > 0)
+    	{
+    		$this->additionalFields[$matches[1]] = $arguments[0];
+    		return $this;
+    	}
     }
 
     /**
@@ -63,6 +86,26 @@ abstract class Entity
             }
             else if ($value['type'] == 'object')
                 $out += $this->{$key}->toArray();
+        }
+        
+        // Add also the additional fields
+        if (!empty($this->additionalFields))
+        {
+        	foreach ($this->additionalFields as $key => $additionalField)
+        	{
+        		if (is_array($additionalField))
+        		{
+        			$list = array();
+        			foreach ($additionalField as $c)
+        				$list[] = $c->toArray();
+        				
+        			$out[$key] = $list;
+        		}
+        		else if (is_object($additionalField))
+        			$out += $additionalField->toArray();
+        		else
+        			$out[$key] = $additionalField;
+        	}
         }
 
         return $out;

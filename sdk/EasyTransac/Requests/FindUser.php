@@ -20,13 +20,6 @@ class FindUser extends Request
      */
     public function execute(Entity $entity)
     {
-    	$this->requiredFields = [
-    		'Id',
-    		'Email',
-    		'Firstname',
-    		'Lastname',
-    	];
-    	
         return $this->call('/user/find', $entity);
     }
 }

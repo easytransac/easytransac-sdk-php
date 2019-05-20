@@ -21,15 +21,6 @@ class AddCreditCard extends Request
      */
     public function execute(Entity $entity)
     {
-    	$this->requiredFields = [
-    		'Alias',
-    		'CardNumber',
-   			'CardMonth',
-   			'CardYear',
-    		'CardType',
-    		'LastAccessed',
-    	];
-    	
         return $this->call('/payment/addcard', $entity);
     }
 }

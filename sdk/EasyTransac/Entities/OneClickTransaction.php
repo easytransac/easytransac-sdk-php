@@ -37,6 +37,8 @@ class OneClickTransaction extends Entity
 	protected $returnUrl = null;
 	/** @map:CardCVV **/
 	protected $CVV = null;
+	/** @map:PreAuth **/
+	protected $preAuth = null;
 
     public function __construct()
     {
@@ -201,6 +203,17 @@ class OneClickTransaction extends Entity
 	public function getCVV()
 	{
 		return $this->CVV;
+	}
+	
+	public function setPreAuth($value)
+	{
+		$this->preAuth = $value;
+		return $this;
+	}
+
+	public function getPreAuth()
+	{
+		return $this->preAuth;
 	}
 }
 
