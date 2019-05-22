@@ -14,9 +14,9 @@ class BankTransferStatus extends Entity
 	/** @map:PayoutId **/
 	protected $payoutId = null;
 	
-	public function getId()
+	public function getCustomer()
 	{
-		return $this->id;
+		return $this->customer;
 	}
 
 	public function getPayoutId()
@@ -24,9 +24,9 @@ class BankTransferStatus extends Entity
 		return $this->payoutId;
 	}
 
-	public function setId($id)
+	public function setCustomer($customer)
 	{
-		$this->id = $id;
+		$this->customer = $customer;
 		return $this;
 	}
 
