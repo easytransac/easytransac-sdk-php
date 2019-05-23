@@ -11,9 +11,13 @@ class RefundTest extends PHPUnit_Framework_TestCase
     	
     	$c->setLanguage($f['Language']);
     	$c->setTid($f['Tid']);
+    	$c->setReason($f['Reason']);
+    	$c->setAmount($f['Amount']);
     	
     	$this->assertEquals($c->getLanguage(), $f['Language']);
     	$this->assertEquals($c->getTid(), $f['Tid']);
+    	$this->assertEquals($c->getReason(), $f['Reason']);
+    	$this->assertEquals($c->getAmount(), $f['Amount']);
     }
 
     public function testToArray()
@@ -23,6 +27,8 @@ class RefundTest extends PHPUnit_Framework_TestCase
     	 
     	$c->setLanguage($f['Language']);
     	$c->setTid($f['Tid']);
+    	$c->setAmount($f['Amount']);
+    	$c->setReason($f['Reason']);
     	
     	$this->assertEquals($c->toArray(), $f);
     }
@@ -39,7 +45,9 @@ class RefundTest extends PHPUnit_Framework_TestCase
     {
     	return [
     		'Language' => 'FRE',
-    		'Tid' => '123'
+    		'Tid' => '123',
+    		'Amount' => '1234',
+    		'Reason' => 'i\'m a reason'
     	];
     }
 }

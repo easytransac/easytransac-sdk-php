@@ -31,6 +31,12 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setSendEmail($f['SendEmail']);
     	$c->setUserAgent($f['UserAgent']);
     	$c->setVersion($f['Version']);
+    	$c->setSendSMS($f['SendSMS']);
+    	$c->setSendLater($f['SendLater']);
+    	$c->setOperationType($f['OperationType']);
+    	$c->setAskAmount($f['AskAmount']);
+    	$c->setAskInvoiceNumber($f['AskInvoiceNumber']);
+    	$c->setPreAuth($f['PreAuth']);
     	
     	$this->assertEquals($c->getAmount(), $f['Amount']);
     	$this->assertEquals($c->getCancelUrl(), $f['CancelUrl']);
@@ -50,6 +56,12 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getSendEmail(), $f['SendEmail']);
     	$this->assertEquals($c->getUserAgent(), $f['UserAgent']);
     	$this->assertEquals($c->getVersion(), $f['Version']);
+    	$this->assertEquals($c->getSendSMS(), $f['SendSMS']);
+    	$this->assertEquals($c->getSendLater(), $f['SendLater']);
+    	$this->assertEquals($c->getOperationType(), $f['OperationType']);
+    	$this->assertEquals($c->getAskAmount(), $f['AskAmount']);
+    	$this->assertEquals($c->getAskInvoiceNumber(), $f['AskInvoiceNumber']);
+    	$this->assertEquals($c->getPreAuth(), $f['PreAuth']);
     }
 
     public function testToArray()
@@ -79,6 +91,12 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setSendEmail($f['SendEmail']);
     	$c->setUserAgent($f['UserAgent']);
     	$c->setVersion($f['Version']);
+    	$c->setSendSMS($f['SendSMS']);
+    	$c->setSendLater($f['SendLater']);
+    	$c->setOperationType($f['OperationType']);
+    	$c->setAskAmount($f['AskAmount']);
+    	$c->setAskInvoiceNumber($f['AskInvoiceNumber']);
+    	$c->setPreAuth($f['PreAuth']);
     	
     	$this->assertEquals($c->toArray(), $this->getFixture(true));
     }
@@ -115,7 +133,13 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     			'PayToEmail' => null,
     			'UserAgent' => null,
     			'Language' => 'FRE',
-    			'Version' => 123
+    			'Version' => 123,
+    			'SendSMS' => 'no',
+    			'SendLater' => '2016-05-12',
+    			'OperationType' => 'payment',
+    			'AskAmount' => 'no',
+    			'AskInvoiceNumber' => 'no',
+    			'PreAuth' => 'no',
     		];
     	}
     	else
@@ -132,7 +156,13 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     			'Firstname' => 'Mich',
    				'MultiplePayments' => false,
     			'Language' => 'FRE',
-    			'Version' => 123
+    			'Version' => 123,
+    			'SendSMS' => 'no',
+    			'SendLater' => '2016-05-12',
+    			'OperationType' => 'payment',
+    			'AskAmount' => 'no',
+    			'AskInvoiceNumber' => 'no',
+    			'PreAuth' => 'no',
     		];
     	}
     }

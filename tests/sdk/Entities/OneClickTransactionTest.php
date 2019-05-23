@@ -20,6 +20,10 @@ class OneClickTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setPayToEmail($f['PayToEmail']);
     	$c->setClientId($f['ClientId']);
     	$c->setVersion($f['Version']);
+    	$c->setSecure($f['3DS']);
+    	$c->setReturnUrl($f['ReturnUrl']);
+    	$c->setCVV($f['CardCVV']);
+    	$c->setPreAuth($f['PreAuth']);
     	
     	$this->assertEquals($c->getAlias(), $f['Alias']);
     	$this->assertEquals($c->getAmount(), $f['Amount']);
@@ -32,6 +36,10 @@ class OneClickTransactionTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getPayToEmail(), $f['PayToEmail']);
     	$this->assertEquals($c->getClientId(), $f['ClientId']);
     	$this->assertEquals($c->getVersion(), $f['Version']);
+    	$this->assertEquals($c->getSecure(), $f['3DS']);
+    	$this->assertEquals($c->getReturnUrl(), $f['ReturnUrl']);
+    	$this->assertEquals($c->getCVV(), $f['CardCVV']);
+    	$this->assertEquals($c->getPreAuth(), $f['PreAuth']);
     }
 
     public function testToArray()
@@ -50,6 +58,10 @@ class OneClickTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setPayToEmail($f['PayToEmail']);
     	$c->setClientId($f['ClientId']);
     	$c->setVersion($f['Version']);
+    	$c->setSecure($f['3DS']);
+    	$c->setReturnUrl($f['ReturnUrl']);
+    	$c->setCVV($f['CardCVV']);
+    	$c->setPreAuth($f['PreAuth']);
     	
     	$this->assertEquals($c->toArray(), $f);
     }
@@ -75,7 +87,11 @@ class OneClickTransactionTest extends PHPUnit_Framework_TestCase
     		'UserAgent' => 'Firefox',
     		'PayToEmail' => 'test@test.com',
     		'ClientId' => 'abc123',
-    		'Version' => '1.1'
+    		'Version' => '1.1',
+    		'3DS' => 'yes',
+    		'ReturnUrl' => 'https://www.easytransac.com',
+    		'CardCVV' => '123',
+    		'PreAuth' => 'no',
     	];
     }
 }

@@ -8,7 +8,7 @@ class UserTest extends PHPUnit_Framework_TestCase
     {
     	$c = new \EasyTransac\Entities\User();
     	$f = $this->getFixture();
-    	
+
     	$c->setAccountOwner($f['AccountOwner']);
     	$c->setActivationEmail($f['ActivationEmail']);
     	$c->setActive($f['Active']);
@@ -35,7 +35,13 @@ class UserTest extends PHPUnit_Framework_TestCase
     	$c->setTester($f['Tester']);
     	$c->setVat($f['Vat']);
     	$c->setZipCode($f['ZipCode']);
-    	
+    	$c->setCompanyType($f['CompanyType']);
+    	$c->setCompanyCountry($f['CompanyCountry']);
+    	$c->setGender($f['Gender']);
+    	$c->setCountry($f['Country']);
+    	$c->setWelcomeEmail($f['WelcomeEmail']);
+    	$c->setSetCompany($f['SetCompany']);
+
     	$this->assertEquals($c->getAccountOwner(), $f['AccountOwner']);
     	$this->assertEquals($c->getActivationEmail(), $f['ActivationEmail']);
     	$this->assertEquals($c->getActive(), $f['Active']);
@@ -62,13 +68,19 @@ class UserTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getTester(), $f['Tester']);
     	$this->assertEquals($c->getVat(), $f['Vat']);
     	$this->assertEquals($c->getZipCode(), $f['ZipCode']);
+    	$this->assertEquals($c->getCompanyType(), $f['CompanyType']);
+    	$this->assertEquals($c->getCompanyCountry(), $f['CompanyCountry']);
+    	$this->assertEquals($c->getGender(), $f['Gender']);
+    	$this->assertEquals($c->getCountry(), $f['Country']);
+    	$this->assertEquals($c->getWelcomeEmail(), $f['WelcomeEmail']);
+    	$this->assertEquals($c->getSetCompany(), $f['SetCompany']);
     }
 
     public function testToArray()
     {
     	$c = new \EasyTransac\Entities\User();
     	$f = $this->getFixture();
-    	 
+
     	$c->setAccountOwner($f['AccountOwner']);
     	$c->setActivationEmail($f['ActivationEmail']);
     	$c->setActive($f['Active']);
@@ -95,19 +107,25 @@ class UserTest extends PHPUnit_Framework_TestCase
     	$c->setTester($f['Tester']);
     	$c->setVat($f['Vat']);
     	$c->setZipCode($f['ZipCode']);
-    	
+    	$c->setCompanyType($f['CompanyType']);
+    	$c->setCompanyCountry($f['CompanyCountry']);
+    	$c->setGender($f['Gender']);
+    	$c->setCountry($f['Country']);
+    	$c->setWelcomeEmail($f['WelcomeEmail']);
+    	$c->setSetCompany($f['SetCompany']);
+
     	$this->assertEquals($c->toArray(), $f);
     }
-    
+
     public function testHydrate()
     {
     	$c = new \EasyTransac\Entities\User();
     	$f = $this->getFixture();
     	$c->hydrate(json_decode(json_encode($f)));
-    	
+
     	$this->assertEquals($c->toArray(), $f);
     }
-    
+
     protected function getFixture()
     {
     	return [
@@ -137,6 +155,12 @@ class UserTest extends PHPUnit_Framework_TestCase
     		'Active' => true,
     		'Tester' => true,
     		'CompanyLogo' => 'toto.png',
+    		'CompanyType' => 'entrepreneur',
+    		'CompanyCountry' => 'FRA',
+    		'Gender' => 'male',
+    		'Country' => 'FRA',
+    		'WelcomeEmail' => 'yes',
+    		'SetCompany' => 'yes'
     	];
     }
 }

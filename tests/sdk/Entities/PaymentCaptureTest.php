@@ -15,8 +15,8 @@ class PaymentCaptureTest extends PHPUnit_Framework_TestCase
 
     public function testSetterGetters()
     {
-        $this->assertEquals($this->c->getTid, "1a2b3c");
-        $this->assertEquals($this->c->getLanguage, "French");
+        $this->assertEquals($this->c->getTid(), "1a2b3c");
+        $this->assertEquals($this->c->getLanguage(), "French");
     }
 
     public function testToArray()

@@ -16,7 +16,7 @@ $arg = (new Entities\BankTransferStatus())
 	->setCustomer($customer)
 	->setPayoutId('abc123');
 
-$request = new Requests\BankTransfersStatus();
+$request = new Requests\BankTransferStatus();
 $response = $request->execute($arg);
 
 if ($response->isSuccess())
