@@ -22,6 +22,10 @@ class CustomerTest extends PHPUnit_Framework_TestCase
     	$c->setZipCode($f['ZipCode']);
     	$c->setCountry($f['Country']);
     	$c->setClientId($f['ClientId']);
+    	$c->setCompany($f['Company']);
+    	$c->setIban($f['Iban']);
+    	$c->setBic($f['Bic']);
+    	$c->setCommunication($f['Communication']);
     	
     	$this->assertEquals($c->getAddress(), $f['Address']);
     	$this->assertEquals($c->getBirthDate(), $f['BirthDate']);
@@ -36,6 +40,10 @@ class CustomerTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getZipCode(), $f['ZipCode']);
     	$this->assertEquals($c->getCountry(), $f['Country']);
     	$this->assertEquals($c->getClientId(), $f['ClientId']);
+    	$this->assertEquals($c->getCompany(), $f['Company']);
+    	$this->assertEquals($c->getIban(), $f['Iban']);
+    	$this->assertEquals($c->getBic(), $f['Bic']);
+    	$this->assertEquals($c->getCommunication(), $f['Communication']);
     }
 
     public function testToArray()
@@ -56,6 +64,10 @@ class CustomerTest extends PHPUnit_Framework_TestCase
     	$c->setZipCode($f['ZipCode']);
     	$c->setCountry($f['Country']);
     	$c->setClientId($f['ClientId']);
+    	$c->setCompany($f['Company']);
+    	$c->setIban($f['Iban']);
+    	$c->setBic($f['Bic']);
+    	$c->setCommunication($f['Communication']);
     	
     	$this->assertEquals($c->toArray(), $this->getFixture());
     }
@@ -83,7 +95,11 @@ class CustomerTest extends PHPUnit_Framework_TestCase
     		'City' => 'Strasbourg',
     		'Uid' => '1234',
     		'ClientId' => '12',
-    		'Country' => 'FRA'
+    		'Country' => 'FRA',
+    		'Company' => 'EasyTransac',
+    		'Iban' => 'MyIban',
+    		'Bic' => 'MyBic',
+    		'Communication' => 'yes'
     	];
     }
 }

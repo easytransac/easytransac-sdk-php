@@ -9,30 +9,38 @@ class InitBankTransferTest extends PHPUnit_Framework_TestCase
 
     protected function setUp(): void
     {
+    	$fixture = $this->getFixture();
+    	
         $this->c = new \EasyTransac\Entities\InitBankTransfer();
         $this->customer = new \EasyTransac\Entities\Customer();
-        $this->customer->setLastname("Jean");
+        $this->customer->setClientId($fixture['ClientId']);
 
         $this->c->setCustomer($this->customer);
-        $this->c->setAmount("100");
-        $this->c->setReference("azerty");
+        $this->c->setAmount($fixture['Amount']);
+        $this->c->setReference($fixture['Reference']);
     }
 
     public function testGetterSetters()
     {
-        $this->asserEquals($this->c->getCustomer(), $this->customer);
-        $this->asserEquals($this->c->getAmount(), "100");
-        $this->asserEquals($this->c->getReference(), "azerty");
+    	$fixture = $this->getFixture();
+    	
+    	$this->assertEquals($this->customer->getClientId(), $fixture['ClientId']);
+    	$this->assertEquals($this->c->getAmount(), $fixture['Amount']);
+    	$this->assertEquals($this->c->getReference(), $fixture['Reference']);
     }
 
     public function testToArray()
     {
-        $a = [
-            "LastName" => $this->c->getCustomer()->getLastName(),
-            "Amount" => "100",
-            "Reference" => "azerty",
-        ];
-
-        $this->assertEquals($this->c->toArray(), $a);
+        $this->assertEquals($this->c->toArray(), $this->getFixture());
+    }
+    
+    public function getFixture() 
+    {
+		return [
+			'Reference' => 'a1b2c3',
+			'Amount' => '1234',
+			'Reference' => 'a9z8e7',
+			'ClientId' => 'a4f7g53'
+		];
     }
 }

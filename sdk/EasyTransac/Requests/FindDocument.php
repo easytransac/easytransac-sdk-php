@@ -11,7 +11,7 @@ use \EasyTransac\Entities\Entity;
  */
 class FindDocument extends Request
 {
-    /** @array:Document **/
+    /** @object:Document **/
     protected $response;
 
     /**

@@ -17,6 +17,9 @@ class PaymentPageInfosTest extends PHPUnit_Framework_TestCase
     	$c->setPageUrl($f['PageUrl']);
     	$c->setRequestId($f['RequestId']);
     	$c->setStatus($f['Status']);
+    	$c->setOperationType($f['OperationType']);
+    	$c->setDateSent($f['DateSent']);
+    	$c->setSecure($f['3DSecure']);
     	
     	$this->assertEquals($c->getAmount(), $f['Amount']);
     	$this->assertEquals($c->getDate(), $f['Date']);
@@ -26,6 +29,9 @@ class PaymentPageInfosTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getPageUrl(), $f['PageUrl']);
     	$this->assertEquals($c->getRequestId(), $f['RequestId']);
     	$this->assertEquals($c->getStatus(), $f['Status']);
+    	$this->assertEquals($c->getOperationType(), $f['OperationType']);
+    	$this->assertEquals($c->getDateSent(), $f['DateSent']);
+    	$this->assertEquals($c->getSecure(), $f['3DSecure']);
     }
 
     public function testToArray()
@@ -41,6 +47,9 @@ class PaymentPageInfosTest extends PHPUnit_Framework_TestCase
     	$c->setPageUrl($f['PageUrl']);
     	$c->setRequestId($f['RequestId']);
     	$c->setStatus($f['Status']);
+    	$c->setOperationType($f['OperationType']);
+    	$c->setDateSent($f['DateSent']);
+    	$c->setSecure($f['3DSecure']);
     	
     	$this->assertEquals($c->toArray(), $f);
     }
@@ -65,6 +74,9 @@ class PaymentPageInfosTest extends PHPUnit_Framework_TestCase
     		'RequestId' => 123,
     		'Email' => 'test@test.com',
     		'Language' => 'FRE',
+    		'OperationType' => 'payment',
+    		'DateSent' => '2016-12-06 12:24',
+    		'3DSecure' => 'yes',
     	];
     }
 }

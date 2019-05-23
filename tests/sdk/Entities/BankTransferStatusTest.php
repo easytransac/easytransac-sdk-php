@@ -9,29 +9,32 @@ class BankTransferStatusTest extends PHPUnit_Framework_TestCase
 
     protected function setUp(): void
     {
+    	$fixture = $this->getFixture();
         $this->c = new \EasyTransac\Entities\BankTransferStatus();
 
         $this->customer = new \EasyTransac\Entities\Customer();
-        $this->customer->setLastname("Toto");
-        $this->c->setCustomer($customer);
-        $this->c->setPayoutId("112233");
-        $this->c->setId("332211");
+        $this->customer->setClientId($fixture['ClientId']);
+        $this->c->setCustomer($this->customer);
+        $this->c->setPayoutId($fixture['PayoutId']);
     }
 
     public function testGetterSetters()
     {
-        $this->assertEquals($this->c->getCustomer(), $this->customer);
-        $this->assertEquals($this->c->getPayoutId(), "112233");
-        $this->assertEquals($this->c->getId(), "332211");
+    	$fixture = $this->getFixture();
+        $this->assertEquals($this->c->getPayoutId(), $fixture['PayoutId']);
+        $this->assertEquals($this->customer->getClientId(), $fixture['ClientId']);
     }
 
     public function testToArray()
     {
-        $a = [
-            "LastName" => "Toto",
-            "PayoutId" => "112233",
-            "Id" => "332211",
-        ];
-        $this->assertEquals($this->c->toArray(), $a);
+        $this->assertEquals($this->c->toArray(), $this->getFixture());
+    }
+    
+    protected function getFixture()
+    {
+    	return [
+    		"ClientId" => "a1b2c3",
+    		"PayoutId" => "112233",
+    	];
     }
 }

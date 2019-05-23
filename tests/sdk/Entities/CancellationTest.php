@@ -6,27 +6,38 @@ class CancellationTest extends PHPUnit_Framework_TestCase
 {
     public function testSettersGetters()
     {
+    	$fixture = $this->getFixture();
+    	
     	$c = new \EasyTransac\Entities\Cancellation();
     	
-    	$c->setLanguage('FR');
-    	$c->setTid('123456');
+    	$c->setLanguage($fixture['Language']);
+    	$c->setTid($fixture['Tid']);
+    	$c->setRequestId($fixture['RequestId']);
     	
-    	$this->assertEquals($c->getLanguage(), 'FR');
-    	$this->assertEquals($c->getTid(), '123456');
+    	$this->assertEquals($c->getLanguage(), $fixture['Language']);
+    	$this->assertEquals($c->getTid(), $fixture['Tid']);
+    	$this->assertEquals($c->getRequestId(), $fixture['RequestId']);
     }
 
     public function testToArray()
     {
+    	$fixture = $this->getFixture();
+    	
     	$c = new \EasyTransac\Entities\Cancellation();
-    	$c->setLanguage('FR');
-    	$c->setTid('123456');
+    	$c->setLanguage($fixture['Language']);
+    	$c->setTid($fixture['Tid']);
+    	$c->setRequestId($fixture['RequestId']);
     	
-    	$a = [
-    		'Language' => 'FR',
-    		'Tid' => '123456'
+    	$this->assertEquals($c->toArray(), $fixture);
+    }
+    
+    protected function getFixture() 
+    {
+    	return [
+    		'Language' => 'FRE',
+    		'Tid' => '123456',
+    		'RequestId' => '123'
     	];
-    	
-    	$this->assertEquals($c->toArray(), $a);
     }
 }
 
