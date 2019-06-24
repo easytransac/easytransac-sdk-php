@@ -114,18 +114,18 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	if (!$rendered)
     	{
     		return [
-    			'SendEmail' => true,
+    			'SendEmail' => 'yes',
     			'OrderId' => 123,
     			'Description' => 'Test description',
     			'Amount' => 12000,
    				'ClientIP' => '127.0.0.1',
-   				'3DS' => false,
+   				'3DS' => 'no',
     			'ReturnUrl' => 'https:/www.easytransac.com',
     			'CancelUrl' => 'https:/www.easytransac.com',
     			'Customer' => [
     				'Firstname' => 'Mich'
     			],
-    			'MultiplePayments' => false,
+    			'MultiplePayments' => 'no',
    				'MultiplePaymentsRepeat' => null,
    				'DownPayment' => null,
    				'Rebill' => null,
@@ -145,16 +145,16 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     	else
     	{
     		return [
-    			'SendEmail' => true,
+    			'SendEmail' => 'yes',
     			'OrderId' => 123,
     			'Description' => 'Test description',
     			'Amount' => 12000,
    				'ClientIP' => '127.0.0.1',
-   				'3DS' => false,
+   				'3DS' => 'no',
    				'ReturnUrl' => 'https:/www.easytransac.com',
     			'CancelUrl' => 'https:/www.easytransac.com',
     			'Firstname' => 'Mich',
-   				'MultiplePayments' => false,
+   				'MultiplePayments' => 'no',
     			'Language' => 'FRE',
     			'Version' => 123,
     			'SendSMS' => 'no',

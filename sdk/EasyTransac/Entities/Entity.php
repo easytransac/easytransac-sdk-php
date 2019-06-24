@@ -5,6 +5,7 @@ namespace EasyTransac\Entities;
 use \EasyTransac\Core\CommentParser;
 use \EasyTransac\Core\Services;
 use EasyTransac\Core\Logger;
+use EasyTransac\Converters\BooleanToString;
 
 /**
  * Generic entity
@@ -15,10 +16,40 @@ abstract class Entity
 {
     protected $mapping = [];
     protected $additionalFields = [];
-
+    protected $converters = [];
+	
     public function __construct()
     {
+    	$this->addConverter(new BooleanToString());
         $this->makeMapping();
+    }
+    
+    /**
+     * Attach a api argument converter
+     * @param EasyTransac\Converters\IConverter $converter
+     * @return \EasyTransac\Entities\Entity
+     */
+    public function addConverter(\EasyTransac\Converters\IConverter $converter)
+    {
+    	$this->converters[] = $converter;
+    	
+    	return $this;
+    }
+    
+    /**
+     * Call all registred converters
+     * @param Mixed $value
+     * @return Mixed
+     */
+    public function callConverters($value)
+    {
+        if ($this->converters)
+        {
+        	foreach ($this->converters as $converter)
+        		$value = $converter->convert($value) ;
+        }
+        
+        return $value;
     }
     
     /**
@@ -75,7 +106,7 @@ abstract class Entity
 
             if ($value['type'] == 'map')
             {
-                $out[$value['name']] = $this->{$key};
+                $out[$value['name']] = $this->callConverters($this->{$key});
             }
             else if ($value['type'] == 'array')
             {
@@ -104,7 +135,7 @@ abstract class Entity
         		else if (is_object($additionalField))
         			$out += $additionalField->toArray();
         		else
-        			$out[$key] = $additionalField;
+        			$out[$key] = $this->callConverters($additionalField);
         	}
         }
 
