@@ -1,0 +1,1365 @@
+<?xml version="1.0"?>
+<checkstyle version="1.3.0">
+  <file name="Converters/IConverter.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+  </file>
+  <file name="Requests/CreditCardInfo.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/Cancellation.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/FindUserBy.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="17" severity="error" message="No summary for method getEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="22" severity="error" message="No summary for method getId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="27" severity="error" message="Argument $email is missing from the Docblock of setEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="27" severity="error" message="No summary for method setEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="33" severity="error" message="Argument $id is missing from the Docblock of setId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="33" severity="error" message="No summary for method setId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $email" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $id" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/PaymentPageInfos.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="35" severity="error" message="Argument $value is missing from the Docblock of setRequestId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="35" severity="error" message="No summary for method setRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="41" severity="error" message="No summary for method getRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="46" severity="error" message="Argument $operationType is missing from the Docblock of setOperationType" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="46" severity="error" message="No summary for method setOperationType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="52" severity="error" message="No summary for method getOperationType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="57" severity="error" message="No summary for method getStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="62" severity="error" message="Argument $status is missing from the Docblock of setStatus" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="62" severity="error" message="No summary for method setStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="68" severity="error" message="No summary for method getDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="73" severity="error" message="Argument $date is missing from the Docblock of setDate" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="73" severity="error" message="No summary for method setDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="79" severity="error" message="No summary for method getDateSent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="84" severity="error" message="Argument $date is missing from the Docblock of setDateSent" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="84" severity="error" message="No summary for method setDateSent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="90" severity="error" message="No summary for method getAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="95" severity="error" message="Argument $amount is missing from the Docblock of setAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="95" severity="error" message="No summary for method setAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="101" severity="error" message="No summary for method getFixFees()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="106" severity="error" message="Argument $fixFees is missing from the Docblock of setFixFees" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="106" severity="error" message="No summary for method setFixFees()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="112" severity="error" message="No summary for method getSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="117" severity="error" message="Argument $secure is missing from the Docblock of setSecure" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="117" severity="error" message="No summary for method setSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="123" severity="error" message="No summary for method getPageUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="128" severity="error" message="Argument $pageUrl is missing from the Docblock of setPageUrl" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="128" severity="error" message="No summary for method setPageUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="134" severity="error" message="No summary for method getEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="139" severity="error" message="Argument $email is missing from the Docblock of setEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="139" severity="error" message="No summary for method setEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="145" severity="error" message="No summary for method getLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="150" severity="error" message="Argument $language is missing from the Docblock of setLanguage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="150" severity="error" message="No summary for method setLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $requestId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $operationType" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $status" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $date" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $dateSent" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $amount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $fixFees" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $secure" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $pageUrl" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $email" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="33" severity="error" message="No summary for property $language" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/Notification.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="51" severity="error" message="No summary for method getOperationType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="56" severity="error" message="Argument $operationType is missing from the Docblock of setOperationType" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="56" severity="error" message="No summary for method setOperationType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="62" severity="error" message="No summary for method getRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="67" severity="error" message="Argument $requestId is missing from the Docblock of setRequestId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="67" severity="error" message="No summary for method setRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="73" severity="error" message="No summary for method getTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="78" severity="error" message="Argument $tid is missing from the Docblock of setTid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="78" severity="error" message="No summary for method setTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="84" severity="error" message="No summary for method getUid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="89" severity="error" message="Argument $uid is missing from the Docblock of setUid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="89" severity="error" message="No summary for method setUid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="95" severity="error" message="No summary for method getOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="100" severity="error" message="Argument $orderId is missing from the Docblock of setOrderId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="100" severity="error" message="No summary for method setOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="106" severity="error" message="No summary for method getStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="111" severity="error" message="Argument $status is missing from the Docblock of setStatus" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="111" severity="error" message="No summary for method setStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="117" severity="error" message="No summary for method getDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="122" severity="error" message="Argument $date is missing from the Docblock of setDate" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="122" severity="error" message="No summary for method setDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="128" severity="error" message="No summary for method getAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="133" severity="error" message="Argument $amount is missing from the Docblock of setAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="133" severity="error" message="No summary for method setAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="139" severity="error" message="No summary for method getCurrency()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="144" severity="error" message="Argument $currency is missing from the Docblock of setCurrency" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="144" severity="error" message="No summary for method setCurrency()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="150" severity="error" message="No summary for method getFixFees()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="155" severity="error" message="Argument $fixFees is missing from the Docblock of setFixFees" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="155" severity="error" message="No summary for method setFixFees()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="161" severity="error" message="No summary for method getMessage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="166" severity="error" message="Argument $message is missing from the Docblock of setMessage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="166" severity="error" message="No summary for method setMessage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="172" severity="error" message="No summary for method getSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="177" severity="error" message="Argument $secure is missing from the Docblock of setSecure" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="177" severity="error" message="No summary for method setSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="183" severity="error" message="No summary for method getOneClick()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="188" severity="error" message="Argument $oneClick is missing from the Docblock of setOneClick" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="188" severity="error" message="No summary for method setOneClick()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="194" severity="error" message="No summary for method getAlias()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="199" severity="error" message="Argument $alias is missing from the Docblock of setAlias" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="199" severity="error" message="No summary for method setAlias()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="205" severity="error" message="No summary for method getCardNumber()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="210" severity="error" message="Argument $cardNumber is missing from the Docblock of setCardNumber" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="210" severity="error" message="No summary for method setCardNumber()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="216" severity="error" message="No summary for method getTest()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="221" severity="error" message="Argument $test is missing from the Docblock of setTest" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="221" severity="error" message="No summary for method setTest()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="227" severity="error" message="No summary for method getSignature()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="232" severity="error" message="Argument $signature is missing from the Docblock of setSignature" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="232" severity="error" message="No summary for method setSignature()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="238" severity="error" message="No summary for method getClient()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="243" severity="error" message="Argument $client is missing from the Docblock of setClient" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="243" severity="error" message="No summary for method setClient()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="249" severity="error" message="No summary for method getError()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="254" severity="error" message="Argument $error is missing from the Docblock of setError" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="254" severity="error" message="No summary for method setError()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $operationType" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $requestId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $tid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $uid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $orderId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $status" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $date" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $amount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $currency" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $fixFees" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="33" severity="error" message="No summary for property $message" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="35" severity="error" message="No summary for property $secure" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="37" severity="error" message="No summary for property $oneClick" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="39" severity="error" message="No summary for property $alias" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="41" severity="error" message="No summary for property $cardNumber" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="43" severity="error" message="No summary for property $test" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="45" severity="error" message="No summary for property $signature" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="47" severity="error" message="No summary for property $client" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="49" severity="error" message="No summary for property $error" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/DirectTransaction.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="47" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="58" severity="error" message="Argument $value is missing from the Docblock of setCreditCard" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="58" severity="error" message="No summary for method setCreditCard()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="64" severity="error" message="No summary for method getCreditCard()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="69" severity="error" message="Argument $value is missing from the Docblock of setCustomer" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="69" severity="error" message="No summary for method setCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="75" severity="error" message="No summary for method getCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="80" severity="error" message="Argument $value is missing from the Docblock of setDownPayment" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="80" severity="error" message="No summary for method setDownPayment()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="86" severity="error" message="No summary for method getDownPayment()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="91" severity="error" message="Argument $value is missing from the Docblock of setSecure" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="91" severity="error" message="No summary for method setSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="97" severity="error" message="No summary for method getSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="102" severity="error" message="Argument $value is missing from the Docblock of setClientIp" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="102" severity="error" message="No summary for method setClientIp()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="108" severity="error" message="No summary for method getClientIp()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="113" severity="error" message="Argument $value is missing from the Docblock of setDescription" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="113" severity="error" message="No summary for method setDescription()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="119" severity="error" message="No summary for method getDescription()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="124" severity="error" message="Argument $value is missing from the Docblock of setOrderId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="124" severity="error" message="No summary for method setOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="130" severity="error" message="No summary for method getOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="135" severity="error" message="Argument $value is missing from the Docblock of setAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="135" severity="error" message="No summary for method setAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="141" severity="error" message="No summary for method getAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="146" severity="error" message="No summary for method getMultiplePayments()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="151" severity="error" message="Argument $multiplePayments is missing from the Docblock of setMultiplePayments" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="151" severity="error" message="No summary for method setMultiplePayments()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="157" severity="error" message="No summary for method getMultiplePaymentsRepeat()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="162" severity="error" message="Argument $multiplePaymentsRepeat is missing from the Docblock of setMultiplePaymentsRepeat" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="162" severity="error" message="No summary for method setMultiplePaymentsRepeat()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="168" severity="error" message="No summary for method getRebill()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="173" severity="error" message="Argument $rebill is missing from the Docblock of setRebill" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="173" severity="error" message="No summary for method setRebill()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="179" severity="error" message="No summary for method getRecurrence()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="184" severity="error" message="Argument $recurrence is missing from the Docblock of setRecurrence" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="184" severity="error" message="No summary for method setRecurrence()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="190" severity="error" message="No summary for method getPayToEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="195" severity="error" message="Argument $payToEmail is missing from the Docblock of setPayToEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="195" severity="error" message="No summary for method setPayToEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="201" severity="error" message="No summary for method getUserAgent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="206" severity="error" message="Argument $userAgent is missing from the Docblock of setUserAgent" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="206" severity="error" message="No summary for method setUserAgent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="212" severity="error" message="No summary for method getLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="217" severity="error" message="Argument $language is missing from the Docblock of setLanguage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="217" severity="error" message="No summary for method setLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="223" severity="error" message="No summary for method getPreAuth()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="228" severity="error" message="Argument $value is missing from the Docblock of setPreAuth" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="228" severity="error" message="No summary for method setPreAuth()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="234" severity="error" message="No summary for method getReturnUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="239" severity="error" message="Argument $returnUrl is missing from the Docblock of setReturnUrl" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="239" severity="error" message="No summary for method setReturnUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $amount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $orderId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $description" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $clientIp" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $secure" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $downPayment" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $returnUrl" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $multiplePayments" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $multiplePaymentsRepeat" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $rebill" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="33" severity="error" message="No summary for property $recurrence" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="35" severity="error" message="No summary for property $payToEmail" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="37" severity="error" message="No summary for property $userAgent" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="39" severity="error" message="No summary for property $language" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="41" severity="error" message="No summary for property $customer" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="43" severity="error" message="No summary for property $creditCard" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="45" severity="error" message="No summary for property $preAuth" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/AddCreditCard.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/BankTransfersList.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="15" severity="error" message="No summary for method getBankTransferInfos()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="20" severity="error" message="Argument $bankTransferInfos is missing from the Docblock of setBankTransferInfos" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="20" severity="error" message="No summary for method setBankTransferInfos()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $bankTransferInfos" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/Request.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="18" severity="error" message="No summary for property $requiredFields" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/Customer.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="47" severity="error" message="Argument $value is missing from the Docblock of setUid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="47" severity="error" message="No summary for method setUid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="53" severity="error" message="No summary for method getUid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="58" severity="error" message="Argument $value is missing from the Docblock of setCity" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="58" severity="error" message="No summary for method setCity()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="64" severity="error" message="No summary for method getCity()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="69" severity="error" message="Argument $value is missing from the Docblock of setZipCode" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="69" severity="error" message="No summary for method setZipCode()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="75" severity="error" message="No summary for method getZipCode()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="80" severity="error" message="Argument $value is missing from the Docblock of setAddress" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="80" severity="error" message="No summary for method setAddress()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="86" severity="error" message="No summary for method getCountry()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="91" severity="error" message="No summary for method getAddress()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="96" severity="error" message="Argument $value is missing from the Docblock of setNationality" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="96" severity="error" message="No summary for method setNationality()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="102" severity="error" message="No summary for method getNationality()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="107" severity="error" message="Argument $value is missing from the Docblock of setBirthDate" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="107" severity="error" message="No summary for method setBirthDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="113" severity="error" message="No summary for method getBirthDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="118" severity="error" message="Argument $value is missing from the Docblock of setPhone" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="118" severity="error" message="No summary for method setPhone()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="124" severity="error" message="No summary for method getPhone()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="129" severity="error" message="Argument $value is missing from the Docblock of setCallingCode" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="129" severity="error" message="No summary for method setCallingCode()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="135" severity="error" message="No summary for method getCallingCode()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="140" severity="error" message="Argument $value is missing from the Docblock of setLastname" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="140" severity="error" message="No summary for method setLastname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="146" severity="error" message="Argument $value is missing from the Docblock of setCountry" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="146" severity="error" message="No summary for method setCountry()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="152" severity="error" message="No summary for method getLastname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="157" severity="error" message="Argument $value is missing from the Docblock of setFirstname" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="157" severity="error" message="No summary for method setFirstname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="163" severity="error" message="No summary for method getFirstname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="168" severity="error" message="Argument $value is missing from the Docblock of setEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="168" severity="error" message="No summary for method setEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="174" severity="error" message="No summary for method getEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="179" severity="error" message="No summary for method getClientId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="184" severity="error" message="Argument $clientId is missing from the Docblock of setClientId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="184" severity="error" message="No summary for method setClientId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="190" severity="error" message="No summary for method getCompany()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="195" severity="error" message="No summary for method getIban()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="200" severity="error" message="No summary for method getBic()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="205" severity="error" message="No summary for method getCommunication()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="210" severity="error" message="Argument $company is missing from the Docblock of setCompany" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="210" severity="error" message="No summary for method setCompany()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="216" severity="error" message="Argument $iban is missing from the Docblock of setIban" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="216" severity="error" message="No summary for method setIban()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="222" severity="error" message="Argument $bic is missing from the Docblock of setBic" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="222" severity="error" message="No summary for method setBic()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="228" severity="error" message="Argument $communication is missing from the Docblock of setCommunication" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="228" severity="error" message="No summary for method setCommunication()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $email" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $firstname" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $lastname" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $callingCode" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $phone" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $birthDate" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $nationality" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $address" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $zipCode" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $city" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="33" severity="error" message="No summary for property $country" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="35" severity="error" message="No summary for property $uid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="37" severity="error" message="No summary for property $clientId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="39" severity="error" message="No summary for property $company" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="41" severity="error" message="No summary for property $iban" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="43" severity="error" message="No summary for property $bic" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="45" severity="error" message="No summary for property $communication" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/UserInfos.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="17" severity="error" message="No summary for method getId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="22" severity="error" message="Argument $id is missing from the Docblock of setId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="22" severity="error" message="No summary for method setId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="28" severity="error" message="No summary for method getMessage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="33" severity="error" message="Argument $message is missing from the Docblock of setMessage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="33" severity="error" message="No summary for method setMessage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $message" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/BankTransferStatus.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="17" severity="error" message="No summary for method getCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="22" severity="error" message="No summary for method getPayoutId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="27" severity="error" message="Argument $customer is missing from the Docblock of setCustomer" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="27" severity="error" message="No summary for method setCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="33" severity="error" message="Argument $payoutId is missing from the Docblock of setPayoutId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="33" severity="error" message="No summary for method setPayoutId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $customer" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $payoutId" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Core/FgcCaller.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="14" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="23" severity="error" message="Argument $headers is missing from the Docblock of setHeaders" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="41" severity="error" message="Argument $second is missing from the Docblock of setTimeout" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="59" severity="error" message="Argument $url is missing from the Docblock of call" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="59" severity="error" message="Argument $params is missing from the Docblock of call" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="101" severity="error" message="Argument $headers is missing from the Docblock of addHeaders" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="11" severity="error" message="No summary for property $timeout" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="12" severity="error" message="No summary for property $headers" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/GetDocument.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/PaymentPageCancellation.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/DirectPayment.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/PaymentPage.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Core/Security.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+  </file>
+  <file name="Requests/AddCustomer.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/BankTransferStatus.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/OneClickTransaction.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="43" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="54" severity="error" message="Argument $value is missing from the Docblock of setAlias" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="54" severity="error" message="No summary for method setAlias()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="60" severity="error" message="No summary for method getAlias()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="65" severity="error" message="Argument $value is missing from the Docblock of setClientIp" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="65" severity="error" message="No summary for method setClientIp()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="71" severity="error" message="No summary for method getClientIp()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="76" severity="error" message="Argument $value is missing from the Docblock of setDescription" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="76" severity="error" message="No summary for method setDescription()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="82" severity="error" message="No summary for method getDescription()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="87" severity="error" message="Argument $value is missing from the Docblock of setOrderId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="87" severity="error" message="No summary for method setOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="93" severity="error" message="No summary for method getOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="98" severity="error" message="Argument $value is missing from the Docblock of setUid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="98" severity="error" message="No summary for method setUid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="104" severity="error" message="No summary for method getUid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="109" severity="error" message="Argument $value is missing from the Docblock of setAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="109" severity="error" message="No summary for method setAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="115" severity="error" message="No summary for method getAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="120" severity="error" message="No summary for method getPayToEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="125" severity="error" message="Argument $payToEmail is missing from the Docblock of setPayToEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="125" severity="error" message="No summary for method setPayToEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="131" severity="error" message="No summary for method getUserAgent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="136" severity="error" message="Argument $userAgent is missing from the Docblock of setUserAgent" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="No summary for method setUserAgent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="142" severity="error" message="No summary for method getLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="147" severity="error" message="Argument $language is missing from the Docblock of setLanguage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="147" severity="error" message="No summary for method setLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="153" severity="error" message="No summary for method getClientId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="158" severity="error" message="Argument $clientId is missing from the Docblock of setClientId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="158" severity="error" message="No summary for method setClientId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="164" severity="error" message="No summary for method getVersion()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="169" severity="error" message="Argument $version is missing from the Docblock of setVersion" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="169" severity="error" message="No summary for method setVersion()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="175" severity="error" message="Argument $value is missing from the Docblock of setSecure" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="175" severity="error" message="No summary for method setSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="181" severity="error" message="No summary for method getSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="186" severity="error" message="No summary for method getReturnUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="191" severity="error" message="Argument $returnUrl is missing from the Docblock of setReturnUrl" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="No summary for method setReturnUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="197" severity="error" message="Argument $value is missing from the Docblock of setCVV" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="197" severity="error" message="No summary for method setCVV()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="203" severity="error" message="No summary for method getCVV()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="208" severity="error" message="Argument $value is missing from the Docblock of setPreAuth" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="208" severity="error" message="No summary for method setPreAuth()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="214" severity="error" message="No summary for method getPreAuth()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $amount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $uid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $orderId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $description" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $clientIp" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $alias" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $payToEmail" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $userAgent" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $language" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $clientId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="33" severity="error" message="No summary for property $version" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="35" severity="error" message="No summary for property $secure" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="37" severity="error" message="No summary for property $returnUrl" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="39" severity="error" message="No summary for property $CVV" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="41" severity="error" message="No summary for property $preAuth" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/DebitPayment.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/CreditCardsList.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="15" severity="error" message="No summary for method getCreditCards()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="20" severity="error" message="Argument $creditCards is missing from the Docblock of setCreditCards" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="20" severity="error" message="No summary for method setCreditCards()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $creditCards" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Core/ICaller.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="15" severity="error" message="Name of argument $headers does not match with the DocBlock's name $params in setHeaders()" source="phpDocumentor.file.PPC:ERR-50014"/>
+    <error line="15" severity="notice" message="Parameter $params could not be found in setHeaders()" source="phpDocumentor.file.PPC:ERR-50013"/>
+    <error line="26" severity="error" message="Argument $second is missing from the Docblock of setTimeout" source="phpDocumentor.file.PPC:ERR-50015"/>
+  </file>
+  <file name="Core/Services.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="14" severity="error" message="No summary for property $instance" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $key" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="16" severity="error" message="No summary for property $caller" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $modifier" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="18" severity="error" message="No summary for property $url" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $timeout" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/DebitTransaction.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="51" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="62" severity="error" message="No summary for method getReturnUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="67" severity="error" message="Argument $returnUrl is missing from the Docblock of setReturnUrl" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="67" severity="error" message="No summary for method setReturnUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="73" severity="error" message="Argument $value is missing from the Docblock of setCustomer" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="73" severity="error" message="No summary for method setCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="79" severity="error" message="No summary for method getCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="84" severity="error" message="Argument $value is missing from the Docblock of setMultiplePayments" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="84" severity="error" message="No summary for method setMultiplePayments()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="90" severity="error" message="No summary for method getMultiplePayments()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="95" severity="error" message="Argument $value is missing from the Docblock of setDownPayment" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="95" severity="error" message="No summary for method setDownPayment()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="101" severity="error" message="No summary for method getDownPayment()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="106" severity="error" message="Argument $value is missing from the Docblock of setClientIp" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="106" severity="error" message="No summary for method setClientIp()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="112" severity="error" message="No summary for method getClientIp()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="117" severity="error" message="Argument $value is missing from the Docblock of setDescription" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="117" severity="error" message="No summary for method setDescription()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="123" severity="error" message="No summary for method getDescription()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="128" severity="error" message="Argument $value is missing from the Docblock of setOrderId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="128" severity="error" message="No summary for method setOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="134" severity="error" message="No summary for method getOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="139" severity="error" message="Argument $value is missing from the Docblock of setAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="139" severity="error" message="No summary for method setAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="145" severity="error" message="No summary for method getAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="150" severity="error" message="No summary for method getBic()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="155" severity="error" message="Argument $bic is missing from the Docblock of setBic" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="155" severity="error" message="No summary for method setBic()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="161" severity="error" message="No summary for method getIban()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="166" severity="error" message="Argument $iban is missing from the Docblock of setIban" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="166" severity="error" message="No summary for method setIban()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="172" severity="error" message="No summary for method getSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="177" severity="error" message="Argument $secure is missing from the Docblock of setSecure" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="177" severity="error" message="No summary for method setSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="183" severity="error" message="No summary for method getMultiplePaymentsRepeat()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="188" severity="error" message="Argument $multiplePaymentsRepeat is missing from the Docblock of setMultiplePaymentsRepeat" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="188" severity="error" message="No summary for method setMultiplePaymentsRepeat()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="194" severity="error" message="No summary for method getRebill()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="199" severity="error" message="Argument $rebill is missing from the Docblock of setRebill" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="199" severity="error" message="No summary for method setRebill()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="205" severity="error" message="No summary for method getRecurrence()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="210" severity="error" message="Argument $recurrence is missing from the Docblock of setRecurrence" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="210" severity="error" message="No summary for method setRecurrence()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="216" severity="error" message="No summary for method getPayToEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="221" severity="error" message="Argument $payToEmail is missing from the Docblock of setPayToEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="221" severity="error" message="No summary for method setPayToEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="227" severity="error" message="No summary for method getUserAgent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="232" severity="error" message="Argument $userAgent is missing from the Docblock of setUserAgent" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="232" severity="error" message="No summary for method setUserAgent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="238" severity="error" message="No summary for method getLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="243" severity="error" message="Argument $language is missing from the Docblock of setLanguage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="243" severity="error" message="No summary for method setLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $amount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $orderId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $description" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $clientIp" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $secure" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $downPayment" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $multiplePayments" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $multiplePaymentsRepeat" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $rebill" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $recurrence" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="33" severity="error" message="No summary for property $payToEmail" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="35" severity="error" message="No summary for property $userAgent" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="37" severity="error" message="No summary for property $language" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="39" severity="error" message="No summary for property $bic" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="41" severity="error" message="No summary for property $iban" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="43" severity="error" message="No summary for property $customer" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="45" severity="error" message="No summary for property $accountOwner" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="47" severity="error" message="No summary for property $returnUrl" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="49" severity="error" message="No summary for property $Rebill" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Converters/BooleanToString.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="14" severity="error" message="Argument $value is missing from the Docblock of convert" source="phpDocumentor.file.PPC:ERR-50015"/>
+  </file>
+  <file name="Responses/StandardResponse.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="14" severity="error" message="No summary for property $entity" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $errorMessage" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="16" severity="error" message="No summary for property $errorCode" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $success" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="18" severity="error" message="No summary for property $sameSignature" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/Entity.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="17" severity="error" message="No summary for property $mapping" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="18" severity="error" message="No summary for property $additionalFields" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $converters" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/FindCustomer.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/PaymentCapture.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="17" severity="error" message="No summary for method getTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="22" severity="error" message="No summary for method getLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="27" severity="error" message="Argument $tid is missing from the Docblock of setTid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="27" severity="error" message="No summary for method setTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="33" severity="error" message="Argument $language is missing from the Docblock of setLanguage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="33" severity="error" message="No summary for method setLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $tid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $language" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/UpdateCustomer.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/Refund.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="No summary for method getAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="26" severity="error" message="Argument $amount is missing from the Docblock of setAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="26" severity="error" message="No summary for method setAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="32" severity="error" message="No summary for method getReason()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="37" severity="error" message="Argument $reason is missing from the Docblock of setReason" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="37" severity="error" message="No summary for method setReason()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="43" severity="error" message="No summary for method getTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="48" severity="error" message="Argument $tid is missing from the Docblock of setTid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="48" severity="error" message="No summary for method setTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="54" severity="error" message="No summary for method getLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="59" severity="error" message="Argument $language is missing from the Docblock of setLanguage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="59" severity="error" message="No summary for method setLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $tid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $language" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $amount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $reason" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/CreditCardInfo.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="No summary for method getCardBin()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="26" severity="error" message="No summary for method getCardCountry()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="31" severity="error" message="No summary for method getCardType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="36" severity="error" message="No summary for method getCardBank()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="41" severity="error" message="Argument $cardBIN is missing from the Docblock of setCardBin" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="41" severity="error" message="No summary for method setCardBin()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="47" severity="error" message="Argument $cardCountry is missing from the Docblock of setCardCountry" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="47" severity="error" message="No summary for method setCardCountry()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="53" severity="error" message="Argument $cardType is missing from the Docblock of setCardType" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="53" severity="error" message="No summary for method setCardType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="59" severity="error" message="Argument $cardBank is missing from the Docblock of setCardBank" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="59" severity="error" message="No summary for method setCardBank()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $cardBin" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $cardCountry" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $cardType" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $cardBank" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/PaymentPageTransaction.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="61" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="72" severity="error" message="No summary for method getSendEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="77" severity="error" message="Argument $sendEmail is missing from the Docblock of setSendEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="77" severity="error" message="No summary for method setSendEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="83" severity="error" message="No summary for method getSendSMS()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="88" severity="error" message="Argument $sendSMS is missing from the Docblock of setSendSMS" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="88" severity="error" message="No summary for method setSendSMS()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="94" severity="error" message="No summary for method getSendLater()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="99" severity="error" message="Argument $date is missing from the Docblock of setSendLater" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="99" severity="error" message="No summary for method setSendLater()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="105" severity="error" message="No summary for method getVersion()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="110" severity="error" message="Argument $version is missing from the Docblock of setVersion" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="110" severity="error" message="No summary for method setVersion()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="116" severity="error" message="No summary for method getOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="121" severity="error" message="Argument $orderId is missing from the Docblock of setOrderId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="121" severity="error" message="No summary for method setOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="127" severity="error" message="Argument $operationType is missing from the Docblock of setOperationType" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="127" severity="error" message="No summary for method setOperationType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="133" severity="error" message="No summary for method getOperationType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="138" severity="error" message="No summary for method getDescription()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="143" severity="error" message="Argument $description is missing from the Docblock of setDescription" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="143" severity="error" message="No summary for method setDescription()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="149" severity="error" message="No summary for method getAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="154" severity="error" message="Argument $amount is missing from the Docblock of setAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="154" severity="error" message="No summary for method setAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="160" severity="error" message="No summary for method getClientIP()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="165" severity="error" message="Argument $clientIP is missing from the Docblock of setClientIP" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="165" severity="error" message="No summary for method setClientIP()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="171" severity="error" message="No summary for method getSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="176" severity="error" message="Argument $secure is missing from the Docblock of setSecure" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="176" severity="error" message="No summary for method setSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="182" severity="error" message="No summary for method getReturnUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="187" severity="error" message="Argument $returnUrl is missing from the Docblock of setReturnUrl" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="187" severity="error" message="No summary for method setReturnUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="193" severity="error" message="No summary for method getCancelUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="198" severity="error" message="Argument $cancelUrl is missing from the Docblock of setCancelUrl" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="198" severity="error" message="No summary for method setCancelUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="204" severity="error" message="No summary for method getCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="209" severity="error" message="Argument $customer is missing from the Docblock of setCustomer" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="209" severity="error" message="No summary for method setCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="215" severity="error" message="No summary for method getMultiplePayments()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="220" severity="error" message="Argument $multiplePayments is missing from the Docblock of setMultiplePayments" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="220" severity="error" message="No summary for method setMultiplePayments()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="226" severity="error" message="No summary for method getMultiplePaymentsRepeat()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="231" severity="error" message="Argument $multiplePaymentsRepeat is missing from the Docblock of setMultiplePaymentsRepeat" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="231" severity="error" message="No summary for method setMultiplePaymentsRepeat()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="237" severity="error" message="No summary for method getDownPayment()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="242" severity="error" message="Argument $downPayment is missing from the Docblock of setDownPayment" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="242" severity="error" message="No summary for method setDownPayment()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="248" severity="error" message="No summary for method getRebill()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="253" severity="error" message="Argument $Rebill is missing from the Docblock of setRebill" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="253" severity="error" message="No summary for method setRebill()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="259" severity="error" message="No summary for method getRecurrence()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="264" severity="error" message="Argument $recurrence is missing from the Docblock of setRecurrence" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="264" severity="error" message="No summary for method setRecurrence()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="270" severity="error" message="No summary for method getPayToEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="275" severity="error" message="Argument $payToEmail is missing from the Docblock of setPayToEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="275" severity="error" message="No summary for method setPayToEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="281" severity="error" message="No summary for method getUserAgent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="286" severity="error" message="Argument $userAgent is missing from the Docblock of setUserAgent" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="286" severity="error" message="No summary for method setUserAgent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="292" severity="error" message="No summary for method getLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="297" severity="error" message="Argument $language is missing from the Docblock of setLanguage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="297" severity="error" message="No summary for method setLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="303" severity="error" message="No summary for method getAskAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="308" severity="error" message="Argument $askAmount is missing from the Docblock of setAskAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="308" severity="error" message="No summary for method setAskAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="314" severity="error" message="No summary for method getAskInvoiceNumber()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="319" severity="error" message="Argument $askInvoiceNumber is missing from the Docblock of setAskInvoiceNumber" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="319" severity="error" message="No summary for method setAskInvoiceNumber()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="325" severity="error" message="No summary for method getPreAuth()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="330" severity="error" message="Argument $preAuth is missing from the Docblock of setPreAuth" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="330" severity="error" message="No summary for method setPreAuth()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $sendEmail" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $sendSMS" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $sendLater" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $orderId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $operationType" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $description" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $amount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $clientIP" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $secure" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $returnUrl" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="33" severity="error" message="No summary for property $cancelUrl" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="35" severity="error" message="No summary for property $customer" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="37" severity="error" message="No summary for property $multiplePayments" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="39" severity="error" message="No summary for property $multiplePaymentsRepeat" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="41" severity="error" message="No summary for property $downPayment" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="43" severity="error" message="No summary for property $Rebill" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="45" severity="error" message="No summary for property $recurrence" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="47" severity="error" message="No summary for property $payToEmail" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="49" severity="error" message="No summary for property $userAgent" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="51" severity="error" message="No summary for property $language" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="53" severity="error" message="No summary for property $version" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="55" severity="error" message="No summary for property $askAmount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="57" severity="error" message="No summary for property $askInvoiceNumber" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="59" severity="error" message="No summary for property $preAuth" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/BankTransfersList.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/BankTransferInfos.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="29" severity="error" message="No summary for method getId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="34" severity="error" message="No summary for method getDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="39" severity="error" message="No summary for method getStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="44" severity="error" message="No summary for method getAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="49" severity="error" message="No summary for method getFixFees()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="54" severity="error" message="No summary for method getIban()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="59" severity="error" message="No summary for method getBic()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="64" severity="error" message="No summary for method getReference()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="69" severity="error" message="Argument $id is missing from the Docblock of setId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="69" severity="error" message="No summary for method setId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="75" severity="error" message="Argument $date is missing from the Docblock of setDate" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="75" severity="error" message="No summary for method setDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="81" severity="error" message="Argument $status is missing from the Docblock of setStatus" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="81" severity="error" message="No summary for method setStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="87" severity="error" message="Argument $amount is missing from the Docblock of setAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="87" severity="error" message="No summary for method setAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="93" severity="error" message="Argument $fixFees is missing from the Docblock of setFixFees" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="93" severity="error" message="No summary for method setFixFees()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="99" severity="error" message="Argument $iban is missing from the Docblock of setIban" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="99" severity="error" message="No summary for method setIban()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="105" severity="error" message="Argument $bic is missing from the Docblock of setBic" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="105" severity="error" message="No summary for method setBic()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="111" severity="error" message="Argument $reference is missing from the Docblock of setReference" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="111" severity="error" message="No summary for method setReference()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $date" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $status" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $amount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $fixFees" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $iban" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $bic" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $reference" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/PaymentPageCancellationInfos.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="31" severity="error" message="No summary for method getRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="36" severity="error" message="No summary for method getStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="41" severity="error" message="No summary for method getDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="46" severity="error" message="No summary for method getDateSent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="51" severity="error" message="No summary for method getAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="56" severity="error" message="No summary for method getSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="61" severity="error" message="No summary for method getPageUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="66" severity="error" message="No summary for method getEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="71" severity="error" message="No summary for method getLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="76" severity="error" message="Argument $requestId is missing from the Docblock of setRequestId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="76" severity="error" message="No summary for method setRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="82" severity="error" message="Argument $status is missing from the Docblock of setStatus" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="82" severity="error" message="No summary for method setStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="88" severity="error" message="Argument $date is missing from the Docblock of setDate" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="88" severity="error" message="No summary for method setDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="94" severity="error" message="Argument $dateSent is missing from the Docblock of setDateSent" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="94" severity="error" message="No summary for method setDateSent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="100" severity="error" message="Argument $amount is missing from the Docblock of setAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="100" severity="error" message="No summary for method setAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="106" severity="error" message="Argument $secure is missing from the Docblock of setSecure" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="106" severity="error" message="No summary for method setSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="112" severity="error" message="Argument $pageUrl is missing from the Docblock of setPageUrl" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="112" severity="error" message="No summary for method setPageUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="118" severity="error" message="Argument $email is missing from the Docblock of setEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="118" severity="error" message="No summary for method setEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="124" severity="error" message="Argument $language is missing from the Docblock of setLanguage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="124" severity="error" message="No summary for method setLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $requestId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $status" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $date" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $dateSent" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $amount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $secure" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $pageUrl" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $email" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $language" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Core/LimitedModifier.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="18" severity="error" message="Argument $services is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="18" severity="error" message="Argument $funcName is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="18" severity="error" message="Argument $params is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="11" severity="error" message="No summary for property $funcName" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="12" severity="error" message="No summary for property $params" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/Document.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="29" severity="error" message="No summary for method getId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="34" severity="error" message="No summary for method getDocumentType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="39" severity="error" message="No summary for method getStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="44" severity="error" message="No summary for method getDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="49" severity="error" message="No summary for method getDateUpdated()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="54" severity="error" message="No summary for method getContent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="59" severity="error" message="No summary for method getComment()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="64" severity="error" message="No summary for method getExtension()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="69" severity="error" message="Argument $id is missing from the Docblock of setId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="69" severity="error" message="No summary for method setId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="75" severity="error" message="Argument $documentType is missing from the Docblock of setDocumentType" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="75" severity="error" message="No summary for method setDocumentType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="81" severity="error" message="Argument $status is missing from the Docblock of setStatus" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="81" severity="error" message="No summary for method setStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="87" severity="error" message="Argument $date is missing from the Docblock of setDate" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="87" severity="error" message="No summary for method setDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="93" severity="error" message="Argument $dateUpdated is missing from the Docblock of setDateUpdated" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="93" severity="error" message="No summary for method setDateUpdated()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="99" severity="error" message="Argument $content is missing from the Docblock of setContent" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="99" severity="error" message="No summary for method setContent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="105" severity="error" message="Argument $comment is missing from the Docblock of setComment" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="105" severity="error" message="No summary for method setComment()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="111" severity="error" message="Argument $extension is missing from the Docblock of setExtension" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="111" severity="error" message="No summary for method setExtension()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $documentType" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $status" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $date" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $dateUpdated" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $content" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $comment" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $extension" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/CreditCard.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="33" severity="error" message="Argument $value is missing from the Docblock of setLastAccessed" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="33" severity="error" message="No summary for method setLastAccessed()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="39" severity="error" message="No summary for method getLastAccessed()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="44" severity="error" message="Argument $value is missing from the Docblock of setCountry" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="44" severity="error" message="No summary for method setCountry()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="50" severity="error" message="No summary for method getCountry()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="55" severity="error" message="Argument $value is missing from the Docblock of setType" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="55" severity="error" message="No summary for method setType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="61" severity="error" message="No summary for method getType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="66" severity="error" message="Argument $value is missing from the Docblock of setAlias" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="66" severity="error" message="No summary for method setAlias()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="72" severity="error" message="No summary for method getAlias()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="77" severity="error" message="Argument $value is missing from the Docblock of setClientId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="77" severity="error" message="No summary for method setClientId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="83" severity="error" message="No summary for method getClientId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="88" severity="error" message="Argument $value is missing from the Docblock of setOwner" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="88" severity="error" message="No summary for method setOwner()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="94" severity="error" message="No summary for method getOwner()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="99" severity="error" message="Argument $value is missing from the Docblock of setCVV" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="99" severity="error" message="No summary for method setCVV()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="105" severity="error" message="No summary for method getCVV()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="110" severity="error" message="Argument $value is missing from the Docblock of setYear" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="110" severity="error" message="No summary for method setYear()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="116" severity="error" message="No summary for method getYear()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="121" severity="error" message="Argument $value is missing from the Docblock of setMonth" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="121" severity="error" message="No summary for method setMonth()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="127" severity="error" message="No summary for method getMonth()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="132" severity="error" message="Argument $value is missing from the Docblock of setNumber" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="132" severity="error" message="No summary for method setNumber()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="138" severity="error" message="No summary for method getNumber()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $number" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $month" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $year" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $CVV" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $owner" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $alias" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $clientId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $type" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $country" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $lastAccessed" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/FindDocument.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/Cancellation.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="19" severity="error" message="No summary for method getTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="24" severity="error" message="Argument $tid is missing from the Docblock of setTid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="24" severity="error" message="No summary for method setTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="30" severity="error" message="No summary for method getLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="35" severity="error" message="Argument $language is missing from the Docblock of setLanguage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="35" severity="error" message="No summary for method setLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="41" severity="error" message="No summary for method getRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="46" severity="error" message="Argument $requestId is missing from the Docblock of setRequestId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="46" severity="error" message="No summary for method setRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $tid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $language" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $requestId" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/DocumentRequest.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="23" severity="error" message="No summary for method getCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="28" severity="error" message="No summary for method getUser()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="33" severity="error" message="No summary for method getDocument()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="38" severity="error" message="No summary for method getDocumentId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="43" severity="error" message="No summary for method getShowContent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="48" severity="error" message="Argument $customer is missing from the Docblock of setCustomer" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="48" severity="error" message="No summary for method setCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="54" severity="error" message="Argument $User is missing from the Docblock of setUser" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="54" severity="error" message="No summary for method setUser()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="60" severity="error" message="Argument $document is missing from the Docblock of setDocument" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="60" severity="error" message="No summary for method setDocument()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="66" severity="error" message="Argument $documentId is missing from the Docblock of setDocumentId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="66" severity="error" message="No summary for method setDocumentId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="72" severity="error" message="Argument $showContent is missing from the Docblock of setShowContent" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="72" severity="error" message="No summary for method setShowContent()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $customer" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $User" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $document" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $documentId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $showContent" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/AddUser.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/AddDocument.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Core/PaymentNotification.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="16" severity="error" message="Argument $data is missing from the Docblock of getContent" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="16" severity="error" message="Argument $apiKey is missing from the Docblock of getContent" source="phpDocumentor.file.PPC:ERR-50015"/>
+  </file>
+  <file name="Entities/DoneTransaction.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="59" severity="error" message="Argument $value is missing from the Docblock of setSecureUrl" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="59" severity="error" message="No summary for method setSecureUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="65" severity="error" message="No summary for method getSecureUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="70" severity="error" message="Argument $value is missing from the Docblock of setAdditionalError" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="70" severity="error" message="No summary for method setAdditionalError()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="76" severity="error" message="No summary for method getAdditionalError()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="81" severity="error" message="Argument $value is missing from the Docblock of setError" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="81" severity="error" message="No summary for method setError()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="87" severity="error" message="No summary for method getError()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="92" severity="error" message="Argument $value is missing from the Docblock of setAlias" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="92" severity="error" message="No summary for method setAlias()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="98" severity="error" message="No summary for method getAlias()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="103" severity="error" message="Argument $value is missing from the Docblock of setOriginalPaymentTid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="103" severity="error" message="No summary for method setOriginalPaymentTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="109" severity="error" message="No summary for method getOriginalPaymentTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="114" severity="error" message="Argument $value is missing from the Docblock of setRebill" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="114" severity="error" message="No summary for method setRebill()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="120" severity="error" message="No summary for method getRebill()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="125" severity="error" message="Argument $value is missing from the Docblock of setMultiplePayments" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="125" severity="error" message="No summary for method setMultiplePayments()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="131" severity="error" message="No summary for method getMultiplePayments()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="136" severity="error" message="Argument $value is missing from the Docblock of setOneClick" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="No summary for method setOneClick()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="142" severity="error" message="No summary for method getOneClick()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="147" severity="error" message="Argument $value is missing from the Docblock of setSecure" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="147" severity="error" message="No summary for method setSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="153" severity="error" message="No summary for method getSecure()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="158" severity="error" message="Argument $value is missing from the Docblock of setMessage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="158" severity="error" message="No summary for method setMessage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="164" severity="error" message="No summary for method getMessage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="169" severity="error" message="Argument $value is missing from the Docblock of setFixFees" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="169" severity="error" message="No summary for method setFixFees()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="175" severity="error" message="No summary for method getFixFees()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="180" severity="error" message="Argument $value is missing from the Docblock of setAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="180" severity="error" message="No summary for method setAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="186" severity="error" message="No summary for method getAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="191" severity="error" message="Argument $value is missing from the Docblock of setDateRepresentment" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="No summary for method setDateRepresentment()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="197" severity="error" message="No summary for method getDateRepresentment()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="202" severity="error" message="Argument $value is missing from the Docblock of setDateChargeback" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="202" severity="error" message="No summary for method setDateChargeback()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="208" severity="error" message="No summary for method getDateChargeback()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="213" severity="error" message="Argument $value is missing from the Docblock of setDateRefund" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="213" severity="error" message="No summary for method setDateRefund()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="219" severity="error" message="No summary for method getDateRefund()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="224" severity="error" message="Argument $value is missing from the Docblock of setDate" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="224" severity="error" message="No summary for method setDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="230" severity="error" message="No summary for method getDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="235" severity="error" message="Argument $value is missing from the Docblock of setStatus" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="235" severity="error" message="No summary for method setStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="241" severity="error" message="No summary for method getStatus()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="246" severity="error" message="Argument $value is missing from the Docblock of setOrderId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="246" severity="error" message="No summary for method setOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="252" severity="error" message="No summary for method getOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="257" severity="error" message="Argument $value is missing from the Docblock of setUid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="257" severity="error" message="No summary for method setUid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="263" severity="error" message="No summary for method getUid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="268" severity="error" message="Argument $value is missing from the Docblock of setTid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="268" severity="error" message="No summary for method setTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="274" severity="error" message="No summary for method getTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="279" severity="error" message="Argument $value is missing from the Docblock of setRequestId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="279" severity="error" message="No summary for method setRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="285" severity="error" message="No summary for method getRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="290" severity="error" message="Argument $value is missing from the Docblock of setMandateUrl" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="290" severity="error" message="No summary for method setMandateUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="296" severity="error" message="No summary for method getMandateUrl()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="310" severity="error" message="Argument $client is missing from the Docblock of setClient" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="310" severity="error" message="No summary for method setClient()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="316" severity="error" message="No summary for method isCaptured()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="321" severity="error" message="No summary for method isPending()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $requestId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $tid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $uid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $orderId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $status" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $date" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $dateRefund" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $dateChargeback" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $dateRepresentment" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $amount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="33" severity="error" message="No summary for property $fixFees" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="35" severity="error" message="No summary for property $message" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="37" severity="error" message="No summary for property $secure" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="39" severity="error" message="No summary for property $oneClick" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="41" severity="error" message="No summary for property $multiplePayments" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="43" severity="error" message="No summary for property $rebill" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="45" severity="error" message="No summary for property $originalPaymentTid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="47" severity="error" message="No summary for property $alias" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="49" severity="error" message="No summary for property $error" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="51" severity="error" message="No summary for property $additionalError" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="53" severity="error" message="No summary for property $secureUrl" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="55" severity="error" message="No summary for property $client" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="57" severity="error" message="No summary for property $mandateUrl" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Core/ICallerModifier.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+  </file>
+  <file name="Requests/MakeBankTransfer.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/AddCreditCard.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="29" severity="error" message="No summary for method getCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="34" severity="error" message="Argument $customer is missing from the Docblock of setCustomer" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="34" severity="error" message="No summary for method setCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="40" severity="error" message="No summary for method getCreditCard()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="45" severity="error" message="Argument $creditCard is missing from the Docblock of setCreditCard" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="45" severity="error" message="No summary for method setCreditCard()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="51" severity="error" message="No summary for method getLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="56" severity="error" message="Argument $language is missing from the Docblock of setLanguage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="56" severity="error" message="No summary for method setLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="62" severity="error" message="No summary for method getClientIp()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="67" severity="error" message="Argument $clientIp is missing from the Docblock of setClientIp" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="67" severity="error" message="No summary for method setClientIp()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $customer" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $creditCard" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $language" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $clientIp" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Core/Logger.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="16" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="21" severity="error" message="No summary for method __clone()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="26" severity="error" message="No summary for method getInstance()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="11" severity="error" message="No summary for property $active" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="12" severity="error" message="No summary for property $logName" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="13" severity="error" message="No summary for property $filePath" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="14" severity="error" message="No summary for property $instance" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/UpdateUser.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/PaymentStatus.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/Client.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="29" severity="error" message="No summary for method getId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="34" severity="error" message="Argument $id is missing from the Docblock of setId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="34" severity="error" message="No summary for method setId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="40" severity="error" message="No summary for method getEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="45" severity="error" message="Argument $email is missing from the Docblock of setEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="45" severity="error" message="No summary for method setEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="51" severity="error" message="No summary for method getFirstname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="56" severity="error" message="Argument $firstname is missing from the Docblock of setFirstname" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="56" severity="error" message="No summary for method setFirstname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="62" severity="error" message="No summary for method getLastname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="67" severity="error" message="Argument $lastname is missing from the Docblock of setLastname" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="67" severity="error" message="No summary for method setLastname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="73" severity="error" message="No summary for method getPhone()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="78" severity="error" message="Argument $phone is missing from the Docblock of setPhone" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="78" severity="error" message="No summary for method setPhone()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="84" severity="error" message="No summary for method getAddress()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="89" severity="error" message="Argument $address is missing from the Docblock of setAddress" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="89" severity="error" message="No summary for method setAddress()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="95" severity="error" message="No summary for method getZipCode()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="100" severity="error" message="Argument $zipCode is missing from the Docblock of setZipCode" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="100" severity="error" message="No summary for method setZipCode()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="106" severity="error" message="No summary for method getCity()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="111" severity="error" message="Argument $city is missing from the Docblock of setCity" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="111" severity="error" message="No summary for method setCity()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $email" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $firstname" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $lastname" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $phone" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $address" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $zipCode" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $city" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/CustomerInfos.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="13" severity="error" message="No summary for property $clientId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $creationDate" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $email" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $uid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $company" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $firstname" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $lastname" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $address" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $zipCode" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $city" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="33" severity="error" message="No summary for property $country" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="35" severity="error" message="No summary for property $callingCode" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="37" severity="error" message="No summary for property $phone" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="39" severity="error" message="No summary for property $birthDate" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="41" severity="error" message="No summary for property $nationality" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="43" severity="error" message="No summary for property $iban" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="45" severity="error" message="No summary for property $bic" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/PaymentStatus.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $value is missing from the Docblock of setLanguage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="21" severity="error" message="No summary for method setLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="27" severity="error" message="No summary for method getLanguage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="32" severity="error" message="Argument $value is missing from the Docblock of setTid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="32" severity="error" message="No summary for method setTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="38" severity="error" message="No summary for method getTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="43" severity="error" message="Argument $value is missing from the Docblock of setOrderId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="43" severity="error" message="No summary for method setOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="49" severity="error" message="No summary for method getOrderId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="54" severity="error" message="Argument $value is missing from the Docblock of setRequestId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="54" severity="error" message="No summary for method setRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="60" severity="error" message="No summary for method getRequestId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $tid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $orderId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $requestId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $language" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/OneClickPayment.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Core/CurlCaller.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="15" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="20" severity="error" message="No summary for method __destruct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="30" severity="error" message="Argument $headers is missing from the Docblock of setHeaders" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="48" severity="error" message="Argument $second is missing from the Docblock of setTimeout" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="66" severity="error" message="Argument $url is missing from the Docblock of call" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="66" severity="error" message="Argument $params is missing from the Docblock of call" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="121" severity="error" message="Argument $headers is missing from the Docblock of addHeaders" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="11" severity="error" message="No summary for property $curlInstance" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="12" severity="error" message="No summary for property $timeout" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="13" severity="error" message="No summary for property $headers" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/InitBankTransfer.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="19" severity="error" message="No summary for method getCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="24" severity="error" message="No summary for method getAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="29" severity="error" message="No summary for method getReference()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="34" severity="error" message="Argument $customer is missing from the Docblock of setCustomer" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="34" severity="error" message="No summary for method setCustomer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="40" severity="error" message="Argument $amount is missing from the Docblock of setAmount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="40" severity="error" message="No summary for method setAmount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="46" severity="error" message="Argument $reference is missing from the Docblock of setReference" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="46" severity="error" message="No summary for method setReference()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $customer" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $amount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $reference" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Core/CommentParser.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="14" severity="error" message="Argument $class is missing from the Docblock of __construct" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="14" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="12" severity="error" message="No summary for property $class" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/Capture.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/User.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="77" severity="error" message="No summary for method getId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="82" severity="error" message="Argument $id is missing from the Docblock of setId" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="82" severity="error" message="No summary for method setId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="88" severity="error" message="No summary for method getEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="93" severity="error" message="Argument $email is missing from the Docblock of setEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="93" severity="error" message="No summary for method setEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="99" severity="error" message="No summary for method getPassword()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="104" severity="error" message="Argument $password is missing from the Docblock of setPassword" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="104" severity="error" message="No summary for method setPassword()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="110" severity="error" message="No summary for method getIdentifier()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="115" severity="error" message="Argument $identifier is missing from the Docblock of setIdentifier" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="115" severity="error" message="No summary for method setIdentifier()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="121" severity="error" message="No summary for method getCompany()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="126" severity="error" message="Argument $company is missing from the Docblock of setCompany" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="126" severity="error" message="No summary for method setCompany()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="132" severity="error" message="No summary for method getFirstname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="137" severity="error" message="Argument $firstname is missing from the Docblock of setFirstname" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="137" severity="error" message="No summary for method setFirstname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="143" severity="error" message="No summary for method getLastname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="148" severity="error" message="Argument $lastname is missing from the Docblock of setLastname" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="148" severity="error" message="No summary for method setLastname()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="154" severity="error" message="No summary for method getAddress()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="159" severity="error" message="Argument $address is missing from the Docblock of setAddress" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="159" severity="error" message="No summary for method setAddress()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="165" severity="error" message="No summary for method getZipCode()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="170" severity="error" message="Argument $zipCode is missing from the Docblock of setZipCode" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="170" severity="error" message="No summary for method setZipCode()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="176" severity="error" message="No summary for method getCity()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="181" severity="error" message="Argument $city is missing from the Docblock of setCity" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="181" severity="error" message="No summary for method setCity()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="187" severity="error" message="No summary for method getCallingCode()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="192" severity="error" message="Argument $callingCode is missing from the Docblock of setCallingCode" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="192" severity="error" message="No summary for method setCallingCode()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="198" severity="error" message="No summary for method getPhone()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="203" severity="error" message="Argument $phone is missing from the Docblock of setPhone" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="203" severity="error" message="No summary for method setPhone()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="209" severity="error" message="No summary for method getBirthDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="214" severity="error" message="Argument $birthDate is missing from the Docblock of setBirthDate" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="214" severity="error" message="No summary for method setBirthDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="220" severity="error" message="No summary for method getNationality()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="225" severity="error" message="Argument $nationality is missing from the Docblock of setNationality" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="225" severity="error" message="No summary for method setNationality()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="231" severity="error" message="No summary for method getAccountOwner()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="236" severity="error" message="Argument $accountOwner is missing from the Docblock of setAccountOwner" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="236" severity="error" message="No summary for method setAccountOwner()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="242" severity="error" message="No summary for method getIban()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="247" severity="error" message="Argument $iban is missing from the Docblock of setIban" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="247" severity="error" message="No summary for method setIban()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="253" severity="error" message="No summary for method getBic()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="258" severity="error" message="Argument $bic is missing from the Docblock of setBic" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="258" severity="error" message="No summary for method setBic()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="264" severity="error" message="No summary for method getVat()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="269" severity="error" message="Argument $vat is missing from the Docblock of setVat" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="269" severity="error" message="No summary for method setVat()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="275" severity="error" message="No summary for method getSiret()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="280" severity="error" message="Argument $siret is missing from the Docblock of setSiret" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="280" severity="error" message="No summary for method setSiret()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="286" severity="error" message="No summary for method getActivationEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="291" severity="error" message="Argument $activationEmail is missing from the Docblock of setActivationEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="291" severity="error" message="No summary for method setActivationEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="297" severity="error" message="No summary for method getJoinDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="302" severity="error" message="Argument $joinDate is missing from the Docblock of setJoinDate" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="302" severity="error" message="No summary for method setJoinDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="308" severity="error" message="No summary for method getBalance()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="313" severity="error" message="Argument $balance is missing from the Docblock of setBalance" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="313" severity="error" message="No summary for method setBalance()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="319" severity="error" message="No summary for method getConditionsAccepted()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="324" severity="error" message="Argument $conditionsAccepted is missing from the Docblock of setConditionsAccepted" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="324" severity="error" message="No summary for method setConditionsAccepted()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="330" severity="error" message="No summary for method getActive()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="335" severity="error" message="Argument $active is missing from the Docblock of setActive" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="335" severity="error" message="No summary for method setActive()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="341" severity="error" message="No summary for method getTester()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="346" severity="error" message="Argument $tester is missing from the Docblock of setTester" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="346" severity="error" message="No summary for method setTester()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="352" severity="error" message="No summary for method getCompanyLogo()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="357" severity="error" message="Argument $companyLogo is missing from the Docblock of setCompanyLogo" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="357" severity="error" message="No summary for method setCompanyLogo()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="363" severity="error" message="No summary for method getCompanyType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="368" severity="error" message="Argument $companyType is missing from the Docblock of setCompanyType" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="368" severity="error" message="No summary for method setCompanyType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="374" severity="error" message="No summary for method getCompanyCountry()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="379" severity="error" message="Argument $companyCountry is missing from the Docblock of setCompanyCountry" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="379" severity="error" message="No summary for method setCompanyCountry()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="385" severity="error" message="No summary for method getGender()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="390" severity="error" message="Argument $gender is missing from the Docblock of setGender" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="390" severity="error" message="No summary for method setGender()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="396" severity="error" message="No summary for method getCountry()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="401" severity="error" message="Argument $country is missing from the Docblock of setCountry" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="401" severity="error" message="No summary for method setCountry()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="407" severity="error" message="No summary for method getWelcomeEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="412" severity="error" message="Argument $welcomeEmail is missing from the Docblock of setWelcomeEmail" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="412" severity="error" message="No summary for method setWelcomeEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="418" severity="error" message="No summary for method getSetCompany()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="423" severity="error" message="Argument $setCompany is missing from the Docblock of setSetCompany" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="423" severity="error" message="No summary for method setSetCompany()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $email" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $password" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $identifier" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $company" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $firstname" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $lastname" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $address" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $zipCode" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $city" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="33" severity="error" message="No summary for property $callingCode" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="35" severity="error" message="No summary for property $phone" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="37" severity="error" message="No summary for property $birthDate" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="39" severity="error" message="No summary for property $nationality" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="41" severity="error" message="No summary for property $accountOwner" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="43" severity="error" message="No summary for property $iban" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="45" severity="error" message="No summary for property $bic" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="47" severity="error" message="No summary for property $vat" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="49" severity="error" message="No summary for property $siret" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="51" severity="error" message="No summary for property $activationEmail" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="53" severity="error" message="No summary for property $joinDate" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="55" severity="error" message="No summary for property $balance" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="57" severity="error" message="No summary for property $conditionsAccepted" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="59" severity="error" message="No summary for property $active" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="61" severity="error" message="No summary for property $tester" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="63" severity="error" message="No summary for property $companyLogo" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="65" severity="error" message="No summary for property $companyType" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="67" severity="error" message="No summary for property $companyCountry" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="69" severity="error" message="No summary for property $gender" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="71" severity="error" message="No summary for property $country" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="73" severity="error" message="No summary for property $welcomeEmail" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="75" severity="error" message="No summary for property $setCompany" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/CreditCardsList.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="autoload.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+  </file>
+  <file name="Requests/PaymentRefund.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Requests/FindUser.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="21" severity="error" message="Argument $entity is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="15" severity="error" message="No summary for property $response" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Entities/CancellationInfos.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="19" severity="error" message="No summary for method getOriginalPaymentTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="24" severity="error" message="Argument $originalPaymentTid is missing from the Docblock of setOriginalPaymentTid" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="24" severity="error" message="No summary for method setOriginalPaymentTid()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="30" severity="error" message="No summary for method getDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="35" severity="error" message="Argument $date is missing from the Docblock of setDate" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="35" severity="error" message="No summary for method setDate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="41" severity="error" message="No summary for method getMessage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="46" severity="error" message="Argument $message is missing from the Docblock of setMessage" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="46" severity="error" message="No summary for method setMessage()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $originalPaymentTid" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $date" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $message" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+</checkstyle>
