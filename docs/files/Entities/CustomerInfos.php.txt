@@ -1,0 +1,48 @@
+<?php
+
+namespace EasyTransac\Entities;
+
+/**
+ * Represents the response of the request "AddCustomer" and "UpdateCustomer"
+ * @author klyde
+ * @copyright EasyTransac
+ */
+class CustomerInfos extends Entity
+{
+    /** @map:ClientId **/
+	protected $clientId = null;
+    /** @map:CreationDate **/
+	protected $creationDate = null;
+    /** @map:Email **/
+	protected $email = null;
+    /** @map:Uid **/
+	protected $uid = null;
+    /** @map:Company **/
+	protected $company = null;
+    /** @map:Firstname **/
+	protected $firstname = null;
+    /** @map:Lastname **/
+	protected $lastname = null;
+    /** @map:Address **/
+	protected $address = null;
+    /** @map:ZipCode **/
+	protected $zipCode = null;
+    /** @map:City **/
+	protected $city = null;
+    /** @map:Country **/
+	protected $country = null;
+    /** @map:CallingCode **/
+	protected $callingCode = null;
+    /** @map:Phone **/
+	protected $phone = null;
+    /** @map:BirthDate **/
+	protected $birthDate = null;
+    /** @map:Nationality **/
+	protected $nationality = null;
+    /** @map:Iban **/
+	protected $iban = null;
+    /** @map:Bic **/
+	protected $bic = null;
+}
+
+?>
