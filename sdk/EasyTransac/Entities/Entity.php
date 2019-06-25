@@ -6,6 +6,7 @@ use \EasyTransac\Core\CommentParser;
 use \EasyTransac\Core\Services;
 use EasyTransac\Core\Logger;
 use EasyTransac\Converters\BooleanToString;
+use EasyTransac\Converters\YesNoLowerCase;
 
 /**
  * Generic entity
@@ -21,12 +22,13 @@ abstract class Entity
     public function __construct()
     {
     	$this->addConverter(new BooleanToString());
+    	$this->addConverter(new YesNoLowerCase());
         $this->makeMapping();
     }
     
     /**
      * Attach a api argument converter
-     * @param EasyTransac\Converters\IConverter $converter
+     * @param \EasyTransac\Converters\IConverter $converter
      * @return \EasyTransac\Entities\Entity
      */
     public function addConverter(\EasyTransac\Converters\IConverter $converter)
