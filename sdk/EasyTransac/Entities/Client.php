@@ -25,6 +25,8 @@ class Client extends Entity
 	protected $zipCode = null;
 	/** @map:City **/
 	protected $city = null;
+	/** @map:Company **/
+	protected $company = null;
 	
 	public function getId() 
 	{
@@ -104,6 +106,17 @@ class Client extends Entity
 	}
 	
 	public function getCity() 
+	{
+		return $this->city;
+	}
+	
+	public function setCompany($company) 
+	{
+		$this->company = $company;
+		return $this;
+	}
+	
+		public function getCity() 
 	{
 		return $this->city;
 	}
