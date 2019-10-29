@@ -116,9 +116,9 @@ class Client extends Entity
 		return $this;
 	}
 	
-		public function getCity() 
+	public function getCompany() 
 	{
-		return $this->city;
+		return $this->company;
 	}
 	
 	public function setCity($city) 
