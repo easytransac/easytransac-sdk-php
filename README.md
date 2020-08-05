@@ -60,6 +60,9 @@ EasyTransac\Core\Services::getInstance()->provideAPIKey('YOUR_API_KEY_HERE');
 // For testing, you can activate logs
 EasyTransac\Core\Services::getInstance()->setDebug(true);
 
+// Connexion timeout in second
+EasyTransac\Core\Services::getInstance()->setRequestTimeout(30);
+
 // You can change the log directory (by default the path is the running script path)
 Logger::getInstance()->setFilePath('YOU_CUSTOM_PATH');
 ```
