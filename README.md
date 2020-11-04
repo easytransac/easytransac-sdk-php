@@ -13,28 +13,28 @@ Currently it processes credit cards and SEPA Direct Debit (SDD).
 Requirements
 ------------
 
-You need at least: 
+You need at least:
   - PHP >=5.5
   - cURL in order to get clear error messages
   - an API key provided by EasyTransac (register an account at [EasyTransac website](https://www.easytransac.com/))
   - OpenSSL version 1.0.1 to support TLSv1.2 ciphers
-  
+
 Installation
 ------------
 
 ### By composer
 
-Execute this command on you terminal in your project folder: 
+Execute this command on you terminal in your project folder:
 
     composer require easytransac/easytransac-sdk-php
-  
+
 Or add in your *composer.json*:
 
     "require": {
       ...
       "easytransac/easytransac-sdk-php": "*",
     }
-    
+
 ### Manually
 
 In order to use it, you only need to require the autoload file *easytransac/easytransac-sdk-php/sdk/EasyTransac/autoload.php*.
@@ -93,15 +93,15 @@ $response = $dp->execute($transaction);
 if ($response->isSuccess())
 {
 	$transactionItem = $response->getContent();
-    
-	// Check if the 3DSecure is forced by the server on this transaction, 
+
+	// Check if the 3DSecure is forced by the server on this transaction,
 	// if yes, then we must use the 3DS url to finish the transaction
 	if ($transactionItem->getSecure())
 	{
 	    // Using of the 3DS url
 	    // You have to call this url to proceed the 3DS process
 	    // $transactionItem->getSecureUrl();
-	    
+
 	}
 	else
 	{
@@ -128,4 +128,15 @@ var_dump($response->toArray());
 
 // Payment status
 var_dump($response->getStatus());
+```
+
+### Get base API response in JSON and Array
+```php
+// You can get the complete response from the api with these methods bellow
+$dp = new EasyTransac\Requests\DirectPayment();
+$response = $dp->execute($transaction);
+
+var_dump($response->getRealJsonResponse()); // Jsonified response (stdClass object)
+var_dump($response->getRealArrayResponse()); // Array item
+
 ```

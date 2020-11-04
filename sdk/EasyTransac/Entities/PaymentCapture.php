@@ -11,17 +11,15 @@ class PaymentCapture extends Entity
 {
 	/** @map:Tid **/
 	protected $tid = null;
+	/** @map:Amount **/
+	protected $amount = null;
 	/** @map:Language **/
 	protected $language = null;
-	
-	public function getTid()
-	{
-		return $this->tid;
-	}
 
-	public function getLanguage()
+	public function setAmount($amount)
 	{
-		return $this->language;
+		$this->amount = $amount;
+		return $this;
 	}
 
 	public function setTid($tid)

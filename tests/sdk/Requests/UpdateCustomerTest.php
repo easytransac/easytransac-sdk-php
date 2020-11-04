@@ -36,7 +36,7 @@ class UpdateCustomerTest extends PHPUnit_Framework_TestCase
 		
 		$this->assertTrue($response instanceof \EasyTransac\Responses\StandardResponse);
 		$this->assertTrue($response->isSuccess());
-		$this->assertTrue($response->getContent() instanceof \EasyTransac\Entities\CustomerInfos);
+		$this->assertTrue($response->getContent() instanceof \EasyTransac\Entities\Customer);
 		$this->assertTrue(count($response->getContent()->toArray()) > 0);
 	}
 	

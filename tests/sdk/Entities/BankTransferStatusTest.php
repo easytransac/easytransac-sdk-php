@@ -18,18 +18,11 @@ class BankTransferStatusTest extends PHPUnit_Framework_TestCase
         $this->c->setPayoutId($fixture['PayoutId']);
     }
 
-    public function testGetterSetters()
-    {
-    	$fixture = $this->getFixture();
-        $this->assertEquals($this->c->getPayoutId(), $fixture['PayoutId']);
-        $this->assertEquals($this->customer->getClientId(), $fixture['ClientId']);
-    }
-
     public function testToArray()
     {
         $this->assertEquals($this->c->toArray(), $this->getFixture());
     }
-    
+
     protected function getFixture()
     {
     	return [

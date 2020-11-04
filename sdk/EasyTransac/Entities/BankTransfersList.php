@@ -16,12 +16,6 @@ class BankTransfersList extends Entity
 	{
 		return $this->bankTransferInfos;
 	}
-
-	public function setBankTransferInfos($bankTransferInfos)
-	{
-		$this->bankTransferInfos = $bankTransferInfos;
-		return $this;
-	}
 }
 
 ?>

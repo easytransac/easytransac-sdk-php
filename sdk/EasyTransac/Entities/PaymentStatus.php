@@ -24,20 +24,10 @@ class PaymentStatus extends Entity
         return $this;
     }
 
-    public function getLanguage()
-    {
-        return $this->language;
-    }
-
     public function setTid($value)
     {
         $this->tid = $value;
         return $this;
-    }
-
-    public function getTid()
-    {
-        return $this->tid;
     }
 
 	public function setOrderId($value)
@@ -46,20 +36,10 @@ class PaymentStatus extends Entity
 		return $this;
 	}
 
-	public function getOrderId()
-	{
-		return $this->orderId;
-	}
-
 	public function setRequestId($value)
 	{
 		$this->requestId = $value;
 		return $this;
-	}
-
-	public function getRequestId()
-	{
-		return $this->requestId;
 	}
 }
 

@@ -16,13 +16,6 @@ class CreditCardsList extends Entity
     {
         return $this->creditCards;
     }
-
-    public function setCreditCards(array $creditCards)
-    {
-        $this->creditCards = $creditCards;
-        return $this;
-    }
-
 }
 
 ?>

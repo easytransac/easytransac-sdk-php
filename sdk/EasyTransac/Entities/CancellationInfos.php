@@ -9,6 +9,8 @@ namespace EasyTransac\Entities;
  */
 class CancellationInfos extends Entity
 {
+	/** @map:Tid **/
+	protected $tid = null;
     /** @map:OriginalPaymentTid **/
     protected $originalPaymentTid = null;
     /** @map:Date **/
@@ -16,15 +18,14 @@ class CancellationInfos extends Entity
     /** @map:Message **/
     protected $message = null;
 
+	public function getTid()
+	{
+		return $this->tid;
+	}
+
     public function getOriginalPaymentTid()
     {
         return $this->originalPaymentTid;
-    }
-
-    public function setOriginalPaymentTid($originalPaymentTid)
-    {
-        $this->originalPaymentTid = $originalPaymentTid;
-        return $this;
     }
 
     public function getDate()
@@ -32,21 +33,9 @@ class CancellationInfos extends Entity
         return $this->date;
     }
 
-    public function setDate($date)
-    {
-        $this->date = $date;
-        return $this;
-    }
-
     public function getMessage()
     {
         return $this->message;
-    }
-
-    public function setMessage($message)
-    {
-        $this->message = $message;
-        return $this;
     }
 }
 

@@ -19,31 +19,6 @@ class DocumentRequest extends Entity
     protected $documentId = null;
     /** @map:ShowContent **/
     protected $showContent = null;
-    
-	public function getCustomer()
-	{
-		return $this->customer;
-	}
-
-	public function getUser()
-	{
-		return $this->User;
-	}
-
-	public function getDocument()
-	{
-		return $this->document;
-	}
-
-	public function getDocumentId()
-	{
-		return $this->documentId;
-	}
-
-	public function getShowContent()
-	{
-		return $this->showContent;
-	}
 
 	public function setCustomer($customer)
 	{

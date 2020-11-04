@@ -13,16 +13,6 @@ class BankTransferStatus extends Entity
 	protected $customer = null;
 	/** @map:PayoutId **/
 	protected $payoutId = null;
-	
-	public function getCustomer()
-	{
-		return $this->customer;
-	}
-
-	public function getPayoutId()
-	{
-		return $this->payoutId;
-	}
 
 	public function setCustomer($customer)
 	{

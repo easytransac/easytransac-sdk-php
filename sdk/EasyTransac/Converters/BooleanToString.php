@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace EasyTransac\Converters;
 
@@ -17,7 +17,7 @@ class BooleanToString implements IConverter
 			return 'yes';
 		else if ($value === false)
 			return 'no';
-		else 
+		else
 			return $value;
 	}
 }

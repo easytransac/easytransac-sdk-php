@@ -10,7 +10,7 @@ class InitBankTransferTest extends PHPUnit_Framework_TestCase
     protected function setUp(): void
     {
     	$fixture = $this->getFixture();
-    	
+
         $this->c = new \EasyTransac\Entities\InitBankTransfer();
         $this->customer = new \EasyTransac\Entities\Customer();
         $this->customer->setClientId($fixture['ClientId']);
@@ -20,21 +20,12 @@ class InitBankTransferTest extends PHPUnit_Framework_TestCase
         $this->c->setReference($fixture['Reference']);
     }
 
-    public function testGetterSetters()
-    {
-    	$fixture = $this->getFixture();
-    	
-    	$this->assertEquals($this->customer->getClientId(), $fixture['ClientId']);
-    	$this->assertEquals($this->c->getAmount(), $fixture['Amount']);
-    	$this->assertEquals($this->c->getReference(), $fixture['Reference']);
-    }
-
     public function testToArray()
     {
         $this->assertEquals($this->c->toArray(), $this->getFixture());
     }
-    
-    public function getFixture() 
+
+    public function getFixture()
     {
 		return [
 			'Reference' => 'a1b2c3',

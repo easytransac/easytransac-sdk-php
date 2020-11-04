@@ -11,6 +11,12 @@ class DoneTransaction extends Entity
 {
     /** @map:RequestId **/
     protected $requestId = null;
+	/** @map:OriginalRequestId **/
+	protected $originalRequestId = null;
+	/** @map:RequestAttempt **/
+	protected $requestAttempt = null;
+	/** @map:OperationType **/
+	protected $operationType = null;
     /** @map:Tid **/
     protected $tid = null;
     /** @map:Uid **/
@@ -23,6 +29,8 @@ class DoneTransaction extends Entity
     protected $date = null;
     /** @map:DateRefund **/
     protected $dateRefund = null;
+	/** @map:AmountRefund **/
+	protected $amountRefund = null;
     /** @map:DateChargeback **/
     protected $dateChargeback = null;
     /** @map:DateRepresentment **/
@@ -55,33 +63,34 @@ class DoneTransaction extends Entity
     protected $client = null;
     /** @map:MandateUrl **/
     protected $mandateUrl = null;
-
-    public function setSecureUrl($value)
-    {
-        $this->secureUrl = $value;
-        return $this;
-    }
+	/** @map:RedirectUrl **/
+	protected $redirectUrl = null;
+	/** @map:Test **/
+	protected $test = null;
 
     public function getSecureUrl()
     {
         return $this->secureUrl;
     }
 
-    public function setAdditionalError($value)
-    {
-        $this->additionalError = $value;
-        return $this;
-    }
+	public function getRequestAttempt()
+	{
+		return $this->requestAttempt;
+	}
+
+	public function getOriginalRequestId()
+	{
+		return $this->originalRequestId;
+	}
+
+	public function getOperationType()
+	{
+		return $this->operationType;
+	}
 
     public function getAdditionalError()
     {
         return $this->additionalError;
-    }
-
-    public function setError($value)
-    {
-        $this->error = $value;
-        return $this;
     }
 
     public function getError()
@@ -89,21 +98,9 @@ class DoneTransaction extends Entity
         return $this->error;
     }
 
-    public function setAlias($value)
-    {
-        $this->alias = $value;
-        return $this;
-    }
-
     public function getAlias()
     {
         return $this->alias;
-    }
-
-    public function setOriginalPaymentTid($value)
-    {
-        $this->originalPaymentTid = $value;
-        return $this;
     }
 
     public function getOriginalPaymentTid()
@@ -111,21 +108,9 @@ class DoneTransaction extends Entity
         return $this->originalPaymentTid;
     }
 
-    public function setRebill($value)
-    {
-        $this->rebill = $value;
-        return $this;
-    }
-
     public function getRebill()
     {
         return $this->rebill;
-    }
-
-    public function setMultiplePayments($value)
-    {
-        $this->multiplePayments = $value;
-        return $this;
     }
 
     public function getMultiplePayments()
@@ -133,21 +118,9 @@ class DoneTransaction extends Entity
         return $this->multiplePayments;
     }
 
-    public function setOneClick($value)
-    {
-        $this->oneClick = $value;
-        return $this;
-    }
-
     public function getOneClick()
     {
         return $this->oneClick;
-    }
-
-    public function setSecure($value)
-    {
-        $this->secure = $value;
-        return $this;
     }
 
     public function getSecure()
@@ -155,21 +128,9 @@ class DoneTransaction extends Entity
         return $this->secure;
     }
 
-    public function setMessage($value)
-    {
-        $this->message = $value;
-        return $this;
-    }
-
     public function getMessage()
     {
         return $this->message;
-    }
-
-    public function setFixFees($value)
-    {
-        $this->fixFees = $value;
-        return $this;
     }
 
     public function getFixFees()
@@ -177,21 +138,9 @@ class DoneTransaction extends Entity
         return $this->fixFees;
     }
 
-    public function setAmount($value)
-    {
-        $this->amount = $value;
-        return $this;
-    }
-
     public function getAmount()
     {
         return $this->amount;
-    }
-
-    public function setDateRepresentment($value)
-    {
-        $this->dateRepresentment = $value;
-        return $this;
     }
 
     public function getDateRepresentment()
@@ -199,21 +148,9 @@ class DoneTransaction extends Entity
         return $this->dateRepresentment;
     }
 
-    public function setDateChargeback($value)
-    {
-        $this->dateChargeback = $value;
-        return $this;
-    }
-
     public function getDateChargeback()
     {
         return $this->dateChargeback;
-    }
-
-    public function setDateRefund($value)
-    {
-        $this->dateRefund = $value;
-        return $this;
     }
 
     public function getDateRefund()
@@ -221,21 +158,14 @@ class DoneTransaction extends Entity
         return $this->dateRefund;
     }
 
-    public function setDate($value)
-    {
-        $this->date = $value;
-        return $this;
-    }
+	public function getAMountRefund()
+	{
+		return $this->amountRefund;
+	}
 
     public function getDate()
     {
         return $this->date;
-    }
-
-    public function setStatus($value)
-    {
-        $this->status = $value;
-        return $this;
     }
 
     public function getStatus()
@@ -243,21 +173,9 @@ class DoneTransaction extends Entity
         return $this->status;
     }
 
-    public function setOrderId($value)
-    {
-        $this->orderId = $value;
-        return $this;
-    }
-
     public function getOrderId()
     {
         return $this->orderId;
-    }
-
-    public function setUid($value)
-    {
-        $this->uid = $value;
-        return $this;
     }
 
     public function getUid()
@@ -265,21 +183,9 @@ class DoneTransaction extends Entity
         return $this->uid;
     }
 
-    public function setTid($value)
-    {
-        $this->tid = $value;
-        return $this;
-    }
-
     public function getTid()
     {
         return $this->tid;
-    }
-
-    public function setRequestId($value)
-    {
-        $this->requestId = $value;
-        return $this;
     }
 
     public function getRequestId()
@@ -287,16 +193,20 @@ class DoneTransaction extends Entity
         return $this->requestId;
     }
 
-    public function setMandateUrl($value)
-    {
-        $this->mandateUrl = $value;
-        return $this;
-    }
-
     public function getMandateUrl()
     {
         return $this->mandateUrl;
     }
+
+	public function getRedirectUrl()
+	{
+		return $this->redirectUrl;
+	}
+
+	public function getTest()
+	{
+		return $this->test;
+	}
     
 	/**
 	 * Returns the transaction client.
@@ -306,13 +216,7 @@ class DoneTransaction extends Entity
     {
     	return $this->client;
     }
-    
-    public function setClient(Client $client)
-    {
-    	$this->client = $client;
-    	return $this;
-    }
-	
+
 	public function isCaptured()
 	{
 		return $this->status === 'captured';

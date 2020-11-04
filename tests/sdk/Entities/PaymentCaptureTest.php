@@ -11,19 +11,15 @@ class PaymentCaptureTest extends PHPUnit_Framework_TestCase
         $this->c = new \EasyTransac\Entities\PaymentCapture();
         $this->c->setTid("1a2b3c");
         $this->c->setLanguage("French");
-    }
-
-    public function testSetterGetters()
-    {
-        $this->assertEquals($this->c->getTid(), "1a2b3c");
-        $this->assertEquals($this->c->getLanguage(), "French");
+        $this->c->setAmount("1230");
     }
 
     public function testToArray()
     {
         $a = [
             "Tid" => "1a2b3c",
-            "Language" => "French",
+			"Language" => "French",
+			"Amount" => "1230",
         ];
 
         $this->assertEquals($this->c->toArray(), $a);
