@@ -13,12 +13,12 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 	public function testGetContentFailed()
 	{
 		$this->setExpectedException(\RuntimeException::class);
-		
+
 		$f = $this->getFixture();
 		unset($f['Tid']);
 		$response = \EasyTransac\Core\PaymentNotification::getContent($f, 'myApiKey');
 	}
-	
+
 	protected function getFixture($rendered = false)
 	{
 		if (!$rendered)
@@ -49,9 +49,9 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 					'Phone' => '0388000000',
 					'Address' => '204 av vosges',
 					'ZipCode' => '67100',
-					'City' => 'STRASB' 
+					'City' => 'STRASB'
 				),
-				'Signature' => '025a8c33ae62d715ead24176460d9617959f086f' 
+				'Signature' => '025a8c33ae62d715ead24176460d9617959f086f'
 			);
 		}
 		else

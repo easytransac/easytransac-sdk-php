@@ -17,6 +17,12 @@ class CreditCardInfo extends Entity
     protected $cardType = null;
     /** @map:CardBank **/
     protected $cardBank = null;
+    /** @map:Alias **/
+    protected $alias = null;
+    /** @map:CardMonth **/
+    protected $cardMonth = null;
+    /** @map:CardYear **/
+    protected $cardYear = null;
     
     public function getCardBin()
     {
@@ -38,28 +44,19 @@ class CreditCardInfo extends Entity
         return $this->cardBank;
     }
 
-    public function setCardBin($cardBIN)
+    public function getAlias()
     {
-        $this->cardBin = $cardBIN;
-        return $this;
+        return $this->alias;
     }
 
-    public function setCardCountry($cardCountry)
+    public function getCardMonth()
     {
-        $this->cardCountry = $cardCountry;
-        return $this;
+        return $this->cardMonth;
     }
 
-    public function setCardType($cardType)
+    public function getCardYear()
     {
-        $this->cardType = $cardType;
-        return $this;
-    }
-
-    public function setCardBank($cardBank)
-    {
-        $this->cardBank = $cardBank;
-        return $this;
+        return $this->cardYear;
     }
 }
 

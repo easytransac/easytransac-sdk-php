@@ -4,49 +4,12 @@ require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
 
 class OneClickTransactionTest extends PHPUnit_Framework_TestCase
 {
-    public function testSettersGetters()
-    {
-    	$c = new \EasyTransac\Entities\OneClickTransaction();
-    	$f = $this->getFixture();
-    	
-    	$c->setAlias($f['Alias']);
-    	$c->setAmount($f['Amount']);
-    	$c->setClientIp($f['ClientIp']);
-    	$c->setDescription($f['Description']);
-    	$c->setOrderId($f['OrderId']);
-    	$c->setUid($f['Uid']);
-    	$c->setLanguage($f['Language']);
-    	$c->setUserAgent($f['UserAgent']);
-    	$c->setPayToEmail($f['PayToEmail']);
-    	$c->setClientId($f['ClientId']);
-    	$c->setVersion($f['Version']);
-    	$c->setSecure($f['3DS']);
-    	$c->setReturnUrl($f['ReturnUrl']);
-    	$c->setCVV($f['CardCVV']);
-    	$c->setPreAuth($f['PreAuth']);
-    	
-    	$this->assertEquals($c->getAlias(), $f['Alias']);
-    	$this->assertEquals($c->getAmount(), $f['Amount']);
-    	$this->assertEquals($c->getClientIp(), $f['ClientIp']);
-    	$this->assertEquals($c->getDescription(), $f['Description']);
-    	$this->assertEquals($c->getOrderId(), $f['OrderId']);
-    	$this->assertEquals($c->getUid(), $f['Uid']);
-    	$this->assertEquals($c->getLanguage(), $f['Language']);
-    	$this->assertEquals($c->getUserAgent(), $f['UserAgent']);
-    	$this->assertEquals($c->getPayToEmail(), $f['PayToEmail']);
-    	$this->assertEquals($c->getClientId(), $f['ClientId']);
-    	$this->assertEquals($c->getVersion(), $f['Version']);
-    	$this->assertEquals($c->getSecure(), $f['3DS']);
-    	$this->assertEquals($c->getReturnUrl(), $f['ReturnUrl']);
-    	$this->assertEquals($c->getCVV(), $f['CardCVV']);
-    	$this->assertEquals($c->getPreAuth(), $f['PreAuth']);
-    }
 
     public function testToArray()
     {
     	$c = new \EasyTransac\Entities\OneClickTransaction();
     	$f = $this->getFixture();
-    	 
+
     	$c->setAlias($f['Alias']);
     	$c->setAmount($f['Amount']);
     	$c->setClientIp($f['ClientIp']);
@@ -57,23 +20,23 @@ class OneClickTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setUserAgent($f['UserAgent']);
     	$c->setPayToEmail($f['PayToEmail']);
     	$c->setClientId($f['ClientId']);
-    	$c->setVersion($f['Version']);
     	$c->setSecure($f['3DS']);
     	$c->setReturnUrl($f['ReturnUrl']);
     	$c->setCVV($f['CardCVV']);
     	$c->setPreAuth($f['PreAuth']);
-    	
+    	$c->setPreAuthDuration($f['PreAuthDuration']);
+
     	$this->assertEquals($c->toArray(), $f);
     }
-    
+
     public function testHydrate()
     {
     	$c = new \EasyTransac\Entities\OneClickTransaction();
     	$c->hydrate(json_decode(json_encode($this->getFixture())));
-    	 
+
     	$this->assertEquals($c->toArray(), $this->getFixture(true));
     }
-    
+
     protected function getFixture($rendered = false)
     {
     	return [
@@ -87,11 +50,11 @@ class OneClickTransactionTest extends PHPUnit_Framework_TestCase
     		'UserAgent' => 'Firefox',
     		'PayToEmail' => 'test@test.com',
     		'ClientId' => 'abc123',
-    		'Version' => '1.1',
     		'3DS' => 'yes',
     		'ReturnUrl' => 'https://www.easytransac.com',
     		'CardCVV' => '123',
     		'PreAuth' => 'no',
+    		'PreAuthDuration' => '10',
     	];
     }
 }

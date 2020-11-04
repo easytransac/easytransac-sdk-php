@@ -11,7 +11,7 @@ use \EasyTransac\Entities\Entity;
  */
 class FindCustomer extends Request
 {
-    /** @object:CustomerInfos **/
+    /** @object:Customer **/
     protected $response;
 
     /**

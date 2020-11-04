@@ -11,6 +11,8 @@ class PaymentPageCancellationInfos extends Entity
 {
     /** @map:RequestId **/
     protected $requestId = null;
+	/** @map:OperationType **/
+	protected $operationType = null;
     /** @map:Status **/
     protected $status = null;
     /** @map:Date **/
@@ -32,6 +34,11 @@ class PaymentPageCancellationInfos extends Entity
     {
         return $this->requestId;
     }
+
+	public function getOperationType()
+	{
+		return $this->operationType;
+	}
 
     public function getStatus()
     {
@@ -71,60 +78,6 @@ class PaymentPageCancellationInfos extends Entity
     public function getLanguage()
     {
         return $this->language;
-    }
-
-    public function setRequestId($requestId)
-    {
-        $this->requestId = $requestId;
-        return $this;
-    }
-
-    public function setStatus($status)
-    {
-        $this->status = $status;
-        return $this;
-    }
-
-    public function setDate($date)
-    {
-        $this->date = $date;
-        return $this;
-    }
-
-    public function setDateSent($dateSent)
-    {
-        $this->dateSent = $dateSent;
-        return $this;
-    }
-
-    public function setAmount($amount)
-    {
-        $this->amount = $amount;
-        return $this;
-    }
-
-    public function setSecure($secure)
-    {
-        $this->secure = $secure;
-        return $this;
-    }
-
-    public function setPageUrl($pageUrl)
-    {
-        $this->pageUrl = $pageUrl;
-        return $this;
-    }
-
-    public function setEmail($email)
-    {
-        $this->email = $email;
-        return $this;
-    }
-
-    public function setLanguage($language)
-    {
-        $this->language = $language;
-        return $this;
     }
 }
 

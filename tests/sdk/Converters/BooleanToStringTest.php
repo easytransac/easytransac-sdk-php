@@ -7,7 +7,7 @@ class BooleanToStringTest extends PHPUnit_Framework_TestCase
 	public function testConvert()
 	{
 		$converter = new \EasyTransac\Converters\BooleanToString();
-		
+
 		$this->assertEquals($converter->convert(true), 'yes');
 		$this->assertEquals($converter->convert(false), 'no');
 		$this->assertEquals($converter->convert('test'), 'test');

@@ -16,6 +16,16 @@ class StandardResponse
     protected $errorCode;
     protected $success = false;
     protected $sameSignature = false;
+    protected $json;
+    
+    /**
+     * Need to receive the real api response 
+     * @param \stdClass $json
+     */
+    public function __construct(\stdClass $json = null)
+    {
+    	$this->json = $json;
+    }
     
     /**
      * Defines is the signature request/response is the same
@@ -115,6 +125,27 @@ class StandardResponse
     {
         $this->errorMessage = $message;
         return $this;
+    }
+    
+    /**
+     * Returns the api response in json (stdclass)
+     * @return \stdClass|null
+     */
+    public function getRealJsonResponse()
+    {
+    	return $this->json;
+    }
+    
+    /**
+     * Returns the api response in array
+     * @return Array|null
+     */
+    public function getRealArrayResponse()
+    {
+    	if ($this->json === null)
+    		return null;
+    	else
+    		return json_decode(json_encode($this->json), true);
     }
 }
 

@@ -16,21 +16,6 @@ class InitBankTransfer extends Entity
 	/** @map:Reference **/
 	protected $reference = null;
 	
-	public function getCustomer()
-	{
-		return $this->customer;
-	}
-
-	public function getAmount()
-	{
-		return $this->amount;
-	}
-
-	public function getReference()
-	{
-		return $this->reference;
-	}
-
 	public function setCustomer($customer)
 	{
 		$this->customer = $customer;

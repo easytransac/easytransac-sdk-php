@@ -7,45 +7,33 @@ class DocumentTest extends PHPUnit_Framework_TestCase
     public function testSettersGetters()
     {
     	$fixture = $this->getFixture();
-    	
+
         $c = new \EasyTransac\Entities\Document();
-        $c->setComment($fixture['Comment']);
         $c->setDocumentType($fixture['DocumentType']);
-        $c->setStatus($fixture['Status']);
-        $c->setDate($fixture['Date']);
-        $c->setDateUpdated($fixture['DateUpdated']);
         $c->setContent($fixture['Content']);
         $c->setExtension($fixture['Extension']);
-        $c->setId($fixture['Id']);
-        
-        $this->assertEquals($c->getComment(), $fixture['Comment']);
+
         $this->assertEquals($c->getDocumentType(), $fixture['DocumentType']);
-        $this->assertEquals($c->getStatus(), $fixture['Status']);
-        $this->assertEquals($c->getDate(), $fixture['Date']);
-        $this->assertEquals($c->getDateUpdated(), $fixture['DateUpdated']);
         $this->assertEquals($c->getContent(), $fixture['Content']);
         $this->assertEquals($c->getExtension(), $fixture['Extension']);
-        $this->assertEquals($c->getId(), $fixture['Id']);
     }
-    
+
     public function testToArray()
     {
     	$fixture = $this->getFixture();
-    	
-    	$c = new \EasyTransac\Entities\Document();
-    	$c->setComment($fixture['Comment']);
-    	$c->setDocumentType($fixture['DocumentType']);
-    	$c->setStatus($fixture['Status']);
-    	$c->setDate($fixture['Date']);
-    	$c->setDateUpdated($fixture['DateUpdated']);
-    	$c->setContent($fixture['Content']);
-    	$c->setExtension($fixture['Extension']);
-    	$c->setId($fixture['Id']);
+		$c = new \EasyTransac\Entities\Document();
+		$c->hydrate(json_decode(json_encode($fixture)));
 
     	$this->assertEquals($c->toArray(), $fixture);
+
+		$this->assertEquals($c->getComment(), $fixture['Comment']);
+		$this->assertEquals($c->getStatus(), $fixture['Status']);
+		$this->assertEquals($c->getDate(), $fixture['Date']);
+        $this->assertEquals($c->getDateUpdated(), $fixture['DateUpdated']);
+		$this->assertEquals($c->getId(), $fixture['Id']);
     }
-    
-    protected function getFixture() 
+
+    protected function getFixture()
     {
     	return [
     		'Id' => 'WEX3SJ6B9G',

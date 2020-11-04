@@ -24,7 +24,7 @@ class UpdateUserReqTest extends PHPUnit_Framework_TestCase
 		
 		$this->assertTrue($response instanceof \EasyTransac\Responses\StandardResponse);
 		$this->assertTrue($response->isSuccess());
-		$this->assertTrue($response->getContent() instanceof \EasyTransac\Entities\UserInfos);
+		$this->assertTrue($response->getContent() instanceof \EasyTransac\Entities\User);
 		$this->assertTrue(count($response->getContent()->toArray()) > 0);
 	}
 	

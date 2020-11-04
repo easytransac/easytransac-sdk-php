@@ -4,38 +4,19 @@ require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
 
 class NotificationTest extends PHPUnit_Framework_TestCase
 {
-    public function testSettersGetters()
+    public function testHydrate()
     {
+		$f = $this->getFixture(true);
     	$c = new \EasyTransac\Entities\Notification();
-    	$f = $this->getFixture();
-    	
-    	$client = new \EasyTransac\Entities\Client();
-    	$client->setFirstname($f['Client']['Firstname']);
-    	
-    	$c->setAlias($f['Alias']);
-    	$c->setAmount($f['Amount']);
-    	$c->setCardNumber($f['CardNumber']);
-    	$c->setClient($client);
-    	$c->setCurrency($f['Currency']);
-    	$c->setDate($f['Date']);
-    	$c->setFixFees($f['FixFees']);
-    	$c->setMessage($f['Message']);
-    	$c->setOneClick($f['OneClick']);
-    	$c->setOperationType($f['OperationType']);
-    	$c->setOrderId($f['OrderId']);
-    	$c->setRequestId($f['RequestId']);
-    	$c->setSecure($f['3DSecure']);
-    	$c->setSignature($f['Signature']);
-    	$c->setStatus($f['Status']);
-    	$c->setTest($f['Test']);
-    	$c->setTid($f['Tid']);
-    	$c->setUid($f['Uid']);
-    	$c->setError($f['Error']);
-    	
-    	$this->assertEquals($c->getAlias(), $f['Alias']);
+    	$c->hydrate(json_decode(json_encode($this->getFixture())));
+
+    	$this->assertEquals($c->toArray(), $f);
+
+		$c = new \EasyTransac\Entities\Notification();
+		$c->hydrate(json_decode(json_encode($this->getFixture())));
+		$this->assertEquals($c->getAlias(), $f['Alias']);
     	$this->assertEquals($c->getAmount(), $f['Amount']);
     	$this->assertEquals($c->getCardNumber(), $f['CardNumber']);
-    	$this->assertEquals($c->getClient(), $client);
     	$this->assertEquals($c->getDate(), $f['Date']);
     	$this->assertEquals($c->getFixFees(), $f['FixFees']);
     	$this->assertEquals($c->getMessage(), $f['Message']);
@@ -51,47 +32,9 @@ class NotificationTest extends PHPUnit_Framework_TestCase
     	$this->assertEquals($c->getUid(), $f['Uid']);
     	$this->assertEquals($c->getCurrency(), $f['Currency']);
     	$this->assertEquals($c->getError(), $f['Error']);
+		$this->assertTrue($c->getClient() instanceof \EasyTransac\Entities\Client);
     }
 
-    public function testToArray()
-    {
-    	$c = new \EasyTransac\Entities\Notification();
-    	$f = $this->getFixture();
-    	 
-    	$client = new \EasyTransac\Entities\Client();
-    	$client->setFirstname($f['Client']['Firstname']);
-    	 
-    	$c->setAlias($f['Alias']);
-    	$c->setAmount($f['Amount']);
-    	$c->setCardNumber($f['CardNumber']);
-    	$c->setClient($client);
-    	$c->setCurrency($f['Currency']);
-    	$c->setDate($f['Date']);
-    	$c->setFixFees($f['FixFees']);
-    	$c->setMessage($f['Message']);
-    	$c->setOneClick($f['OneClick']);
-    	$c->setOperationType($f['OperationType']);
-    	$c->setOrderId($f['OrderId']);
-    	$c->setRequestId($f['RequestId']);
-    	$c->setSecure($f['3DSecure']);
-    	$c->setSignature($f['Signature']);
-    	$c->setStatus($f['Status']);
-    	$c->setTest($f['Test']);
-    	$c->setTid($f['Tid']);
-    	$c->setUid($f['Uid']);
-    	$c->setError($f['Error']);
-    	
-    	$this->assertEquals($c->toArray(), $this->getFixture(true));
-    }
-    
-    public function testHydrate()
-    {
-    	$c = new \EasyTransac\Entities\Notification();
-    	$c->hydrate(json_decode(json_encode($this->getFixture())));
-    	
-    	$this->assertEquals($c->toArray(), $this->getFixture(true));
-    }
-    
     public function getFixture($rendered = false)
     {
     	if (!$rendered)

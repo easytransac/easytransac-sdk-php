@@ -65,54 +65,6 @@ class BankTransferInfos extends Entity
 	{
 		return $this->reference;
 	}
-
-	public function setId($id)
-	{
-		$this->id = $id;
-		return $this;
-	}
-
-	public function setDate($date)
-	{
-		$this->date = $date;
-		return $this;
-	}
-
-	public function setStatus($status)
-	{
-		$this->status = $status;
-		return $this;
-	}
-
-	public function setAmount($amount)
-	{
-		$this->amount = $amount;
-		return $this;
-	}
-
-	public function setFixFees($fixFees)
-	{
-		$this->fixFees = $fixFees;
-		return $this;
-	}
-
-	public function setIban($iban)
-	{
-		$this->iban = $iban;
-		return $this;
-	}
-
-	public function setBic($bic)
-	{
-		$this->bic = $bic;
-		return $this;
-	}
-
-	public function setReference($reference)
-	{
-		$this->reference = $reference;
-		return $this;
-	}
 }
 
 ?>

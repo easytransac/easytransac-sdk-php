@@ -66,45 +66,15 @@ class Document extends Entity
 		return $this->extension;
 	}
 
-	public function setId($id)
-	{
-		$this->id = $id;
-		return $this;
-	}
-
-	public function setDocumentType($documentType)
-	{
-		$this->documentType = $documentType;
-		return $this;
-	}
-
-	public function setStatus($status)
-	{
-		$this->status = $status;
-		return $this;
-	}
-
-	public function setDate($date)
-	{
-		$this->date = $date;
-		return $this;
-	}
-
-	public function setDateUpdated($dateUpdated)
-	{
-		$this->dateUpdated = $dateUpdated;
-		return $this;
-	}
-
 	public function setContent($content)
 	{
 		$this->content = $content;
 		return $this;
 	}
 
-	public function setComment($comment)
+	public function setDocumentType($documentType)
 	{
-		$this->comment = $comment;
+		$this->documentType = $documentType;
 		return $this;
 	}
 

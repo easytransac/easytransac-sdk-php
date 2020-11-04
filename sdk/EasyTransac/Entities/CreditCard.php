@@ -29,33 +29,29 @@ class CreditCard extends Entity
     protected $country = null;
     /** @map:LastAccessed **/
     protected $lastAccessed = null;
+    /** @map:Verified **/
+    protected $verified = null;
+    /** @map:Status **/
+    protected $status = null;
 
-    public function setLastAccessed($value)
-    {
-        $this->lastAccessed = $value;
-        return $this;
-    }
-    
     public function getLastAccessed()
     {
         return $this->lastAccessed;
     }
 
-    public function setCountry($value)
+    public function getVerified()
     {
-        $this->country = $value;
-        return $this;
+        return $this->verified;
+    }
+
+    public function getStatus()
+    {
+        return $this->status;
     }
 
     public function getCountry()
     {
         return $this->country;
-    }
-
-    public function setType($value)
-    {
-        $this->type = $value;
-        return $this;
     }
 
     public function getType()

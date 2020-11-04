@@ -1,0 +1,56 @@
+2020-11-04 16:17:53 - Called url: https://www.easytransac.com/api/payment/transfer
+
+2020-11-04 16:17:53 - Array
+(
+    [From] => 419
+    [To] => 419
+    [Tid] => abc123
+    [Amount] => 100
+    [Description] => transfer test
+    [Signature] => bd0b83c086eb12afeb7f4635ebc15c001a2ec0c2
+)
+
+
+2020-11-04 16:17:55 - {"Code":181,"Error":"Invalid parameter Tid"}
+
+2020-11-04 16:18:32 - Called url: https://www.easytransac.com/api/payment/transfer
+
+2020-11-04 16:18:32 - Array
+(
+    [From] => 419
+    [To] => 419
+    [Tid] => abcd1234
+    [Amount] => 100
+    [Description] => transfer test
+    [Signature] => 99d36e8db1f5f62e3136d77dfbd89971bab7ebd2
+)
+
+
+2020-11-04 16:18:33 - {"Code":203,"Error":"No transaction found"}
+
+2020-11-04 16:21:17 - Called url: https://www.easytransac.com/api/payment/transfer
+
+2020-11-04 16:21:17 - Array
+(
+    [From] => 419
+    [To] => 419
+    [Tid] => ZgEvr6m8
+    [Amount] => 100
+    [Description] => transfer test
+    [Signature] => 16c734592d7239c62fb906fc701e1f749b09b018
+)
+
+
+2020-11-04 16:21:19 - {"Code":0,"Result":{"From":"419","To":"419","Amount":"1.00","Status":"pending","OriginalTid":"ZgEvr6m8","Date":"2020-11-04 16:21:19"},"Signature":"b13093f8638c69a828ee43a06f52716bc9442931"}
+
+2020-11-04 16:21:19 - Array
+(
+    [From] => 419
+    [To] => 419
+    [Amount] => 1.00
+    [OriginalTid] => ZgEvr6m8
+    [Status] => pending
+    [Date] => 2020-11-04 16:21:19
+)
+
+

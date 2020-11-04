@@ -45,8 +45,10 @@ class DebitTransaction extends Entity
     protected $accountOwner = null;
     /** @map:ReturnUrl **/
     protected $returnUrl = null;
-    /** @map:Rebill **/
-    protected $Rebill = null;
+	/** @map:SddCallingCode **/
+	protected $sddCallingCode = null;
+	/** @map:SddPhone **/
+	protected $sddPhone = null;
 
     public function __construct()
     {
@@ -58,12 +60,7 @@ class DebitTransaction extends Entity
     	if (isset($_SERVER['HTTP_USER_AGENT']) && !empty($_SERVER['HTTP_USER_AGENT']))
     		$this->setUserAgent($_SERVER['HTTP_USER_AGENT']);
     }
-    
-    public function getReturnUrl()
-    {
-    	return $this->returnUrl;
-    }
-    
+
     public function setReturnUrl($returnUrl)
     {
     	$this->returnUrl = $returnUrl;
@@ -76,20 +73,16 @@ class DebitTransaction extends Entity
         return $this;
     }
 
-    public function getCustomer()
-    {
-        return $this->customer;
-    }
+	public function setAccountOwner($value)
+	{
+		$this->accountOwner = $value;
+		return $this;
+	}
 
     public function setMultiplePayments($value)
     {
         $this->multiplePayments = $value;
         return $this;
-    }
-
-    public function getMultiplePayments()
-    {
-        return $this->multiplePayments;
     }
 
     public function setDownPayment($value)
@@ -98,20 +91,10 @@ class DebitTransaction extends Entity
         return $this;
     }
 
-    public function getDownPayment()
-    {
-        return $this->downPayment;
-    }
-
     public function setClientIp($value)
     {
         $this->clientIp = $value;
         return $this;
-    }
-
-    public function getClientIp()
-    {
-        return $this->clientIp;
     }
 
     public function setDescription($value)
@@ -120,20 +103,10 @@ class DebitTransaction extends Entity
         return $this;
     }
 
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
     public function setOrderId($value)
     {
         $this->orderId = $value;
         return $this;
-    }
-
-    public function getOrderId()
-    {
-        return $this->orderId;
     }
 
     public function setAmount($value)
@@ -142,107 +115,69 @@ class DebitTransaction extends Entity
         return $this;
     }
 
-    public function getAmount()
-    {
-        return $this->amount;
-    }
-    
-	public function getBic() 
-	{
-		return $this->bic;
-	}
-	
 	public function setBic($bic) 
 	{
 		$this->bic = $bic;
 		return $this;
 	}
-	
-	public function getIban() 
-	{
-		return $this->iban;
-	}
-	
+
 	public function setIban($iban) 
 	{
 		$this->iban = $iban;
 		return $this;
 	}
-	
-	public function getSecure() 
-	{
-		return $this->secure;
-	}
-	
+
 	public function setSecure($secure) 
 	{
 		$this->secure = $secure;
 		return $this;
 	}
-	
-	public function getMultiplePaymentsRepeat() 
-	{
-		return $this->multiplePaymentsRepeat;
-	}
-	
+
 	public function setMultiplePaymentsRepeat($multiplePaymentsRepeat) 
 	{
 		$this->multiplePaymentsRepeat = $multiplePaymentsRepeat;
 		return $this;
 	}
-	
-	public function getRebill() 
-	{
-		return $this->rebill;
-	}
-	
+
 	public function setRebill($rebill) 
 	{
 		$this->rebill = $rebill;
 		return $this;
 	}
-	
-	public function getRecurrence() 
-	{
-		return $this->recurrence;
-	}
-	
+
 	public function setRecurrence($recurrence) 
 	{
 		$this->recurrence = $recurrence;
 		return $this;
 	}
-	
-	public function getPayToEmail() 
-	{
-		return $this->payToEmail;
-	}
-	
+
 	public function setPayToEmail($payToEmail) 
 	{
 		$this->payToEmail = $payToEmail;
 		return $this;
 	}
-	
-	public function getUserAgent() 
-	{
-		return $this->userAgent;
-	}
-	
-	public function setUserAgent($userAgent) 
+
+	public function setUserAgent($userAgent)
 	{
 		$this->userAgent = $userAgent;
 		return $this;
 	}
-	
-	public function getLanguage() 
-	{
-		return $this->language;
-	}
-	
+
 	public function setLanguage($language) 
 	{
 		$this->language = $language;
+		return $this;
+	}
+
+	public function setSddCallingCode($sddCallingCode)
+	{
+		$this->sddCallingCode = $sddCallingCode;
+		return $this;
+	}
+
+	public function setSddPhone($sddPhone)
+	{
+		$this->sddPhone = $sddPhone;
 		return $this;
 	}
 }

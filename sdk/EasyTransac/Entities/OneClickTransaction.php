@@ -29,8 +29,6 @@ class OneClickTransaction extends Entity
     protected $language = null;
     /** @map:ClientId **/
     protected $clientId = null;
-    /** @map:Version **/
-    protected $version = null;
 	/** @map:3DS **/
 	protected $secure = null;
 	/** @map:ReturnUrl **/
@@ -39,6 +37,8 @@ class OneClickTransaction extends Entity
 	protected $CVV = null;
 	/** @map:PreAuth **/
 	protected $preAuth = null;
+	/** @map:PreAuthDuration **/
+	protected $preAuthDuration = null;
 
     public function __construct()
     {
@@ -57,20 +57,10 @@ class OneClickTransaction extends Entity
         return $this;
     }
 
-    public function getAlias()
-    {
-        return $this->alias;
-    }
-
     public function setClientIp($value)
     {
         $this->clientIp = $value;
         return $this;
-    }
-
-    public function getClientIp()
-    {
-        return $this->clientIp;
     }
 
     public function setDescription($value)
@@ -79,20 +69,10 @@ class OneClickTransaction extends Entity
         return $this;
     }
 
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
     public function setOrderId($value)
     {
         $this->orderId = $value;
         return $this;
-    }
-
-    public function getOrderId()
-    {
-        return $this->orderId;
     }
 
     public function setUid($value)
@@ -101,91 +81,40 @@ class OneClickTransaction extends Entity
         return $this;
     }
 
-    public function getUid()
-    {
-        return $this->uid;
-    }
-
     public function setAmount($value)
     {
         $this->amount = $value;
         return $this;
     }
 
-    public function getAmount()
-    {
-        return $this->amount;
-    }
-    
-	public function getPayToEmail() 
-	{
-		return $this->payToEmail;
-	}
-	
 	public function setPayToEmail($payToEmail) 
 	{
 		$this->payToEmail = $payToEmail;
 		return $this;
 	}
-	
-	public function getUserAgent() 
-	{
-		return $this->userAgent;
-	}
-	
+
 	public function setUserAgent($userAgent) 
 	{
 		$this->userAgent = $userAgent;
 		return $this;
 	}
-	
-	public function getLanguage() 
-	{
-		return $this->language;
-	}
-	
+
 	public function setLanguage($language) 
 	{
 		$this->language = $language;
 		return $this;
 	}
-	
-	public function getClientId() 
-	{
-		return $this->clientId;
-	}
-	
+
 	public function setClientId($clientId) 
 	{
 		$this->clientId = $clientId;
 		return $this;
 	}
-	
-	function getVersion()
-	{
-		return $this->version;
-	}
 
-	function setVersion($version)
+	public function setSecure($secure)
 	{
-        $this->version = $version;
-        return $this;
-	}
-
-	public function setSecure($value)
-	{
-		$this->secure = $value;
+		$this->secure = $secure;
 		return $this;
-	}
-
-	public function getSecure()
-	{
-		return $this->secure;
-	}
-
-	public function getReturnUrl()
-	{
-		return $this->returnUrl;
 	}
 
 	public function setReturnUrl($returnUrl)
@@ -194,26 +123,22 @@ class OneClickTransaction extends Entity
 		return $this;
 	}
 
-	public function setCVV($value)
+	public function setCVV($cvv)
 	{
-		$this->CVV = $value;
+		$this->CVV = $cvv;
 		return $this;
 	}
 
-	public function getCVV()
+	public function setPreAuth($preAuth)
 	{
-		return $this->CVV;
-	}
-	
-	public function setPreAuth($value)
-	{
-		$this->preAuth = $value;
+		$this->preAuth = $preAuth;
 		return $this;
 	}
 
-	public function getPreAuth()
+	public function setPreAuthDuration($preAuthDuration)
 	{
-		return $this->preAuth;
+		$this->preAuthDuration = $preAuthDuration;
+		return $this;
 	}
 }
 

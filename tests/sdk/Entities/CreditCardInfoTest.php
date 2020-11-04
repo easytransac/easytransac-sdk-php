@@ -4,35 +4,31 @@ require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
 
 class CreditCardInfoTest extends PHPUnit_Framework_TestCase
 {
-    protected $c;
-
-    protected function setUp(): void
+	public function testHydrate()
     {
-    	$fixture = $this->getFixture();
-    	
-        $this->c = new \EasyTransac\Entities\CreditCardInfo();
-        $this->c->setCardBin($fixture['CardBIN']);
-        $this->c->setCardCountry($fixture['CardCountry']);
-        $this->c->setCardType($fixture['CardType']);
-        $this->c->setCardBank($fixture['CardBank']);
+		$f = $this->getFixture();
+    	$c = new \EasyTransac\Entities\CreditCardInfo();
+    	$c->hydrate(json_decode(json_encode($f)));
+
+    	$this->assertEquals($c->toArray(), $f);
+
+		$this->assertEquals($c->getCardBin(), $f['CardBIN']);
+		$this->assertEquals($c->getCardCountry(), $f['CardCountry']);
+		$this->assertEquals($c->getCardType(), $f['CardType']);
+		$this->assertEquals($c->getCardBank(), $f['CardBank']);
+
+		$c = new \EasyTransac\Entities\CreditCardInfo();
+    	$c->hydrate(json_decode(json_encode([
+			'Alias' => 'abc',
+			'CardMonth' => '01',
+			'CardYear' => '20',
+		])));
+		$this->assertEquals($c->getAlias(), 'abc');
+		$this->assertEquals($c->getCardMonth(), '01');
+		$this->assertEquals($c->getCardYear(), '20');
     }
 
-    public function testGetterSetters()
-    {
-    	$fixture = $this->getFixture();
-    	
-    	$this->assertEquals($this->c->getCardBin(), $fixture['CardBIN']);
-    	$this->assertEquals($this->c->getCardCountry(), $fixture['CardCountry']);
-    	$this->assertEquals($this->c->getCardType(), $fixture['CardType']);
-    	$this->assertEquals($this->c->getCardBank(), $fixture['CardBank']);
-    }
-
-    public function testToArray()
-    {
-    	$this->assertEquals($this->c->toArray(), $this->getFixture());
-    }
-    
-    protected function getFixture() 
+    protected function getFixture()
     {
     	return [
     		"CardBIN" => "1111222233334444",

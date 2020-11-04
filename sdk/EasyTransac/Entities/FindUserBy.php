@@ -14,16 +14,6 @@ class FindUserBy extends Entity
     /** @map:Id   **/
     protected $id   = null;
 
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    public function getId()
-    {
-        return $this->id;
-    }
-
     public function setEmail($email)
     {
         $this->email = $email;

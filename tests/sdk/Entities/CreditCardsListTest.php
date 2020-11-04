@@ -4,42 +4,20 @@ require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
 
 class CreditCardsListTest extends PHPUnit_Framework_TestCase
 {
-    public function testSettersGetters()
-    {
-    	$list = new \EasyTransac\Entities\CreditCardsList();
-    	$cards = [
-    		(new \EasyTransac\Entities\CreditCard())->hydrate($this->getFixture()),
-    		(new \EasyTransac\Entities\CreditCard())->hydrate($this->getFixture())
-    	];
-    	
-    	$list->setCreditCards($cards);
-    	
-    	$this->assertEquals($list->getCreditCards(), $cards);
-    }
-
-    public function testToArray()
-    {
-    	$list = new \EasyTransac\Entities\CreditCardsList();
-    	$cards = [
-    		(new \EasyTransac\Entities\CreditCard())->hydrate(json_decode(json_encode($this->getFixture())))
-    	];
-    	 
-    	$list->setCreditCards($cards);
-    	
-    	$this->assertEquals($list->toArray(), ['CreditCard' => [$this->getFixture()]]);
-    }
-    
     public function testHydrate()
     {
     	$list = new \EasyTransac\Entities\CreditCardsList();
-    	
+
     	$cards = json_decode(json_encode([$this->getFixture()]));
-    	
+		$fixtureCards = [$this->getFixture()];
     	$list->hydrate($cards);
-    	
-    	$this->assertEquals($list->toArray(), ['CreditCard' => [$this->getFixture()]]);
+    	$this->assertEquals($list->toArray(), ['CreditCard' => $fixtureCards]);
+		
+		$this->assertTrue(is_array($list->getCreditCards())
+							&& count($list->getCreditCards()) == count($fixtureCards)
+							&& $list->getCreditCards()[0] instanceof EasyTransac\Entities\CreditCard);
     }
-    
+
     protected function getFixture()
     {
     	return [

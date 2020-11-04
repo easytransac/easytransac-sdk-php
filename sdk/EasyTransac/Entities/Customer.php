@@ -9,6 +9,8 @@ namespace EasyTransac\Entities;
  */
 class Customer extends Entity
 {
+	/** @map:Id **/
+	protected $id = null;
     /** @map:Email **/
     protected $email = null;
     /** @map:Firstname **/
@@ -43,11 +45,29 @@ class Customer extends Entity
     protected $bic = null;
     /** @map:Communication **/
     protected $communication = null;
+    /** @map:CreationDate **/
+    protected $creationDate = null;
+
+    public function getCreationDate()
+    {
+    	return $this->creationDate;
+    }
 
     public function setUid($value)
     {
         $this->uid = $value;
         return $this;
+    }
+
+    public function getId()
+    {
+    	return $this->id;
+    }
+
+	public function setId($value)
+    {
+    	$this->id = $value;
+		return $this;
     }
 
     public function getUid()
@@ -87,7 +107,7 @@ class Customer extends Entity
     {
         return $this->country;
     }
-    
+
     public function getAddress()
     {
         return $this->address;
@@ -142,7 +162,7 @@ class Customer extends Entity
         $this->lastname = $value;
         return $this;
     }
-    
+
     public function setCountry($value)
     {
         $this->country = $value;
@@ -175,18 +195,18 @@ class Customer extends Entity
     {
         return $this->email;
     }
-    
-	public function getClientId() 
+
+	public function getClientId()
 	{
 		return $this->clientId;
 	}
-	
-	public function setClientId($clientId) 
+
+	public function setClientId($clientId)
 	{
 		$this->clientId = $clientId;
 		return $this;
 	}
-	
+
 	public function getCompany()
 	{
 		return $this->company;

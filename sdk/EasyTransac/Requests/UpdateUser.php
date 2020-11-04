@@ -11,7 +11,7 @@ use \EasyTransac\Entities\Entity;
  */
 class UpdateUser extends Request
 {
-    /** @object:UserInfos **/
+    /** @object:User **/
     protected $response;
 
     /**

@@ -45,7 +45,7 @@ abstract class Request
 	         
 	        if ($json->Code != '0')
 	        {
-	        	return (new StandardResponse())
+	        	return (new StandardResponse($json))
 		        	->setErrorMessage($json->Error)
 		        	->setErrorCode($json->Code);
 	        }
@@ -61,17 +61,17 @@ abstract class Request
 	        		\EasyTransac\Core\Logger::getInstance()->write($json);
 	        		\EasyTransac\Core\Logger::getInstance()->write('Used api key: '.\EasyTransac\Core\Services::getInstance()->getAPIKey());
 	        		
-	        		return (new StandardResponse())
+	        		return (new StandardResponse($json))
 	        			->setErrorMessage('The signature is incorrect');
 	        	}
 	        	 
 	        	if (!$this->checkRequiredFields($json->Result))
 	        	{
-	        		return (new StandardResponse())
+	        		return (new StandardResponse($json))
 	        			->setErrorMessage('One or more required fields in the response are missing');
 	        	}
 	        	 
-	        	return $this->mapResponse($json->Result);
+	        	return $this->mapResponse($json->Result, $json);
 	        }
         }
         catch (\Exception $e)
@@ -83,11 +83,12 @@ abstract class Request
     /**
      * Makes the relation between API field names and entity attributes and hydrates the correct entity
      * @param \stdClass $fields
+     * @param \stdClass $json
      * @return \EasyTransac\Responses\StandardResponse
      */
-    protected function mapResponse($fields)
+    protected function mapResponse($fields, \stdClass $json)
     {
-        $sr = new StandardResponse();
+    	$sr = new StandardResponse($json);
         $sr->setSuccess(true);
 
         $parser = new CommentParser($this);
@@ -111,7 +112,7 @@ abstract class Request
     
     /**
      * Returns true if all required fields are in the json response
-     * @param Array|stdClass $json
+     * @param Array|\stdClass $json
      * @return boolean
      */
     private function checkRequiredFields($json)

@@ -25,21 +25,11 @@ class AddCreditCard extends Entity
     	if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR']))
     		$this->setClientIp($_SERVER['REMOTE_ADDR']);
     }
-    
-    public function getCustomer()
-    {
-        return $this->customer;
-    }
 
     public function setCustomer(Entity $customer)
     {
         $this->customer = $customer;
         return $this;
-    }
-
-    public function getCreditCard()
-    {
-        return $this->creditCard;
     }
 
     public function setCreditCard(Entity $creditCard)
@@ -48,20 +38,10 @@ class AddCreditCard extends Entity
         return $this;
     }
 
-    public function getLanguage()
-    {
-        return $this->language;
-    }
-
     public function setLanguage($language)
     {
         $this->language = $language;
         return $this;
-    }
-
-    public function getClientIp()
-    {
-        return $this->clientIp;
     }
 
     public function setClientIp($clientIp)
@@ -69,7 +49,6 @@ class AddCreditCard extends Entity
         $this->clientIp = $clientIp;
         return $this;
     }
-
 }
 
 ?>

@@ -7,31 +7,27 @@ class DocumentRequestTest extends PHPUnit_Framework_TestCase
     public function testSettersGetters()
     {
     	$fixture = $this->getFixture();
-    	
+
         $document = new \EasyTransac\Entities\Document();
         $document->setExtension($fixture['Extension']);
-        
+
         $customer = new \EasyTransac\Entities\Customer();
         $customer->setClientId($fixture['ClientId']);
 
         $user = new \EasyTransac\Entities\User();
         $user->setEmail($fixture['Email']);
-        
+
     	$c = new \EasyTransac\Entities\DocumentRequest();
         $c->setShowContent($fixture['ShowContent']);
         $c->setDocumentId($fixture['DocumentId']);
         $c->setDocument($document);
         $c->setCustomer($customer);
         $c->setUser($user);
-        
-        $this->assertEquals($c->getShowContent(), $fixture['ShowContent']);
-        $this->assertEquals($c->getDocumentId(), $fixture['DocumentId']);
-        $this->assertEquals($c->getCustomer(), $customer);
-        $this->assertEquals($c->getDocument(), $document);
-        $this->assertEquals($c->getUser(), $user);
+
+    	$this->assertEquals($c->toArray(), $fixture);
     }
-    
-    protected function getFixture() 
+
+    protected function getFixture()
     {
     	return [
     		'Email' => 'john@doe.com',
