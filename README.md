@@ -128,6 +128,10 @@ var_dump($response->toArray());
 
 // Payment status
 var_dump($response->getStatus());
+
+// If you have a doubt about a value that does not exist in the response, 
+// you can print the superglobal $_POST, all notification values are there:
+var_dump($_POST);
 ```
 
 ### Get base API response in JSON and Array
