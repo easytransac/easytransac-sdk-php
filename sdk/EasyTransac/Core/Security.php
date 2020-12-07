@@ -23,7 +23,9 @@ class Security
         $signature = '';
         if (is_array($params))
         {
+	    $params = array_change_key_case($params, CASE_LOWER);
             ksort($params);
+
             foreach ($params as $name => $valeur)
             {
             	if (is_object($valeur))
@@ -33,7 +35,9 @@ class Security
                 {
                     if (is_array($valeur))
                     {
+                        $valeur = array_change_key_case($valeur, CASE_LOWER);
                         ksort($valeur);
+
                         foreach ($valeur as $v)
                             $signature .= $v.'$';
                     }
