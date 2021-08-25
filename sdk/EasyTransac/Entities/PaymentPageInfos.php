@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents the response of the request "PaymentPage"
- * @author klyde
  * @copyright EasyTransac
  */
 class PaymentPageInfos extends Entity

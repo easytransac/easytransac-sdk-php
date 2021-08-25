@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /client/payout/list, find all bank transfers from a customer
- * @author Klyde
  * @copyright EasyTransac
  */
 class BankTransfersList extends Request

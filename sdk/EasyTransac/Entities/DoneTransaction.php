@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents the response of requests "DirectPayment", "OneClickPayment", "PaymentStatus" and "PaymentRefund"
- * @author klyde
  * @copyright EasyTransac
  */
 class DoneTransaction extends Entity

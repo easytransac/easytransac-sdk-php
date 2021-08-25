@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /kyc/find, Find documents
- * @author Klyde
  * @copyright EasyTransac
  */
 class FindDocument extends Request

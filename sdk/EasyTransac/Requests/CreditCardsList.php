@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/listcards, gets the credit cards list
- * @author Klyde
  * @copyright EasyTransac
  */
 class CreditCardsList extends Request

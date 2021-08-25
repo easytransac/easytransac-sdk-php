@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents the response of the request "cancelpage"
- * @author klyde
  * @copyright EasyTransac
  */
 class PaymentPageCancellationInfos extends Entity

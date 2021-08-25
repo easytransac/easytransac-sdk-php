@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/cardinfos, get info from a credit card
- * @author Klyde
  * @copyright EasyTransac
  */
 class CreditCardInfo extends Request

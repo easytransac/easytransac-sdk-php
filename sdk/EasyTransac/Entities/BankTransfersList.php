@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents a bank transfer list
- * @author klyde
  * @copyright EasyTransac
  */
 class BankTransfersList extends Entity

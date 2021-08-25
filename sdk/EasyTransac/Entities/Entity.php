@@ -10,7 +10,6 @@ use EasyTransac\Converters\YesNoLowerCase;
 
 /**
  * Generic entity
- * @author Klyde
  * @copyright EasyTransac
  */
 abstract class Entity

@@ -4,7 +4,6 @@ namespace EasyTransac\Core;
 
 /**
  * Parse a payment notification 
- * @author klyde
  * @copyright EasyTransac
  */
 class PaymentNotification

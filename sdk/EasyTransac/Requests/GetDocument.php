@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /kyc/get, get a document
- * @author Klyde
  * @copyright EasyTransac
  */
 class GetDocument extends Request

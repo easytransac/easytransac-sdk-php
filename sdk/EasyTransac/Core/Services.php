@@ -6,7 +6,6 @@ use \EasyTransac\Core\Security;
 
 /**
  * Singleton, allows to call EasyTransac API with API key
- * @author Klyde
  * @copyright EasyTransac
  */
 class Services

@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /client/payout/list, get the status of a bank transfer
- * @author Klyde
  * @copyright EasyTransac
  */
 class BankTransferStatus extends Request

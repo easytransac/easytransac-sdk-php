@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /client/payout/init, make a bank transfer from your account to a customer
- * @author Klyde
  * @copyright EasyTransac
  */
 class MakeBankTransfer extends Request

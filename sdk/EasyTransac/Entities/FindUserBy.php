@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents arguments of the request "FindUser"
- * @author klyde
  * @copyright EasyTransac
  */
 class FindUserBy extends Entity

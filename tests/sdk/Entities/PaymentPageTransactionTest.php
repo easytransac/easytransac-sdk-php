@@ -94,7 +94,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
     			'ReturnUrl' => 'https:/www.easytransac.com',
     			'CancelUrl' => 'https:/www.easytransac.com',
     			'Customer' => [
-    				'Firstname' => 'Mich'
+    				'Firstname' => 'John'
     			],
     			'MultiplePayments' => 'no',
    				'MultiplePaymentsRepeat' => null,
@@ -123,7 +123,7 @@ class PaymentPageTransactionTest extends PHPUnit_Framework_TestCase
    				'3DS' => 'no',
    				'ReturnUrl' => 'https:/www.easytransac.com',
     			'CancelUrl' => 'https:/www.easytransac.com',
-    			'Firstname' => 'Mich',
+    			'Firstname' => 'John',
    				'MultiplePayments' => 'no',
     			'Language' => 'FRE',
     			'SendSMS' => 'no',

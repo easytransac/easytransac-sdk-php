@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents Transfer pro to pro
- * @author klyde
  * @copyright EasyTransac
  */
 class P2PTransfer extends Entity

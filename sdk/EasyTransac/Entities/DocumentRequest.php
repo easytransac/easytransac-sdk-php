@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents arguments for request "adddocument"
- * @author Klyde
  * @copyright EasyTransac
  */
 class DocumentRequest extends Entity

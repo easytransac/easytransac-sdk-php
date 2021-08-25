@@ -64,7 +64,7 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
 	    		'MultiplePayments' => 3,
 	    		'MultiplePaymentsRepeat' => 3,
 	    		'Customer' => [
-	    			'Lastname' => 'mich'
+	    			'Lastname' => 'Doe'
 	    		],
 	    		'CreditCard' => [
 	    			'CardNumber' => '1234567891234567'
@@ -88,7 +88,7 @@ class DirectTransactionTest extends PHPUnit_Framework_TestCase
     			'DownPayment' => 3500,
     			'MultiplePayments' => 3,
     			'MultiplePaymentsRepeat' => 3,
-    			'Lastname' => 'mich',
+    			'Lastname' => 'Doe',
     			'CardNumber' => '1234567891234567',
     			'Rebill' => 'yes',
     			'Recurrence' => 'monthly',

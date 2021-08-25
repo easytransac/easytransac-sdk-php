@@ -19,7 +19,7 @@ class DebitTransactionTest extends PHPUnit_Framework_TestCase
     	$c->setDownPayment($f['DownPayment']);
     	$c->setMultiplePayments($f['MultiplePayments']);
     	$c->setOrderId($f['OrderId']);
-    	$c->setSecure($f['3DS']);
+    	$c->setB2B($f['B2B']);
     	$c->setUserAgent($f['UserAgent']);
     	$c->setLanguage($f['Language']);
     	$c->setPayToEmail($f['PayToEmail']);
@@ -61,12 +61,12 @@ class DebitTransactionTest extends PHPUnit_Framework_TestCase
 	    		'OrderId' => 10,
 	    		'Description' => 'Description of the transaction',
 	    		'ClientIp' => '127.0.0.1',
-	    		'3DS' => 'no',
+	    		'B2B' => 'no',
 	    		'DownPayment' => 3500,
 	    		'MultiplePayments' => 3,
 	    		'MultiplePaymentsRepeat' => 3,
 	    		'Customer' => [
-	    			'Lastname' => 'mich'
+	    			'Lastname' => 'Doe'
 	    		],
 	    		'Rebill' => 'yes',
 	    		'Recurrence' => 'monthly',
@@ -84,11 +84,11 @@ class DebitTransactionTest extends PHPUnit_Framework_TestCase
     			'OrderId' => 10,
     			'Description' => 'Description of the transaction',
     			'ClientIp' => '127.0.0.1',
-    			'3DS' => 'no',
+    			'B2B' => 'no',
     			'DownPayment' => 3500,
     			'MultiplePayments' => 3,
     			'MultiplePaymentsRepeat' => 3,
-    			'Lastname' => 'mich',
+    			'Lastname' => 'Doe',
     			'Rebill' => 'yes',
     			'Recurrence' => 'monthly',
     			'PayToEmail' => 'test@test.com',

@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents arguments of the request "DebitPayment"
- * @author klyde
  * @copyright EasyTransac
  */
 class DebitTransaction extends Entity
@@ -17,8 +16,8 @@ class DebitTransaction extends Entity
     protected $description = null;
     /** @map:ClientIp **/
     protected $clientIp = null;
-    /** @map:3DS **/
-    protected $secure = null;
+	/** @map:B2B **/
+	protected $b2b = null;
     /** @map:DownPayment **/
     protected $downPayment = null;
     /** @map:MultiplePayments **/
@@ -127,9 +126,9 @@ class DebitTransaction extends Entity
 		return $this;
 	}
 
-	public function setSecure($secure) 
+	public function setB2B($b2b)
 	{
-		$this->secure = $secure;
+		$this->b2b = $b2b;
 		return $this;
 	}
 

@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * This is the main argument for the makebanktransfer request
- * @author klyde
  * @copyright EasyTransac
  */
 class InitBankTransfer extends Entity

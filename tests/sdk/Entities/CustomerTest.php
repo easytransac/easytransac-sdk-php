@@ -83,7 +83,7 @@ class CustomerTest extends PHPUnit_Framework_TestCase
     public function getFixture()
     {
     	return [
-    		'Email' => 'test@movidone.com',
+    		'Email' => 'john@doe.com',
     		'Firstname' => 'Test firstname',
     		'Lastname' => 'Test lastname',
     		'CallingCode' => '33',

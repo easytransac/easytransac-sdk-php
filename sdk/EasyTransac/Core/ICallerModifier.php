@@ -4,7 +4,6 @@ namespace EasyTransac\Core;
 
 /**
  * Modifies the comportement of the caller
- * @author klyde
  */
 interface ICallerModifier
 {

@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/status, requests for a payment status
- * @author Klyde
  * @copyright EasyTransac
  */
 class PaymentStatus extends Request

@@ -4,7 +4,6 @@ namespace EasyTransac\Core;
 
 /**
  * Base methods for caller
- * @author klyde
  */
 interface ICaller
 {

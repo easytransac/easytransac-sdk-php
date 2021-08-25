@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/capture, 
- * @author Klyde
  * @copyright EasyTransac
  */
 class Capture extends Request

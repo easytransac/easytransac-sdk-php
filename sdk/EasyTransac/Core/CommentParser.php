@@ -4,7 +4,6 @@ namespace EasyTransac\Core;
 
 /**
  * Analyses the tag in comments of the current entity class
- * @author Klyde
  * @copyright EasyTransac
  */
 class CommentParser

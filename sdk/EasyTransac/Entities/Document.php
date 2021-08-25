@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents a document
- * @author klyde
  * @copyright EasyTransac
  */
 class Document extends Entity

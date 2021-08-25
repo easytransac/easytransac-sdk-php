@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /client/find, find a customer
- * @author Klyde
  * @copyright EasyTransac
  */
 class FindCustomer extends Request

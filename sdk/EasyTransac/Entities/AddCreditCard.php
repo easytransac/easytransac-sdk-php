@@ -4,7 +4,7 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents arguments of the request "AddCreditCard"
- * @author Klyde
+ * @deprecated since april 2021
  * @copyright EasyTransac
  */
 class AddCreditCard extends Entity

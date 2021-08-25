@@ -43,7 +43,7 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 				'Error' => 'Error test',
 				'Client' => array (
 					'Id' => 'DZxemv4',
-					'Email' => 'contact@movidone.com',
+					'Email' => 'john@doe.com',
 					'Firstname' => 'Pitest',
 					'Lastname' => 'BULL',
 					'Phone' => '0388000000',
@@ -74,7 +74,7 @@ class PaymentNotificationTest extends PHPUnit_Framework_TestCase
 				'CardNumber' => '************0025',
 				'Test' => 'yes',
 				'Id' => 'DZxemv4',
-				'Email' => 'contact@movidone.com',
+				'Email' => 'john@doe.com',
 				'Firstname' => 'Pitest',
 				'Lastname' => 'BULL',
 				'Phone' => '0388000000',

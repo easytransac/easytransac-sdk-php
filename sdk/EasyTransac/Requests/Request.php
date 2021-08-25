@@ -10,7 +10,6 @@ use EasyTransac\Core\Security;
 
 /**
  * Gerenic request
- * @author Klyde
  * @copyright EasyTransac
  */
 abstract class Request

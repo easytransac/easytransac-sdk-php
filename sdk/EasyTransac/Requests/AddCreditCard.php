@@ -6,7 +6,7 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/addcard, add a credit card
- * @author Klyde
+ * @deprecated since april 2021
  * @copyright EasyTransac
  */
 class AddCreditCard extends Request

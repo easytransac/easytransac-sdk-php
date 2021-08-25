@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents a payment notification
- * @author klyde
  * @copyright EasyTransac
  */
 class Notification extends Entity

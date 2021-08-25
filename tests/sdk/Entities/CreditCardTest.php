@@ -70,7 +70,7 @@ class CreditCardTest extends PHPUnit_Framework_TestCase
 				'CardMonth' => '12',
 				'CardYear' => '2018',
 				'CardCVV' => '123',
-				'CardOwner' => 'Mich',
+				'CardOwner' => 'John Doe',
 				'Alias' => 'a1b2c3d4',
 				'CardType' => 'visa',
 				'CardCountry' => 'FR',
@@ -84,7 +84,7 @@ class CreditCardTest extends PHPUnit_Framework_TestCase
 				'CardMonth' => '12',
 				'CardYear' => '2018',
 				'CardCVV' => '123',
-				'CardOwner' => 'Mich',
+				'CardOwner' => 'John Doe',
 				'Alias' => 'a1b2c3d4',
 
 			];

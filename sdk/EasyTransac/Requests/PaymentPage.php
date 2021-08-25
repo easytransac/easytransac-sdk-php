@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/page, asks for the external payment page
- * @author Klyde
  * @copyright EasyTransac
  */
 class PaymentPage extends Request

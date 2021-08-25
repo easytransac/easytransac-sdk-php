@@ -58,8 +58,8 @@ class ClientTest extends PHPUnit_Framework_TestCase
     	return [
     		'Id' => '123',
     		'Email' => 'test@test.com',
-    		'Firstname' => 'Mich',
-    		'Lastname' => 'Choi',
+    		'Firstname' => 'John',
+    		'Lastname' => 'Doe',
     		'Phone' => '0388000000',
     		'Address' => '204 av de Colmar',
     		'ZipCode' => '67100',

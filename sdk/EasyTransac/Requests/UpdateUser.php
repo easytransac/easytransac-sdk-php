@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /user/update, makes an update of an user
- * @author Klyde
  * @copyright EasyTransac
  */
 class UpdateUser extends Request

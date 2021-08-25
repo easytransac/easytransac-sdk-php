@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents arguments of the request "Capture"
- * @author klyde
  * @copyright EasyTransac
  */
 class PaymentCapture extends Entity

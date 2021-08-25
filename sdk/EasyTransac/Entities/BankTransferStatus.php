@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * This is the main argument for /payout/status request
- * @author klyde
  * @copyright EasyTransac
  */
 class BankTransferStatus extends Entity

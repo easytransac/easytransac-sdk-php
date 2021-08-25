@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents a customer
- * @author klyde
  * @copyright EasyTransac
  */
 class Customer extends Entity

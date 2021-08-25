@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * Response used in return of a request
- * @author Klyde
  * @copyright EasyTransac
  */
 class StandardResponse

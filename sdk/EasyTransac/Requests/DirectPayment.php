@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/direct, makes a payment "direct"
- * @author Klyde
  * @copyright EasyTransac
  */
 class DirectPayment extends Request

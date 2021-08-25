@@ -58,7 +58,7 @@ class NotificationTest extends PHPUnit_Framework_TestCase
 	    		'Test' => 'no',
 	    		'Error' => 'Error test',
 	    		'Client' => [
-	    			'Firstname' => 'mich'
+	    			'Firstname' => 'Doe'
 	    		],
 	    		'Signature' => 'abc123'
 	    	];
@@ -82,7 +82,7 @@ class NotificationTest extends PHPUnit_Framework_TestCase
     			'Alias' => 'abcdef',
     			'CardNumber' => '789456123',
    				'Test' => 'no',
-   				'Firstname' => 'mich',
+   				'Firstname' => 'Doe',
    				'Error' => 'Error test',
     			'Signature' => 'abc123'
     		];

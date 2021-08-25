@@ -4,7 +4,6 @@ namespace EasyTransac\Core;
 
 /**
  * Security tools 
- * @author Klyde
  * @copyright EasyTransac
  */
 class Security

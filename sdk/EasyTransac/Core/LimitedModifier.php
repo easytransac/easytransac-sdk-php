@@ -4,7 +4,6 @@ namespace EasyTransac\Core;
 
 /**
  * Specific modifier for ecommerce 
- * @author klyde
  */
 class LimitedModifier implements ICallerModifier
 {

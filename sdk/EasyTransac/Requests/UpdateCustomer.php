@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /client/update, edit a customer
- * @author Klyde
  * @copyright EasyTransac
  */
 class UpdateCustomer extends Request

@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /user/find, search a user
- * @author Klyde
  * @copyright EasyTransac
  */
 class FindUser extends Request

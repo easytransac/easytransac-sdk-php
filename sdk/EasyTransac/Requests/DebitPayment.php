@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/debit, makes a payment by "debit"
- * @author Klyde
  * @copyright EasyTransac
  */
 class DebitPayment extends Request

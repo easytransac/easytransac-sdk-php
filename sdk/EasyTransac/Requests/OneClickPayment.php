@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/oneclick, asks for a payment OneClick
- * @author Klyde
  * @copyright EasyTransac
  */
 class OneClickPayment extends Request

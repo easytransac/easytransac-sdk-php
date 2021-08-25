@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /client/add, add a new customer
- * @author Klyde
  * @copyright EasyTransac
  */
 class AddCustomer extends Request

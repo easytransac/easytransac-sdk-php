@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/cancel, asks for the cancellation of a payment page 
- * @author Klyde
  * @copyright EasyTransac
  */
 class PaymentPageCancellation extends Request

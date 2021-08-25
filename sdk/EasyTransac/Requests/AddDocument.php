@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /kyc/add, add a new document
- * @author Klyde
  * @copyright EasyTransac
  */
 class AddDocument extends Request

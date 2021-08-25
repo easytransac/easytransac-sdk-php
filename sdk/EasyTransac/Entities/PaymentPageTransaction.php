@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents arguments for the request "PaymentPage"
- * @author klyde
  * @copyright EasyTransac
  */
 class PaymentPageTransaction extends Entity
@@ -27,6 +26,8 @@ class PaymentPageTransaction extends Entity
     protected $clientIP = null;
     /** @map:3DS **/
     protected $secure = null;
+    /** @map:B2B **/
+    protected $b2b = null;
     /** @map:ReturnUrl **/
     protected $returnUrl = null;
     /** @map:CancelUrl **/
@@ -124,6 +125,12 @@ class PaymentPageTransaction extends Entity
     public function setSecure($secure)
     {
         $this->secure = $secure;
+        return $this;
+    }
+
+    public function setB2B($b2b)
+    {
+        $this->b2b = $b2b;
         return $this;
     }
 

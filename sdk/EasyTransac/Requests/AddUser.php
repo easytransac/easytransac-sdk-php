@@ -6,7 +6,6 @@ use \EasyTransac\Entities\Entity;
 
 /**
  * API function /user/add, add a new user
- * @author Klyde
  * @copyright EasyTransac
  */
 class AddUser extends Request

@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents arguments for request "Cancellation"
- * @author Klyde
  * @copyright EasyTransac
  */
 class Cancellation extends Entity

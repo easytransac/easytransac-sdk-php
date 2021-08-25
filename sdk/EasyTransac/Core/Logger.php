@@ -4,7 +4,6 @@ namespace EasyTransac\Core;
 
 /**
  * Class for log data for debuging purpose
- * @author klyde
  */
 class Logger
 {

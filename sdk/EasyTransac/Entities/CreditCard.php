@@ -4,7 +4,6 @@ namespace EasyTransac\Entities;
 
 /**
  * Represents a credit card
- * @author klyde
  * @copyright EasyTransac
  */
 class CreditCard extends Entity
