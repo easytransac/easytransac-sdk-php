@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/direct, makes a payment "direct"
@@ -22,5 +22,3 @@ class DirectPayment extends Request
         return $this->call('/payment/direct', $entity);
     }
 }
-
-?>

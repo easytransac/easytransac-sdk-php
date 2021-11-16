@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /client/find, find a customer
@@ -22,5 +22,3 @@ class FindCustomer extends Request
         return $this->call('/client/find', $entity);
     }
 }
-
-?>

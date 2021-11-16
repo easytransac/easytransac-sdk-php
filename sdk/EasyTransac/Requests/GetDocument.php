@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /kyc/get, get a document
@@ -22,5 +22,3 @@ class GetDocument extends Request
         return $this->call('/kyc/get', $entity);
     }
 }
-
-?>

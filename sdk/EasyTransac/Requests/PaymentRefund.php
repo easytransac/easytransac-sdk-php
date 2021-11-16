@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/refund, asks for a refund
@@ -22,5 +22,3 @@ class PaymentRefund extends Request
         return $this->call('/payment/refund', $entity);
     }
 }
-
-?>

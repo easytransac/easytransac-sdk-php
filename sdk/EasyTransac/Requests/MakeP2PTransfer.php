@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/transfer, make a transfer from your customer account to another customer account
@@ -23,5 +23,3 @@ class MakeP2PTransfer extends Request
         return $this->call('/payment/transfer', $entity);
     }
 }
-
-?>

@@ -68,7 +68,7 @@ class CreditCard extends Entity
     {
         return $this->alias;
     }
-    
+
     public function setClientId($value)
     {
         $this->clientId = $value;
@@ -135,5 +135,3 @@ class CreditCard extends Entity
         return $this->number;
     }
 }
-
-?>

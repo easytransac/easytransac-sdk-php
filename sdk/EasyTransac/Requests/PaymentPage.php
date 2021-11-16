@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/page, asks for the external payment page
@@ -22,5 +22,3 @@ class PaymentPage extends Request
         return $this->call('/payment/page', $entity);
     }
 }
-
-?>

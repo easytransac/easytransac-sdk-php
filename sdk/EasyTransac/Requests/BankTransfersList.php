@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /client/payout/list, find all bank transfers from a customer
@@ -23,5 +23,3 @@ class BankTransfersList extends Request
         return $this->call('/client/payout/list', $entity);
     }
 }
-
-?>

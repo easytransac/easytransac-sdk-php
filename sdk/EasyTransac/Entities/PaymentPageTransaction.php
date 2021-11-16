@@ -65,13 +65,15 @@ class PaymentPageTransaction extends Entity
 
     public function __construct()
     {
-    	parent::__construct();
-    	 
-    	if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR']))
-    		$this->setClientIp($_SERVER['REMOTE_ADDR']);
-    	
-    	if (isset($_SERVER['HTTP_USER_AGENT']) && !empty($_SERVER['HTTP_USER_AGENT']))
-    		$this->setUserAgent($_SERVER['HTTP_USER_AGENT']);
+        parent::__construct();
+
+        if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR'])) {
+            $this->setClientIp($_SERVER['REMOTE_ADDR']);
+        }
+
+        if (isset($_SERVER['HTTP_USER_AGENT']) && !empty($_SERVER['HTTP_USER_AGENT'])) {
+            $this->setUserAgent($_SERVER['HTTP_USER_AGENT']);
+        }
     }
 
     public function setSendEmail($sendEmail)
@@ -80,17 +82,17 @@ class PaymentPageTransaction extends Entity
         return $this;
     }
 
-	public function setSendSMS($sendSMS)
-	{
-		$this->sendSMS = $sendSMS;
-		return $this;
-	}
+    public function setSendSMS($sendSMS)
+    {
+        $this->sendSMS = $sendSMS;
+        return $this;
+    }
 
-	public function setSendLater($date)
-	{
-		$this->sendLater = $date;
-		return $this;
-	}
+    public function setSendLater($date)
+    {
+        $this->sendLater = $date;
+        return $this;
+    }
 
     public function setOrderId($orderId)
     {
@@ -98,11 +100,11 @@ class PaymentPageTransaction extends Entity
         return $this;
     }
 
-	public function setOperationType($operationType)
-	{
-		$this->operationType = $operationType;
-		return $this;
-	}
+    public function setOperationType($operationType)
+    {
+        $this->operationType = $operationType;
+        return $this;
+    }
 
     public function setDescription($description)
     {
@@ -202,19 +204,19 @@ class PaymentPageTransaction extends Entity
 
     public function setAskAmount($askAmount)
     {
-    	$this->askAmount = $askAmount;
+        $this->askAmount = $askAmount;
         return $this;
     }
 
     public function setAskInvoiceNumber($askInvoiceNumber)
     {
-    	$this->askInvoiceNumber = $askInvoiceNumber;
+        $this->askInvoiceNumber = $askInvoiceNumber;
         return $this;
     }
 
     public function setPreAuth($preAuth)
     {
-    	$this->preAuth = $preAuth;
+        $this->preAuth = $preAuth;
         return $this;
     }
 
@@ -236,5 +238,3 @@ class PaymentPageTransaction extends Entity
         return $this;
     }
 }
-
-?>

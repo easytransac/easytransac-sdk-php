@@ -35,5 +35,3 @@ class UserInfos extends Entity
         return $this;
     }
 }
-
-?>

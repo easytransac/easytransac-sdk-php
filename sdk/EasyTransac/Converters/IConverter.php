@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace EasyTransac\Converters;
 
@@ -7,12 +7,10 @@ namespace EasyTransac\Converters;
  */
 interface IConverter
 {
-	/**
-	 * Logic for a value convertion
-	 * @param Mixed $value
-	 * @return Mixed
-	 */
-	public function convert($value);
+    /**
+     * Logic for a value convertion
+     * @param Mixed $value
+     * @return Mixed
+     */
+    public function convert($value);
 }
-
-?>

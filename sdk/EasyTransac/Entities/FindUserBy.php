@@ -25,5 +25,3 @@ class FindUserBy extends Entity
         return $this;
     }
 }
-
-?>

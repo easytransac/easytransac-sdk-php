@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /client/add, add a new customer
@@ -22,5 +22,3 @@ class AddCustomer extends Request
         return $this->call('/client/add', $entity);
     }
 }
-
-?>

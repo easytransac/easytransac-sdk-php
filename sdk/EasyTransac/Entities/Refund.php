@@ -22,13 +22,13 @@ class Refund extends Entity
         $this->amount = $amount;
         return $this;
     }
-    
+
     public function setReason($reason)
     {
-    	$this->reason = $reason;
+        $this->reason = $reason;
         return $this;
     }
-    
+
     public function setTid($tid)
     {
         $this->tid = $tid;
@@ -40,7 +40,4 @@ class Refund extends Entity
         $this->language = $language;
         return $this;
     }
-
 }
-
-?>

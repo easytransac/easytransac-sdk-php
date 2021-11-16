@@ -10,14 +10,14 @@ class PaymentPageInfos extends Entity
 {
     /** @map:RequestId **/
     protected $requestId = null;
-	/** @map:OperationType **/
-	protected $operationType = null;
+    /** @map:OperationType **/
+    protected $operationType = null;
     /** @map:Status **/
     protected $status = null;
     /** @map:Date **/
     protected $date = null;
-	/** @map:DateSent **/
-	protected $dateSent = null;
+    /** @map:DateSent **/
+    protected $dateSent = null;
     /** @map:Amount **/
     protected $amount = null;
     /** @map:3DSecure **/
@@ -34,10 +34,10 @@ class PaymentPageInfos extends Entity
         return $this->requestId;
     }
 
-	public function getOperationType()
-	{
-		return $this->operationType;
-	}
+    public function getOperationType()
+    {
+        return $this->operationType;
+    }
 
     public function getStatus()
     {
@@ -49,10 +49,10 @@ class PaymentPageInfos extends Entity
         return $this->date;
     }
 
-	public function getDateSent()
-	{
-		return $this->dateSent;
-	}
+    public function getDateSent()
+    {
+        return $this->dateSent;
+    }
 
     public function getAmount()
     {
@@ -79,5 +79,3 @@ class PaymentPageInfos extends Entity
         return $this->language;
     }
 }
-
-?>

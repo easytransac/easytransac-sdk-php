@@ -16,5 +16,3 @@ class CreditCardsList extends Entity
         return $this->creditCards;
     }
 }
-
-?>

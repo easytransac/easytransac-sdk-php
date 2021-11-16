@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /kyc/find, Find documents
@@ -22,5 +22,3 @@ class FindDocument extends Request
         return $this->call('/kyc/find', $entity);
     }
 }
-
-?>

@@ -38,5 +38,3 @@ else
 {
     var_dump($response->getErrorMessage());
 }
-
-?>

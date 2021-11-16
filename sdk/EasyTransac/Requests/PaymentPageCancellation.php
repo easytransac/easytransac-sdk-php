@@ -2,10 +2,10 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
- * API function /payment/cancel, asks for the cancellation of a payment page 
+ * API function /payment/cancel, asks for the cancellation of a payment page
  * @copyright EasyTransac
  */
 class PaymentPageCancellation extends Request
@@ -22,5 +22,3 @@ class PaymentPageCancellation extends Request
         return $this->call('/payment/cancelpage', $entity);
     }
 }
-
-?>

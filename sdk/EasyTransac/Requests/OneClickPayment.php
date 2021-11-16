@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/oneclick, asks for a payment OneClick
@@ -22,5 +22,3 @@ class OneClickPayment extends Request
         return $this->call('/payment/oneclick', $entity);
     }
 }
-
-?>

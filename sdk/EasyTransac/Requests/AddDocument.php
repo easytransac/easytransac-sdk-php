@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /kyc/add, add a new document
@@ -22,5 +22,3 @@ class AddDocument extends Request
         return $this->call('/kyc/add', $entity);
     }
 }
-
-?>

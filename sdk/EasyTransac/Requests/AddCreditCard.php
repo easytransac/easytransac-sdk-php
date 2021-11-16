@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/addcard, add a credit card
@@ -24,5 +24,3 @@ class AddCreditCard extends Request
         return $this->call('/payment/addcard', $entity);
     }
 }
-
-?>

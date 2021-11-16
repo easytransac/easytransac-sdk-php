@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /client/payout/init, make a bank transfer from your account to a customer
@@ -23,5 +23,3 @@ class MakeBankTransfer extends Request
         return $this->call('/client/payout/init', $entity);
     }
 }
-
-?>

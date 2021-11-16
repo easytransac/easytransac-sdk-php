@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/status, requests for a payment status
@@ -22,5 +22,3 @@ class PaymentStatus extends Request
         return $this->call('/payment/status', $entity);
     }
 }
-
-?>

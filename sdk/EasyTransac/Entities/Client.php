@@ -10,5 +10,3 @@ class Client extends Customer
 {
 
 }
-
-?>

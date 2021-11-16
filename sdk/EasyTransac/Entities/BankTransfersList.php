@@ -8,13 +8,11 @@ namespace EasyTransac\Entities;
  */
 class BankTransfersList extends Entity
 {
-	/** @array:BankTransferInfos **/
-	protected $bankTransferInfos;
-	
-	public function getBankTransferInfos()
-	{
-		return $this->bankTransferInfos;
-	}
-}
+    /** @array:BankTransferInfos **/
+    protected $bankTransferInfos;
 
-?>
+    public function getBankTransferInfos()
+    {
+        return $this->bankTransferInfos;
+    }
+}

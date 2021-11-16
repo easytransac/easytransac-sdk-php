@@ -20,10 +20,11 @@ class AddCreditCard extends Entity
 
     public function __construct()
     {
-    	parent::__construct();
-    	
-    	if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR']))
-    		$this->setClientIp($_SERVER['REMOTE_ADDR']);
+        parent::__construct();
+
+        if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR'])) {
+            $this->setClientIp($_SERVER['REMOTE_ADDR']);
+        }
     }
 
     public function setCustomer(Entity $customer)
@@ -50,5 +51,3 @@ class AddCreditCard extends Entity
         return $this;
     }
 }
-
-?>

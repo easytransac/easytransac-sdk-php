@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /client/payout/list, get the status of a bank transfer
@@ -23,5 +23,3 @@ class BankTransferStatus extends Request
         return $this->call('/client/payout/status', $entity);
     }
 }
-
-?>

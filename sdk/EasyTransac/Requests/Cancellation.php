@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/cancel, asks for the cancellation of a recurring payment
@@ -22,5 +22,3 @@ class Cancellation extends Request
         return $this->call('/payment/cancel', $entity);
     }
 }
-
-?>

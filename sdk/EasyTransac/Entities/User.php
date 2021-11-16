@@ -34,8 +34,8 @@ class User extends Entity
     protected $phone = null;
     /** @map:BirthDate **/
     protected $birthDate = null;
-	/** @map:BirthName **/
-	protected $birthName = null;
+    /** @map:BirthName **/
+    protected $birthName = null;
     /** @map:Nationality **/
     protected $nationality = null;
     /** @map:AccountOwner **/
@@ -64,14 +64,14 @@ class User extends Entity
     protected $companyLogo = null;
     /** @map:CompanyType **/
     protected $companyType = null;
-	/** @map:CompanyAddress0 **/
-	protected $companyAddress0 = null;
-	/** @map:CompanyAddress **/
-	protected $companyAddress = null;
-	/** @map:CompanyCity **/
-	protected $companyCity = null;
-	/** @map:CompanyZipCode **/
-	protected $companyZipCode = null;
+    /** @map:CompanyAddress0 **/
+    protected $companyAddress0 = null;
+    /** @map:CompanyAddress **/
+    protected $companyAddress = null;
+    /** @map:CompanyCity **/
+    protected $companyCity = null;
+    /** @map:CompanyZipCode **/
+    protected $companyZipCode = null;
     /** @map:CompanyCountry **/
     protected $companyCountry = null;
     /** @map:Gender **/
@@ -80,18 +80,18 @@ class User extends Entity
     protected $country = null;
     /** @map:WelcomeEmail **/
     protected $welcomeEmail = null;
-	/** @map:KYC **/
-	protected $kyc = null;
-	/** @map:PSPApproved **/
-	protected $pspApproved = null;
-	/** @map:CompleteActivities **/
-	protected $completeActivities = null;
-	/** @map:CompleteDocuments **/
-	protected $completeDocuments = null;
-	/** @map:Logo **/
-	protected $logo = null;
-	/** @map:Live **/
-	protected $live = null;
+    /** @map:KYC **/
+    protected $kyc = null;
+    /** @map:PSPApproved **/
+    protected $pspApproved = null;
+    /** @map:CompleteActivities **/
+    protected $completeActivities = null;
+    /** @map:CompleteDocuments **/
+    protected $completeDocuments = null;
+    /** @map:Logo **/
+    protected $logo = null;
+    /** @map:Live **/
+    protected $live = null;
 
     public function getId()
     {
@@ -236,16 +236,16 @@ class User extends Entity
         return $this;
     }
 
-	public function getBirthName()
-	{
-		return $this->birthName;
-	}
+    public function getBirthName()
+    {
+        return $this->birthName;
+    }
 
-	public function setBirthName($birthName)
-	{
-		$this->birthName = $birthName;
-		return $this;
-	}
+    public function setBirthName($birthName)
+    {
+        $this->birthName = $birthName;
+        return $this;
+    }
 
     public function getNationality()
     {
@@ -366,7 +366,7 @@ class User extends Entity
         $this->companyLogo = $companyLogo;
         return $this;
     }
-    
+
     public function getCompanyType()
     {
         return $this->companyType;
@@ -378,50 +378,50 @@ class User extends Entity
         return $this;
     }
 
-	public function getCompanyAddress0()
-	{
-		return $this->companyAddress0;
-	}
+    public function getCompanyAddress0()
+    {
+        return $this->companyAddress0;
+    }
 
-	public function setCompanyAddress0($companyAddress0)
-	{
-		$this->companyAddress0 = $companyAddress0;
-		return $this;
-	}
+    public function setCompanyAddress0($companyAddress0)
+    {
+        $this->companyAddress0 = $companyAddress0;
+        return $this;
+    }
 
-	public function getCompanyAddress()
-	{
-		return $this->companyAddress;
-	}
+    public function getCompanyAddress()
+    {
+        return $this->companyAddress;
+    }
 
-	public function setCompanyAddress($companyAddress)
-	{
-		$this->companyAddress = $companyAddress;
-		return $this;
-	}
+    public function setCompanyAddress($companyAddress)
+    {
+        $this->companyAddress = $companyAddress;
+        return $this;
+    }
 
-	public function getCompanyCity()
-	{
-		return $this->companyCity;
-	}
+    public function getCompanyCity()
+    {
+        return $this->companyCity;
+    }
 
-	public function setCompanyCity($companyCity)
-	{
-		$this->companyCity = $companyCity;
-		return $this;
-	}
+    public function setCompanyCity($companyCity)
+    {
+        $this->companyCity = $companyCity;
+        return $this;
+    }
 
-	public function getCompanyZipCode()
-	{
-		return $this->companyZipCode;
-	}
+    public function getCompanyZipCode()
+    {
+        return $this->companyZipCode;
+    }
 
-	public function setCompanyZipCode($companyZipCode)
-	{
-		$this->companyZipCode = $companyZipCode;
-		return $this;
-	}
-    
+    public function setCompanyZipCode($companyZipCode)
+    {
+        $this->companyZipCode = $companyZipCode;
+        return $this;
+    }
+
     public function getCompanyCountry()
     {
         return $this->companyCountry;
@@ -432,7 +432,7 @@ class User extends Entity
         $this->companyCountry = $companyCountry;
         return $this;
     }
-    
+
     public function getGender()
     {
         return $this->gender;
@@ -443,7 +443,7 @@ class User extends Entity
         $this->gender = $gender;
         return $this;
     }
-    
+
     public function getCountry()
     {
         return $this->country;
@@ -457,39 +457,37 @@ class User extends Entity
 
     public function setWelcomeEmail($welcomeEmail)
     {
-    	$this->welcomeEmail = $welcomeEmail;
+        $this->welcomeEmail = $welcomeEmail;
         return $this;
     }
 
-	public function getKYC()
-	{
-		return $this->kyc;
-	}
+    public function getKYC()
+    {
+        return $this->kyc;
+    }
 
-	public function getPSPApproved()
-	{
-		return $this->pspApproved;
-	}
+    public function getPSPApproved()
+    {
+        return $this->pspApproved;
+    }
 
-	public function getCompleteActivities()
-	{
-		return $this->completeActivities;
-	}
+    public function getCompleteActivities()
+    {
+        return $this->completeActivities;
+    }
 
-	public function getCompleteDocuments()
-	{
-		return $this->completeDocuments;
-	}
+    public function getCompleteDocuments()
+    {
+        return $this->completeDocuments;
+    }
 
-	public function getLogo()
-	{
-		return $this->logo;
-	}
+    public function getLogo()
+    {
+        return $this->logo;
+    }
 
-	public function getLive()
-	{
-		return $this->live;
-	}
+    public function getLive()
+    {
+        return $this->live;
+    }
 }
-
-?>

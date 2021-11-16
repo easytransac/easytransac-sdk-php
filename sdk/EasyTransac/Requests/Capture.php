@@ -2,10 +2,10 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
- * API function /payment/capture, 
+ * API function /payment/capture,
  * @copyright EasyTransac
  */
 class Capture extends Request
@@ -22,5 +22,3 @@ class Capture extends Request
         return $this->call('/payment/capture', $entity);
     }
 }
-
-?>

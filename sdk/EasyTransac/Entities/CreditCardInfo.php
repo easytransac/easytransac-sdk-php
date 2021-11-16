@@ -22,7 +22,7 @@ class CreditCardInfo extends Entity
     protected $cardMonth = null;
     /** @map:CardYear **/
     protected $cardYear = null;
-    
+
     public function getCardBin()
     {
         return $this->cardBin;
@@ -58,5 +58,3 @@ class CreditCardInfo extends Entity
         return $this->cardYear;
     }
 }
-
-?>

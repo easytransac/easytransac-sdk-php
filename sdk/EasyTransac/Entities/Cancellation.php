@@ -25,5 +25,3 @@ class Cancellation extends Entity
         return $this;
     }
 }
-
-?>

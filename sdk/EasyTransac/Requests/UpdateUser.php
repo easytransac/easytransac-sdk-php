@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /user/update, makes an update of an user
@@ -22,5 +22,3 @@ class UpdateUser extends Request
         return $this->call('/user/update', $entity);
     }
 }
-
-?>

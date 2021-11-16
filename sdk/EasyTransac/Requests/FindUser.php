@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /user/find, search a user
@@ -22,5 +22,3 @@ class FindUser extends Request
         return $this->call('/user/find', $entity);
     }
 }
-
-?>

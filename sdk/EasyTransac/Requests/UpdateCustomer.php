@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /client/update, edit a customer
@@ -22,5 +22,3 @@ class UpdateCustomer extends Request
         return $this->call('/client/update', $entity);
     }
 }
-
-?>
