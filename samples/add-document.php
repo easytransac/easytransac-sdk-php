@@ -16,7 +16,7 @@ $file = __DIR__ . '/drivers-license.jpg';
 $user = (new User())
     ->setId(1589632);
 
-$document = (new Document)
+$document = (new Document())
     ->setDocumentType('IDENTITY_PROOF')
     ->setContent(base64_encode(file_get_contents($file)))
     ->setExtension(pathinfo($file, PATHINFO_EXTENSION));

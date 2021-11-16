@@ -37,4 +37,3 @@ if ($response->isSuccess()) {
 } else {
     var_dump($response->getErrorMessage());
 }
-
