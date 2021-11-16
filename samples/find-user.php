@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__.'/../sdk/EasyTransac/autoload.php');
+require_once __DIR__ . '/../sdk/EasyTransac/autoload.php';
 
 use EasyTransac\Core\Services;
 use EasyTransac\Entities\FindUserBy;
@@ -15,13 +15,8 @@ $user = (new FindUserBy())
 $request = new FindUser();
 $response = $request->execute($user);
 
-if ($response->isSuccess())
-{
+if ($response->isSuccess()) {
     var_dump($response->getContent()->toArray());
-}
-else
-{
+} else {
     var_dump($response->getErrorMessage());
 }
-
-?>

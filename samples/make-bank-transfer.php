@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__.'/../sdk/EasyTransac/autoload.php');
+require_once __DIR__ . '/../sdk/EasyTransac/autoload.php';
 
 use EasyTransac\Core\Services;
 use EasyTransac\Entities\Customer;
@@ -11,23 +11,18 @@ Services::getInstance()->setDebug(true);
 Services::getInstance()->provideAPIKey('a1b2c3d4');
 
 $customer = (new Customer())
-	->setClientId('a4f7g53');
+    ->setClientId('a4f7g53');
 
 $initBankTransfer = (new InitBankTransfer())
-	->setCustomer($customer)
-	->setAmount(1234)
-	->setReference('BONUS');
-	
+    ->setCustomer($customer)
+    ->setAmount(1234)
+    ->setReference('BONUS');
+
 $request = new MakeBankTransfer();
 $response = $request->execute($initBankTransfer);
 
-if ($response->isSuccess())
-{
-	var_dump($response->getContent()->toArray());
+if ($response->isSuccess()) {
+    var_dump($response->getContent()->toArray());
+} else {
+    var_dump($response->getErrorMessage());
 }
-else
-{
-	var_dump($response->getErrorMessage());
-}
-
-?>

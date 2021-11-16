@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__.'/../sdk/EasyTransac/autoload.php');
+require_once __DIR__ . '/../sdk/EasyTransac/autoload.php';
 
 use EasyTransac\Core\Services;
 use EasyTransac\Entities;
@@ -16,13 +16,8 @@ $customer = (new Entities\Cancellation())
 $request = new Requests\PaymentPageCancellation();
 $response = $request->execute($customer);
 
-if ($response->isSuccess())
-{
+if ($response->isSuccess()) {
     var_dump($response->getContent()->toArray());
-}
-else
-{
+} else {
     var_dump($response->getErrorMessage());
 }
-
-?>

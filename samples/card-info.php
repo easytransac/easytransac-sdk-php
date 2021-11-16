@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__.'/../sdk/EasyTransac/autoload.php');
+require_once __DIR__ . '/../sdk/EasyTransac/autoload.php';
 
 use EasyTransac\Core\Services;
 use EasyTransac\Entities\CreditCard;
@@ -15,13 +15,8 @@ $card = (new CreditCard())
 $request = new Requests\CreditCardInfo();
 $response = $request->execute($card);
 
-if ($response->isSuccess())
-{
+if ($response->isSuccess()) {
     var_dump($response->getContent()->toArray());
-}
-else
-{
+} else {
     var_dump($response->getErrorMessage());
 }
-
-?>
