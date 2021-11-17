@@ -10,12 +10,16 @@ class DocumentRequest extends Entity
 {
     /** @object:Customer **/
     protected $customer = null;
+
     /** @object:User **/
     protected $User = null;
+
     /** @object:Document **/
     protected $document = null;
+
     /** @map:DocumentId **/
     protected $documentId = null;
+
     /** @map:ShowContent **/
     protected $showContent = null;
 

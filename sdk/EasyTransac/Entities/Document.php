@@ -10,18 +10,25 @@ class Document extends Entity
 {
     /** @map:Id **/
     protected $id = null;
+
     /** @map:DocumentType **/
     protected $documentType = null;
+
     /** @map:Status **/
     protected $status = null;
+
     /** @map:Date **/
     protected $date = null;
+
     /** @map:DateUpdated **/
     protected $dateUpdated = null;
+
     /** @map:Content **/
     protected $content = null;
+
     /** @map:Comment **/
     protected $comment = null;
+
     /** @map:Extension **/
     protected $extension = null;
 

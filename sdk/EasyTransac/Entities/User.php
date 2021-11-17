@@ -10,86 +10,127 @@ class User extends Entity
 {
     /** @map:Id **/
     protected $id = null;
+
     /** @map:Email **/
     protected $email = null;
+
     /** @map:Password **/
     protected $password = null;
+
     /** @map:Identifier **/
     protected $identifier = null;
+
     /** @map:Company **/
     protected $company = null;
+
     /** @map:Firstname **/
     protected $firstname = null;
+
     /** @map:Lastname **/
     protected $lastname = null;
+
     /** @map:Address **/
     protected $address = null;
+
     /** @map:ZipCode **/
     protected $zipCode = null;
+
     /** @map:City **/
     protected $city = null;
+
     /** @map:CallingCode **/
     protected $callingCode = null;
+
     /** @map:Phone **/
     protected $phone = null;
+
     /** @map:BirthDate **/
     protected $birthDate = null;
+
     /** @map:BirthName **/
     protected $birthName = null;
+
     /** @map:Nationality **/
     protected $nationality = null;
+
     /** @map:AccountOwner **/
     protected $accountOwner = null;
+
     /** @map:Iban **/
     protected $iban = null;
+
     /** @map:Bic **/
     protected $bic = null;
+
     /** @map:Vat **/
     protected $vat = null;
+
     /** @map:Siret **/
     protected $siret = null;
+
     /** @map:ActivationEmail **/
     protected $activationEmail = null;
+
     /** @map:JoinDate **/
     protected $joinDate = null;
+
     /** @map:Balance **/
     protected $balance = null;
+
     /** @map:ConditionsAccepted **/
     protected $conditionsAccepted = null;
+
     /** @map:Active **/
     protected $active = null;
+
     /** @map:Tester **/
     protected $tester = null;
+
     /** @map:CompanyLogo **/
     protected $companyLogo = null;
+
     /** @map:CompanyType **/
     protected $companyType = null;
+
     /** @map:CompanyAddress0 **/
     protected $companyAddress0 = null;
+
     /** @map:CompanyAddress **/
     protected $companyAddress = null;
+
     /** @map:CompanyCity **/
     protected $companyCity = null;
+
     /** @map:CompanyZipCode **/
     protected $companyZipCode = null;
+
     /** @map:CompanyCountry **/
     protected $companyCountry = null;
+
     /** @map:Gender **/
     protected $gender = null;
+
     /** @map:Country **/
     protected $country = null;
+
     /** @map:WelcomeEmail **/
     protected $welcomeEmail = null;
+
     /** @map:KYC **/
     protected $kyc = null;
+
     /** @map:PSPApproved **/
     protected $pspApproved = null;
+
     /** @map:CompleteActivities **/
     protected $completeActivities = null;
+
     /** @map:CompleteDocuments **/
     protected $completeDocuments = null;
+
     /** @map:Logo **/
     protected $logo = null;
+
     /** @map:Live **/
     protected $live = null;
 
