@@ -10,40 +10,58 @@ class Customer extends Entity
 {
     /** @map:Id **/
     protected $id = null;
+
     /** @map:Email **/
     protected $email = null;
+
     /** @map:Firstname **/
     protected $firstname = null;
+
     /** @map:Lastname **/
     protected $lastname = null;
+
     /** @map:CallingCode **/
     protected $callingCode = null;
+
     /** @map:Phone **/
     protected $phone = null;
+
     /** @map:BirthDate **/
     protected $birthDate = null;
+
     /** @map:Nationality **/
     protected $nationality = null;
+
     /** @map:Address **/
     protected $address = null;
+
     /** @map:ZipCode **/
     protected $zipCode = null;
+
     /** @map:City **/
     protected $city = null;
+
     /** @map:Country **/
     protected $country = null;
+
     /** @map:Uid **/
     protected $uid = null;
+
     /** @map:ClientId **/
     protected $clientId = null;
+
     /** @map:Company **/
     protected $company = null;
+
     /** @map:Iban **/
     protected $iban = null;
+
     /** @map:Bic **/
     protected $bic = null;
+
     /** @map:Communication **/
     protected $communication = null;
+
     /** @map:CreationDate **/
     protected $creationDate = null;
 

@@ -10,22 +10,31 @@ class PaymentPageInfos extends Entity
 {
     /** @map:RequestId **/
     protected $requestId = null;
+
     /** @map:OperationType **/
     protected $operationType = null;
+
     /** @map:Status **/
     protected $status = null;
+
     /** @map:Date **/
     protected $date = null;
+
     /** @map:DateSent **/
     protected $dateSent = null;
+
     /** @map:Amount **/
     protected $amount = null;
+
     /** @map:3DSecure **/
     protected $secure = null;
+
     /** @map:PageUrl **/
     protected $pageUrl = null;
+
     /** @map:Email **/
     protected $email = null;
+
     /** @map:Language **/
     protected $language = null;
 

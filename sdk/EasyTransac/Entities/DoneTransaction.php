@@ -10,60 +10,88 @@ class DoneTransaction extends Entity
 {
     /** @map:RequestId **/
     protected $requestId = null;
+
     /** @map:OriginalRequestId **/
     protected $originalRequestId = null;
+
     /** @map:RequestAttempt **/
     protected $requestAttempt = null;
+
     /** @map:OperationType **/
     protected $operationType = null;
+
     /** @map:Tid **/
     protected $tid = null;
+
     /** @map:Uid **/
     protected $uid = null;
+
     /** @map:OrderId **/
     protected $orderId = null;
+
     /** @map:Status **/
     protected $status = null;
+
     /** @map:Date **/
     protected $date = null;
+
     /** @map:DateRefund **/
     protected $dateRefund = null;
+
     /** @map:AmountRefund **/
     protected $amountRefund = null;
+
     /** @map:DateChargeback **/
     protected $dateChargeback = null;
+
     /** @map:DateRepresentment **/
     protected $dateRepresentment = null;
+
     /** @map:Amount **/
     protected $amount = null;
+
     /** @map:FixFees **/
     protected $fixFees = null;
+
     /** @map:Message **/
     protected $message = null;
+
     /** @map:3DSecure **/
     protected $secure = null;
+
     /** @map:OneClick **/
     protected $oneClick = null;
+
     /** @map:MultiplePayments **/
     protected $multiplePayments = null;
+
     /** @map:Rebill **/
     protected $rebill = null;
+
     /** @map:OriginalPaymentTid **/
     protected $originalPaymentTid = null;
+
     /** @map:Alias **/
     protected $alias = null;
+
     /** @map:Error **/
     protected $error = null;
+
     /** @map:AdditionalError **/
     protected $additionalError = null;
+
     /** @map:3DSecureUrl **/
     protected $secureUrl = null;
+
     /** @object:Client **/
     protected $client = null;
+
     /** @map:MandateUrl **/
     protected $mandateUrl = null;
+
     /** @map:RedirectUrl **/
     protected $redirectUrl = null;
+
     /** @map:Test **/
     protected $test = null;
 

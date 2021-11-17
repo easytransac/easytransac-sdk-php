@@ -10,8 +10,10 @@ class InitBankTransfer extends Entity
 {
     /** @object:Customer **/
     protected $customer = null;
+
     /** @map:Amount **/
     protected $amount = null;
+
     /** @map:Reference **/
     protected $reference = null;
 
