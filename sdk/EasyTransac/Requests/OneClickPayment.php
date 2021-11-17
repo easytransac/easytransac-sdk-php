@@ -6,6 +6,7 @@ use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/oneclick, asks for a payment OneClick
+ * URL: https://www.easytransac.com/fr/documentation#tag/API-Payment/paths/~1api~1payment~1oneclick/post
  * @copyright EasyTransac
  */
 class OneClickPayment extends Request

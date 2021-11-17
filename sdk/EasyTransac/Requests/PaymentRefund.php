@@ -6,6 +6,7 @@ use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/refund, asks for a refund
+ * URL: https://www.easytransac.com/fr/documentation#tag/API-Payment/paths/~1api~1payment~1refund/post
  * @copyright EasyTransac
  */
 class PaymentRefund extends Request

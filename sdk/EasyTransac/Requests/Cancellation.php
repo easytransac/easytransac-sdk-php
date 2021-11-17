@@ -6,6 +6,7 @@ use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/cancel, asks for the cancellation of a recurring payment
+ * URL: https://www.easytransac.com/fr/documentation#tag/API-Payment/paths/~1api~1payment~1cancel/post
  * @copyright EasyTransac
  */
 class Cancellation extends Request
