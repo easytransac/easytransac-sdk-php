@@ -14,7 +14,9 @@ Requirements
 ------------
 
 You need at least:
-  - PHP >=5.5
+  - Based on the SDK version:
+    - 1.3+ versions requires PHP >= 7.1
+    - Older versions requires PHP >=5.5
   - cURL in order to get clear error messages
   - An API key provided by EasyTransac (register an account at [EasyTransac website](https://www.easytransac.com/))
   - OpenSSL version 1.0.1 to support TLSv1.2 ciphers

@@ -18,23 +18,16 @@ class AddCreditCardTest extends TestCase
         $c->setCustomer($cust);
         $c->setCreditCard($card);
 
-        $a = [
+        $this->assertEquals($this->getFixture(), $c->toArray());
+    }
+
+    public function getFixture(): array
+    {
+        return [
             'Email' => 'test@test.com',
             'CardCVV' => '123',
             'Language' => 'FR',
             'ClientIp' => '127.0.0.1'
         ];
-
-        $this->assertEquals($c->toArray(), $a);
-    }
-
-    public function testEntityMisc()
-    {
-        $c = new AddCreditCard();
-        $c->setFakeArg('test');
-        $r = $c->toArray();
-        $this->assertEquals($r['FakeArg'], 'test');
-        $this->assertEquals($c->getFakeArg(), 'test');
-        $this->assertEquals($c->getFakeArgInexistant(), null);
     }
 }
