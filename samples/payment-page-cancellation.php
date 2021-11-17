@@ -10,7 +10,7 @@ Services::getInstance()->setDebug(true);
 Services::getInstance()->provideAPIKey('a1b2c3d4');
 
 $customer = (new Entities\Cancellation())
-    ->setRequestId('a1b2c3d4')
+    ->setTid('a1b2c3d4')
     ->setLanguage('FRE');
 
 $request = new Requests\PaymentPageCancellation();
