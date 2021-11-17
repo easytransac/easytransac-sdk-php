@@ -10,16 +10,22 @@ class CreditCardInfo extends Entity
 {
     /** @map:CardBIN **/
     protected $cardBin = null;
+
     /** @map:CardCountry **/
     protected $cardCountry = null;
+
     /** @map:CardType **/
     protected $cardType = null;
+
     /** @map:CardBank **/
     protected $cardBank = null;
+
     /** @map:Alias **/
     protected $alias = null;
+
     /** @map:CardMonth **/
     protected $cardMonth = null;
+
     /** @map:CardYear **/
     protected $cardYear = null;
 

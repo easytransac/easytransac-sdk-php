@@ -10,20 +10,28 @@ class P2PTransfer extends Entity
 {
     /** @map:From **/
     protected $from = null;
+
     /** @map:To **/
     protected $to = null;
+
     /** @map:Tid **/
     protected $tid = null;
+
     /** @map:Amount **/
     protected $amount = null;
+
     /** @map:Description **/
     protected $description = null;
+
     /** @map:Language **/
     protected $language = null;
+
     /** @map:OriginalTid **/
     protected $originalTid = null;
+
     /** @map:Status **/
     protected $status = null;
+
     /** @map:Date **/
     protected $date = null;
 

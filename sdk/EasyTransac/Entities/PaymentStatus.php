@@ -10,10 +10,13 @@ class PaymentStatus extends Entity
 {
     /** @map:Tid **/
     protected $tid = null;
+
     /** @map:OrderId **/
     protected $orderId = null;
+
     /** @map:RequestId **/
     protected $requestId = null;
+
     /** @map:Language **/
     protected $language = null;
 

@@ -10,42 +10,64 @@ class DebitTransaction extends Entity
 {
     /** @map:Amount **/
     protected $amount = null;
+
     /** @map:OrderId **/
     protected $orderId = null;
+
     /** @map:Description **/
     protected $description = null;
+
     /** @map:ClientIp **/
     protected $clientIp = null;
+
     /** @map:B2B **/
     protected $b2b = null;
+
     /** @map:DownPayment **/
     protected $downPayment = null;
+
     /** @map:MultiplePayments **/
     protected $multiplePayments = null;
+
     /** @map:MultiplePaymentsRepeat **/
     protected $multiplePaymentsRepeat = null;
+
     /** @map:Rebill **/
     protected $rebill = null;
+
     /** @map:Recurrence **/
     protected $recurrence = null;
+
     /** @map:PayToEmail **/
     protected $payToEmail = null;
+
+    /** @map:PayToId **/
+    protected $payToId = null;
+
     /** @map:UserAgent **/
     protected $userAgent = null;
+
     /** @map:Language **/
     protected $language = null;
+
     /** @map:Bic **/
     protected $bic = null;
+
     /** @map:Iban **/
     protected $iban = null;
+
     /** @object:Customer **/
     protected $customer = null;
+
     /** @map:AccountOwner **/
     protected $accountOwner = null;
+
     /** @map:ReturnUrl **/
     protected $returnUrl = null;
+
     /** @map:SddCallingCode **/
     protected $sddCallingCode = null;
+
     /** @map:SddPhone **/
     protected $sddPhone = null;
 
@@ -155,6 +177,12 @@ class DebitTransaction extends Entity
     public function setPayToEmail($payToEmail)
     {
         $this->payToEmail = $payToEmail;
+        return $this;
+    }
+
+    public function setPayToId($payToId)
+    {
+        $this->payToId = $payToId;
         return $this;
     }
 

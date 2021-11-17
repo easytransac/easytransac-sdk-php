@@ -10,56 +10,82 @@ class PaymentPageTransaction extends Entity
 {
     /** @map:SendEmail **/
     protected $sendEmail = null;
+
     /** @map:SendSMS **/
     protected $sendSMS = null;
+
     /** @map:SendLater **/
     protected $sendLater = null;
+
     /** @map:OrderId **/
     protected $orderId = null;
+
     /** @map:OperationType **/
     protected $operationType = null;
+
     /** @map:Description **/
     protected $description = null;
+
     /** @map:Amount **/
     protected $amount = null;
+
     /** @map:ClientIP **/
     protected $clientIP = null;
+
     /** @map:3DS **/
     protected $secure = null;
+
     /** @map:B2B **/
     protected $b2b = null;
+
     /** @map:ReturnUrl **/
     protected $returnUrl = null;
+
     /** @map:CancelUrl **/
     protected $cancelUrl = null;
+
     /** @object:Customer **/
     protected $customer = null;
+
     /** @map:MultiplePayments **/
     protected $multiplePayments = null;
+
     /** @map:MultiplePaymentsRepeat **/
     protected $multiplePaymentsRepeat = null;
+
     /** @map:DownPayment **/
     protected $downPayment = null;
+
     /** @map:Rebill **/
     protected $Rebill = null;
+
     /** @map:Recurrence **/
     protected $recurrence = null;
+
     /** @map:PayToEmail **/
     protected $payToEmail = null;
+
     /** @map:UserAgent **/
     protected $userAgent = null;
+
     /** @map:Language **/
     protected $language = null;
+
     /** @map:AskAmount **/
     protected $askAmount = null;
+
     /** @map:AskInvoiceNumber **/
     protected $askInvoiceNumber = null;
+
     /** @map:PreAuth **/
     protected $preAuth = null;
+
     /** @map:PreAuthDuration **/
     protected $preAuthDuration = null;
+
     /** @map:SddCallingCode **/
     protected $sddCallingCode = null;
+
     /** @map:SddPhone **/
     protected $sddPhone = null;
 

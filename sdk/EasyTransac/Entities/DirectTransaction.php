@@ -10,38 +10,58 @@ class DirectTransaction extends Entity
 {
     /** @map:Amount **/
     protected $amount = null;
+
     /** @map:OrderId **/
     protected $orderId = null;
+
     /** @map:Description **/
     protected $description = null;
+
     /** @map:ClientIp **/
     protected $clientIp = null;
+
     /** @map:3DS **/
     protected $secure = null;
+
     /** @map:DownPayment **/
     protected $downPayment = null;
+
     /** @map:ReturnUrl **/
     protected $returnUrl = null;
+
     /** @map:MultiplePayments **/
     protected $multiplePayments = null;
+
     /** @map:MultiplePaymentsRepeat **/
     protected $multiplePaymentsRepeat = null;
+
     /** @map:Rebill **/
     protected $rebill = null;
+
     /** @map:Recurrence **/
     protected $recurrence = null;
+
     /** @map:PayToEmail **/
     protected $payToEmail = null;
+
+    /** @map:PayToId **/
+    protected $payToId = null;
+
     /** @map:UserAgent **/
     protected $userAgent = null;
+
     /** @map:Language **/
     protected $language = null;
+
     /** @object:Customer **/
     protected $customer = null;
+
     /** @object:CreditCard **/
     protected $creditCard = null;
+
     /** @map:PreAuth **/
     protected $preAuth = null;
+
     /** @map:PreAuthDuration **/
     protected $preAuthDuration = null;
 
@@ -133,6 +153,12 @@ class DirectTransaction extends Entity
     public function setPayToEmail($payToEmail)
     {
         $this->payToEmail = $payToEmail;
+        return $this;
+    }
+
+    public function setPayToId($payToId)
+    {
+        $this->payToId = $payToId;
         return $this;
     }
 

@@ -10,8 +10,10 @@ class PaymentCapture extends Entity
 {
     /** @map:Tid **/
     protected $tid = null;
+
     /** @map:Amount **/
     protected $amount = null;
+
     /** @map:Language **/
     protected $language = null;
 

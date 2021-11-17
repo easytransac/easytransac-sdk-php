@@ -10,10 +10,13 @@ class Refund extends Entity
 {
     /** @map:Tid **/
     protected $tid = null;
+
     /** @map:Language **/
     protected $language = null;
+
     /** @map:Amount **/
     protected $amount = null;
+
     /** @map:Reason **/
     protected $reason = null;
 

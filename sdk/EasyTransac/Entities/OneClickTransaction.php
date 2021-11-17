@@ -10,32 +10,49 @@ class OneClickTransaction extends Entity
 {
     /** @map:Amount **/
     protected $amount = null;
+
     /** @map:Uid **/
     protected $uid = null;
+
     /** @map:OrderId **/
     protected $orderId = null;
+
     /** @map:Description **/
     protected $description = null;
+
     /** @map:ClientIp **/
     protected $clientIp = null;
+
     /** @map:Alias **/
     protected $alias = null;
+
     /** @map:PayToEmail **/
     protected $payToEmail = null;
+
+    /** @map:PayToId **/
+    protected $payToId = null;
+
     /** @map:UserAgent **/
     protected $userAgent = null;
+
     /** @map:Language **/
     protected $language = null;
+
     /** @map:ClientId **/
     protected $clientId = null;
+
     /** @map:3DS **/
     protected $secure = null;
+
     /** @map:ReturnUrl **/
     protected $returnUrl = null;
+
     /** @map:CardCVV **/
     protected $CVV = null;
+
     /** @map:PreAuth **/
     protected $preAuth = null;
+
     /** @map:PreAuthDuration **/
     protected $preAuthDuration = null;
 
@@ -91,6 +108,12 @@ class OneClickTransaction extends Entity
     public function setPayToEmail($payToEmail)
     {
         $this->payToEmail = $payToEmail;
+        return $this;
+    }
+
+    public function setPayToId($payToId)
+    {
+        $this->payToId = $payToId;
         return $this;
     }
 
