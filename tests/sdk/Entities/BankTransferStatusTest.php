@@ -1,18 +1,20 @@
 <?php
 
-require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
+use EasyTransac\Entities\BankTransferStatus;
+use EasyTransac\Entities\Customer;
+use PHPUnit\Framework\TestCase;
 
-class BankTransferStatusTest extends PHPUnit_Framework_TestCase
+class BankTransferStatusTest extends TestCase
 {
     protected $c;
     protected $customer;
 
     protected function setUp(): void
     {
-    	$fixture = $this->getFixture();
-        $this->c = new \EasyTransac\Entities\BankTransferStatus();
+        $fixture = $this->getFixture();
+        $this->c = new BankTransferStatus();
 
-        $this->customer = new \EasyTransac\Entities\Customer();
+        $this->customer = new Customer();
         $this->customer->setClientId($fixture['ClientId']);
         $this->c->setCustomer($this->customer);
         $this->c->setPayoutId($fixture['PayoutId']);
@@ -23,11 +25,11 @@ class BankTransferStatusTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($this->c->toArray(), $this->getFixture());
     }
 
-    protected function getFixture()
+    protected function getFixture(): array
     {
-    	return [
-    		"ClientId" => "a1b2c3",
-    		"PayoutId" => "112233",
-    	];
+        return [
+            "ClientId" => "a1b2c3",
+            "PayoutId" => "112233",
+        ];
     }
 }

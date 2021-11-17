@@ -1,22 +1,21 @@
 <?php
 
-require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
+use EasyTransac\Converters\BooleanToString;
+use PHPUnit\Framework\TestCase;
 
-class BooleanToStringTest extends PHPUnit_Framework_TestCase
+class BooleanToStringTest extends TestCase
 {
-	public function testConvert()
-	{
-		$converter = new \EasyTransac\Converters\BooleanToString();
+    public function testConvert()
+    {
+        $converter = new BooleanToString();
 
-		$this->assertEquals($converter->convert(true), 'yes');
-		$this->assertEquals($converter->convert(false), 'no');
-		$this->assertEquals($converter->convert('test'), 'test');
-		$this->assertEquals($converter->convert(123), 123);
-		$this->assertEquals($converter->convert(0), 0);
-		$this->assertEquals($converter->convert(1), 1);
-		$this->assertEquals($converter->convert('0'), '0');
-		$this->assertEquals($converter->convert('1'), '1');
-	}
+        $this->assertEquals('yes', $converter->convert(true));
+        $this->assertEquals('no', $converter->convert(false));
+        $this->assertEquals('test', $converter->convert('test'));
+        $this->assertEquals(123, $converter->convert(123));
+        $this->assertEquals(0, $converter->convert(0));
+        $this->assertEquals(1, $converter->convert(1));
+        $this->assertEquals('0', $converter->convert('0'));
+        $this->assertEquals('1', $converter->convert('1'));
+    }
 }
-
-?>

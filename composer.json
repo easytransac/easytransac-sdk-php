@@ -2,7 +2,7 @@
     "name": "easytransac/easytransac-sdk-php",
     "description": "A SDK to make payment with the EasyTransac API",
     "require": {
-        "php": ">=5.5"
+        "php": ">=7.1"
     },
     "autoload": {
         "psr-4": { 

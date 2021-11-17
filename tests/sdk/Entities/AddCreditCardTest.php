@@ -1,15 +1,18 @@
 <?php
 
-require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
+use EasyTransac\Entities\AddCreditCard;
+use EasyTransac\Entities\CreditCard;
+use EasyTransac\Entities\Customer;
+use PHPUnit\Framework\TestCase;
 
-class AddCreditCardTest extends PHPUnit_Framework_TestCase
+class AddCreditCardTest extends TestCase
 {
     public function testToArray()
     {
-        $cust = (new \EasyTransac\Entities\Customer())->setEmail("test@test.com");
-        $card = (new \EasyTransac\Entities\CreditCard())->setCVV("123");
+        $cust = (new Customer())->setEmail("test@test.com");
+        $card = (new CreditCard())->setCVV("123");
 
-        $c = new \EasyTransac\Entities\AddCreditCard();
+        $c = new AddCreditCard();
         $c->setLanguage('FR');
         $c->setClientIp('127.0.0.1');
         $c->setCustomer($cust);
@@ -25,15 +28,13 @@ class AddCreditCardTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($c->toArray(), $a);
     }
 
-	public function testEntityMisc()
-	{
-		$c = new \EasyTransac\Entities\AddCreditCard();
-		$c->setFakeArg('test');
-		$r = $c->toArray();
-		$this->assertEquals($r['FakeArg'], 'test');
-		$this->assertEquals($c->getFakeArg(), 'test');
-		$this->assertEquals($c->getFakeArgInexistant(), null);
-	}
+    public function testEntityMisc()
+    {
+        $c = new AddCreditCard();
+        $c->setFakeArg('test');
+        $r = $c->toArray();
+        $this->assertEquals($r['FakeArg'], 'test');
+        $this->assertEquals($c->getFakeArg(), 'test');
+        $this->assertEquals($c->getFakeArgInexistant(), null);
+    }
 }
-
-?>

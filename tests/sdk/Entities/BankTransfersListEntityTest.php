@@ -1,25 +1,26 @@
 <?php
 
-require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
+use EasyTransac\Entities\BankTransfersList;
+use PHPUnit\Framework\TestCase;
 
-class BankTransfersListEntityTest extends PHPUnit_Framework_TestCase
+class BankTransfersListEntityTest extends TestCase
 {
     protected $c;
     protected $infos;
 
     public function testToArray()
     {
-		$c = new \EasyTransac\Entities\BankTransfersList();
-		$bts = json_decode(json_encode([$this->getFixture()]));
-		$c->hydrate($bts);
+        $c = new BankTransfersList();
+        $bts = json_decode(json_encode([$this->getFixture()]));
+        $c->hydrate($bts);
 
-    	$this->assertEquals($c->toArray(), ['BankTransferInfos' => [['Bic' => 'bic123']]]);
+        $this->assertEquals(['BankTransferInfos' => [['Bic' => 'bic123']]], $c->toArray());
     }
 
-	public function getFixture()
-	{
-		return [
-			'Bic' => 'bic123'
-		];
-	}
+    public function getFixture(): array
+    {
+        return [
+            'Bic' => 'bic123'
+        ];
+    }
 }

@@ -17,7 +17,6 @@ class CommentParser
 
     /**
      * Returns an array with comment tag info for each class attribute
-     * @return Generator
      */
     public function parse()
     {

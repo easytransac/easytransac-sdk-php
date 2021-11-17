@@ -1,30 +1,30 @@
 <?php
 
-require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
+use EasyTransac\Entities\BankTransferInfos;
+use PHPUnit\Framework\TestCase;
 
-class BankTransferInfosTest extends PHPUnit_Framework_TestCase
+class BankTransferInfosTest extends TestCase
 {
     public function testSettersGetters()
     {
-		$f = $this->getFixture();
-		$c = new \EasyTransac\Entities\BankTransferInfos();
-		$c->hydrate(json_decode(json_encode($this->getFixture())));
+        $c = new BankTransferInfos();
+        $c->hydrate(json_decode(json_encode($this->getFixture())));
 
-        $this->assertEquals($c->getId(), "aa1B23");
-        $this->assertEquals($c->getDate(), "2019-05-20 15:36:30");
-        $this->assertEquals($c->getStatus(), "captured");
-        $this->assertEquals($c->getAmount(), "100");
-        $this->assertEquals($c->getFixFees(), "no");
-        $this->assertEquals($c->getIban(), "11223344556677");
-        $this->assertEquals($c->getBic(), "77665544332211");
-        $this->assertEquals($c->getReference(), "azerty");
+        $this->assertEquals("aa1B23", $c->getId());
+        $this->assertEquals("2019-05-20 15:36:30", $c->getDate());
+        $this->assertEquals("captured", $c->getStatus());
+        $this->assertEquals("100", $c->getAmount());
+        $this->assertEquals("no", $c->getFixFees());
+        $this->assertEquals("11223344556677", $c->getIban());
+        $this->assertEquals("77665544332211", $c->getBic());
+        $this->assertEquals("azerty", $c->getReference());
 
-		$this->assertEquals($c->toArray(), $this->getFixture());
+        $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
-	public function getFixture()
-	{
-		return $a = [
+    public function getFixture(): array
+    {
+        return [
             'Id' => 'aa1B23',
             'Date' => "2019-05-20 15:36:30",
             "Status" => "captured",
@@ -34,5 +34,5 @@ class BankTransferInfosTest extends PHPUnit_Framework_TestCase
             "Bic" => "77665544332211",
             "Reference" => "azerty",
         ];
-	}
+    }
 }
