@@ -4,4 +4,6 @@
     <rule ref="PSR12">
         <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace" />
     </rule>
+    <exclude-pattern>/vendor/*</exclude-pattern>
+    <exclude-pattern>/Fixtures/*</exclude-pattern>
 </ruleset>
