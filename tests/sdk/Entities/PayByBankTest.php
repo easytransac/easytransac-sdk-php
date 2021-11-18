@@ -1,17 +1,15 @@
 <?php
 
-use EasyTransac\Entities\Customer;
-use EasyTransac\Entities\PayByBank;
 use PHPUnit\Framework\TestCase;
 
 class PayByBankTest extends TestCase
 {
     public function testToArray()
     {
-        $c = new PayByBank();
+        $c = new EasyTransac\Entities\PayByBank();
         $f = $this->getFixture();
 
-        $customer = new Customer();
+        $customer = new EasyTransac\Entities\Customer();
         $customer->setLastname($f['Customer']['Lastname']);
         $customer->setEmail($f['Customer']['Email']);
 
@@ -30,7 +28,7 @@ class PayByBankTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new PayByBank();
+        $c = new EasyTransac\Entities\PayByBank();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture(true));

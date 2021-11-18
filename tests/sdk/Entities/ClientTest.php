@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\Client;
 use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase
 {
     public function testSettersGetters()
     {
-        $c = new Client();
+        $c = new EasyTransac\Entities\Client();
         $f = $this->getFixture();
 
         $c->setAddress($f['Address']);
@@ -31,7 +30,7 @@ class ClientTest extends TestCase
 
     public function testToArray()
     {
-        $c = new Client();
+        $c = new EasyTransac\Entities\Client();
         $f = $this->getFixture();
 
         $c->setAddress($f['Address']);
@@ -48,13 +47,13 @@ class ClientTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new Client();
+        $c = new EasyTransac\Entities\Client();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
-    public function getFixture()
+    public function getFixture(): array
     {
         return [
             'Id' => '123',

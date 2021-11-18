@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\Refund;
 use PHPUnit\Framework\TestCase;
 
 class RefundTest extends TestCase
 {
     public function testToArray()
     {
-        $c = new Refund();
+        $c = new EasyTransac\Entities\Refund();
         $f = $this->getFixture();
 
         $c->setLanguage($f['Language']);
@@ -20,7 +19,7 @@ class RefundTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new Refund();
+        $c = new EasyTransac\Entities\Refund();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture());

@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\PaymentPageCancellationInfos;
 use PHPUnit\Framework\TestCase;
 
 class PaymentPageCancellationInfosTest extends TestCase
 {
     public function testHydrate()
     {
-        $c = new PaymentPageCancellationInfos();
+        $c = new EasyTransac\Entities\PaymentPageCancellationInfos();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture());

@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\PaymentHistoryRequest;
 use PHPUnit\Framework\TestCase;
 
 class PaymentHistoryTest extends TestCase
 {
     public function testToArray()
     {
-        $c = new PaymentHistoryRequest();
+        $c = new EasyTransac\Entities\PaymentHistoryRequest();
         $f = $this->getFixture();
 
         $c->setLimit($f['Limit']);
@@ -15,10 +14,9 @@ class PaymentHistoryTest extends TestCase
         $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
-
     public function testHydrate()
     {
-        $c = new PaymentHistoryRequest();
+        $c = new EasyTransac\Entities\PaymentHistoryRequest();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture());

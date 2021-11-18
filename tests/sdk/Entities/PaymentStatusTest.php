@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\PaymentStatus;
 use PHPUnit\Framework\TestCase;
 
 class PaymentStatusTest extends TestCase
 {
     public function testToArray()
     {
-        $c = new PaymentStatus();
+        $c = new EasyTransac\Entities\PaymentStatus();
         $f = $this->getFixture();
 
         $c->setLanguage($f['Language']);
@@ -20,7 +19,7 @@ class PaymentStatusTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new PaymentStatus();
+        $c = new EasyTransac\Entities\PaymentStatus();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture());

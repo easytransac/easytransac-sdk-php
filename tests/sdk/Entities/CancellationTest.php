@@ -1,6 +1,5 @@
 <?php
 
-use EasyTransac\Entities\Cancellation;
 use PHPUnit\Framework\TestCase;
 
 class CancellationTest extends TestCase
@@ -9,14 +8,14 @@ class CancellationTest extends TestCase
     {
         $fixture = $this->getFixture();
 
-        $c = new Cancellation();
+        $c = new EasyTransac\Entities\Cancellation();
         $c->setLanguage($fixture['Language']);
         $c->setTid($fixture['Tid']);
 
         $this->assertEquals($c->toArray(), $fixture);
     }
 
-    protected function getFixture()
+    protected function getFixture(): array
     {
         return [
             'Language' => 'FRE',

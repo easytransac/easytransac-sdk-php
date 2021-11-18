@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\User;
 use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase
 {
     public function testSettersGetters()
     {
-        $c = new User();
+        $c = new EasyTransac\Entities\User();
         $f = $this->getFixture();
 
         $c->setAccountOwner($f['AccountOwner']);
@@ -64,22 +63,22 @@ class UserTest extends TestCase
         $this->assertEquals($c->getGender(), $f['Gender']);
         $this->assertEquals($c->getCountry(), $f['Country']);
 
-        $c = new User();
+        $c = new EasyTransac\Entities\User();
         $c->setBirthName('a');
-        $this->assertEquals($c->getBirthName(), 'a');
+        $this->assertEquals('a', $c->getBirthName());
         $c->setCompanyAddress0('b');
-        $this->assertEquals($c->getCompanyAddress0(), 'b');
+        $this->assertEquals('b', $c->getCompanyAddress0());
         $c->setCompanyAddress('c');
-        $this->assertEquals($c->getCompanyAddress(), 'c');
+        $this->assertEquals('c', $c->getCompanyAddress());
         $c->setCompanyCity('d');
-        $this->assertEquals($c->getCompanyCity(), 'd');
+        $this->assertEquals('d', $c->getCompanyCity());
         $c->setCompanyZipCode('e');
-        $this->assertEquals($c->getCompanyZipCode(), 'e');
+        $this->assertEquals('e', $c->getCompanyZipCode());
     }
 
     public function testToArray()
     {
-        $c = new User();
+        $c = new EasyTransac\Entities\User();
         $f = $this->getFixture();
 
         $c->setAccountOwner($f['AccountOwner']);
@@ -116,7 +115,7 @@ class UserTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new User();
+        $c = new EasyTransac\Entities\User();
         $f = $this->getFixture(true);
         $c->hydrate(json_decode(json_encode($f)));
 

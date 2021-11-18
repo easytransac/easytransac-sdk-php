@@ -1,20 +1,18 @@
 <?php
 
-use EasyTransac\Entities\Customer;
-use EasyTransac\Entities\InitBankTransfer;
 use PHPUnit\Framework\TestCase;
 
 class InitBankTransferTest extends TestCase
 {
-    protected $c;
-    protected $customer;
+    protected \EasyTransac\Entities\InitBankTransfer $c;
+    protected \EasyTransac\Entities\Customer $customer;
 
     protected function setUp(): void
     {
         $fixture = $this->getFixture();
 
-        $this->c = new InitBankTransfer();
-        $this->customer = new Customer();
+        $this->c = new EasyTransac\Entities\InitBankTransfer();
+        $this->customer = new EasyTransac\Entities\Customer();
         $this->customer->setClientId($fixture['ClientId']);
 
         $this->c->setCustomer($this->customer);

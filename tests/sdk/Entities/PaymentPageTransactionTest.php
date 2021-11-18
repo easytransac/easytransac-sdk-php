@@ -1,41 +1,17 @@
 <?php
 
-use EasyTransac\Entities\Customer;
-use EasyTransac\Entities\PaymentPageTransaction;
 use PHPUnit\Framework\TestCase;
 
 class PaymentPageTransactionTest extends TestCase
 {
-    public function testSettersGetters()
-    {
-        $f = $this->getFixture();
-
-        $cust = new Customer();
-        $cust->setFirstname($f['Customer']['Firstname']);
-
-        $c = new PaymentPageTransaction();
-
-        $c->setDownPayment($f['DownPayment']);
-        $c->setPayToEmail($f['PayToEmail']);
-        $c->setRebill($f['Rebill']);
-        $c->setRecurrence($f['Recurrence']);
-        $c->setUserAgent($f['UserAgent']);
-
-        $this->assertEquals($c->getDownPayment(), $f['DownPayment']);
-        $this->assertEquals($c->getPayToEmail(), $f['PayToEmail']);
-        $this->assertEquals($c->getRebill(), $f['Rebill']);
-        $this->assertEquals($c->getRecurrence(), $f['Recurrence']);
-        $this->assertEquals($c->getUserAgent(), $f['UserAgent']);
-    }
-
     public function testToArray()
     {
         $f = $this->getFixture();
 
-        $cust = new Customer();
+        $cust = new EasyTransac\Entities\Customer();
         $cust->setFirstname($f['Customer']['Firstname']);
 
-        $c = new PaymentPageTransaction();
+        $c = new EasyTransac\Entities\PaymentPageTransaction();
 
         $c->setAmount($f['Amount']);
         $c->setCancelUrl($f['CancelUrl']);
@@ -63,7 +39,7 @@ class PaymentPageTransactionTest extends TestCase
 
         $this->assertEquals($c->toArray(), $this->getFixture(true));
 
-        $c = new PaymentPageTransaction();
+        $c = new EasyTransac\Entities\PaymentPageTransaction();
         $c->setPreAuthDuration('a');
         $c->setSddCallingCode('b');
         $c->setSddPhone('c');
@@ -76,7 +52,7 @@ class PaymentPageTransactionTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new PaymentPageTransaction();
+        $c = new EasyTransac\Entities\PaymentPageTransaction();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture(true));

@@ -1,17 +1,15 @@
 <?php
 
-use EasyTransac\Entities\Customer;
-use EasyTransac\Entities\DebitTransaction;
 use PHPUnit\Framework\TestCase;
 
 class DebitTransactionTest extends TestCase
 {
     public function testToArray()
     {
-        $c = new DebitTransaction();
+        $c = new EasyTransac\Entities\DebitTransaction();
         $f = $this->getFixture();
 
-        $customer = new Customer();
+        $customer = new EasyTransac\Entities\Customer();
         $customer->setLastname($f['Customer']['Lastname']);
 
         $c->setAmount($f['Amount']);
@@ -33,7 +31,7 @@ class DebitTransactionTest extends TestCase
 
         $this->assertEquals($c->toArray(), $this->getFixture(true));
 
-        $customer = new DebitTransaction();
+        $customer = new EasyTransac\Entities\DebitTransaction();
         $customer->setAccountOwner('a');
         $customer->setSddCallingCode('b');
         $customer->setSddPhone('c');
@@ -48,7 +46,7 @@ class DebitTransactionTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new DebitTransaction();
+        $c = new EasyTransac\Entities\DebitTransaction();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture(true));

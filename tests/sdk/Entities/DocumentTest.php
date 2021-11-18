@@ -1,6 +1,5 @@
 <?php
 
-use EasyTransac\Entities\Document;
 use PHPUnit\Framework\TestCase;
 
 class DocumentTest extends TestCase
@@ -9,7 +8,7 @@ class DocumentTest extends TestCase
     {
         $fixture = $this->getFixture();
 
-        $c = new Document();
+        $c = new EasyTransac\Entities\Document();
         $c->setDocumentType($fixture['DocumentType']);
         $c->setContent($fixture['Content']);
         $c->setExtension($fixture['Extension']);
@@ -22,7 +21,7 @@ class DocumentTest extends TestCase
     public function testToArray()
     {
         $fixture = $this->getFixture();
-        $c = new Document();
+        $c = new EasyTransac\Entities\Document();
         $c->hydrate(json_decode(json_encode($fixture)));
 
         $this->assertEquals($c->toArray(), $fixture);

@@ -1,6 +1,5 @@
 <?php
 
-use EasyTransac\Entities\CreditCardInfo;
 use PHPUnit\Framework\TestCase;
 
 class CreditCardInfoTest extends TestCase
@@ -8,7 +7,7 @@ class CreditCardInfoTest extends TestCase
     public function testHydrate()
     {
         $f = $this->getFixture();
-        $c = new CreditCardInfo();
+        $c = new EasyTransac\Entities\CreditCardInfo();
         $c->hydrate(json_decode(json_encode($f)));
 
         $this->assertEquals($c->toArray(), $f);
@@ -18,7 +17,7 @@ class CreditCardInfoTest extends TestCase
         $this->assertEquals($c->getCardType(), $f['CardType']);
         $this->assertEquals($c->getCardBank(), $f['CardBank']);
 
-        $c = new CreditCardInfo();
+        $c = new EasyTransac\Entities\CreditCardInfo();
         $c->hydrate(json_decode(json_encode([
             'Alias' => 'abc',
             'CardMonth' => '01',
@@ -29,7 +28,7 @@ class CreditCardInfoTest extends TestCase
         $this->assertEquals('20', $c->getCardYear());
     }
 
-    protected function getFixture()
+    protected function getFixture(): array
     {
         return [
             "CardBIN" => "1111222233334444",

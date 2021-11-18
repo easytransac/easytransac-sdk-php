@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\P2PTransfer;
 use PHPUnit\Framework\TestCase;
 
 class P2PTransferTest extends TestCase
 {
     public function testSetters()
     {
-        $c = new P2PTransfer();
+        $c = new EasyTransac\Entities\P2PTransfer();
         $f = $this->getFixture();
 
         $c->setFrom($f['From']);
@@ -22,7 +21,7 @@ class P2PTransferTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new P2PTransfer();
+        $c = new EasyTransac\Entities\P2PTransfer();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture());
@@ -31,7 +30,7 @@ class P2PTransferTest extends TestCase
     public function testReturn()
     {
         $f = $this->getFixtureReturn();
-        $c = new P2PTransfer();
+        $c = new EasyTransac\Entities\P2PTransfer();
         $c->hydrate(json_decode(json_encode($f)));
 
         $this->assertEquals($c->getFrom(), $f['From']);

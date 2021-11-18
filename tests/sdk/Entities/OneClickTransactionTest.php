@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\OneClickTransaction;
 use PHPUnit\Framework\TestCase;
 
 class OneClickTransactionTest extends TestCase
 {
     public function testToArray()
     {
-        $c = new OneClickTransaction();
+        $c = new EasyTransac\Entities\OneClickTransaction();
         $f = $this->getFixture();
 
         $c->setAlias($f['Alias']);
@@ -31,10 +30,10 @@ class OneClickTransactionTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new OneClickTransaction();
+        $c = new EasyTransac\Entities\OneClickTransaction();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
-        $this->assertEquals($c->toArray(), $this->getFixture(true));
+        $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
     protected function getFixture(): array

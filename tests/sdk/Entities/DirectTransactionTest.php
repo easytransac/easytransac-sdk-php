@@ -1,21 +1,18 @@
 <?php
 
-use EasyTransac\Entities\CreditCard;
-use EasyTransac\Entities\Customer;
-use EasyTransac\Entities\DirectTransaction;
 use PHPUnit\Framework\TestCase;
 
 class DirectTransactionTest extends TestCase
 {
     public function testToArray()
     {
-        $c = new DirectTransaction();
+        $c = new EasyTransac\Entities\DirectTransaction();
         $f = $this->getFixture();
 
-        $card = new CreditCard();
+        $card = new EasyTransac\Entities\CreditCard();
         $card->setNumber($f['CreditCard']['CardNumber']);
 
-        $customer = new Customer();
+        $customer = new EasyTransac\Entities\Customer();
         $customer->setLastname($f['Customer']['Lastname']);
 
         $c->setAmount($f['Amount']);
@@ -37,7 +34,7 @@ class DirectTransactionTest extends TestCase
 
         $this->assertEquals($c->toArray(), $this->getFixture(true));
 
-        $c = new DirectTransaction();
+        $c = new EasyTransac\Entities\DirectTransaction();
         $c->setPreAuth('a');
         $c->setPreAuthDuration('b');
         $r = $c->toArray();
@@ -47,7 +44,7 @@ class DirectTransactionTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new DirectTransaction();
+        $c = new EasyTransac\Entities\DirectTransaction();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture(true));

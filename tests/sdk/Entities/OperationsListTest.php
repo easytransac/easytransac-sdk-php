@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\OperationsListRequest;
 use PHPUnit\Framework\TestCase;
 
 class OperationsListTest extends TestCase
 {
     public function testToArray()
     {
-        $c = new OperationsListRequest();
+        $c = new EasyTransac\Entities\OperationsListRequest();
         $f = $this->getFixture();
 
         $c->setLimit($f['Limit']);
@@ -18,7 +17,7 @@ class OperationsListTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new OperationsListRequest();
+        $c = new EasyTransac\Entities\OperationsListRequest();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture());

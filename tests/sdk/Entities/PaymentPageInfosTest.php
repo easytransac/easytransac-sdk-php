@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\PaymentPageInfos;
 use PHPUnit\Framework\TestCase;
 
 class PaymentPageInfosTest extends TestCase
 {
     public function testHydrate()
     {
-        $c = new PaymentPageInfos();
+        $c = new EasyTransac\Entities\PaymentPageInfos();
         $f = $this->getFixture();
         $c->hydrate(json_decode(json_encode($f)));
 

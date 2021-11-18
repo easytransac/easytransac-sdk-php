@@ -1,7 +1,5 @@
 <?php
 
-use EasyTransac\Entities\Client;
-use EasyTransac\Entities\Notification;
 use PHPUnit\Framework\TestCase;
 
 class NotificationTest extends TestCase
@@ -9,12 +7,12 @@ class NotificationTest extends TestCase
     public function testHydrate()
     {
         $f = $this->getFixture(true);
-        $c = new Notification();
+        $c = new EasyTransac\Entities\Notification();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $f);
 
-        $c = new Notification();
+        $c = new EasyTransac\Entities\Notification();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
         $this->assertEquals($c->getAlias(), $f['Alias']);
         $this->assertEquals($c->getAmount(), $f['Amount']);
@@ -34,7 +32,7 @@ class NotificationTest extends TestCase
         $this->assertEquals($c->getUid(), $f['Uid']);
         $this->assertEquals($c->getCurrency(), $f['Currency']);
         $this->assertEquals($c->getError(), $f['Error']);
-        $this->assertTrue($c->getClient() instanceof Client);
+        $this->assertTrue($c->getClient() instanceof EasyTransac\Entities\Client);
     }
 
     public function getFixture($rendered = false): array

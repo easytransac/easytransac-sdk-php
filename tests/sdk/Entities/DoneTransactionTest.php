@@ -1,7 +1,5 @@
 <?php
 
-use EasyTransac\Entities\Client;
-use EasyTransac\Entities\DoneTransaction;
 use PHPUnit\Framework\TestCase;
 
 class DoneTransactionTest extends TestCase
@@ -9,7 +7,7 @@ class DoneTransactionTest extends TestCase
     public function testHydrate()
     {
         $f = $this->getFixture(true, true);
-        $c = new DoneTransaction();
+        $c = new EasyTransac\Entities\DoneTransaction();
         $c->hydrate(json_decode(json_encode($this->getFixture(false, true))));
 
         $this->assertEquals($c->toArray(), $f);
@@ -33,7 +31,7 @@ class DoneTransactionTest extends TestCase
         $this->assertEquals($c->getMandateUrl(), $f['MandateUrl']);
         $this->assertTrue($c->isCaptured());
 
-        $c = new DoneTransaction();
+        $c = new EasyTransac\Entities\DoneTransaction();
         $c->hydrate(json_decode(json_encode([
             'RequestAttempt' => 'a',
             'OriginalRequestId' => 'b',
@@ -41,7 +39,7 @@ class DoneTransactionTest extends TestCase
             'AmountRefund' => 'd',
             'RedirectUrl' => 'e',
             'Test' => 'f',
-            'Client' => new Client()
+            'Client' => new EasyTransac\Entities\Client()
         ])));
         $this->assertEquals('a', $c->getRequestAttempt());
         $this->assertEquals('b', $c->getOriginalRequestId());
@@ -49,10 +47,10 @@ class DoneTransactionTest extends TestCase
         $this->assertEquals('d', $c->getAMountRefund());
         $this->assertEquals('e', $c->getRedirectUrl());
         $this->assertEquals('f', $c->getTest());
-        $this->assertTrue($c->getClient() instanceof Client);
+        $this->assertTrue($c->getClient() instanceof EasyTransac\Entities\Client);
     }
 
-    protected function getFixture($rendered = false, $full = false)
+    protected function getFixture($rendered = false, $full = false): array
     {
         if ($full) {
             if (!$rendered) {

@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\CreditCard;
 use PHPUnit\Framework\TestCase;
 
 class CreditCardTest extends TestCase
 {
     public function testSettersGetters()
     {
-        $c = new CreditCard();
+        $c = new EasyTransac\Entities\CreditCard();
         $f = $this->getFixture();
 
         $c->setAlias($f['Alias']);
@@ -29,7 +28,7 @@ class CreditCardTest extends TestCase
 
     public function testToArray()
     {
-        $c = new CreditCard();
+        $c = new EasyTransac\Entities\CreditCard();
         $f = $this->getFixture();
 
         $c->setAlias($f['Alias']);
@@ -45,7 +44,7 @@ class CreditCardTest extends TestCase
     public function testHydrate()
     {
         $f = $this->getFixture(true);
-        $c = new CreditCard();
+        $c = new EasyTransac\Entities\CreditCard();
         $c->hydrate(json_decode(json_encode($f)));
         $this->assertEquals($c->toArray(), $f);
 
@@ -53,7 +52,7 @@ class CreditCardTest extends TestCase
         $this->assertEquals($c->getCountry(), $f['CardCountry']);
         $this->assertEquals($c->getLastAccessed(), $f['LastAccessed']);
 
-        $c = new CreditCard();
+        $c = new EasyTransac\Entities\CreditCard();
         $c->hydrate(json_decode(json_encode([
             'Verified' => 'a',
             'Status' => 'b'

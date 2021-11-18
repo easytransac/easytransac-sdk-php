@@ -1,13 +1,12 @@
 <?php
 
-use EasyTransac\Entities\FindUserBy;
 use PHPUnit\Framework\TestCase;
 
 class FindUserByTest extends TestCase
 {
     public function testToArray()
     {
-        $c = new FindUserBy();
+        $c = new EasyTransac\Entities\FindUserBy();
         $f = $this->getFixture();
 
         $c->setEmail($f['Email']);
@@ -18,13 +17,13 @@ class FindUserByTest extends TestCase
 
     public function testHydrate()
     {
-        $c = new FindUserBy();
+        $c = new EasyTransac\Entities\FindUserBy();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
         $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
-    public function getFixture()
+    public function getFixture(): array
     {
         return [
             'Email' => 'test@easytransac.com',

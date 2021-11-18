@@ -1,9 +1,5 @@
 <?php
 
-use EasyTransac\Entities\Customer;
-use EasyTransac\Entities\Document;
-use EasyTransac\Entities\DocumentRequest;
-use EasyTransac\Entities\User;
 use PHPUnit\Framework\TestCase;
 
 class DocumentRequestTest extends TestCase
@@ -12,16 +8,16 @@ class DocumentRequestTest extends TestCase
     {
         $fixture = $this->getFixture();
 
-        $document = new Document();
+        $document = new EasyTransac\Entities\Document();
         $document->setExtension($fixture['Extension']);
 
-        $customer = new Customer();
+        $customer = new EasyTransac\Entities\Customer();
         $customer->setClientId($fixture['ClientId']);
 
-        $user = new User();
+        $user = new EasyTransac\Entities\User();
         $user->setEmail($fixture['Email']);
 
-        $c = new DocumentRequest();
+        $c = new EasyTransac\Entities\DocumentRequest();
         $c->setShowContent($fixture['ShowContent']);
         $c->setDocumentId($fixture['DocumentId']);
         $c->setDocument($document);

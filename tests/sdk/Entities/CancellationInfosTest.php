@@ -1,6 +1,5 @@
 <?php
 
-use EasyTransac\Entities\CancellationInfos;
 use PHPUnit\Framework\TestCase;
 
 class CancellationInfosTest extends TestCase
@@ -8,7 +7,7 @@ class CancellationInfosTest extends TestCase
     public function testToArray()
     {
         $f = $this->getFixture();
-        $c = new CancellationInfos();
+        $c = new EasyTransac\Entities\CancellationInfos();
         $c->hydrate(json_decode(json_encode($f)));
 
         $this->assertEquals($c->toArray(), $f);
