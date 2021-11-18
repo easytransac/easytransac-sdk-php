@@ -20,12 +20,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set PHP version to 7.2
+      - name: Set PHP version to 7.4
         uses: shivammathur/setup-php@v2
         env:
           runner: self-hosted
         with:
-          php-version: '7.2'
+          php-version: '7.4'
           tools: composer
 
       - name: Install dependencies
