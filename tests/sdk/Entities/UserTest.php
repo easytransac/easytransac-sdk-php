@@ -124,7 +124,7 @@ class UserTest extends TestCase
         $this->assertEquals($c->getJoinDate(), $f['JoinDate']);
         $this->assertEquals($c->getTester(), $f['Tester']);
 
-        $c = new User();
+        $c = new EasyTransac\Entities\User();
         $c->hydrate(json_decode(json_encode([
             'KYC' => 'a',
             'PSPApproved' => 'b',
