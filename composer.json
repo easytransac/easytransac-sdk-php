@@ -1,9 +1,21 @@
 {
     "name": "easytransac/easytransac-sdk-php",
     "description": "A SDK to make payment with the EasyTransac API",
+    "keywords": [
+        "easytransac",
+        "php",
+        "sdk"
+    ],
+    "license": "MIT",
+    "type": "library",
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.4"
     },
+    "authors": [
+        {
+            "name": "Easytransac"
+        }
+    ],
     "autoload": {
         "psr-4": { 
         	"EasyTransac\\": "sdk/EasyTransac/" 
