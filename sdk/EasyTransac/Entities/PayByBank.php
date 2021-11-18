@@ -97,6 +97,4 @@ class PayByBank extends Entity
         $this->userAgent = $userAgent;
         return $this;
     }
-
-
 }
