@@ -11,11 +11,12 @@ use EasyTransac\Entities\Entity;
  */
 class PaymentRequestsHistory extends Request
 {
-    /** @object:PaymentPageInfos **/
+    /** @object:PaymentRequestsHistoryResponse **/
     protected $response;
 
     /**
      * {@inheritDoc}
+     * @param \Easytransac\Entities\PaymentRequestsHistoryRequest
      * @see \EasyTransac\Requests\Request::execute()
      */
     public function execute(Entity $entity)

@@ -3,7 +3,7 @@
 use EasyTransac\Entities\PaymentRequestsHistoryRequest;
 use PHPUnit\Framework\TestCase;
 
-class PaymentHistoryTest extends TestCase
+class PaymentRequestsHistoryTest extends TestCase
 {
     public function testToArray()
     {
