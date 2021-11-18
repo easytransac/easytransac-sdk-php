@@ -20,6 +20,9 @@ class DoneTransaction extends Entity
     /** @map:OperationType **/
     protected $operationType = null;
 
+    /** @map:PaymentMethod **/
+    protected $paymentMethod = null;
+
     /** @map:Tid **/
     protected $tid = null;
 
@@ -233,6 +236,11 @@ class DoneTransaction extends Entity
     public function getTest()
     {
         return $this->test;
+    }
+
+    public function getPaymentMethod()
+    {
+        return $this->paymentMethod;
     }
 
     /**

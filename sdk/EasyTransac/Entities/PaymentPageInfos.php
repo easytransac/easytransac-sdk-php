@@ -14,6 +14,9 @@ class PaymentPageInfos extends Entity
     /** @map:OperationType **/
     protected $operationType = null;
 
+    /** @map ApplicationType */
+    protected $applicationType = null;
+
     /** @map:Status **/
     protected $status = null;
 
@@ -102,5 +105,10 @@ class PaymentPageInfos extends Entity
     public function getPaymentMethod()
     {
         return $this->paymentMethod;
+    }
+
+    public function getApplicationType()
+    {
+        return $this->applicationType;
     }
 }

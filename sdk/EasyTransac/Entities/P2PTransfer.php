@@ -23,6 +23,9 @@ class P2PTransfer extends Entity
     /** @map:Description **/
     protected $description = null;
 
+    /** @map ApplicationType */
+    protected $applicationType = null;
+
     /** @map:Language **/
     protected $language = null;
 
@@ -99,5 +102,10 @@ class P2PTransfer extends Entity
     public function getStatus()
     {
         return $this->status;
+    }
+
+    public function getApplicationType()
+    {
+        return $this->applicationType;
     }
 }
