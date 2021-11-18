@@ -60,18 +60,12 @@ class PaymentRequestsHistoryRequest extends Entity
         return $this;
     }
 
-    /**
-     * @param null $email
-     */
     public function setEmail($email)
     {
         $this->email = $email;
         return $this;
     }
 
-    /**
-     * @param null $id
-     */
     public function setId($id)
     {
         $this->id = $id;
