@@ -38,6 +38,12 @@ class PaymentPageInfos extends Entity
     /** @map:Language **/
     protected $language = null;
 
+    /** @map:Live **/
+    protected $live = null;
+
+    /** @map:PaymentMethod **/
+    protected $paymentMethod = null;
+
     public function getRequestId()
     {
         return $this->requestId;
@@ -86,5 +92,15 @@ class PaymentPageInfos extends Entity
     public function getLanguage()
     {
         return $this->language;
+    }
+
+    public function getLive()
+    {
+        return $this->live;
+    }
+
+    public function getPaymentMethod()
+    {
+        return $this->paymentMethod;
     }
 }
