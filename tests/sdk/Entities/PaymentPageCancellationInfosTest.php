@@ -13,7 +13,7 @@ class PaymentPageCancellationInfosTest extends TestCase
         $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
-    protected function getFixture()
+    protected function getFixture(): array
     {
         return [
             "RequestId" => "111",
