@@ -1,10 +1,9 @@
 EasyTransac SDK (PHP)
 =====================
 
-[![Build](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/build.yml/badge.svg)](https://github.com/easytransac/omnipay-easytransac/actions/workflows/build.yml)
-[![PSR12](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/psr12.yml/badge.svg)](https://github.com/easytransac/omnipay-easytransac/actions/workflows/psr12.yml)
-[![Test](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/test.yml/badge.svg)](https://github.com/easytransac/omnipay-easytransac/actions/workflows/test.yml)
-[![PHP Version Require](http://poser.pugx.org/easytransac/easytransac-sdk-php/require/php)](https://packagist.org/packages/easytransac/easytransac-sdk-php)
+[![Build](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/build.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/build.yml)
+[![PSR12](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/psr12.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/psr12.yml)
+[![Test](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/test.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/test.yml)
 
 [![Build Status](https://travis-ci.org/easytransac/easytransac-sdk-php.svg?branch=master)](https://travis-ci.org/easytransac/easytransac-sdk-php)
 [![Latest Stable Version](https://poser.pugx.org/easytransac/easytransac-sdk-php/version)](https://packagist.org/packages/easytransac/easytransac-sdk-php)
