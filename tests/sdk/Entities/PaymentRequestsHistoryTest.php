@@ -29,7 +29,7 @@ class PaymentRequestsHistoryTest extends TestCase
     {
         return [
             'Limit' => 10,
-            'Remote' => true
+            'Remote' => 'yes'
         ];
     }
 }
