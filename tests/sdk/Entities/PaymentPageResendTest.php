@@ -10,7 +10,6 @@ class PaymentPageResendTest extends TestCase
         $c = new PaymentPageResend();
         $c->hydrate(json_decode(json_encode($this->getFixture())));
 
-        var_dump($c->toArray());
         $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
