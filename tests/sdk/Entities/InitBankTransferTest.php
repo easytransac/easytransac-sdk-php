@@ -4,10 +4,10 @@ use PHPUnit\Framework\TestCase;
 
 class InitBankTransferTest extends TestCase
 {
-    protected \EasyTransac\Entities\InitBankTransfer $c;
-    protected \EasyTransac\Entities\Customer $customer;
+    protected $c;
+    protected $customer;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $fixture = $this->getFixture();
 
@@ -25,10 +25,9 @@ class InitBankTransferTest extends TestCase
         $this->assertEquals($this->c->toArray(), $this->getFixture());
     }
 
-    public function getFixture(): array
+    public function getFixture()
     {
         return [
-            'Reference' => 'a1b2c3',
             'Amount' => '1234',
             'Reference' => 'a9z8e7',
             'ClientId' => 'a4f7g53'

@@ -17,7 +17,7 @@ class CancellationInfosTest extends TestCase
         $this->assertEquals($c->getOriginalPaymentTid(), $f['OriginalPaymentTid']);
     }
 
-    public function getFixture(): array
+    public function getFixture()
     {
         return [
             'Tid' => '12ef',

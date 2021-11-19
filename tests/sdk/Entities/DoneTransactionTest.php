@@ -50,7 +50,7 @@ class DoneTransactionTest extends TestCase
         $this->assertTrue($c->getClient() instanceof EasyTransac\Entities\Client);
     }
 
-    protected function getFixture($rendered = false, $full = false): array
+    protected function getFixture($rendered = false, $full = false)
     {
         if ($full) {
             if (!$rendered) {

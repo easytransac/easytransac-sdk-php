@@ -41,7 +41,7 @@ class P2PTransferTest extends TestCase
         $this->assertEquals($c->getDate(), $f['Date']);
     }
 
-    protected function getFixtureReturn(): array
+    protected function getFixtureReturn()
     {
         return [
             "From" => 1234,
@@ -53,7 +53,7 @@ class P2PTransferTest extends TestCase
         ];
     }
 
-    protected function getFixture(): array
+    protected function getFixture()
     {
         return [
             'From' => 'test@easytransac.com',

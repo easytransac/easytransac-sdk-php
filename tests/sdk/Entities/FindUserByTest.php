@@ -23,7 +23,7 @@ class FindUserByTest extends TestCase
         $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
-    public function getFixture(): array
+    public function getFixture()
     {
         return [
             'Email' => 'test@easytransac.com',

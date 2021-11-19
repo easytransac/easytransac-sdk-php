@@ -141,7 +141,7 @@ class UserTest extends TestCase
         $this->assertEquals('f', $c->getLive());
     }
 
-    protected function getFixture($full = false): array
+    protected function getFixture($full = false)
     {
         if ($full) {
             return [

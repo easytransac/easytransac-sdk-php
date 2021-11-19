@@ -20,7 +20,7 @@ class CreditCardsListTest extends TestCase
         );
     }
 
-    protected function getFixture(): array
+    protected function getFixture()
     {
         return [
             'CardNumber' => '1234567891234567',

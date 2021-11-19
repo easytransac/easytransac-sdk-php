@@ -35,7 +35,7 @@ class NotificationTest extends TestCase
         $this->assertTrue($c->getClient() instanceof EasyTransac\Entities\Client);
     }
 
-    public function getFixture($rendered = false): array
+    public function getFixture($rendered = false)
     {
         if (!$rendered) {
             return [

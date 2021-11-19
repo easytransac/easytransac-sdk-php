@@ -25,7 +25,7 @@ class PaymentStatusTest extends TestCase
         $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
-    public function getFixture(): array
+    public function getFixture()
     {
         return [
             'Language' => 'FRE',

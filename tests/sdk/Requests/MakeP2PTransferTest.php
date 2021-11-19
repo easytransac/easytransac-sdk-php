@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class MakeP2PTransferTest extends TestCase
 {
-    private const API_KEY = 'abc';
+    const API_KEY = 'abc';
 
     public function testExecuteSuccess()
     {
@@ -38,7 +38,7 @@ class MakeP2PTransferTest extends TestCase
         $this->assertTrue($response->getContent() instanceof P2PTransfer);
     }
 
-    protected function getFixtureReturn(): array
+    protected function getFixtureReturn()
     {
         return [
             "From" => 1234,

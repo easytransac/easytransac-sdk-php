@@ -33,7 +33,7 @@ class DocumentTest extends TestCase
         $this->assertEquals($c->getId(), $fixture['Id']);
     }
 
-    protected function getFixture(): array
+    protected function getFixture()
     {
         return [
             'Id' => 'WEX3SJ6B9G',

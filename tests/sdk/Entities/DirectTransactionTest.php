@@ -50,7 +50,7 @@ class DirectTransactionTest extends TestCase
         $this->assertEquals($c->toArray(), $this->getFixture(true));
     }
 
-    public function getFixture($rendered = false): array
+    public function getFixture($rendered = false)
     {
         if (!$rendered) {
             return [

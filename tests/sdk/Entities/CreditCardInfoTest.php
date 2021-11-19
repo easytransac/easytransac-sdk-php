@@ -28,7 +28,7 @@ class CreditCardInfoTest extends TestCase
         $this->assertEquals('20', $c->getCardYear());
     }
 
-    protected function getFixture(): array
+    protected function getFixture()
     {
         return [
             "CardBIN" => "1111222233334444",

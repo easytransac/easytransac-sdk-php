@@ -61,7 +61,7 @@ class CreditCardTest extends TestCase
         $this->assertEquals('b', $c->getStatus());
     }
 
-    protected function getFixture($full = false): array
+    protected function getFixture($full = false)
     {
         if ($full) {
             return [

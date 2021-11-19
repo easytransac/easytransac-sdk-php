@@ -22,7 +22,7 @@ class PaymentHistoryTest extends TestCase
         $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
-    protected function getFixture(): array
+    protected function getFixture()
     {
         return [
             'Limit' => 10,

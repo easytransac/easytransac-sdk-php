@@ -4,9 +4,9 @@ use PHPUnit\Framework\TestCase;
 
 class PaymentCaptureTest extends TestCase
 {
-    protected \EasyTransac\Entities\PaymentCapture $c;
+    protected $c;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->c = new EasyTransac\Entities\PaymentCapture();
         $this->c->setTid("1a2b3c");

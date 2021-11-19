@@ -58,7 +58,7 @@ class PaymentPageTransactionTest extends TestCase
         $this->assertEquals($c->toArray(), $this->getFixture(true));
     }
 
-    protected function getFixture($rendered = false): array
+    protected function getFixture($rendered = false)
     {
         if (!$rendered) {
             return [

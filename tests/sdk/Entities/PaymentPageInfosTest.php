@@ -22,7 +22,7 @@ class PaymentPageInfosTest extends TestCase
         $this->assertEquals($c->getDateSent(), $f['DateSent']);
     }
 
-    protected function getFixture(): array
+    protected function getFixture()
     {
         return [
             'Status' => 'captured',

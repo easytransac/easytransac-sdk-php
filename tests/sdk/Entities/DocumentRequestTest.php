@@ -27,7 +27,7 @@ class DocumentRequestTest extends TestCase
         $this->assertEquals($c->toArray(), $fixture);
     }
 
-    protected function getFixture(): array
+    protected function getFixture()
     {
         return [
             'Email' => 'john@doe.com',

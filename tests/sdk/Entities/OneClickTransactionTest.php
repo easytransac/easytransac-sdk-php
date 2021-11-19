@@ -36,7 +36,7 @@ class OneClickTransactionTest extends TestCase
         $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
-    protected function getFixture(): array
+    protected function getFixture()
     {
         return [
             'Amount' => 12000,

@@ -53,7 +53,7 @@ class ClientTest extends TestCase
         $this->assertEquals($c->toArray(), $this->getFixture());
     }
 
-    public function getFixture(): array
+    public function getFixture()
     {
         return [
             'Id' => '123',
