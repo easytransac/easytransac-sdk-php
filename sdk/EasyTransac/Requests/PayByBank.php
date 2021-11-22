@@ -21,6 +21,6 @@ class PayByBank extends Request
      */
     public function execute(Entity $entity)
     {
-        return $this->call('/payment/byBank', $entity);
+        return $this->call('/payment/bybank', $entity);
     }
 }
