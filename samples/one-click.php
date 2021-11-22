@@ -13,7 +13,7 @@ $transaction = (new OneClickTransaction())
     ->setAmount(100)
     ->setUid('a1b2c3d4')
     ->setClientIp('127.0.0.1')
-    ->setAlias('mycardalias');
+    ->setAlias('a1b2c3');
 
 $dp = new OneClickPayment();
 $response = $dp->execute($transaction);

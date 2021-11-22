@@ -10,7 +10,8 @@ Services::getInstance()->setDebug(true);
 Services::getInstance()->provideAPIKey('a1b2c3d4');
 
 $customer = (new Customer())
-    ->setUid('a1b2c3d4');
+    ->setUid('a1b2c3d4')
+    ->setClientId('CBA123');
 
 $request = new CreditCardsList();
 $response = $request->execute($customer);
