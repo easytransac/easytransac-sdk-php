@@ -1,6 +1,6 @@
 {
     "name": "easytransac/easytransac-sdk-php",
-    "description": "A SDK to make payment with the EasyTransac API",
+    "description": "Easytransac payment gateway PHP SDK",
     "keywords": [
         "easytransac",
         "php",
