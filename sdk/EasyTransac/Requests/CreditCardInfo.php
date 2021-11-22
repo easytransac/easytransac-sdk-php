@@ -2,10 +2,11 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * API function /payment/cardinfos, get info from a credit card
+ * URL: https://www.easytransac.com/fr/documentation#tag/API-Payment/paths/~1api~1payment~1cardinfos/post
  * @copyright EasyTransac
  */
 class CreditCardInfo extends Request
@@ -23,5 +24,3 @@ class CreditCardInfo extends Request
         return $this->call('/payment/cardinfos', $entity);
     }
 }
-
-?>

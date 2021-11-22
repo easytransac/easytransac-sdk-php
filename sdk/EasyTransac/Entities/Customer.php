@@ -8,48 +8,66 @@ namespace EasyTransac\Entities;
  */
 class Customer extends Entity
 {
-	/** @map:Id **/
-	protected $id = null;
+    /** @map:Id **/
+    protected $id = null;
+
     /** @map:Email **/
     protected $email = null;
+
     /** @map:Firstname **/
     protected $firstname = null;
+
     /** @map:Lastname **/
     protected $lastname = null;
+
     /** @map:CallingCode **/
     protected $callingCode = null;
+
     /** @map:Phone **/
     protected $phone = null;
+
     /** @map:BirthDate **/
     protected $birthDate = null;
+
     /** @map:Nationality **/
     protected $nationality = null;
+
     /** @map:Address **/
     protected $address = null;
+
     /** @map:ZipCode **/
     protected $zipCode = null;
+
     /** @map:City **/
     protected $city = null;
+
     /** @map:Country **/
     protected $country = null;
+
     /** @map:Uid **/
     protected $uid = null;
+
     /** @map:ClientId **/
     protected $clientId = null;
+
     /** @map:Company **/
     protected $company = null;
+
     /** @map:Iban **/
     protected $iban = null;
+
     /** @map:Bic **/
     protected $bic = null;
+
     /** @map:Communication **/
     protected $communication = null;
+
     /** @map:CreationDate **/
     protected $creationDate = null;
 
     public function getCreationDate()
     {
-    	return $this->creationDate;
+        return $this->creationDate;
     }
 
     public function setUid($value)
@@ -60,13 +78,13 @@ class Customer extends Entity
 
     public function getId()
     {
-    	return $this->id;
+        return $this->id;
     }
 
-	public function setId($value)
+    public function setId($value)
     {
-    	$this->id = $value;
-		return $this;
+        $this->id = $value;
+        return $this;
     }
 
     public function getUid()
@@ -195,60 +213,58 @@ class Customer extends Entity
         return $this->email;
     }
 
-	public function getClientId()
-	{
-		return $this->clientId;
-	}
+    public function getClientId()
+    {
+        return $this->clientId;
+    }
 
-	public function setClientId($clientId)
-	{
-		$this->clientId = $clientId;
-		return $this;
-	}
+    public function setClientId($clientId)
+    {
+        $this->clientId = $clientId;
+        return $this;
+    }
 
-	public function getCompany()
-	{
-		return $this->company;
-	}
+    public function getCompany()
+    {
+        return $this->company;
+    }
 
-	public function getIban()
-	{
-		return $this->iban;
-	}
+    public function getIban()
+    {
+        return $this->iban;
+    }
 
-	public function getBic()
-	{
-		return $this->bic;
-	}
+    public function getBic()
+    {
+        return $this->bic;
+    }
 
-	public function getCommunication()
-	{
-		return $this->communication;
-	}
+    public function getCommunication()
+    {
+        return $this->communication;
+    }
 
-	public function setCompany($company)
-	{
-		$this->company = $company;
-		return $this;
-	}
+    public function setCompany($company)
+    {
+        $this->company = $company;
+        return $this;
+    }
 
-	public function setIban($iban)
-	{
-		$this->iban = $iban;
-		return $this;
-	}
+    public function setIban($iban)
+    {
+        $this->iban = $iban;
+        return $this;
+    }
 
-	public function setBic($bic)
-	{
-		$this->bic = $bic;
-		return $this;
-	}
+    public function setBic($bic)
+    {
+        $this->bic = $bic;
+        return $this;
+    }
 
-	public function setCommunication($communication)
-	{
-		$this->communication = $communication;
-		return $this;
-	}
+    public function setCommunication($communication)
+    {
+        $this->communication = $communication;
+        return $this;
+    }
 }
-
-?>

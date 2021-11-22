@@ -1,27 +1,25 @@
 <?php
 
-require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
+use PHPUnit\Framework\TestCase;
 
-class CancellationTest extends PHPUnit_Framework_TestCase
+class CancellationTest extends TestCase
 {
     public function testToArray()
     {
-    	$fixture = $this->getFixture();
+        $fixture = $this->getFixture();
 
-    	$c = new \EasyTransac\Entities\Cancellation();
-    	$c->setLanguage($fixture['Language']);
-    	$c->setTid($fixture['Tid']);
+        $c = new EasyTransac\Entities\Cancellation();
+        $c->setLanguage($fixture['Language']);
+        $c->setTid($fixture['Tid']);
 
-    	$this->assertEquals($c->toArray(), $fixture);
+        $this->assertEquals($c->toArray(), $fixture);
     }
 
     protected function getFixture()
     {
-    	return [
-    		'Language' => 'FRE',
-    		'Tid' => '123456',
-    	];
+        return [
+            'Language' => 'FRE',
+            'Tid' => '123456',
+        ];
     }
 }
-
-?>

@@ -2,8 +2,8 @@
 
 namespace EasyTransac\Entities;
 
-use \EasyTransac\Core\CommentParser;
-use \EasyTransac\Core\Services;
+use EasyTransac\Core\CommentParser;
+use EasyTransac\Core\Services;
 use EasyTransac\Core\Logger;
 use EasyTransac\Converters\BooleanToString;
 use EasyTransac\Converters\YesNoLowerCase;
@@ -20,8 +20,8 @@ abstract class Entity
 
     public function __construct()
     {
-    	$this->addConverter(new BooleanToString());
-    	$this->addConverter(new YesNoLowerCase());
+        $this->addConverter(new BooleanToString());
+        $this->addConverter(new YesNoLowerCase());
         $this->makeMapping();
     }
 
@@ -32,9 +32,9 @@ abstract class Entity
      */
     public function addConverter(\EasyTransac\Converters\IConverter $converter)
     {
-    	$this->converters[] = $converter;
+        $this->converters[] = $converter;
 
-    	return $this;
+        return $this;
     }
 
     /**
@@ -44,10 +44,10 @@ abstract class Entity
      */
     public function callConverters($value)
     {
-        if ($this->converters)
-        {
-        	foreach ($this->converters as $converter)
-        		$value = $converter->convert($value) ;
+        if ($this->converters) {
+            foreach ($this->converters as $converter) {
+                $value = $converter->convert($value) ;
+            }
         }
 
         return $value;
@@ -61,18 +61,16 @@ abstract class Entity
      */
     public function __call($name, $arguments)
     {
-    	if (preg_match('#^get(.*)$#', $name, $matches))
-    	{
-    		if (array_key_exists($matches[1], $this->additionalFields))
-    			return $this->additionalFields[$matches[1]];
-    		else
-    			return null;
-    	}
-    	else if (preg_match('#^set(.*)$#', $name, $matches) && count($arguments) > 0)
-    	{
-    		$this->additionalFields[$matches[1]] = $arguments[0];
-    		return $this;
-    	}
+        if (preg_match('#^get(.*)$#', $name, $matches)) {
+            if (array_key_exists($matches[1], $this->additionalFields)) {
+                return $this->additionalFields[$matches[1]];
+            } else {
+                return null;
+            }
+        } elseif (preg_match('#^set(.*)$#', $name, $matches) && count($arguments) > 0) {
+            $this->additionalFields[$matches[1]] = $arguments[0];
+            return $this;
+        }
     }
 
     /**
@@ -83,10 +81,11 @@ abstract class Entity
      */
     public function hydrate($fields, $checkRequired = false)
     {
-        if (is_array($fields))
+        if (is_array($fields)) {
             $this->hydrateWithArray($fields, $checkRequired);
-        else if(is_object($fields))
+        } elseif (is_object($fields)) {
             $this->hydrateWithObject($fields, $checkRequired);
+        }
 
         Logger::getInstance()->write($this->toArray());
 
@@ -100,44 +99,40 @@ abstract class Entity
     public function toArray()
     {
         $out = array();
-        foreach ($this->mapping as $key => $value)
-        {
-            if ($this->{$key} === null)
+        foreach ($this->mapping as $key => $value) {
+            if ($this->{$key} === null) {
                 continue;
+            }
 
-            if ($value['type'] == 'map')
-            {
+            if ($value['type'] == 'map') {
                 $out[$value['name']] = $this->callConverters($this->{$key});
-            }
-            else if ($value['type'] == 'array')
-            {
+            } elseif ($value['type'] == 'array') {
                 $list = array();
-                foreach ($this->{$key} as $c)
+                foreach ($this->{$key} as $c) {
                     $list[] = $c->toArray();
+                }
                 $out[$value['name']] = $list;
-            }
-            else if ($value['type'] == 'object')
+            } elseif ($value['type'] == 'object') {
                 $out += $this->{$key}->toArray();
+            }
         }
 
         // Add also the additional fields
-        if (!empty($this->additionalFields))
-        {
-        	foreach ($this->additionalFields as $key => $additionalField)
-        	{
-        		if (is_array($additionalField))
-        		{
-        			$list = array();
-        			foreach ($additionalField as $c)
-        				$list[] = $c->toArray();
+        if (!empty($this->additionalFields)) {
+            foreach ($this->additionalFields as $key => $additionalField) {
+                if (is_array($additionalField)) {
+                    $list = array();
+                    foreach ($additionalField as $c) {
+                        $list[] = $c->toArray();
+                    }
 
-        			$out[$key] = $list;
-        		}
-        		else if (is_object($additionalField))
-        			$out += $additionalField->toArray();
-        		else
-        			$out[$key] = $this->callConverters($additionalField);
-        	}
+                    $out[$key] = $list;
+                } elseif (is_object($additionalField)) {
+                    $out += $additionalField->toArray();
+                } else {
+                    $out[$key] = $this->callConverters($additionalField);
+                }
+            }
         }
 
         return $out;
@@ -151,17 +146,19 @@ abstract class Entity
     protected function hydrateWithArray($itemsList, $checkRequired = false)
     {
         $field = null;
-        foreach ($this->mapping as $key => $value)
-            if ($value['type'] == 'array')
+        foreach ($this->mapping as $key => $value) {
+            if ($value['type'] == 'array') {
                 $field = $value;
+            }
+        }
 
-        if ($field == null)
+        if ($field == null) {
             return;
+        }
 
         $list = array();
-        foreach ($itemsList as $item)
-        {
-            $className = '\\EasyTransac\\Entities\\'.$field['name'];
+        foreach ($itemsList as $item) {
+            $className = '\\EasyTransac\\Entities\\' . $field['name'];
             $e = new $className();
             $e->hydrate($item);
             $list[] = $e;
@@ -176,18 +173,14 @@ abstract class Entity
      */
     protected function hydrateWithObject($fields, $checkRequired = false)
     {
-        foreach ($this->mapping as $key => $value)
-        {
-            if ($value['type'] == 'map' && property_exists($fields, $value['name']))
-            {
+        foreach ($this->mapping as $key => $value) {
+            if ($value['type'] == 'map' && property_exists($fields, $value['name'])) {
                 $this->{$key} = $fields->{$value['name']};
-            }
-            else if($value['type'] == 'object' && property_exists($fields, $value['name']))
-            {
-            	$className = '\\EasyTransac\\Entities\\'.$value['name'];
-            	$e = new $className();
-            	$e->hydrate($fields->{$value['name']});
-            	$this->{$key} = $e;
+            } elseif ($value['type'] == 'object' && property_exists($fields, $value['name'])) {
+                $className = '\\EasyTransac\\Entities\\' . $value['name'];
+                $e = new $className();
+                $e->hydrate($fields->{$value['name']});
+                $this->{$key} = $e;
             }
         }
     }
@@ -199,9 +192,8 @@ abstract class Entity
     {
         $parser = new CommentParser($this);
 
-        foreach ($parser->parse() as $result)
+        foreach ($parser->parse() as $result) {
             $this->mapping[$result['field']] = $result;
+        }
     }
 }
-
-?>

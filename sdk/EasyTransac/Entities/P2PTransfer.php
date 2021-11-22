@@ -8,88 +8,104 @@ namespace EasyTransac\Entities;
  */
 class P2PTransfer extends Entity
 {
-	/** @map:From **/
-	protected $from = null;
-	/** @map:To **/
-	protected $to = null;
-	/** @map:Tid **/
-	protected $tid = null;
-	/** @map:Amount **/
-	protected $amount = null;
-	/** @map:Description **/
-	protected $description = null;
-	/** @map:Language **/
-	protected $language = null;
-	/** @map:OriginalTid **/
-	protected $originalTid = null;
-	/** @map:Status **/
-	protected $status = null;
-	/** @map:Date **/
-	protected $date = null;
+    /** @map:From **/
+    protected $from = null;
 
-	public function getFrom()
-	{
-		return $this->from;
-	}
+    /** @map:To **/
+    protected $to = null;
 
-	public function setFrom($value)
-	{
-		$this->from = $value;
-		return $this;
-	}
+    /** @map:Tid **/
+    protected $tid = null;
 
-	public function getTo()
-	{
-		return $this->to;
-	}
+    /** @map:Amount **/
+    protected $amount = null;
 
-	public function setTo($value)
-	{
-		$this->to = $value;
-		return $this;
-	}
+    /** @map:Description **/
+    protected $description = null;
 
-	public function setTid($value)
-	{
-		$this->tid = $value;
-		return $this;
-	}
+    /** @map ApplicationType */
+    protected $applicationType = null;
 
-	public function getAmount()
-	{
-		return $this->amount;
-	}
+    /** @map:Language **/
+    protected $language = null;
 
-	public function setAmount($value)
-	{
-		$this->amount = $value;
-		return $this;
-	}
+    /** @map:OriginalTid **/
+    protected $originalTid = null;
 
-	public function setDescription($value)
-	{
-		$this->description = $value;
-		return $this;
-	}
+    /** @map:Status **/
+    protected $status = null;
 
-	public function setLanguage($value)
-	{
-		$this->language = $value;
-		return $this;
-	}
+    /** @map:Date **/
+    protected $date = null;
 
-	public function getDate()
-	{
-		return $this->date;
-	}
+    public function getFrom()
+    {
+        return $this->from;
+    }
 
-	public function getOriginalTid()
-	{
-		return $this->originalTid;
-	}
+    public function setFrom($value)
+    {
+        $this->from = $value;
+        return $this;
+    }
 
-	public function getStatus()
-	{
-		return $this->status;
-	}
+    public function getTo()
+    {
+        return $this->to;
+    }
+
+    public function setTo($value)
+    {
+        $this->to = $value;
+        return $this;
+    }
+
+    public function setTid($value)
+    {
+        $this->tid = $value;
+        return $this;
+    }
+
+    public function getAmount()
+    {
+        return $this->amount;
+    }
+
+    public function setAmount($value)
+    {
+        $this->amount = $value;
+        return $this;
+    }
+
+    public function setDescription($value)
+    {
+        $this->description = $value;
+        return $this;
+    }
+
+    public function setLanguage($value)
+    {
+        $this->language = $value;
+        return $this;
+    }
+
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    public function getOriginalTid()
+    {
+        return $this->originalTid;
+    }
+
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    public function getApplicationType()
+    {
+        return $this->applicationType;
+    }
 }

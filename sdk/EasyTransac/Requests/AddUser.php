@@ -2,10 +2,11 @@
 
 namespace EasyTransac\Requests;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
- * API function /user/add, add a new user
+ * API function /user/add, used to add a new user
+ * URL: https://www.easytransac.com/fr/documentation#tag/API-User/paths/~1api~1user~1add/post
  * @copyright EasyTransac
  */
 class AddUser extends Request
@@ -22,5 +23,3 @@ class AddUser extends Request
         return $this->call('/user/add', $entity);
     }
 }
-
-?>

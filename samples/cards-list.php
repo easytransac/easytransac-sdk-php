@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__.'/../sdk/EasyTransac/autoload.php');
+require_once __DIR__ . '/../sdk/EasyTransac/autoload.php';
 
 use EasyTransac\Core\Services;
 use EasyTransac\Entities\Customer;
@@ -10,18 +10,14 @@ Services::getInstance()->setDebug(true);
 Services::getInstance()->provideAPIKey('a1b2c3d4');
 
 $customer = (new Customer())
-    ->setUid('a1b2c3d4');
+    ->setUid('a1b2c3d4')
+    ->setClientId('CBA123');
 
 $request = new CreditCardsList();
 $response = $request->execute($customer);
 
-if ($response->isSuccess())
-{
+if ($response->isSuccess()) {
     var_dump($response->getContent()->toArray());
-}
-else
-{
+} else {
     var_dump($response->getErrorMessage());
 }
-
-?>

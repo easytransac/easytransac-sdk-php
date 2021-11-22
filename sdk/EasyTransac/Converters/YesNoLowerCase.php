@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace EasyTransac\Converters;
 
@@ -7,19 +7,18 @@ namespace EasyTransac\Converters;
  */
 class YesNoLowerCase implements IConverter
 {
-	/**
-	 * {@inheritDoc}
-	 * @see \Easytransac\Converters\IConverter::convert()
-	 */
-	public function convert($value)
-	{
-		if ($value === 'Yes')
-			return 'yes';
-		else if ($value == 'No')
-			return 'no';
-		else 
-			return $value;
-	}
+    /**
+     * {@inheritDoc}
+     * @see \Easytransac\Converters\IConverter::convert()
+     */
+    public function convert($value)
+    {
+        if ($value === 'Yes') {
+            return 'yes';
+        } elseif ($value == 'No') {
+            return 'no';
+        } else {
+            return $value;
+        }
+    }
 }
-
-?>

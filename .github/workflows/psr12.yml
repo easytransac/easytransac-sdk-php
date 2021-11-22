@@ -1,0 +1,32 @@
+name: PSR12
+
+on:
+  # Run on all pushes and on all pull requests.
+  # Prevent the build from running when there are only irrelevant changes.
+  push:
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  # Allow manually triggering the workflow.
+  workflow_dispatch:
+
+jobs:
+  psr12:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set PHP version to 5.6
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 5.6
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
+      - name: 'PHPCS PSR12 check'
+        run: vendor/bin/phpcs sdk/ --standard=PSR12

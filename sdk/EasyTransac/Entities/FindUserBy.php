@@ -10,6 +10,7 @@ class FindUserBy extends Entity
 {
     /** @map:Email  **/
     protected $email  = null;
+
     /** @map:Id   **/
     protected $id   = null;
 
@@ -25,5 +26,3 @@ class FindUserBy extends Entity
         return $this;
     }
 }
-
-?>

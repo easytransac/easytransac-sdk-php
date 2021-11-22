@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace EasyTransac\Core;
 
@@ -7,25 +7,23 @@ namespace EasyTransac\Core;
  */
 interface ICallerModifier
 {
-	/**
-	 * Ask for modifications
-	 * @param Services $services
-	 * @param String $funcName
-	 * @param array $params
-	 */
-	public function execute(Services $services, $funcName, array $params);
-	
-	/**
-	 * Returns the service name or its complete url
-	 * @return String 
-	 */
-	public function getFuncName();
-	
-	/**
-	 * Returns params
-	 * @return array
-	 */
-	public function getParams();
-}
+    /**
+     * Ask for modifications
+     * @param Services $services
+     * @param String $funcName
+     * @param array $params
+     */
+    public function execute(Services $services, $funcName, array $params);
 
-?>
+    /**
+     * Returns the service name or its complete url
+     * @return String
+     */
+    public function getFuncName();
+
+    /**
+     * Returns params
+     * @return array
+     */
+    public function getParams();
+}

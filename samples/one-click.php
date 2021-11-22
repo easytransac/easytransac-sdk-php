@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__.'/../sdk/EasyTransac/autoload.php');
+require_once __DIR__ . '/../sdk/EasyTransac/autoload.php';
 
 use EasyTransac\Core\Services;
 use EasyTransac\Entities\OneClickTransaction;
@@ -13,18 +13,13 @@ $transaction = (new OneClickTransaction())
     ->setAmount(100)
     ->setUid('a1b2c3d4')
     ->setClientIp('127.0.0.1')
-    ->setAlias('mycardalias');
+    ->setAlias('a1b2c3');
 
 $dp = new OneClickPayment();
 $response = $dp->execute($transaction);
 
-if ($response->isSuccess())
-{
+if ($response->isSuccess()) {
     var_dump($response->getContent()->toArray());
-}
-else
-{
+} else {
     var_dump($response->getErrorMessage());
 }
-
-?>

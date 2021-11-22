@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Core;
 
-use \EasyTransac\Core\Security;
+use EasyTransac\Core\Security;
 
 /**
  * Singleton, allows to call EasyTransac API with API key
@@ -24,19 +24,19 @@ class Services
      */
     public function setModifier(ICallerModifier $modifier)
     {
-    	$this->modifier = $modifier;
-    	return $this;
+        $this->modifier = $modifier;
+        return $this;
     }
-    
+
     /**
      * Returns the current modifier
      * @return \EasyTransac\Core\ICallerModifier
      */
     public function getModifier()
     {
-    	return $this->modifier;
+        return $this->modifier;
     }
-    
+
     /**
      * Defines the caller
      * @param ICaller $caller
@@ -44,18 +44,18 @@ class Services
      */
     public function setCaller(ICaller $caller)
     {
-    	$this->caller = $caller;
-    	return $this;
+        $this->caller = $caller;
+        return $this;
     }
-    
+
     /**
      * Remove the current Modifier
      * @return \EasyTransac\Core\Services
      */
     public function removeModifier()
     {
-    	$this->modifier = null;
-    	return $this;
+        $this->modifier = null;
+        return $this;
     }
 
     /**
@@ -64,19 +64,19 @@ class Services
      */
     public function removeCaller()
     {
-    	$this->caller = null;
-    	return $this;
+        $this->caller = null;
+        return $this;
     }
-    
+
     /**
      * Get the caller
      * @return \EasyTransac\Core\ICaller
      */
     public function getCaller()
     {
-    	return $this->caller;
+        return $this->caller;
     }
-    
+
     /**
      * Set the url for the request
      * @param String $url
@@ -84,10 +84,10 @@ class Services
      */
     public function setUrl($url)
     {
-    	$this->url = $url;
-    	return $this;
+        $this->url = $url;
+        return $this;
     }
-    
+
     /**
      * Defines the time out of the request
      * @param int $timeout
@@ -107,17 +107,17 @@ class Services
     public function provideAPIKey($key)
     {
         $this->key = $key;
-        
+
         return $this;
     }
-    
+
     /**
      * Returns the api key provided
      * @return String
      */
     public function getAPIKey()
     {
-    	return $this->key;
+        return $this->key;
     }
 
     /**
@@ -141,7 +141,7 @@ class Services
     }
 
     /**
-     * Calls the specified EasyTransac function 
+     * Calls the specified EasyTransac function
      * @param String $funcName
      * @param array &$params
      * @return String
@@ -149,48 +149,43 @@ class Services
      */
     public function call($funcName, array &$params)
     {
-        if (empty($this->key))
+        if (empty($this->key)) {
             throw new \RuntimeException("API key not supplied");
-
-        if (empty($this->caller))
-            throw new \RuntimeException("Caller not supplied");
-            
-        $this->caller->setTimeout($this->timeout);
-        $this->caller->setHeaders(array('EASYTRANSAC-API-KEY:'.$this->key));
-        
-        if (!empty($this->modifier))
-        {
-        	try 
-        	{
-        		$this->modifier->execute($this, $funcName, $params);
-	        	$target = $this->modifier->getFuncName();
-	        	$params = $this->modifier->getParams();
-        	}
-        	catch (\RuntimeException $e)
-        	{
-        		Logger::getInstance()->write('Exception: '.$e->getMessage());
-        		throw $e;
-        	}
         }
-        else
-        	$target = $this->url.$funcName;
-        
+
+        if (empty($this->caller)) {
+            throw new \RuntimeException("Caller not supplied");
+        }
+
+        $this->caller->setTimeout($this->timeout);
+        $this->caller->setHeaders(array('EASYTRANSAC-API-KEY:' . $this->key));
+
+        if (!empty($this->modifier)) {
+            try {
+                $this->modifier->execute($this, $funcName, $params);
+                $target = $this->modifier->getFuncName();
+                $params = $this->modifier->getParams();
+            } catch (\RuntimeException $e) {
+                Logger::getInstance()->write('Exception: ' . $e->getMessage());
+                throw $e;
+            }
+        } else {
+            $target = $this->url . $funcName;
+        }
+
         $params['Signature'] = Security::getSignature($params, $this->key);
-        
-        Logger::getInstance()->write('Called url: '.$target);
+
+        Logger::getInstance()->write('Called url: ' . $target);
         Logger::getInstance()->write($params);
 
-		try 
-		{
-			$response = $this->caller->call($target, $params);
-			Logger::getInstance()->write($response);
-			return $response;
-		}
-		catch (\Exception $e)
-		{
-			Logger::getInstance()->write('Exception: '.$e->getMessage().', Code: '.$e->getCode());
-			throw $e;
-		}
+        try {
+            $response = $this->caller->call($target, $params);
+            Logger::getInstance()->write($response);
+            return $response;
+        } catch (\Exception $e) {
+            Logger::getInstance()->write('Exception: ' . $e->getMessage() . ', Code: ' . $e->getCode());
+            throw $e;
+        }
     }
 
     /**
@@ -199,8 +194,9 @@ class Services
      */
     public static function getInstance()
     {
-        if (self::$instance == null)
+        if (self::$instance == null) {
             self::$instance = new self();
+        }
 
         return self::$instance;
     }
@@ -210,7 +206,7 @@ class Services
      */
     public function __destruct()
     {
-    	$this->caller = null;
+        $this->caller = null;
     }
 
     /**
@@ -218,10 +214,11 @@ class Services
      */
     private function __construct()
     {
-    	$this->caller = new CurlCaller();
-    	
-    	if (!$this->caller->isAvailable())
-    		$this->caller = new FgcCaller();
+        $this->caller = new CurlCaller();
+
+        if (!$this->caller->isAvailable()) {
+            $this->caller = new FgcCaller();
+        }
     }
 
     /**
@@ -229,8 +226,5 @@ class Services
      */
     private function __clone()
     {
-
     }
 }
-
-?>

@@ -1,19 +1,18 @@
 <?php
 
-require_once(__DIR__.'/../../../sdk/EasyTransac/autoload.php');
+use EasyTransac\Converters\YesNoLowerCase;
+use PHPUnit\Framework\TestCase;
 
-class YesNoLowerCaseTest extends PHPUnit_Framework_TestCase
+class YesNoLowerCaseTest extends TestCase
 {
-	public function testConvert()
-	{
-		$converter = new \EasyTransac\Converters\YesNoLowerCase();
+    public function testConvert()
+    {
+        $converter = new YesNoLowerCase();
 
-		$this->assertEquals($converter->convert('Yes'), 'yes');
-		$this->assertEquals($converter->convert('No'), 'no');
-		$this->assertEquals($converter->convert('no'), 'no');
-		$this->assertEquals($converter->convert('yes'), 'yes');
-		$this->assertEquals($converter->convert('Test'), 'Test');
-	}
+        $this->assertEquals('yes', $converter->convert('Yes'));
+        $this->assertEquals('no', $converter->convert('No'));
+        $this->assertEquals('no', $converter->convert('no'));
+        $this->assertEquals('yes', $converter->convert('yes'));
+        $this->assertEquals('Test', $converter->convert('Test'));
+    }
 }
-
-?>

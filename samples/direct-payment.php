@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__.'/../sdk/EasyTransac/autoload.php');
+require_once __DIR__ . '/../sdk/EasyTransac/autoload.php';
 
 use EasyTransac\Core\Services;
 use EasyTransac\Entities\DirectTransaction;
@@ -20,7 +20,7 @@ $customer = (new Customer())
 $card = (new CreditCard())
     ->setNumber('4539527688361959')
     ->setMonth('10')
-    ->setYear('2017')
+    ->setYear('2025')
     ->setCVV('123');
 
 $transaction = (new DirectTransaction())
@@ -32,13 +32,8 @@ $transaction = (new DirectTransaction())
 $dp = new DirectPayment();
 $response = $dp->execute($transaction);
 
-if ($response->isSuccess())
-{
+if ($response->isSuccess()) {
     var_dump($response->getContent()->toArray());
-}
-else
-{
+} else {
     var_dump($response->getErrorMessage());
 }
-
-?>

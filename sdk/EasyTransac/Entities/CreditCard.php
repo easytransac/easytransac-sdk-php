@@ -10,26 +10,37 @@ class CreditCard extends Entity
 {
     /** @map:CardNumber **/
     protected $number = null;
+
     /** @map:CardMonth **/
     protected $month = null;
+
     /** @map:CardYear **/
     protected $year = null;
+
     /** @map:CardCVV **/
     protected $CVV = null;
+
     /** @map:CardOwner **/
     protected $owner = null;
+
     /** @map:Alias **/
     protected $alias = null;
+
     /** @map:ClientId **/
     protected $clientId = null;
+
     /** @map:CardType **/
     protected $type = null;
+
     /** @map:CardCountry **/
     protected $country = null;
+
     /** @map:LastAccessed **/
     protected $lastAccessed = null;
+
     /** @map:Verified **/
     protected $verified = null;
+
     /** @map:Status **/
     protected $status = null;
 
@@ -68,7 +79,7 @@ class CreditCard extends Entity
     {
         return $this->alias;
     }
-    
+
     public function setClientId($value)
     {
         $this->clientId = $value;
@@ -135,5 +146,3 @@ class CreditCard extends Entity
         return $this->number;
     }
 }
-
-?>

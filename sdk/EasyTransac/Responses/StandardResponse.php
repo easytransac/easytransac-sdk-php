@@ -2,7 +2,7 @@
 
 namespace EasyTransac\Responses;
 
-use \EasyTransac\Entities\Entity;
+use EasyTransac\Entities\Entity;
 
 /**
  * Response used in return of a request
@@ -16,16 +16,16 @@ class StandardResponse
     protected $success = false;
     protected $sameSignature = false;
     protected $json;
-    
+
     /**
-     * Need to receive the real api response 
+     * Need to receive the real api response
      * @param \stdClass $json
      */
     public function __construct(\stdClass $json = null)
     {
-    	$this->json = $json;
+        $this->json = $json;
     }
-    
+
     /**
      * Defines is the signature request/response is the same
      * @param Boolean $same
@@ -33,19 +33,19 @@ class StandardResponse
      */
     public function setSameSignature($same)
     {
-    	$this->sameSignature = $same;
-    	return $this;
+        $this->sameSignature = $same;
+        return $this;
     }
-    
+
     /**
      * Returns true if the signature request/response is the same
      * @return boolean|Boolean
      */
     public function isSameSignature()
     {
-    	return $this->sameSignature;
+        return $this->sameSignature;
     }
-    
+
     /**
      * Returns if the response is OK
      * @return boolean
@@ -67,7 +67,7 @@ class StandardResponse
     }
 
     /**
-     * Get the error code returned by the EasyTransac API 
+     * Get the error code returned by the EasyTransac API
      * @return String
      */
     public function getErrorCode()
@@ -125,27 +125,26 @@ class StandardResponse
         $this->errorMessage = $message;
         return $this;
     }
-    
+
     /**
      * Returns the api response in json (stdclass)
      * @return \stdClass|null
      */
     public function getRealJsonResponse()
     {
-    	return $this->json;
+        return $this->json;
     }
-    
+
     /**
      * Returns the api response in array
      * @return Array|null
      */
     public function getRealArrayResponse()
     {
-    	if ($this->json === null)
-    		return null;
-    	else
-    		return json_decode(json_encode($this->json), true);
+        if ($this->json === null) {
+            return null;
+        } else {
+            return json_decode(json_encode($this->json), true);
+        }
     }
 }
-
-?>

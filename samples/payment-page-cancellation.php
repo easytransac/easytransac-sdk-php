@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__.'/../sdk/EasyTransac/autoload.php');
+require_once __DIR__ . '/../sdk/EasyTransac/autoload.php';
 
 use EasyTransac\Core\Services;
 use EasyTransac\Entities;
@@ -10,19 +10,14 @@ Services::getInstance()->setDebug(true);
 Services::getInstance()->provideAPIKey('a1b2c3d4');
 
 $customer = (new Entities\Cancellation())
-    ->setRequestId('a1b2c3d4')
+    ->setRequestId('aQBZzQmPdLXp')
     ->setLanguage('FRE');
 
 $request = new Requests\PaymentPageCancellation();
 $response = $request->execute($customer);
 
-if ($response->isSuccess())
-{
+if ($response->isSuccess()) {
     var_dump($response->getContent()->toArray());
-}
-else
-{
+} else {
     var_dump($response->getErrorMessage());
 }
-
-?>
