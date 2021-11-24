@@ -12,5 +12,6 @@ jobs:
         uses: coverallsapp/github-action@1.1.3
         with:
           path-to-lcov: ./coverage/lcov.xml
+          base-path: /home/user/WorkShare/WorkData/Development/Plugins/easytransac-sdk-php
           git-branch: code_quality
           github-token: ${{ secrets.GITHUB_TOKEN }}
