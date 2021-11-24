@@ -11,4 +11,6 @@ jobs:
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@1.1.3
         with:
+          path-to-lcov: ./coverage/lcov.xml
+          git-branch: code_quality
           github-token: ${{ secrets.GITHUB_TOKEN }}
