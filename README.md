@@ -4,7 +4,7 @@ EasyTransac SDK (PHP)
 [![Build](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/build.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/build.yml)
 [![PSR12](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/psr12.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/psr12.yml)
 [![Test](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/test.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/test.yml)
-[![Coverage Status](https://coveralls.io/repos/github/easytransac/easytransac-sdk-php/badge.svg?branch=master)](https://coveralls.io/github/easytransac/easytransac-sdk-php?branch=master)
+[![Coverage Status](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/test.yml/coverage_badge.svg?branch=code_quality)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/coverage-badge.yml)
 [![Latest Stable Version](https://poser.pugx.org/easytransac/easytransac-sdk-php/version)](https://packagist.org/packages/easytransac/easytransac-sdk-php)
 
 Make your EasyTransac API implementation easier with our SDK.
