@@ -173,6 +173,7 @@ class Services
             $target = $this->url . $funcName;
         }
 
+        $params['Version'] = 'easytransac-sdk-php.v1.3.1';
         $params['Signature'] = Security::getSignature($params, $this->key);
 
         Logger::getInstance()->write('Called url: ' . $target);
