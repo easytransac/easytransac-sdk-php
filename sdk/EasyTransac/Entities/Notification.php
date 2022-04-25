@@ -110,6 +110,78 @@ class Notification extends Entity
     /** @map:ApplicationType **/
     protected $applicationType = null;
 
+    /** @map:OriginalRequestId **/
+    protected $originalRequestId = null;
+
+    /** @map:OriginalPaymentTid **/
+    protected $originalPaymentTid = null;
+
+    /** @map:DateChargeback **/
+    protected $dateChargeback = null;
+
+    /** @map:DateRepresentment **/
+    protected $dateRepresentment = null;
+
+    /** @map:AmountPreAuth **/
+    protected $amountPreAuth = null;
+
+    /** @map:ClientIP **/
+    protected $clientIP = null;
+
+    /** @map:ClientIPCountry **/
+    protected $clientIPCountry = null;
+
+    /** @map:PreAuth **/
+    protected $preAuth = null;
+
+    /** @map:B2B **/
+    protected $b2b = null;
+
+    /** @map:CardType **/
+    protected $cardType = null;
+
+    /** @map:MultiplePayments **/
+    protected $multiplePayments = null;
+
+    /** @map:MultiplePaymentsStatus **/
+    protected $multiplePaymentsStatus = null;
+
+    /** @map:MultiplePaymentsRecurrence **/
+    protected $multiplePaymentsRecurrence = null;
+
+    /** @map:MultiplePaymentsRepeat **/
+    protected $multiplePaymentsRepeat = null;
+
+    /** @map:MultiplePaymentsCount **/
+    protected $multiplePaymentsCount = null;
+
+    /** @map:RebillStatus **/
+    protected $rebillStatus = null;
+
+    /** @map:RebillRecurrence **/
+    protected $rebillRecurrence = null;
+
+    /** @map:RebillCount **/
+    protected $rebillCount = null;
+
+    /** @map:AdditionalError **/
+    protected $additionalError = null;
+
+    /** @map:3DSecureUrl **/
+    protected $secureUrl = null;
+
+    /** @map:MandateUrl **/
+    protected $mandateUrl = null;
+
+    /** @map:RedirectUrl **/
+    protected $redirectUrl = null;
+
+    /** @map:QRCodeImage **/
+    protected $qrCodeImage = null;
+
+    /** @map:QRCodeUrl **/
+    protected $qrCodeUrl = null;
+
     public function getNotificationType()
     {
         return $this->notificationType;
@@ -278,5 +350,125 @@ class Notification extends Entity
     public function getApplicationType()
     {
         return $this->applicationType;
+    }
+
+    public function getOriginalRequestId()
+    {
+        return $this->originalRequestId;
+    }
+
+    public function getOriginalPaymentTid()
+    {
+        return $this->originalPaymentTid;
+    }
+
+    public function getDateChargeback()
+    {
+        return $this->dateChargeback;
+    }
+
+    public function getDateRepresentment()
+    {
+        return $this->dateRepresentment;
+    }
+
+    public function getAmountPreAuth()
+    {
+        return $this->amountPreAuth;
+    }
+
+    public function getClientIP()
+    {
+        return $this->clientIP;
+    }
+
+    public function getClientIPCountry()
+    {
+        return $this->clientIPCountry;
+    }
+
+    public function getPreAuth()
+    {
+        return $this->preAuth;
+    }
+
+    public function getB2b()
+    {
+        return $this->b2b;
+    }
+
+    public function getCardType()
+    {
+        return $this->cardType;
+    }
+
+    public function getMultiplePayments()
+    {
+        return $this->multiplePayments;
+    }
+
+    public function getMultiplePaymentsStatus()
+    {
+        return $this->multiplePaymentsStatus;
+    }
+
+    public function getMultiplePaymentsRecurrence()
+    {
+        return $this->multiplePaymentsRecurrence;
+    }
+
+    public function getMultiplePaymentsRepeat()
+    {
+        return $this->multiplePaymentsRepeat;
+    }
+
+    public function getMultiplePaymentsCount()
+    {
+        return $this->multiplePaymentsCount;
+    }
+
+    public function getRebillStatus()
+    {
+        return $this->rebillStatus;
+    }
+
+    public function getRebillRecurrence()
+    {
+        return $this->rebillRecurrence;
+    }
+
+    public function getRebillCount()
+    {
+        return $this->rebillCount;
+    }
+
+    public function getAdditionalError()
+    {
+        return $this->additionalError;
+    }
+
+    public function getSecureUrl()
+    {
+        return $this->secureUrl;
+    }
+
+    public function getMandateUrl()
+    {
+        return $this->mandateUrl;
+    }
+
+    public function getRedirectUrl()
+    {
+        return $this->redirectUrl;
+    }
+
+    public function getQrCodeImage()
+    {
+        return $this->qrCodeImage;
+    }
+
+    public function getQrCodeUrl()
+    {
+        return $this->qrCodeUrl;
     }
 }
