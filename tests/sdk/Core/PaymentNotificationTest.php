@@ -8,6 +8,7 @@ class PaymentNotificationTest extends TestCase
     public function testGetContent()
     {
         $response = PaymentNotification::getContent($this->getFixture(), 'myApiKey');
+        print_r($response->toArray());
         $this->assertEquals($response->toArray(), $this->getFixture(true));
     }
 
@@ -33,6 +34,7 @@ class PaymentNotificationTest extends TestCase
                 'Status' => 'captured',
                 'Date' => '2016-11-30 11:27:46',
                 'Amount' => '18.00',
+                'AmountRefund' => '6.00',
                 'Currency' => 'EUR',
                 'FixFees' => '0.83',
                 'Message' => 'Payment was successful',
@@ -52,7 +54,7 @@ class PaymentNotificationTest extends TestCase
                     'ZipCode' => '67100',
                     'City' => 'STRASB'
                 ),
-                'Signature' => '7baf77865cd62552fd827bd1da96f576ab36f033'
+                'Signature' => 'bcff7f9ffa5f65fd2cbac2fdd2255484b931fe76'
             );
         } else {
             return array(
@@ -64,6 +66,7 @@ class PaymentNotificationTest extends TestCase
                 'Status' => 'captured',
                 'Date' => '2016-11-30 11:27:46',
                 'Amount' => '18.00',
+                'AmountRefund' => '6.00',
                 'Currency' => 'EUR',
                 'FixFees' => '0.83',
                 'Message' => 'Payment was successful',
@@ -81,7 +84,7 @@ class PaymentNotificationTest extends TestCase
                 'ZipCode' => '67100',
                 'City' => 'STRASB',
                 'Error' => 'Error test',
-                'Signature' => '7baf77865cd62552fd827bd1da96f576ab36f033'
+                'Signature' => 'bcff7f9ffa5f65fd2cbac2fdd2255484b931fe76'
             );
         }
     }

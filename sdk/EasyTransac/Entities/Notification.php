@@ -68,6 +68,48 @@ class Notification extends Entity
     /** @map:Error **/
     protected $error = null;
 
+    /** @map:AmountRefund **/
+    protected $amountRefund = null;
+
+    /** @map:RequestAttempt **/
+    protected $requestAttempt = null;
+
+    /** @map:PaymentMethod **/
+    protected $paymentMethod = null;
+
+    /** @map:UserId **/
+    protected $userId = null;
+
+    /** @map:Description **/
+    protected $description = null;
+
+    /** @map:DateRefund **/
+    protected $dateRefund = null;
+
+    /** @map:CurrencyText **/
+    protected $currencyText = null;
+
+    /** @map:CurrencySymbol **/
+    protected $currencySymbol = null;
+
+    /** @map:FeesPercent **/
+    protected $feesPercent = null;
+
+    /** @map:FeesFixedPart **/
+    protected $feesFixedPart = null;
+
+    /** @map:CardCountry **/
+    protected $cardCountry = null;
+
+    /** @map:CardMonth **/
+    protected $cardMonth = null;
+
+    /** @map:CardYear **/
+    protected $cardYear = null;
+
+    /** @map:ApplicationType **/
+    protected $applicationType = null;
+
     public function getNotificationType()
     {
         return $this->notificationType;
@@ -166,5 +208,75 @@ class Notification extends Entity
     public function getError()
     {
         return $this->error;
+    }
+
+    public function getAmountRefund()
+    {
+        return $this->amountRefund;
+    }
+
+    public function getRequestAttempt()
+    {
+        return $this->requestAttempt;
+    }
+
+    public function getPaymentMethod()
+    {
+        return $this->paymentMethod;
+    }
+
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function getDateRefund()
+    {
+        return $this->dateRefund;
+    }
+
+    public function getCurrencyText()
+    {
+        return $this->currencyText;
+    }
+
+    public function getCurrencySymbol()
+    {
+        return $this->currencySymbol;
+    }
+
+    public function getFeesPercent()
+    {
+        return $this->feesPercent;
+    }
+
+    public function getFeesFixedPart()
+    {
+        return $this->feesFixedPart;
+    }
+
+    public function getCardCountry()
+    {
+        return $this->cardCountry;
+    }
+
+    public function getCardMonth()
+    {
+        return $this->cardMonth;
+    }
+
+    public function getCardYear()
+    {
+        return $this->cardYear;
+    }
+
+    public function getApplicationType()
+    {
+        return $this->applicationType;
     }
 }
