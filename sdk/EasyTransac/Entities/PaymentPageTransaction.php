@@ -65,6 +65,9 @@ class PaymentPageTransaction extends Entity
     /** @map:PayToEmail **/
     protected $payToEmail = null;
 
+    /** @map:PayToId **/
+    protected $payToId = null;
+
     /** @map:UserAgent **/
     protected $userAgent = null;
 
@@ -213,6 +216,12 @@ class PaymentPageTransaction extends Entity
     public function setPayToEmail($payToEmail)
     {
         $this->payToEmail = $payToEmail;
+        return $this;
+    }
+
+    public function setPayToId($payToId)
+    {
+        $this->payToId = $payToId;
         return $this;
     }
 

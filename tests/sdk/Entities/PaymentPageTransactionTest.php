@@ -24,6 +24,7 @@ class PaymentPageTransactionTest extends TestCase
         $c->setMultiplePaymentsRepeat($f['MultiplePaymentsRepeat']);
         $c->setOrderId($f['OrderId']);
         $c->setPayToEmail($f['PayToEmail']);
+        $c->setPayToId($f['PayToId']);
         $c->setRebill($f['Rebill']);
         $c->setRecurrence($f['Recurrence']);
         $c->setReturnUrl($f['ReturnUrl']);
@@ -78,7 +79,8 @@ class PaymentPageTransactionTest extends TestCase
                 'DownPayment' => null,
                 'Rebill' => null,
                 'Recurrence' => null,
-                'PayToEmail' => null,
+                'PayToEmail' => 'test@test.com',
+                'PayToId' => 123,
                 'UserAgent' => null,
                 'Language' => 'FRE',
                 'SendSMS' => 'no',
@@ -100,6 +102,8 @@ class PaymentPageTransactionTest extends TestCase
                 'CancelUrl' => 'https:/www.easytransac.com',
                 'Firstname' => 'John',
                 'MultiplePayments' => 'no',
+                'PayToEmail' => 'test@test.com',
+                'PayToId' => 123,
                 'Language' => 'FRE',
                 'SendSMS' => 'no',
                 'SendLater' => '2016-05-12',

@@ -27,6 +27,7 @@ class DirectTransactionTest extends TestCase
         $c->setUserAgent($f['UserAgent']);
         $c->setLanguage($f['Language']);
         $c->setPayToEmail($f['PayToEmail']);
+        $c->setPayToId($f['PayToId']);
         $c->setRecurrence($f['Recurrence']);
         $c->setRebill($f['Rebill']);
         $c->setMultiplePaymentsRepeat($f['MultiplePaymentsRepeat']);
@@ -71,6 +72,7 @@ class DirectTransactionTest extends TestCase
                 'Rebill' => 'yes',
                 'Recurrence' => 'monthly',
                 'PayToEmail' => 'test@test.com',
+                'PayToId' => 123,
                 'UserAgent' => 'ua',
                 'Language' => 'FRE',
                 'ReturnUrl' => 'https://toto.com'
@@ -90,6 +92,7 @@ class DirectTransactionTest extends TestCase
                 'Rebill' => 'yes',
                 'Recurrence' => 'monthly',
                 'PayToEmail' => 'test@test.com',
+                'PayToId' => 123,
                 'UserAgent' => 'ua',
                 'Language' => 'FRE',
                 'ReturnUrl' => 'https://toto.com'
