@@ -44,12 +44,6 @@ class PayoutsListRequest extends Entity
         return $this;
     }
 
-    public function setLive($live)
-    {
-        $this->live = $live;
-        return $this;
-    }
-
     public function setEmail($email)
     {
         $this->email = $email;

@@ -21,9 +21,6 @@ class PaymentRequestsHistoryRequest extends Entity
     /** @map:DateFrom **/
     protected $dateFrom = null;
 
-    /** @map:Live **/
-    protected $live = null;
-
     /** @map:Email **/
     protected $email = null;
 
@@ -51,12 +48,6 @@ class PaymentRequestsHistoryRequest extends Entity
     public function setDateFrom($dateFrom)
     {
         $this->dateFrom = $dateFrom;
-        return $this;
-    }
-
-    public function setLive($live)
-    {
-        $this->live = $live;
         return $this;
     }
 
