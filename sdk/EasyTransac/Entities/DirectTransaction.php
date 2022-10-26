@@ -65,6 +65,9 @@ class DirectTransaction extends Entity
     /** @map:PreAuthDuration **/
     protected $preAuthDuration = null;
 
+    /** @map:SaveCard **/
+    protected $saveCard = null;
+
     public function __construct()
     {
         parent::__construct();
@@ -189,6 +192,12 @@ class DirectTransaction extends Entity
     public function setReturnUrl($returnUrl)
     {
         $this->returnUrl = $returnUrl;
+        return $this;
+    }
+
+    public function setSaveCard($saveCard)
+    {
+        $this->saveCard = $saveCard;
         return $this;
     }
 }

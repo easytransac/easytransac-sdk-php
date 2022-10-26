@@ -92,6 +92,9 @@ class PaymentPageTransaction extends Entity
     /** @map:SddPhone **/
     protected $sddPhone = null;
 
+    /** @map:SaveCard **/
+    protected $saveCard = null;
+
     public function __construct()
     {
         parent::__construct();
@@ -270,6 +273,12 @@ class PaymentPageTransaction extends Entity
     public function setSddPhone($sddPhone)
     {
         $this->sddPhone = $sddPhone;
+        return $this;
+    }
+
+    public function setSaveCard($saveCard)
+    {
+        $this->saveCard = $saveCard;
         return $this;
     }
 }
