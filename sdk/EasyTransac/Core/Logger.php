@@ -3,26 +3,45 @@
 namespace EasyTransac\Core;
 
 /**
- * Class for log data for debuging purpose
+ * Logger
+ *
+ * Classe utilitaire pour la journalisation des événements, à des fins de débogage.
+ * Utilise le design pattern Singleton.
+ *
+ * @package EasyTransac\Core
  */
 class Logger
 {
+    /** @var bool Active ou non */
     protected $active = false;
-    protected $logName = 'easytransac-sdk.txt';
-    protected $filePath = '';
-    protected static $instance;
 
+    /** @var string Nom du fichier de log */
+    protected $logName = 'easytransac-sdk.txt';
+
+    /** @var string Chemin d'enregistrement du fichier */
+    protected $filePath = '';
+
+    /** @var self|null Instance unique du Logger */
+    protected static $instance = null;
+
+    /** Constructeur privé (singleton) */
     protected function __construct()
     {
     }
 
+    /** Empêche le clonage */
     protected function __clone()
     {
     }
 
-    public static function getInstance()
+    /**
+     * Récupère l'instance unique du logger.
+     *
+     * @return self
+     */
+    public static function getInstance(): self
     {
-        if (self::$instance == null) {
+        if (self::$instance === null) {
             self::$instance = new self();
         }
 
@@ -30,64 +49,72 @@ class Logger
     }
 
     /**
-     * Defines if the logger is active
-     * @param Bool $active
-     * @return \EasyTransac\Core\Logger
+     * Active ou désactive le logger.
+     *
+     * @param $active
+     * @return $this
      */
-    public function setActive($active)
+    public function setActive($active): self
     {
         $this->active = $active;
-        return true;
+        return $this;
     }
 
     /**
-     * Returns if the logger is active
-     * @return boolean
+     * Vérifie si le logger est actif.
+     *
+     * @return bool
      */
-    public function isActive()
+    public function isActive(): bool
     {
         return $this->active;
     }
 
     /**
-     * Defines a log file path
-     * @param String $path
-     * @return \EasyTransac\Core\Logger
+     * Définit le chemin vers le dossier du fichier de log.
+     *
+     * @param $path
+     * @return $this
      */
-    public function setFilePath($path)
+    public function setFilePath($path): self
     {
         $this->filePath = $path;
         return $this;
     }
 
     /**
-     * Returns the log file path
-     * @return String
+     * Récupère le chemin complet vers le fichier de log.
+     *
+     * @return string
      */
-    public function getFilePath()
+    public function getFilePath(): string
     {
         return $this->filePath;
     }
 
     /**
-     * Delete the log file
+     * Supprime le fichier de log s'il existe.
+     *
+     * @return void
      */
-    public function delete()
+    public function delete(): void
     {
-        if (file_exists($this->getFilePath() . $this->logName)) {
-            unlink($this->getFilePath() . $this->logName);
+        $fullPath = $this->getFilePath() . $this->logName;
+        if (file_exists($fullPath)) {
+            unlink($fullPath);
         }
     }
 
     /**
-     * Write the file log with the specified message
-     * @param Mixed $message
-     * @return void|\EasyTransac\Core\Logger
+     * Écrit un message dans le fichier de log (si activé).
+     *
+     * @param $message
+     * @return $this|null
      */
-    public function write($message)
+    public function write($message): ?self
     {
         if (!$this->active) {
-            return;
+            return null;
         }
 
         $date = date('Y-m-d H:i:s') . ' - ';
@@ -96,7 +123,11 @@ class Logger
             $message = print_r($message, true);
         }
 
-        file_put_contents($this->getFilePath() . $this->logName, $date . $message . PHP_EOL . PHP_EOL, FILE_APPEND);
+        file_put_contents(
+            $this->getFilePath() . $this->logName,
+            $date . $message . PHP_EOL . PHP_EOL,
+            FILE_APPEND
+        );
 
         return $this;
     }

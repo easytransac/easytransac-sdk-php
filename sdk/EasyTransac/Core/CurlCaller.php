@@ -3,37 +3,49 @@
 namespace EasyTransac\Core;
 
 /**
- * Caller using Curl
+ * Makes HTTP requests using cURL to interact with the EasyTransac API.
+ * Implements ICaller.
+ *
+ * @package EasyTransac\Core
  */
 class CurlCaller implements ICaller
 {
+    /** @var resource|\CurlHandle|null cURL handle */
     protected $curlInstance = null;
+
+    /** @var int|null Timeout in seconds */
     protected $timeout = null;
-    protected $headers = array();
+
+    /** @var array HTTP headers */
+    protected $headers = [];
 
     public function __construct()
     {
+        // No initialization needed
     }
 
     public function __destruct()
     {
-        if ($this->curlInstance != null) {
+        if ($this->curlInstance !== null) {
             curl_close($this->curlInstance);
         }
     }
 
     /**
-     * {@inheritDoc}
-     * @see \EasyTransac\Core\ICaller::setHeaders()
+     * Sets custom headers for the HTTP request.
+     *
+     * @param $headers
+     * @return void
      */
-    public function setHeaders(array $headers)
+    public function setHeaders($headers)
     {
         $this->headers = $headers;
     }
 
     /**
-     * {@inheritDoc}
-     * @see \EasyTransac\Core\ICaller::getHeaders()
+     * Gets the current list of headers.
+     *
+     * @return array
      */
     public function getHeaders()
     {
@@ -41,8 +53,10 @@ class CurlCaller implements ICaller
     }
 
     /**
-     * {@inheritDoc}
-     * @see \EasyTransac\Core\ICaller::setTimeout()
+     * Sets the cURL timeout.
+     *
+     * @param $second Timeout in seconds
+     * @return void
      */
     public function setTimeout($second)
     {
@@ -50,8 +64,9 @@ class CurlCaller implements ICaller
     }
 
     /**
-     * {@inheritDoc}
-     * @see \EasyTransac\Core\ICaller::isAvailable()
+     * Checks if cURL is available on the server.
+     *
+     * @return bool
      */
     public function isAvailable()
     {
@@ -59,57 +74,67 @@ class CurlCaller implements ICaller
     }
 
     /**
-     * {@inheritDoc}
-     * @see \EasyTransac\Core\ICaller::call()
+     * Executes the HTTP call via cURL.
+     *
+     * @param $url
+     * @param $params
+     * @return string
+     * @throws \RuntimeException On cURL error
      */
-    public function call($url, array $params = array())
+    public function call($url, $params = [])
     {
-        if ($this->curlInstance == null) {
+        if ($this->curlInstance === null) {
             $this->initCurl();
         }
 
-        if ($this->headers) {
+        if (!empty($this->headers)) {
             curl_setopt($this->curlInstance, CURLOPT_HTTPHEADER, $this->headers);
         }
 
-        if ($this->timeout != null) {
+        if ($this->timeout !== null) {
             curl_setopt($this->curlInstance, CURLOPT_TIMEOUT, $this->timeout);
             curl_setopt($this->curlInstance, CURLOPT_CONNECTTIMEOUT, $this->timeout);
         }
 
         curl_setopt($this->curlInstance, CURLOPT_URL, $url);
 
-        if ($params) {
+        if (!empty($params)) {
             curl_setopt($this->curlInstance, CURLOPT_POSTFIELDS, http_build_query($params));
         }
 
         $response = curl_exec($this->curlInstance);
 
         if (($errno = curl_errno($this->curlInstance))) {
-            throw new \RuntimeException("Curl trouble during the call: " . curl_error($this->curlInstance), $errno);
+            throw new \RuntimeException(
+                'Curl error during request: ' . curl_error($this->curlInstance),
+                $errno
+            );
         }
 
-        return $response;
+        return (string) $response;
     }
 
     /**
-     * Init the curl caller with options we need to contact safely the EasyTransac API
+     * Initializes cURL with default options for EasyTransac API.
+     *
+     * @return void
      */
     protected function initCurl()
     {
         $this->curlInstance = curl_init();
 
-        curl_setopt_array($this->curlInstance, array(
+        curl_setopt_array($this->curlInstance, [
             CURLOPT_POST => true,
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_SSL_VERIFYHOST =>  false,
-            CURLOPT_SSL_VERIFYPEER =>  false
-        ));
+            CURLOPT_SSL_VERIFYHOST => false,
+            CURLOPT_SSL_VERIFYPEER => false,
+        ]);
     }
 
     /**
-     * {@inheritDoc}
-     * @see \EasyTransac\Core\ICaller::isTLS12()
+     * Checks if TLS v1.2 is supported by the cURL build.
+     *
+     * @return bool
      */
     public function isTLSv12Available()
     {
@@ -117,10 +142,12 @@ class CurlCaller implements ICaller
     }
 
     /**
-     * {@inheritDoc}
-     * @see \EasyTransac\Core\ICaller::addHeaders()
+     * Adds additional headers to the current header set.
+     *
+     * @param $headers
+     * @return void
      */
-    public function addHeaders(array $headers)
+    public function addHeaders($headers)
     {
         $this->headers = array_merge($this->headers, $headers);
     }

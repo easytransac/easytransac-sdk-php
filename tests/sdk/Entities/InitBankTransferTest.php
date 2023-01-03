@@ -7,7 +7,7 @@ class InitBankTransferTest extends TestCase
     protected $c;
     protected $customer;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $fixture = $this->getFixture();
 

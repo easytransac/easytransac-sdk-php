@@ -3,60 +3,58 @@
 namespace EasyTransac\Core;
 
 /**
- * Security tools
- * @copyright EasyTransac
+ * Classe utilitaire fournissant des outils de sécurité pour les échanges avec l'API EasyTransac.
+ *
+ * Elle est utilisée pour générer une signature sécurisée permettant de vérifier
+ * l'intégrité et l'authenticité des données reçues ou envoyées.
+ *
+ * @package EasyTransac\Core
  */
 class Security
 {
     /**
-     * Returns the signature from a params list and api key for a request
-     * @param array $params
-     * @param String $apiKey
-     * @return String
+     * Génère une signature SHA1 basée sur les paramètres de la requête et la clé API.
+     *
+     * @param $params Données à signer (array associatif, objet ou string brute)
+     * @param $apiKey Clé API privée fournie par EasyTransac
+     * @return string La signature calculée en SHA1
      */
-    public static function getSignature($params, $apiKey)
+    public static function getSignature($params, $apiKey): string
     {
         if (is_object($params)) {
             $params = (array) $params;
         }
 
         $signature = '';
+
         if (is_array($params)) {
-            // set keys to lower case
             $params = array_change_key_case($params, CASE_LOWER);
-            // order by alpha.
             ksort($params);
 
-            foreach ($params as $name => $valeur) {
-                // if object, cast as array, we are in node
-                if (is_object($valeur)) {
-                    $valeur = (array) $valeur;
-                }
+            foreach ($params as $name => $value) {
+                if (strcasecmp($name, 'signature') !== 0) {
+                    if (is_object($value)) {
+                        $value = (array) $value;
+                    }
 
-                // if key is not "Signature"
-                if (strcasecmp($name, 'signature') != 0) {
-                    // if object
-                    if (is_array($valeur)) {
-                        // set values to lower case
-                        $valeur = array_change_key_case($valeur, CASE_LOWER);
-                        // order by alpha.
-                        ksort($valeur);
+                    if (is_array($value)) {
+                        $value = array_change_key_case($value, CASE_LOWER);
+                        ksort($value);
 
-                        // parse node values and assign value
-                        foreach ($valeur as $v) {
+                        foreach ($value as $v) {
                             $signature .= $v . '$';
                         }
                     } else {
-                        // if it's a value
-                        $signature .= $valeur . '$';
+                        $signature .= $value . '$';
                     }
                 }
             }
         } else {
-            $signature = $params . '$';
+            $signature = (string) $params . '$';
         }
 
         $signature .= $apiKey;
+
         return sha1($signature);
     }
 }

@@ -3,48 +3,67 @@
 namespace EasyTransac\Core;
 
 /**
- * Base methods for caller
+ * Interface ICaller
+ *
+ * Defines a standard for HTTP call mechanisms (like cURL or file_get_contents)
+ * used to communicate with the EasyTransac API.
+ *
+ * @package EasyTransac\Core
  */
 interface ICaller
 {
     /**
-     * Defines the headers for calls
-     * @param array $params
+     * Defines the headers for HTTP calls.
+     *
+     * @param $headers Associative array of HTTP headers.
+     * @return void
      */
-    public function setHeaders(array $headers);
+    public function setHeaders($headers);
 
     /**
-     * Returns headers
-     * @return array
+     * Returns the currently set headers.
+     *
+     * @return array The HTTP headers.
      */
     public function getHeaders();
 
     /**
-     * Defines the timeout of the request
+     * Defines the timeout in seconds for the HTTP call.
+     *
+     * @param $second Timeout duration in seconds.
+     * @return void
      */
     public function setTimeout($second);
 
     /**
-     * Return true if this caller method is available
+     * Returns true if the underlying method (cURL, file_get_contents, etc.) is available.
+     *
+     * @return bool
      */
     public function isAvailable();
 
     /**
-     * Launch a call and return the result if there is no error
-     * @param String $url
-     * @param array $params
-     * @throw \RuntimeException
+     * Executes an HTTP call to the provided URL with optional parameters.
+     *
+     * @param $url The endpoint URL.
+     * @param $params Optional parameters for POST requests.
+     * @return string The raw response body.
+     * @throws \RuntimeException On network or HTTP failure.
      */
-    public function call($url, array $params = array());
+    public function call($url, $params = []);
 
     /**
-     * Returns true is available
+     * Checks if the HTTP client supports TLS v1.2.
+     *
+     * @return bool
      */
     public function isTLSv12Available();
 
     /**
-     * Add headers to the headers list
-     * @param array $headers
+     * Adds additional HTTP headers to the request.
+     *
+     * @param $headers Headers to merge with the current list.
+     * @return void
      */
-    public function addHeaders(array $headers);
+    public function addHeaders($headers);
 }

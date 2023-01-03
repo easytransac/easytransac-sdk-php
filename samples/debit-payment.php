@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../sdk/EasyTransac/autoload.php';
+require_once __DIR__ . '/../bootstrap.php';
 
 use EasyTransac\Core\Services;
 use EasyTransac\Entities\DebitTransaction;
