@@ -38,6 +38,9 @@ class PayByBank extends Entity
     /** @map:Language **/
     protected $language = null;
 
+    /** @map:ReturnMethod **/
+    protected $returnMethod = null;
+
     public function setAmount($amount)
     {
         $this->amount = $amount;
@@ -95,6 +98,12 @@ class PayByBank extends Entity
     public function setUserAgent($userAgent)
     {
         $this->userAgent = $userAgent;
+        return $this;
+    }
+
+    public function setReturnMethod($returnMethod)
+    {
+        $this->returnMethod = $returnMethod;
         return $this;
     }
 }
