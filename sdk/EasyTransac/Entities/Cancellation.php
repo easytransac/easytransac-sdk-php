@@ -10,6 +10,7 @@ class Cancellation extends Entity
 {
     /** @map:RequestId **/
     protected $requestId = null;
+
     /** @map:Language **/
     protected $language = null;
 
