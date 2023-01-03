@@ -68,6 +68,9 @@ class DirectTransaction extends Entity
     /** @map:SaveCard **/
     protected $saveCard = null;
 
+    /** @map:ReturnMethod **/
+    protected $returnMethod = null;
+
     public function __construct()
     {
         parent::__construct();
@@ -198,6 +201,12 @@ class DirectTransaction extends Entity
     public function setSaveCard($saveCard)
     {
         $this->saveCard = $saveCard;
+        return $this;
+    }
+
+    public function setReturnMethod($returnMethod)
+    {
+        $this->returnMethod = $returnMethod;
         return $this;
     }
 }

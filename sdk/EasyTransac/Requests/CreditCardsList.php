@@ -20,6 +20,6 @@ class CreditCardsList extends Request
      */
     public function execute(Entity $entity)
     {
-        return $this->call('/payment/listcards', $entity);
+        return $this->call('/payment/card/list', $entity);
     }
 }

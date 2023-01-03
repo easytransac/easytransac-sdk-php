@@ -21,6 +21,6 @@ class CreditCardInfo extends Request
      */
     public function execute(Entity $entity)
     {
-        return $this->call('/payment/cardinfos', $entity);
+        return $this->call('/payment/card/infos', $entity);
     }
 }
