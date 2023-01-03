@@ -95,6 +95,15 @@ class PaymentPageTransaction extends Entity
     /** @map:SaveCard **/
     protected $saveCard = null;
 
+    /** @map:ReturnMethod **/
+    protected $returnMethod = null;
+
+    /** @map:InvoiceExtension **/
+    protected $invoiceExtension = null;
+
+    /** @map:InvoiceName **/
+    protected $invoiceName = null;
+
     public function __construct()
     {
         parent::__construct();
@@ -279,6 +288,24 @@ class PaymentPageTransaction extends Entity
     public function setSaveCard($saveCard)
     {
         $this->saveCard = $saveCard;
+        return $this;
+    }
+
+    public function setReturnMethod($returnMethod)
+    {
+        $this->returnMethod = $returnMethod;
+        return $this;
+    }
+
+    public function setInvoiceExtension($extension)
+    {
+        $this->invoiceExtension = $extension;
+        return $this;
+    }
+
+    public function setInvoiceName($invoiceName)
+    {
+        $this->invoiceName = $invoiceName;
         return $this;
     }
 }
