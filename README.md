@@ -1,5 +1,6 @@
 # EasyTransac SDK (PHP)
 
+
 [![Build](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/build.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/build.yml)
 [![PSR12](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/psr12.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/psr12.yml)
 [![Test](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/test.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/test.yml)
@@ -10,7 +11,7 @@ Make your EasyTransac API implementation easier with our SDK.
 
 The EasyTransac SDK is a tool to process payments with the [EasyTransac API](https://www.easytransac.com/).
 
-## What's New (v2.0.0)
+## What's New (v2.1.0)
 
 - ✅ Added `setEnvironment('sandbox')` for clean sandbox/production separation
 - ✅ Full PHP **7.0 to 8.3** compatibility
