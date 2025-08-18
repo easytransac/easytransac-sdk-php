@@ -3,10 +3,8 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les arguments principaux pour la requête "makebanktransfer".
- * Permet d'initialiser un virement bancaire avec les informations du client, le montant et la référence.
- *
- * @copyright EasyTransac
+ * Represents the main arguments for the "makebanktransfer" request.
+ * Initializes a bank transfer with customer information, amount, and reference.
  */
 class InitBankTransfer extends Entity
 {
@@ -20,10 +18,10 @@ class InitBankTransfer extends Entity
     protected $reference = null;
 
     /**
-     * Définit le client associé au virement bancaire.
+     * Sets the customer associated with the bank transfer.
      *
-     * @param Customer $customer Instance du client à associer.
-     * @return $this Retourne l'instance courante pour chaînage.
+     * @param Customer $customer Customer instance to associate.
+     * @return $this Fluent interface.
      */
     public function setCustomer($customer)
     {
@@ -32,10 +30,10 @@ class InitBankTransfer extends Entity
     }
 
     /**
-     * Définit le montant du virement bancaire.
+     * Sets the bank transfer amount.
      *
-     * @param float|int|string $amount Montant du virement.
-     * @return $this Retourne l'instance courante pour chaînage.
+     * @param float|int|string $amount Transfer amount.
+     * @return $this Fluent interface.
      */
     public function setAmount($amount)
     {
@@ -44,10 +42,10 @@ class InitBankTransfer extends Entity
     }
 
     /**
-     * Définit la référence du virement bancaire.
+     * Sets the bank transfer reference.
      *
-     * @param string $reference Référence du virement.
-     * @return $this Retourne l'instance courante pour chaînage.
+     * @param string $reference Transfer reference.
+     * @return $this Fluent interface.
      */
     public function setReference($reference)
     {

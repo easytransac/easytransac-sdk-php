@@ -3,18 +3,18 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente une notification de paiement reçue par EasyTransac.
+ * Represents a payment notification received by EasyTransac.
  *
- * Cette entité encapsule toutes les données d’une notification envoyée lors d’un changement
- * d’état d’une transaction : confirmation, annulation, remboursement, chargeback, etc.
+ * This entity encapsulates all data from a notification sent when a transaction
+ * changes state: confirmation, cancellation, refund, chargeback, etc.
  *
  * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * 
  */
 class Notification extends Entity
 {
-       /**
-     * Type de notification reçue (ex : 'payment', 'refund', etc.).
+    /**
+     * Type of notification received (e.g., 'payment', 'refund', etc.).
      *
      * @var string|null
      * @map:NotificationType
@@ -22,7 +22,7 @@ class Notification extends Entity
     protected $notificationType = null;
 
     /**
-     * Type d'opération concernée (ex : 'credit', 'debit').
+     * Type of operation concerned (e.g., 'credit', 'debit').
      *
      * @var string|null
      * @map:OperationType
@@ -30,7 +30,7 @@ class Notification extends Entity
     protected $operationType = null;
 
     /**
-     * Identifiant unique de la requête.
+     * Unique request identifier.
      *
      * @var string|null
      * @map:RequestId
@@ -38,7 +38,7 @@ class Notification extends Entity
     protected $requestId = null;
 
     /**
-     * Identifiant unique de la transaction (TID).
+     * Unique transaction identifier (TID).
      *
      * @var string|null
      * @map:Tid
@@ -46,7 +46,7 @@ class Notification extends Entity
     protected $tid = null;
 
     /**
-     * Identifiant unique du client (UID).
+     * Unique customer identifier (UID).
      *
      * @var string|null
      * @map:Uid
@@ -54,7 +54,7 @@ class Notification extends Entity
     protected $uid = null;
 
     /**
-     * Identifiant de la commande partenaire.
+     * Partner order identifier.
      *
      * @var string|null
      * @map:OrderId
@@ -62,7 +62,7 @@ class Notification extends Entity
     protected $orderId = null;
 
     /**
-     * Statut actuel de la transaction (ex : 'success', 'refused').
+     * Current transaction status (e.g., 'success', 'refused').
      *
      * @var string|null
      * @map:Status
@@ -70,7 +70,7 @@ class Notification extends Entity
     protected $status = null;
 
     /**
-     * Date de la transaction ou de la notification.
+     * Transaction or notification date.
      *
      * @var string|null
      * @map:Date
@@ -78,7 +78,7 @@ class Notification extends Entity
     protected $date = null;
 
     /**
-     * Montant de la transaction (en centimes).
+     * Transaction amount (in cents).
      *
      * @var int|null
      * @map:Amount
@@ -86,7 +86,7 @@ class Notification extends Entity
     protected $amount = null;
 
     /**
-     * Devise utilisée (code ISO 4217, ex : 'EUR').
+     * Currency used (ISO 4217 code, e.g., 'EUR').
      *
      * @var string|null
      * @map:Currency
@@ -94,7 +94,7 @@ class Notification extends Entity
     protected $currency = null;
 
     /**
-     * Frais fixes appliqués.
+     * Fixed fees applied.
      *
      * @var int|null
      * @map:FixFees
@@ -102,7 +102,7 @@ class Notification extends Entity
     protected $fixFees = null;
 
     /**
-     * Message d’erreur ou information supplémentaire.
+     * Error message or additional information.
      *
      * @var string|null
      * @map:Message
@@ -110,7 +110,7 @@ class Notification extends Entity
     protected $message = null;
 
     /**
-     * Indique si la transaction utilise le 3D Secure.
+     * Indicates whether the transaction used 3D Secure.
      *
      * @var bool|null
      * @map:3DSecure
@@ -118,7 +118,7 @@ class Notification extends Entity
     protected $secure = null;
 
     /**
-     * Indique si la fonctionnalité OneClick est utilisée.
+     * Indicates whether OneClick was used.
      *
      * @var bool|null
      * @map:OneClick
@@ -126,7 +126,7 @@ class Notification extends Entity
     protected $oneClick = null;
 
     /**
-     * Alias de la carte utilisée.
+     * Alias of the card used.
      *
      * @var string|null
      * @map:Alias
@@ -134,7 +134,7 @@ class Notification extends Entity
     protected $alias = null;
 
     /**
-     * Numéro partiel de la carte (masqué).
+     * Partial (masked) card number.
      *
      * @var string|null
      * @map:CardNumber
@@ -142,7 +142,7 @@ class Notification extends Entity
     protected $cardNumber = null;
 
     /**
-     * Indique si la transaction était un test.
+     * Indicates whether the transaction was a test.
      *
      * @var bool|null
      * @map:Test
@@ -150,7 +150,7 @@ class Notification extends Entity
     protected $test = null;
 
     /**
-     * Signature de validation de la notification.
+     * Notification validation signature.
      *
      * @var string|null
      * @map:Signature
@@ -158,7 +158,7 @@ class Notification extends Entity
     protected $signature = null;
 
     /**
-     * Données du client (objet Client).
+     * Customer data (Client object).
      *
      * @var Client|null
      * @object:Client
@@ -166,7 +166,7 @@ class Notification extends Entity
     protected $client = null;
 
     /**
-     * Message d'erreur retourné par l'API.
+     * Error message returned by the API.
      *
      * @var string|null
      * @map:Error
@@ -174,15 +174,15 @@ class Notification extends Entity
     protected $error = null;
 
     /**
-     * Montant remboursé, le cas échéant.
+     * Refunded amount, if any.
      *
-     * @var int|null
+        * @var int|null
      * @map:AmountRefund
      */
     protected $amountRefund = null;
 
     /**
-     * Nombre de tentatives de requête.
+     * Number of request attempts.
      *
      * @var int|null
      * @map:RequestAttempt
@@ -190,7 +190,7 @@ class Notification extends Entity
     protected $requestAttempt = null;
 
     /**
-     * Méthode de paiement utilisée (ex : CB, SEPA).
+     * Payment method used (e.g., CB, SEPA).
      *
      * @var string|null
      * @map:PaymentMethod
@@ -198,7 +198,7 @@ class Notification extends Entity
     protected $paymentMethod = null;
 
     /**
-     * Identifiant de l’utilisateur.
+     * User identifier.
      *
      * @var string|null
      * @map:UserId
@@ -206,7 +206,7 @@ class Notification extends Entity
     protected $userId = null;
 
     /**
-     * Description associée à la transaction.
+     * Description associated with the transaction.
      *
      * @var string|null
      * @map:Description
@@ -214,7 +214,7 @@ class Notification extends Entity
     protected $description = null;
 
     /**
-     * Date du remboursement si applicable.
+     * Refund date, if applicable.
      *
      * @var string|null
      * @map:DateRefund
@@ -222,7 +222,7 @@ class Notification extends Entity
     protected $dateRefund = null;
 
     /**
-     * Nom complet de la devise (ex : 'euro').
+     * Full currency name (e.g., 'euro').
      *
      * @var string|null
      * @map:CurrencyText
@@ -230,7 +230,7 @@ class Notification extends Entity
     protected $currencyText = null;
 
     /**
-     * Symbole de la devise (ex : '€').
+     * Currency symbol (e.g., '€').
      *
      * @var string|null
      * @map:CurrencySymbol
@@ -238,7 +238,7 @@ class Notification extends Entity
     protected $currencySymbol = null;
 
     /**
-     * Pourcentage de frais appliqués.
+     * Percentage fee applied.
      *
      * @var float|null
      * @map:FeesPercent
@@ -246,7 +246,7 @@ class Notification extends Entity
     protected $feesPercent = null;
 
     /**
-     * Partie fixe des frais appliqués.
+     * Fixed part of the applied fees.
      *
      * @var int|null
      * @map:FeesFixedPart
@@ -254,7 +254,7 @@ class Notification extends Entity
     protected $feesFixedPart = null;
 
     /**
-     * Pays d'origine de la carte bancaire.
+     * Card issuing country.
      *
      * @var string|null
      * @map:CardCountry
@@ -262,7 +262,7 @@ class Notification extends Entity
     protected $cardCountry = null;
 
     /**
-     * Mois d'expiration de la carte.
+     * Card expiration month.
      *
      * @var string|null
      * @map:CardMonth
@@ -270,7 +270,7 @@ class Notification extends Entity
     protected $cardMonth = null;
 
     /**
-     * Année d'expiration de la carte.
+     * Card expiration year.
      *
      * @var string|null
      * @map:CardYear
@@ -278,7 +278,7 @@ class Notification extends Entity
     protected $cardYear = null;
 
     /**
-     * Type d’application ayant initié la transaction (ex : API, BackOffice).
+     * Type of application that initiated the transaction (e.g., API, BackOffice).
      *
      * @var string|null
      * @map:ApplicationType
@@ -286,7 +286,7 @@ class Notification extends Entity
     protected $applicationType = null;
 
     /**
-     * Identifiant de la requête originale (en cas de remboursement ou de rebill).
+     * Identifier of the original request (in case of refund or rebill).
      *
      * @var string|null
      * @map:OriginalRequestId
@@ -294,7 +294,7 @@ class Notification extends Entity
     protected $originalRequestId = null;
 
     /**
-     * Identifiant de la transaction de paiement initiale.
+     * Identifier of the initial payment transaction.
      *
      * @var string|null
      * @map:OriginalPaymentTid
@@ -302,7 +302,7 @@ class Notification extends Entity
     protected $originalPaymentTid = null;
 
     /**
-     * Date du chargeback si survenu.
+     * Chargeback date, if occurred.
      *
      * @var string|null
      * @map:DateChargeback
@@ -310,7 +310,7 @@ class Notification extends Entity
     protected $dateChargeback = null;
 
     /**
-     * Date de re-présentation si applicable.
+     * Representment date, if applicable.
      *
      * @var string|null
      * @map:DateRepresentment
@@ -318,7 +318,7 @@ class Notification extends Entity
     protected $dateRepresentment = null;
 
     /**
-     * Montant pré-autorisé.
+     * Pre-authorized amount.
      *
      * @var int|null
      * @map:AmountPreAuth
@@ -326,7 +326,7 @@ class Notification extends Entity
     protected $amountPreAuth = null;
 
     /**
-     * Adresse IP du client.
+     * Client IP address.
      *
      * @var string|null
      * @map:ClientIP
@@ -334,7 +334,7 @@ class Notification extends Entity
     protected $clientIP = null;
 
     /**
-     * Pays d'origine de l'IP client.
+     * Country of the client IP address.
      *
      * @var string|null
      * @map:ClientIPCountry
@@ -342,7 +342,7 @@ class Notification extends Entity
     protected $clientIPCountry = null;
 
     /**
-     * Indique si la transaction est une pré-autorisation.
+     * Indicates whether the transaction is a pre-authorization.
      *
      * @var bool|null
      * @map:PreAuth
@@ -350,7 +350,7 @@ class Notification extends Entity
     protected $preAuth = null;
 
     /**
-     * Indique si la transaction est B2B.
+     * Indicates whether the transaction is B2B.
      *
      * @var bool|null
      * @map:B2B
@@ -358,7 +358,7 @@ class Notification extends Entity
     protected $b2b = null;
 
     /**
-     * Type de carte utilisée (Visa, MasterCard, etc.).
+     * Type of card used (Visa, MasterCard, etc.).
      *
      * @var string|null
      * @map:CardType
@@ -366,7 +366,7 @@ class Notification extends Entity
     protected $cardType = null;
 
     /**
-     * Indique si un paiement multiple est en cours.
+     * Indicates whether a multiple-payment schedule is in progress.
      *
      * @var bool|null
      * @map:MultiplePayments
@@ -374,7 +374,7 @@ class Notification extends Entity
     protected $multiplePayments = null;
 
     /**
-     * Statut du paiement multiple.
+     * Status of the multiple-payment schedule.
      *
      * @var string|null
      * @map:MultiplePaymentsStatus
@@ -382,7 +382,7 @@ class Notification extends Entity
     protected $multiplePaymentsStatus = null;
 
     /**
-     * Récurrence du paiement multiple.
+     * Recurrence of the multiple-payment schedule.
      *
      * @var string|null
      * @map:MultiplePaymentsRecurrence
@@ -390,7 +390,7 @@ class Notification extends Entity
     protected $multiplePaymentsRecurrence = null;
 
     /**
-     * Nombre de répétitions du paiement multiple.
+     * Number of repetitions of the multiple-payment schedule.
      *
      * @var int|null
      * @map:MultiplePaymentsRepeat
@@ -398,7 +398,7 @@ class Notification extends Entity
     protected $multiplePaymentsRepeat = null;
 
     /**
-     * Nombre total de paiements multiples prévus.
+     * Total number of planned multiple payments.
      *
      * @var int|null
      * @map:MultiplePaymentsCount
@@ -406,7 +406,7 @@ class Notification extends Entity
     protected $multiplePaymentsCount = null;
 
     /**
-     * Statut du rebill (paiement récurrent).
+     * Rebill (recurring payment) status.
      *
      * @var string|null
      * @map:RebillStatus
@@ -414,7 +414,7 @@ class Notification extends Entity
     protected $rebillStatus = null;
 
     /**
-     * Fréquence du rebill (ex : 'monthly').
+     * Rebill frequency (e.g., 'monthly').
      *
      * @var string|null
      * @map:RebillRecurrence
@@ -422,7 +422,7 @@ class Notification extends Entity
     protected $rebillRecurrence = null;
 
     /**
-     * Nombre de répétitions de rebill effectuées.
+     * Number of rebill repetitions performed.
      *
      * @var int|null
      * @map:RebillCount
@@ -430,7 +430,7 @@ class Notification extends Entity
     protected $rebillCount = null;
 
     /**
-     * Erreur supplémentaire fournie par l’API.
+     * Additional error provided by the API.
      *
      * @var string|null
      * @map:AdditionalError
@@ -438,7 +438,7 @@ class Notification extends Entity
     protected $additionalError = null;
 
     /**
-     * URL de redirection vers le 3D Secure.
+     * Redirect URL to 3D Secure.
      *
      * @var string|null
      * @map:3DSecureUrl
@@ -446,7 +446,7 @@ class Notification extends Entity
     protected $secureUrl = null;
 
     /**
-     * URL du mandat SEPA.
+     * SEPA mandate URL.
      *
      * @var string|null
      * @map:MandateUrl
@@ -454,7 +454,7 @@ class Notification extends Entity
     protected $mandateUrl = null;
 
     /**
-     * URL de redirection générale.
+     * General redirect URL.
      *
      * @var string|null
      * @map:RedirectUrl
@@ -462,7 +462,7 @@ class Notification extends Entity
     protected $redirectUrl = null;
 
     /**
-     * Image base64 d’un QR Code de paiement.
+     * Base64 image of a payment QR code.
      *
      * @var string|null
      * @map:QRCodeImage
@@ -470,14 +470,14 @@ class Notification extends Entity
     protected $qrCodeImage = null;
 
     /**
-     * URL vers le QR Code de paiement.
+     * URL to the payment QR code.
      *
      * @var string|null
      * @map:QRCodeUrl
      */
     protected $qrCodeUrl = null;
 
-    // Les getters sont maintenus ci-dessous pour accès en lecture aux propriétés.
+    // Getters are kept below for read access to the properties.
 
     public function getNotificationType()
     {

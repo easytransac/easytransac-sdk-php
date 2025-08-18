@@ -3,224 +3,224 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente la réponse de l’historique de paiement.
- * Cette entité regroupe l’ensemble des informations retournées par EasyTransac
- * suite à une requête de consultation de l’historique des paiements.
+ * Represents the response of a payment history request.
+ * This entity aggregates the information returned by EasyTransac
+ * after querying the payment history.
  *
- * @copyright EasyTransac
+ * @package EasyTransac\Entities
  */
 class PaymentHistoryResponse extends Entity
 {
-    /** 
-     * Type d'opération (ex. : debit, refund...).
+    /**
+     * Operation type (e.g., debit, refund).
      *
      * @var string|null
-     * @map:OperationType 
+     * @map:OperationType
      */
     protected $operationType = null;
 
-    /** 
-     * Méthode de paiement utilisée (CB, SEPA...).
+    /**
+     * Payment method used (e.g., CB, SEPA).
      *
      * @var string|null
-     * @map:PaymentMethod 
+     * @map:PaymentMethod
      */
     protected $paymentMethod = null;
 
-    /** 
-     * Type d'application à l'origine du paiement.
+    /**
+     * Type of application that initiated the payment.
      *
      * @var string|null
-     * @map ApplicationType 
+     * @map:ApplicationType
      */
     protected $applicationType = null;
 
-    /** 
+    /**
      * Transaction ID.
      *
      * @var string|null
-     * @map:Tid 
+     * @map:Tid
      */
     protected $tid = null;
 
-    /** 
-     * Identifiant unique utilisateur.
+    /**
+     * Unique user identifier.
      *
      * @var string|null
-     * @map:Uid 
+     * @map:Uid
      */
     protected $uid = null;
 
-    /** 
-     * Identifiant de commande.
+    /**
+     * Order identifier.
      *
      * @var string|null
-     * @map:OrderId 
+     * @map:OrderId
      */
     protected $orderId = null;
 
-    /** 
-     * Statut de la transaction (ex. : captured, pending...).
+    /**
+     * Transaction status (e.g., captured, pending).
      *
      * @var string|null
-     * @map:Status 
+     * @map:Status
      */
     protected $status = null;
 
-    /** 
-     * Date de la transaction.
+    /**
+     * Transaction date.
      *
      * @var string|null
-     * @map:Date 
+     * @map:Date
      */
     protected $date = null;
 
-    /** 
-     * Date de remboursement éventuel.
+    /**
+     * Refund date, if any.
      *
      * @var string|null
-     * @map:DateRefund 
+     * @map:DateRefund
      */
     protected $dateRefund = null;
 
-    /** 
-     * Date de chargeback éventuel.
+    /**
+     * Chargeback date, if any.
      *
      * @var string|null
-     * @map:DateChargeback 
+     * @map:DateChargeback
      */
     protected $dateChargeback = null;
 
-    /** 
-     * Date de représentation en cas de contestation.
+    /**
+     * Representment date, if applicable.
      *
      * @var string|null
-     * @map:DateRepresentment 
+     * @map:DateRepresentment
      */
     protected $dateRepresentment = null;
 
-    /** 
-     * Montant de la transaction (en centimes).
+    /**
+     * Transaction amount (in cents).
      *
      * @var int|null
-     * @map:Amount 
+     * @map:Amount
      */
     protected $amount = null;
 
-    /** 
-     * Adresse IP du client.
+    /**
+     * Client IP address.
      *
      * @var string|null
-     * @map:ClientIp 
+     * @map:ClientIp
      */
     protected $clientIp = null;
 
-    /** 
-     * Pays associé à l'adresse IP du client.
+    /**
+     * Country associated with the client IP.
      *
      * @var string|null
-     * @map:ClientIpCountry 
+     * @map:ClientIpCountry
      */
     protected $clientIpCountry = null;
 
-    /** 
-     * Code ISO de la devise utilisée.
+    /**
+     * ISO currency code.
      *
      * @var string|null
-     * @map:Currency 
+     * @map:Currency
      */
     protected $currency = null;
 
-    /** 
-     * Nom lisible de la devise utilisée.
+    /**
+     * Human-readable currency name.
      *
      * @var string|null
-     * @map:CurrencyText 
+     * @map:CurrencyText
      */
     protected $currencyText = null;
 
-    /** 
-     * Frais fixes appliqués à la transaction.
+    /**
+     * Fixed fees applied to the transaction.
      *
      * @var float|null
-     * @map:FixFees 
+     * @map:FixFees
      */
     protected $fixFees = null;
 
-    /** 
-     * Message complémentaire de l'API.
+    /**
+     * Additional API message.
      *
      * @var string|null
-     * @map:Message 
+     * @map:Message
      */
     protected $message = null;
 
-    /** 
-     * Statut de l'utilisation du 3D Secure.
+    /**
+     * Whether 3D Secure was used.
      *
      * @var bool|null
-     * @map:3DSecure 
+     * @map:3DSecure
      */
     protected $secure = null;
 
-    /** 
-     * Indique si la transaction est de type One Click.
+    /**
+     * Whether the transaction is One Click.
      *
      * @var bool|null
-     * @map:OneClick 
+     * @map:OneClick
      */
     protected $oneClick = null;
 
-    /** 
-     * Détails de la carte bancaire utilisée.
+    /**
+     * Credit card details used for the transaction.
      *
      * @var CreditCard|null
-     * @object:CreditCard 
+     * @object:CreditCard
      */
     protected $creditCard = null;
 
-    /** 
-     * Indique si la transaction est en environnement de test.
+    /**
+     * Whether the transaction was performed in test mode.
      *
      * @var bool|null
-     * @map:Test 
+     * @map:Test
      */
     protected $test = null;
 
-    /** 
-     * Langue utilisée lors de la transaction.
+    /**
+     * Language used during the transaction.
      *
      * @var string|null
-     * @map:Language 
+     * @map:Language
      */
     protected $language = null;
 
-    /** 
-     * Message d’erreur éventuel.
+    /**
+     * Error message, if any.
      *
      * @var string|null
-     * @map:Error 
+     * @map:Error
      */
     protected $error = null;
 
-    /** 
-     * Détail supplémentaire sur une erreur.
+    /**
+     * Additional error details, if any.
      *
      * @var string|null
-     * @map:AdditionalError 
+     * @map:AdditionalError
      */
     protected $additionalError = null;
 
-    /** 
-     * Informations du client ayant réalisé la transaction.
+    /**
+     * Customer information.
      *
      * @var Client|null
-     * @object:Client 
+     * @object:Client
      */
     protected $client = null;
 
     /**
-     * Récupère le type d'opération.
+     * Returns the operation type.
      *
      * @return string|null
      */
@@ -230,7 +230,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère la méthode de paiement utilisée.
+     * Returns the payment method used.
      *
      * @return string|null
      */
@@ -240,7 +240,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le type d'application.
+     * Returns the application type.
      *
      * @return string|null
      */
@@ -250,7 +250,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère l'identifiant de transaction.
+     * Returns the transaction ID.
      *
      * @return string|null
      */
@@ -260,7 +260,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère l'identifiant utilisateur.
+     * Returns the user identifier.
      *
      * @return string|null
      */
@@ -270,7 +270,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère l'identifiant de commande.
+     * Returns the order identifier.
      *
      * @return string|null
      */
@@ -280,7 +280,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le statut de la transaction.
+     * Returns the transaction status.
      *
      * @return string|null
      */
@@ -290,7 +290,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère la date de la transaction.
+     * Returns the transaction date.
      *
      * @return string|null
      */
@@ -300,7 +300,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère la date de remboursement.
+     * Returns the refund date.
      *
      * @return string|null
      */
@@ -310,7 +310,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère la date de chargeback.
+     * Returns the chargeback date.
      *
      * @return string|null
      */
@@ -320,7 +320,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère la date de représentation.
+     * Returns the representment date.
      *
      * @return string|null
      */
@@ -330,7 +330,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le montant de la transaction.
+     * Returns the transaction amount.
      *
      * @return int|null
      */
@@ -340,7 +340,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère l'adresse IP du client.
+     * Returns the client IP address.
      *
      * @return string|null
      */
@@ -350,7 +350,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le pays associé à l'IP client.
+     * Returns the country associated with the client IP.
      *
      * @return string|null
      */
@@ -360,7 +360,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le code de devise.
+     * Returns the currency code.
      *
      * @return string|null
      */
@@ -370,7 +370,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le nom de la devise.
+     * Returns the currency name.
      *
      * @return string|null
      */
@@ -380,7 +380,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère les frais fixes appliqués.
+     * Returns the fixed fees applied.
      *
      * @return float|null
      */
@@ -390,7 +390,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le message de réponse.
+     * Returns the response message.
      *
      * @return string|null
      */
@@ -400,7 +400,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Indique si 3D Secure a été utilisé.
+     * Indicates whether 3D Secure was used.
      *
      * @return bool|null
      */
@@ -410,7 +410,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Indique si la transaction est One Click.
+     * Indicates whether the transaction is One Click.
      *
      * @return bool|null
      */
@@ -420,7 +420,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère les informations de la carte bancaire.
+     * Returns the credit card information.
      *
      * @return CreditCard|null
      */
@@ -430,7 +430,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Indique si la transaction est en mode test.
+     * Indicates whether the transaction is in test mode.
      *
      * @return bool|null
      */
@@ -440,7 +440,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère la langue de la transaction.
+     * Returns the transaction language.
      *
      * @return string|null
      */
@@ -450,7 +450,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le message d'erreur.
+     * Returns the error message.
      *
      * @return string|null
      */
@@ -460,7 +460,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère l'erreur additionnelle.
+     * Returns the additional error details.
      *
      * @return string|null
      */
@@ -470,7 +470,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Récupère les informations du client.
+     * Returns the customer information.
      *
      * @return Client|null
      */
@@ -480,7 +480,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Vérifie si le paiement a été capturé.
+     * Checks whether the payment was captured.
      *
      * @return bool
      */
@@ -490,7 +490,7 @@ class PaymentHistoryResponse extends Entity
     }
 
     /**
-     * Vérifie si le paiement est en attente.
+     * Checks whether the payment is pending.
      *
      * @return bool
      */

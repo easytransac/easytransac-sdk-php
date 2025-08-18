@@ -3,18 +3,18 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les paramètres de la requête "DirectPayment".
+ * Represents the parameters for a "DirectPayment" request.
  *
- * Cette entité permet d’initier un paiement direct en spécifiant
- * les détails de la transaction, du client, de la carte bancaire, etc.
+ * This entity is used to initiate a direct payment by specifying
+ * transaction, customer, and credit card details, etc.
  *
  * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * 
  */
 class DirectTransaction extends Entity
 {
     /**
-     * Montant de la transaction (en centimes, ex : 1500 = 15.00€).
+     * Transaction amount in cents (e.g., 1500 = 15.00).
      *
      * @var int|null
      * @map:Amount
@@ -22,7 +22,7 @@ class DirectTransaction extends Entity
     protected $amount = null;
 
     /**
-     * Identifiant de la commande.
+     * Order identifier.
      *
      * @var string|null
      * @map:OrderId
@@ -30,7 +30,7 @@ class DirectTransaction extends Entity
     protected $orderId = null;
 
     /**
-     * Description de la transaction.
+     * Transaction description.
      *
      * @var string|null
      * @map:Description
@@ -38,7 +38,7 @@ class DirectTransaction extends Entity
     protected $description = null;
 
     /**
-     * Adresse IP du client.
+     * Client IP address.
      *
      * @var string|null
      * @map:ClientIp
@@ -46,7 +46,7 @@ class DirectTransaction extends Entity
     protected $clientIp = null;
 
     /**
-     * Indique si la transaction doit utiliser le protocole 3D Secure.
+     * Whether to use 3D Secure for the transaction.
      *
      * @var bool|null
      * @map:3DS
@@ -54,7 +54,7 @@ class DirectTransaction extends Entity
     protected $secure = null;
 
     /**
-     * Montant de l'acompte, si applicable.
+     * Down payment amount, if applicable.
      *
      * @var int|null
      * @map:DownPayment
@@ -62,7 +62,7 @@ class DirectTransaction extends Entity
     protected $downPayment = null;
 
     /**
-     * URL de retour après le paiement.
+     * Redirect URL after payment.
      *
      * @var string|null
      * @map:ReturnUrl
@@ -70,7 +70,7 @@ class DirectTransaction extends Entity
     protected $returnUrl = null;
 
     /**
-     * Indique si le paiement se fait en plusieurs fois.
+     * Whether the payment is split into installments.
      *
      * @var bool|null
      * @map:MultiplePayments
@@ -78,7 +78,7 @@ class DirectTransaction extends Entity
     protected $multiplePayments = null;
 
     /**
-     * Nombre de fois que le paiement est répété.
+     * Number of installment repetitions.
      *
      * @var int|null
      * @map:MultiplePaymentsRepeat
@@ -86,7 +86,7 @@ class DirectTransaction extends Entity
     protected $multiplePaymentsRepeat = null;
 
     /**
-     * Active les paiements récurrents.
+     * Enables recurring payments.
      *
      * @var bool|null
      * @map:Rebill
@@ -94,7 +94,7 @@ class DirectTransaction extends Entity
     protected $rebill = null;
 
     /**
-     * Fréquence de récurrence (ex : 'monthly', 'weekly').
+     * Recurrence frequency (e.g., 'monthly', 'weekly').
      *
      * @var string|null
      * @map:Recurrence
@@ -102,7 +102,7 @@ class DirectTransaction extends Entity
     protected $recurrence = null;
 
     /**
-     * Email du destinataire du paiement (paiement entre utilisateurs).
+     * Recipient email (peer-to-peer payments).
      *
      * @var string|null
      * @map:PayToEmail
@@ -110,7 +110,7 @@ class DirectTransaction extends Entity
     protected $payToEmail = null;
 
     /**
-     * Identifiant EasyTransac du destinataire.
+     * EasyTransac recipient identifier.
      *
      * @var string|null
      * @map:PayToId
@@ -118,7 +118,7 @@ class DirectTransaction extends Entity
     protected $payToId = null;
 
     /**
-     * User Agent du navigateur utilisé.
+     * Browser User-Agent.
      *
      * @var string|null
      * @map:UserAgent
@@ -126,7 +126,7 @@ class DirectTransaction extends Entity
     protected $userAgent = null;
 
     /**
-     * Langue utilisée pour les pages de paiement (ex : 'fr', 'en').
+     * Language used for the payment pages (e.g., 'fr', 'en').
      *
      * @var string|null
      * @map:Language
@@ -134,7 +134,7 @@ class DirectTransaction extends Entity
     protected $language = null;
 
     /**
-     * Données du client effectuant la transaction.
+     * Customer data for the transaction.
      *
      * @var Customer|null
      * @object:Customer
@@ -142,7 +142,7 @@ class DirectTransaction extends Entity
     protected $customer = null;
 
     /**
-     * Données de la carte bancaire utilisée pour le paiement.
+     * Credit card data used for payment.
      *
      * @var CreditCard|null
      * @object:CreditCard
@@ -150,7 +150,7 @@ class DirectTransaction extends Entity
     protected $creditCard = null;
 
     /**
-     * Indique si la transaction est une pré-autorisation (sans débit immédiat).
+     * Indicates a pre-authorization (no immediate capture).
      *
      * @var bool|null
      * @map:PreAuth
@@ -158,7 +158,7 @@ class DirectTransaction extends Entity
     protected $preAuth = null;
 
     /**
-     * Durée de validité d'une pré-autorisation (en jours).
+     * Pre-authorization validity period (in days).
      *
      * @var int|null
      * @map:PreAuthDuration
@@ -166,7 +166,7 @@ class DirectTransaction extends Entity
     protected $preAuthDuration = null;
 
     /**
-     * Indique s’il faut enregistrer la carte pour usage futur.
+     * Whether to save the card for future use.
      *
      * @var bool|null
      * @map:SaveCard
@@ -174,7 +174,7 @@ class DirectTransaction extends Entity
     protected $saveCard = null;
 
     /**
-     * Méthode de retour (GET, POST, ou autre).
+     * Return method (GET, POST, etc.).
      *
      * @var string|null
      * @map:ReturnMethod
@@ -182,7 +182,8 @@ class DirectTransaction extends Entity
     protected $returnMethod = null;
 
     /**
-     * Initialise la transaction et capture l’IP et le User-Agent automatiquement si disponibles.
+     * Initializes the transaction and auto-captures client IP and User-Agent
+     * from HTTP headers when available.
      */
     public function __construct()
     {
@@ -198,7 +199,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit la carte de crédit à utiliser.
+     * Sets the credit card to use.
      *
      * @param CreditCard $value
      * @return $this
@@ -210,7 +211,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit le client lié à la transaction.
+     * Sets the customer linked to the transaction.
      *
      * @param Customer $value
      * @return $this
@@ -222,7 +223,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit le montant de l'acompte.
+     * Sets the down payment amount.
      *
      * @param int $value
      * @return $this
@@ -234,7 +235,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Active ou désactive le 3D Secure.
+     * Enables or disables 3D Secure.
      *
      * @param bool $value
      * @return $this
@@ -246,7 +247,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit l’IP client.
+     * Sets the client IP.
      *
      * @param string $value
      * @return $this
@@ -258,7 +259,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit la description de la transaction.
+     * Sets the transaction description.
      *
      * @param string $value
      * @return $this
@@ -270,7 +271,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit l’identifiant de la commande.
+     * Sets the order identifier.
      *
      * @param string $value
      * @return $this
@@ -282,7 +283,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit le montant de la transaction.
+     * Sets the transaction amount.
      *
      * @param int $value
      * @return $this
@@ -294,7 +295,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Active ou désactive le paiement en plusieurs fois.
+     * Enables or disables installment payments.
      *
      * @param bool $multiplePayments
      * @return $this
@@ -306,7 +307,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit le nombre de répétitions pour un paiement en plusieurs fois.
+     * Sets the number of repetitions for installment payments.
      *
      * @param int $multiplePaymentsRepeat
      * @return $this
@@ -318,7 +319,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Active ou désactive les paiements récurrents.
+     * Enables or disables recurring payments.
      *
      * @param bool $rebill
      * @return $this
@@ -330,7 +331,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit la fréquence de récurrence.
+     * Sets the recurrence frequency.
      *
      * @param string $recurrence
      * @return $this
@@ -342,7 +343,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit l’adresse email du destinataire du paiement.
+     * Sets the recipient email for the payment.
      *
      * @param string $payToEmail
      * @return $this
@@ -354,7 +355,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit l’identifiant du destinataire.
+     * Sets the recipient identifier.
      *
      * @param string $payToId
      * @return $this
@@ -366,7 +367,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit le User-Agent du navigateur du client.
+     * Sets the client's browser User-Agent.
      *
      * @param string $userAgent
      * @return $this
@@ -378,7 +379,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit la langue d'affichage.
+     * Sets the display language.
      *
      * @param string $language
      * @return $this
@@ -390,7 +391,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Active ou désactive la pré-autorisation (sans débit immédiat).
+     * Enables or disables pre-authorization (no immediate capture).
      *
      * @param bool $preAuth
      * @return $this
@@ -402,7 +403,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit la durée de la pré-autorisation (en jours).
+     * Sets the pre-authorization duration (in days).
      *
      * @param int $preAuthDuration
      * @return $this
@@ -414,7 +415,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit l’URL de redirection après paiement.
+     * Sets the redirect URL after payment.
      *
      * @param string $returnUrl
      * @return $this
@@ -426,7 +427,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Indique s’il faut enregistrer la carte pour paiements ultérieurs.
+     * Indicates whether the card should be saved for future payments.
      *
      * @param bool $saveCard
      * @return $this
@@ -438,7 +439,7 @@ class DirectTransaction extends Entity
     }
 
     /**
-     * Définit la méthode de retour (GET, POST, etc.).
+     * Sets the return method (GET, POST, etc.).
      *
      * @param string $returnMethod
      * @return $this

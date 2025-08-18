@@ -3,18 +3,18 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente une carte bancaire.
+ * Represents a credit card.
  *
- * Cette entité contient les informations d’une carte de crédit nécessaires
- * aux transactions, comme le numéro, la date d'expiration, le CVV, etc.
+ * This entity contains the credit card information required for transactions,
+ * such as number, expiration date, CVV, etc.
  *
  * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * 
  */
 class CreditCard extends Entity
 {
     /**
-     * Numéro de la carte bancaire (PAN).
+     * Card number (PAN).
      *
      * @var string|null
      * @map:CardNumber
@@ -22,7 +22,7 @@ class CreditCard extends Entity
     protected $number = null;
 
     /**
-     * Mois d'expiration de la carte (au format numérique, ex : 01 à 12).
+     * Card expiration month (numeric, e.g., 01 to 12).
      *
      * @var string|null
      * @map:CardMonth
@@ -30,7 +30,7 @@ class CreditCard extends Entity
     protected $month = null;
 
     /**
-     * Année d'expiration de la carte (format à 4 chiffres).
+     * Card expiration year (4-digit format).
      *
      * @var string|null
      * @map:CardYear
@@ -38,7 +38,7 @@ class CreditCard extends Entity
     protected $year = null;
 
     /**
-     * Code de sécurité (CVV/CVC) situé au dos de la carte.
+     * Security code (CVV/CVC) on the back of the card.
      *
      * @var string|null
      * @map:CardCVV
@@ -46,7 +46,7 @@ class CreditCard extends Entity
     protected $CVV = null;
 
     /**
-     * Nom du titulaire de la carte.
+     * Cardholder name.
      *
      * @var string|null
      * @map:CardOwner
@@ -54,7 +54,7 @@ class CreditCard extends Entity
     protected $owner = null;
 
     /**
-     * Alias de la carte (identifiant interne pour usage futur).
+     * Card alias (internal identifier for future use).
      *
      * @var string|null
      * @map:Alias
@@ -62,7 +62,7 @@ class CreditCard extends Entity
     protected $alias = null;
 
     /**
-     * Identifiant du client auquel est liée la carte.
+     * Identifier of the client the card is linked to.
      *
      * @var string|null
      * @map:ClientId
@@ -70,7 +70,7 @@ class CreditCard extends Entity
     protected $clientId = null;
 
     /**
-     * Type de carte (ex : Visa, MasterCard).
+     * Card type (e.g., Visa, MasterCard).
      *
      * @var string|null
      * @map:CardType
@@ -78,7 +78,7 @@ class CreditCard extends Entity
     protected $type = null;
 
     /**
-     * Pays d'émission de la carte (code ISO, ex : FR, US).
+     * Card issuing country (ISO code, e.g., FR, US).
      *
      * @var string|null
      * @map:CardCountry
@@ -86,7 +86,7 @@ class CreditCard extends Entity
     protected $country = null;
 
     /**
-     * Date du dernier accès ou de la dernière utilisation de la carte.
+     * Date of last access or last use of the card.
      *
      * @var string|null
      * @map:LastAccessed
@@ -94,7 +94,7 @@ class CreditCard extends Entity
     protected $lastAccessed = null;
 
     /**
-     * Indique si la carte a été vérifiée.
+     * Indicates whether the card has been verified.
      *
      * @var string|null
      * @map:Verified
@@ -102,7 +102,7 @@ class CreditCard extends Entity
     protected $verified = null;
 
     /**
-     * Statut de la carte (active, expirée, etc.).
+     * Card status (active, expired, etc.).
      *
      * @var string|null
      * @map:Status
@@ -110,7 +110,7 @@ class CreditCard extends Entity
     protected $status = null;
 
     /**
-     * Retourne la date du dernier accès à la carte.
+     * Returns the date of last access to the card.
      *
      * @return string|null
      */
@@ -120,7 +120,7 @@ class CreditCard extends Entity
     }
 
     /**
-     * Retourne si la carte est vérifiée.
+     * Returns whether the card is verified.
      *
      * @return string|null
      */
@@ -130,7 +130,7 @@ class CreditCard extends Entity
     }
 
     /**
-     * Retourne le statut de la carte.
+     * Returns the card status.
      *
      * @return string|null
      */
@@ -140,7 +140,7 @@ class CreditCard extends Entity
     }
 
     /**
-     * Retourne le pays d’émission de la carte.
+     * Returns the card issuing country.
      *
      * @return string|null
      */
@@ -150,7 +150,7 @@ class CreditCard extends Entity
     }
 
     /**
-     * Retourne le type de carte (Visa, MasterCard, etc.).
+     * Returns the card type (Visa, MasterCard, etc.).
      *
      * @return string|null
      */
@@ -160,9 +160,9 @@ class CreditCard extends Entity
     }
 
     /**
-     * Définit l'alias de la carte.
+     * Sets the card alias.
      *
-     * @param string $value Alias de la carte.
+     * @param string $value Card alias.
      * @return $this
      */
     public function setAlias($value)
@@ -172,7 +172,7 @@ class CreditCard extends Entity
     }
 
     /**
-     * Retourne l'alias de la carte.
+     * Returns the card alias.
      *
      * @return string|null
      */
@@ -182,9 +182,9 @@ class CreditCard extends Entity
     }
 
     /**
-     * Définit l'identifiant du client.
+     * Sets the client identifier.
      *
-     * @param string $value Identifiant client.
+     * @param string $value Client ID.
      * @return $this
      */
     public function setClientId($value)
@@ -194,7 +194,7 @@ class CreditCard extends Entity
     }
 
     /**
-     * Retourne l'identifiant du client.
+     * Returns the client identifier.
      *
      * @return string|null
      */
@@ -204,9 +204,9 @@ class CreditCard extends Entity
     }
 
     /**
-     * Définit le nom du titulaire de la carte.
+     * Sets the cardholder name.
      *
-     * @param string $value Nom du titulaire.
+     * @param string $value Cardholder name.
      * @return $this
      */
     public function setOwner($value)
@@ -216,7 +216,7 @@ class CreditCard extends Entity
     }
 
     /**
-     * Retourne le nom du titulaire de la carte.
+     * Returns the cardholder name.
      *
      * @return string|null
      */
@@ -226,9 +226,9 @@ class CreditCard extends Entity
     }
 
     /**
-     * Définit le code CVV de la carte.
+     * Sets the card CVV code.
      *
-     * @param string $value CVV (code de sécurité).
+     * @param string $value CVV (security code).
      * @return $this
      */
     public function setCVV($value)
@@ -238,7 +238,7 @@ class CreditCard extends Entity
     }
 
     /**
-     * Retourne le code CVV de la carte.
+     * Returns the card CVV code.
      *
      * @return string|null
      */
@@ -248,9 +248,9 @@ class CreditCard extends Entity
     }
 
     /**
-     * Définit l'année d’expiration de la carte.
+     * Sets the card expiration year.
      *
-     * @param string $value Année (format YYYY).
+     * @param string $value Year (YYYY format).
      * @return $this
      */
     public function setYear($value)
@@ -260,7 +260,7 @@ class CreditCard extends Entity
     }
 
     /**
-     * Retourne l’année d’expiration de la carte.
+     * Returns the card expiration year.
      *
      * @return string|null
      */
@@ -270,9 +270,9 @@ class CreditCard extends Entity
     }
 
     /**
-     * Définit le mois d’expiration de la carte.
+     * Sets the card expiration month.
      *
-     * @param string $value Mois (01 à 12).
+     * @param string $value Month (01 to 12).
      * @return $this
      */
     public function setMonth($value)
@@ -282,7 +282,7 @@ class CreditCard extends Entity
     }
 
     /**
-     * Retourne le mois d’expiration de la carte.
+     * Returns the card expiration month.
      *
      * @return string|null
      */
@@ -292,9 +292,9 @@ class CreditCard extends Entity
     }
 
     /**
-     * Définit le numéro de carte bancaire.
+     * Sets the card number.
      *
-     * @param string $value Numéro de carte.
+     * @param string $value Card number.
      * @return $this
      */
     public function setNumber($value)
@@ -304,7 +304,7 @@ class CreditCard extends Entity
     }
 
     /**
-     * Retourne le numéro de carte bancaire.
+     * Returns the card number.
      *
      * @return string|null
      */

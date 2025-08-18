@@ -3,16 +3,14 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente la réponse de la requête "PaymentPage".
- * Cette entité contient les informations retournées lors de la création 
- * d'une page de paiement via l’API EasyTransac.
- *
- * @copyright EasyTransac
+ * Represents the response of a "PaymentPage" request.
+ * This entity contains the information returned when creating
+ * a payment page via the EasyTransac API.
  */
 class PaymentPageInfos extends Entity
 {
     /**
-     * Identifiant unique de la requête de création de page.
+     * Unique identifier of the payment page creation request.
      *
      * @var string|null
      * @map:RequestId
@@ -20,7 +18,7 @@ class PaymentPageInfos extends Entity
     protected $requestId = null;
 
     /**
-     * Type d'opération (ex. : debit, credit, refund...).
+     * Operation type (e.g., debit, credit, refund).
      *
      * @var string|null
      * @map:OperationType
@@ -28,15 +26,15 @@ class PaymentPageInfos extends Entity
     protected $operationType = null;
 
     /**
-     * Type d'application initiant la requête (web, api, etc.).
+     * Type of application initiating the request (e.g., web, api).
      *
      * @var string|null
-     * @map ApplicationType
+     * @map:ApplicationType
      */
     protected $applicationType = null;
 
     /**
-     * Statut actuel de la page de paiement (ex. : created, expired...).
+     * Current status of the payment page (e.g., created, expired).
      *
      * @var string|null
      * @map:Status
@@ -44,7 +42,7 @@ class PaymentPageInfos extends Entity
     protected $status = null;
 
     /**
-     * Date de création de la page de paiement.
+     * Creation date of the payment page.
      *
      * @var string|null
      * @map:Date
@@ -52,7 +50,7 @@ class PaymentPageInfos extends Entity
     protected $date = null;
 
     /**
-     * Date d’envoi de la requête.
+     * Date when the request was sent.
      *
      * @var string|null
      * @map:DateSent
@@ -60,7 +58,7 @@ class PaymentPageInfos extends Entity
     protected $dateSent = null;
 
     /**
-     * Montant affiché ou attendu sur la page de paiement (en centimes).
+     * Amount displayed/expected on the payment page (in cents).
      *
      * @var int|null
      * @map:Amount
@@ -68,7 +66,7 @@ class PaymentPageInfos extends Entity
     protected $amount = null;
 
     /**
-     * Indique si 3D Secure est activé pour la transaction.
+     * Indicates whether 3D Secure is enabled for the transaction.
      *
      * @var bool|null
      * @map:3DSecure
@@ -76,7 +74,7 @@ class PaymentPageInfos extends Entity
     protected $secure = null;
 
     /**
-     * URL de la page de paiement générée.
+     * URL of the generated payment page.
      *
      * @var string|null
      * @map:PageUrl
@@ -84,7 +82,7 @@ class PaymentPageInfos extends Entity
     protected $pageUrl = null;
 
     /**
-     * Adresse email du client associée à la transaction.
+     * Customer email address associated with the transaction.
      *
      * @var string|null
      * @map:Email
@@ -92,7 +90,7 @@ class PaymentPageInfos extends Entity
     protected $email = null;
 
     /**
-     * Langue utilisée sur la page de paiement.
+     * Language used on the payment page.
      *
      * @var string|null
      * @map:Language
@@ -100,7 +98,7 @@ class PaymentPageInfos extends Entity
     protected $language = null;
 
     /**
-     * Indique si la transaction est en mode live (production) ou test.
+     * Indicates whether the transaction is live (production) or test.
      *
      * @var bool|null
      * @map:Live
@@ -108,7 +106,7 @@ class PaymentPageInfos extends Entity
     protected $live = null;
 
     /**
-     * Méthode de paiement prévue (CB, SEPA, etc.).
+     * Planned payment method (e.g., CB, SEPA).
      *
      * @var string|null
      * @map:PaymentMethod
@@ -116,7 +114,7 @@ class PaymentPageInfos extends Entity
     protected $paymentMethod = null;
 
     /**
-     * Récupère l'identifiant unique de la requête.
+     * Returns the unique request identifier.
      *
      * @return string|null
      */
@@ -126,7 +124,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Récupère le type d'opération.
+     * Returns the operation type.
      *
      * @return string|null
      */
@@ -136,7 +134,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Récupère le statut actuel de la page.
+     * Returns the current status of the payment page.
      *
      * @return string|null
      */
@@ -146,7 +144,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Récupère la date de création de la page.
+     * Returns the creation date of the payment page.
      *
      * @return string|null
      */
@@ -156,7 +154,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Récupère la date d’envoi de la requête.
+     * Returns the date when the request was sent.
      *
      * @return string|null
      */
@@ -166,7 +164,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Récupère le montant associé à la page de paiement.
+     * Returns the amount associated with the payment page.
      *
      * @return int|null
      */
@@ -176,7 +174,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Indique si 3D Secure est activé.
+     * Indicates whether 3D Secure is enabled.
      *
      * @return bool|null
      */
@@ -186,7 +184,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Récupère l’URL de la page de paiement.
+     * Returns the payment page URL.
      *
      * @return string|null
      */
@@ -196,7 +194,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Récupère l’adresse email associée à la transaction.
+     * Returns the email address associated with the transaction.
      *
      * @return string|null
      */
@@ -206,7 +204,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Récupère la langue définie pour la page de paiement.
+     * Returns the language used on the payment page.
      *
      * @return string|null
      */
@@ -216,7 +214,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Indique si la transaction est en environnement réel.
+     * Indicates whether the transaction is in a live environment.
      *
      * @return bool|null
      */
@@ -226,7 +224,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Récupère la méthode de paiement définie.
+     * Returns the planned payment method.
      *
      * @return string|null
      */
@@ -236,7 +234,7 @@ class PaymentPageInfos extends Entity
     }
 
     /**
-     * Récupère le type d'application.
+     * Returns the application type.
      *
      * @return string|null
      */

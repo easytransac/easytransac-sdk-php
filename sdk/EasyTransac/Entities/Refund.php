@@ -3,15 +3,14 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les arguments de la requête "PaymentRefund".
- * Cette entité permet de configurer les paramètres nécessaires pour initier un remboursement via l'API EasyTransac.
- *
- * @copyright EasyTransac
+ * Represents the parameters for the "PaymentRefund" request.
+ * This entity configures the fields required to initiate a refund
+ * through the EasyTransac API.
  */
 class Refund extends Entity
 {
     /**
-     * Identifiant de la transaction à rembourser.
+     * Identifier of the transaction to refund.
      *
      * @var string|null
      * @map:Tid
@@ -19,7 +18,7 @@ class Refund extends Entity
     protected $tid = null;
 
     /**
-     * Langue à utiliser pour la réponse (ex. : fr, en).
+     * Language to use for the response (e.g., 'fr', 'en').
      *
      * @var string|null
      * @map:Language
@@ -27,8 +26,8 @@ class Refund extends Entity
     protected $language = null;
 
     /**
-     * Montant à rembourser (en centimes).
-     * Si non spécifié, le montant total sera remboursé.
+     * Amount to refund (in cents).
+     * If not specified, the full amount will be refunded.
      *
      * @var int|null
      * @map:Amount
@@ -36,7 +35,7 @@ class Refund extends Entity
     protected $amount = null;
 
     /**
-     * Raison du remboursement (facultatif).
+     * Reason for the refund (optional).
      *
      * @var string|null
      * @map:Reason
@@ -44,10 +43,10 @@ class Refund extends Entity
     protected $reason = null;
 
     /**
-     * Définit le montant du remboursement.
+     * Sets the refund amount.
      *
-     * @param int $amount Montant à rembourser en centimes.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param int $amount Amount to refund in cents.
+     * @return $this
      */
     public function setAmount($amount)
     {
@@ -56,10 +55,10 @@ class Refund extends Entity
     }
 
     /**
-     * Définit la raison du remboursement.
+     * Sets the refund reason.
      *
-     * @param string $reason Raison du remboursement (ex. : produit défectueux).
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param string $reason Reason for the refund (e.g., defective product).
+     * @return $this
      */
     public function setReason($reason)
     {
@@ -68,10 +67,10 @@ class Refund extends Entity
     }
 
     /**
-     * Définit l'identifiant de la transaction à rembourser.
+     * Sets the transaction identifier to refund.
      *
-     * @param string $tid Identifiant unique de la transaction.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param string $tid Unique transaction identifier.
+     * @return $this
      */
     public function setTid($tid)
     {
@@ -80,10 +79,10 @@ class Refund extends Entity
     }
 
     /**
-     * Définit la langue à utiliser pour la réponse.
+     * Sets the response language.
      *
-     * @param string $language Code langue (ex. : fr, en).
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param string $language Language code (e.g., 'fr', 'en').
+     * @return $this
      */
     public function setLanguage($language)
     {

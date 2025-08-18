@@ -3,21 +3,20 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente une liste de cartes bancaires.
+ * Represents a list of credit cards.
  *
- * Cette entité est utilisée pour modéliser la réponse
- * d'une requête de type "CreditCardsList", contenant
- * plusieurs objets `CreditCard`.
+ * This entity models the response of a "CreditCardsList" request,
+ * containing multiple {@see \EasyTransac\Entities\CreditCard} objects.
  *
  * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * 
  */
 class CreditCardsList extends Entity
 {
     /**
-     * Liste des cartes bancaires associées.
+     * List of associated credit cards.
      *
-     * Il s'agit d'un tableau d'objets de type {@see \EasyTransac\Entities\CreditCard}.
+     * This is an array of {@see \EasyTransac\Entities\CreditCard} objects.
      *
      * @var CreditCard[]|null
      * @array:CreditCard
@@ -25,9 +24,9 @@ class CreditCardsList extends Entity
     protected $creditCards;
 
     /**
-     * Retourne la liste des cartes bancaires.
+     * Returns the list of credit cards.
      *
-     * @return CreditCard[]|null Tableau d'objets CreditCard ou null si vide.
+     * @return CreditCard[]|null Array of CreditCard objects, or null if empty.
      */
     public function getCreditCards()
     {

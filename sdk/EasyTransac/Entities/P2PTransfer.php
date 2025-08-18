@@ -3,18 +3,18 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente un virement entre deux professionnels (P2P).
+ * Represents a peer-to-peer (P2P) transfer between two professionals.
  *
- * Cette entité permet de décrire les paramètres d'un transfert P2P
- * comme les identifiants des utilisateurs, le montant, la langue, etc.
+ * This entity describes the parameters of a P2P transfer such as user
+ * identifiers, amount, language, etc.
  *
  * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * 
  */
 class P2PTransfer extends Entity
 {
     /**
-     * Identifiant du compte source du transfert.
+     * Identifier of the source account.
      *
      * @var string|null
      * @map:From
@@ -22,7 +22,7 @@ class P2PTransfer extends Entity
     protected $from = null;
 
     /**
-     * Identifiant du compte destinataire du transfert.
+     * Identifier of the destination account.
      *
      * @var string|null
      * @map:To
@@ -30,7 +30,7 @@ class P2PTransfer extends Entity
     protected $to = null;
 
     /**
-     * Identifiant de la transaction.
+     * Transaction identifier.
      *
      * @var string|null
      * @map:Tid
@@ -38,7 +38,7 @@ class P2PTransfer extends Entity
     protected $tid = null;
 
     /**
-     * Montant du transfert (en centimes).
+     * Transfer amount (in cents).
      *
      * @var int|null
      * @map:Amount
@@ -46,7 +46,7 @@ class P2PTransfer extends Entity
     protected $amount = null;
 
     /**
-     * Description du virement.
+     * Transfer description.
      *
      * @var string|null
      * @map:Description
@@ -54,7 +54,7 @@ class P2PTransfer extends Entity
     protected $description = null;
 
     /**
-     * Langue utilisée (ex: 'fr').
+     * Language used (e.g., 'fr').
      *
      * @var string|null
      * @map:Language
@@ -62,7 +62,8 @@ class P2PTransfer extends Entity
     protected $language = null;
 
     /**
-     * Identifiant de la transaction originale si le transfert est lié à une opération précédente.
+     * Identifier of the original transaction, if this transfer
+     * is related to a previous operation.
      *
      * @var string|null
      * @map:OriginalTid
@@ -70,7 +71,7 @@ class P2PTransfer extends Entity
     protected $originalTid = null;
 
     /**
-     * Statut du transfert (ex: 'success', 'failed').
+     * Transfer status (e.g., 'success', 'failed').
      *
      * @var string|null
      * @map:Status
@@ -78,7 +79,7 @@ class P2PTransfer extends Entity
     protected $status = null;
 
     /**
-     * Date du transfert.
+     * Transfer date.
      *
      * @var string|null
      * @map:Date
@@ -86,7 +87,7 @@ class P2PTransfer extends Entity
     protected $date = null;
 
     /**
-     * Récupère l'identifiant de l'expéditeur du transfert.
+     * Returns the identifier of the transfer sender.
      *
      * @return string|null
      */
@@ -96,7 +97,7 @@ class P2PTransfer extends Entity
     }
 
     /**
-     * Définit l'identifiant de l'expéditeur du transfert.
+     * Sets the identifier of the transfer sender.
      *
      * @param string $value
      * @return $this
@@ -108,7 +109,7 @@ class P2PTransfer extends Entity
     }
 
     /**
-     * Récupère l'identifiant du destinataire du transfert.
+     * Returns the identifier of the transfer recipient.
      *
      * @return string|null
      */
@@ -118,7 +119,7 @@ class P2PTransfer extends Entity
     }
 
     /**
-     * Définit l'identifiant du destinataire du transfert.
+     * Sets the identifier of the transfer recipient.
      *
      * @param string $value
      * @return $this
@@ -130,7 +131,7 @@ class P2PTransfer extends Entity
     }
 
     /**
-     * Définit l'identifiant de la transaction.
+     * Sets the transaction identifier.
      *
      * @param string $value
      * @return $this
@@ -142,7 +143,7 @@ class P2PTransfer extends Entity
     }
 
     /**
-     * Récupère le montant du transfert.
+     * Returns the transfer amount.
      *
      * @return int|null
      */
@@ -152,7 +153,7 @@ class P2PTransfer extends Entity
     }
 
     /**
-     * Définit le montant du transfert.
+     * Sets the transfer amount.
      *
      * @param int $value
      * @return $this
@@ -164,7 +165,7 @@ class P2PTransfer extends Entity
     }
 
     /**
-     * Définit une description pour le transfert.
+     * Sets a description for the transfer.
      *
      * @param string $value
      * @return $this
@@ -176,7 +177,7 @@ class P2PTransfer extends Entity
     }
 
     /**
-     * Définit la langue du transfert.
+     * Sets the language of the transfer.
      *
      * @param string $value
      * @return $this
@@ -188,7 +189,7 @@ class P2PTransfer extends Entity
     }
 
     /**
-     * Récupère la date du transfert.
+     * Returns the transfer date.
      *
      * @return string|null
      */
@@ -198,7 +199,7 @@ class P2PTransfer extends Entity
     }
 
     /**
-     * Récupère l'identifiant de la transaction originale, le cas échéant.
+     * Returns the original transaction identifier, if any.
      *
      * @return string|null
      */
@@ -208,7 +209,7 @@ class P2PTransfer extends Entity
     }
 
     /**
-     * Récupère le statut du transfert.
+     * Returns the transfer status.
      *
      * @return string|null
      */

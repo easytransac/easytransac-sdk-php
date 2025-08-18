@@ -3,18 +3,17 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente un client (Customer).
+ * Represents a client (Customer).
  *
- * Cette classe est fournie pour des raisons de rétrocompatibilité
- * avec les anciennes versions du SDK EasyTransac où la classe « Client »
- * était utilisée à la place de « Customer ».
+ * This class is provided for backward compatibility with older versions
+ * of the EasyTransac SDK where the "Client" class was used instead of "Customer".
  *
- * Elle hérite de toutes les propriétés et méthodes de la classe Customer.
+ * It inherits all properties and methods from the Customer class.
  *
  * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * 
  */
 class Client extends Customer
 {
-
+    
 }

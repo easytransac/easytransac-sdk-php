@@ -3,10 +3,10 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les paramètres de la requête de type "Cancellation" (annulation).
+ * Represents the parameters of a "Cancellation" request.
  *
- * Cette entité est utilisée pour encapsuler les données nécessaires
- * à l'annulation d'une transaction via l'API EasyTransac.
+ * This entity encapsulates the data required to cancel a transaction
+ * through the EasyTransac API.
  *
  * @package EasyTransac\Entities
  * @copyright EasyTransac
@@ -14,9 +14,9 @@ namespace EasyTransac\Entities;
 class Cancellation extends Entity
 {
     /**
-     * Identifiant unique de la requête à annuler.
+     * Unique identifier of the request to cancel.
      *
-     * Mappé sous le nom "RequestId" dans la requête API.
+     * Mapped as "RequestId" in the API request.
      *
      * @var string|null
      * @map:RequestId
@@ -24,9 +24,9 @@ class Cancellation extends Entity
     protected $requestId = null;
 
     /**
-     * Code de langue préféré pour la requête (par exemple 'fr', 'en').
+     * Preferred language code for the request (e.g., 'fr', 'en').
      *
-     * Mappé sous le nom "Language" dans la requête API.
+     * Mapped as "Language" in the API request.
      *
      * @var string|null
      * @map:Language
@@ -34,9 +34,9 @@ class Cancellation extends Entity
     protected $language = null;
 
     /**
-     * Définit l'identifiant unique de la requête à annuler.
+     * Sets the unique identifier of the request to cancel.
      *
-     * @param string $requestId L'identifiant de la requête à annuler.
+     * @param string $requestId The ID of the request to cancel.
      * @return $this
      */
     public function setRequestId($requestId)
@@ -46,9 +46,9 @@ class Cancellation extends Entity
     }
 
     /**
-     * Définit la langue utilisée pour la requête d'annulation.
+     * Sets the language used for the cancellation request.
      *
-     * @param string $language Le code langue ISO 639-1 (ex : 'fr', 'en').
+     * @param string $language ISO 639-1 language code (e.g., 'fr', 'en').
      * @return $this
      */
     public function setLanguage($language)

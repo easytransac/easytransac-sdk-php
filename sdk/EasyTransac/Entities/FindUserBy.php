@@ -3,24 +3,22 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les arguments de la requête "FindUser".
- * Permet de rechercher un utilisateur par email ou par identifiant.
- *
- * @copyright EasyTransac
+ * Represents the arguments for the "FindUser" request.
+ * Allows searching for a user by email or by identifier.
  */
 class FindUserBy extends Entity
 {
-    /** @map:Email  **/
-    protected $email  = null;
+    /** @map:Email **/
+    protected $email = null;
 
-    /** @map:Id   **/
-    protected $id   = null;
+    /** @map:Id **/
+    protected $id = null;
 
     /**
-     * Définit l'email de l'utilisateur à rechercher.
+     * Sets the email of the user to search for.
      *
-     * @param string $email L'adresse email de l'utilisateur.
-     * @return $this Retourne l'instance courante pour chaînage.
+     * @param string $email The user's email address.
+     * @return $this Fluent interface.
      */
     public function setEmail($email)
     {
@@ -29,10 +27,10 @@ class FindUserBy extends Entity
     }
 
     /**
-     * Définit l'identifiant de l'utilisateur à rechercher.
+     * Sets the identifier of the user to search for.
      *
-     * @param int|string $id L'identifiant de l'utilisateur.
-     * @return $this Retourne l'instance courante pour chaînage.
+     * @param int|string $id The user's identifier.
+     * @return $this Fluent interface.
      */
     public function setId($id)
     {

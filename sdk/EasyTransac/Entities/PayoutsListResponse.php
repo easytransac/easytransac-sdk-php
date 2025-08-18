@@ -3,16 +3,14 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente la réponse de la requête "payouts".
- * Cette entité permet de récupérer les détails des virements effectués à un utilisateur via l’API EasyTransac.
- * Documentation officielle : https://www.easytransac.com/fr/documentation#tag/API-User/paths/~1api~1user~1payouts/post
- *
- * @copyright EasyTransac
+ * Represents the response for the "payouts" request.
+ * This entity exposes the details of payouts made to a user via the EasyTransac API.
+ * Official documentation: https://www.easytransac.com/fr/documentation#tag/API-User/paths/~1api~1user~1payouts/post
  */
 class PayoutsListResponse extends Entity
 {
     /**
-     * Identifiant unique du virement.
+     * Unique identifier of the payout.
      *
      * @var string|null
      * @map:Id
@@ -20,7 +18,7 @@ class PayoutsListResponse extends Entity
     protected $id = null;
 
     /**
-     * Identifiant de l’utilisateur ayant reçu le virement.
+     * Identifier of the user who received the payout.
      *
      * @var string|null
      * @map:UserId
@@ -28,7 +26,7 @@ class PayoutsListResponse extends Entity
     protected $userId = null;
 
     /**
-     * Statut du virement (ex. : pending, done, failed).
+     * Payout status (e.g., pending, done, failed).
      *
      * @var string|null
      * @map:Status
@@ -36,7 +34,7 @@ class PayoutsListResponse extends Entity
     protected $status = null;
 
     /**
-     * Date de traitement du virement.
+     * Processing date of the payout.
      *
      * @var string|null
      * @map:Date
@@ -44,7 +42,7 @@ class PayoutsListResponse extends Entity
     protected $date = null;
 
     /**
-     * Montant transféré (en centimes).
+     * Transferred amount (in cents).
      *
      * @var int|null
      * @map:Amount
@@ -52,7 +50,7 @@ class PayoutsListResponse extends Entity
     protected $amount = null;
 
     /**
-     * Devise utilisée (ex. : EUR).
+     * Currency used (e.g., EUR).
      *
      * @var string|null
      * @map:Currency
@@ -60,7 +58,7 @@ class PayoutsListResponse extends Entity
     protected $currency = null;
 
     /**
-     * IBAN utilisé pour effectuer le virement.
+     * IBAN used to perform the payout.
      *
      * @var string|null
      * @map:Iban
@@ -68,7 +66,7 @@ class PayoutsListResponse extends Entity
     protected $iban = null;
 
     /**
-     * Code BIC de la banque du destinataire.
+     * BIC code of the recipient bank.
      *
      * @var string|null
      * @map:Bic
@@ -76,7 +74,7 @@ class PayoutsListResponse extends Entity
     protected $bic = null;
 
     /**
-     * Raison ou commentaire associé au virement.
+     * Reason or comment associated with the payout.
      *
      * @var string|null
      * @map:Reason
@@ -84,7 +82,7 @@ class PayoutsListResponse extends Entity
     protected $reason = null;
 
     /**
-     * Récupère l'identifiant du virement.
+     * Returns the payout identifier.
      *
      * @return string|null
      */
@@ -94,7 +92,7 @@ class PayoutsListResponse extends Entity
     }
 
     /**
-     * Récupère l'identifiant de l'utilisateur.
+     * Returns the user identifier.
      *
      * @return string|null
      */
@@ -104,7 +102,7 @@ class PayoutsListResponse extends Entity
     }
 
     /**
-     * Récupère le statut du virement.
+     * Returns the payout status.
      *
      * @return string|null
      */
@@ -114,7 +112,7 @@ class PayoutsListResponse extends Entity
     }
 
     /**
-     * Récupère la date du virement.
+     * Returns the payout date.
      *
      * @return string|null
      */
@@ -124,7 +122,7 @@ class PayoutsListResponse extends Entity
     }
 
     /**
-     * Récupère le montant transféré.
+     * Returns the transferred amount.
      *
      * @return int|null
      */
@@ -134,7 +132,7 @@ class PayoutsListResponse extends Entity
     }
 
     /**
-     * Récupère la devise utilisée.
+     * Returns the currency used.
      *
      * @return string|null
      */
@@ -144,7 +142,7 @@ class PayoutsListResponse extends Entity
     }
 
     /**
-     * Récupère l’IBAN du compte bénéficiaire.
+     * Returns the beneficiary IBAN.
      *
      * @return string|null
      */
@@ -154,7 +152,7 @@ class PayoutsListResponse extends Entity
     }
 
     /**
-     * Récupère le code BIC de la banque.
+     * Returns the bank BIC code.
      *
      * @return string|null
      */
@@ -164,7 +162,7 @@ class PayoutsListResponse extends Entity
     }
 
     /**
-     * Récupère la raison associée au virement.
+     * Returns the payout reason/comment.
      *
      * @return string|null
      */

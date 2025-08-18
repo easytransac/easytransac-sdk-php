@@ -3,18 +3,18 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente la réponse de la requête "cancellation" (annulation de transaction).
+ * Represents the response to a "cancellation" (transaction reversal) request.
  *
- * Cette entité contient les informations renvoyées après une demande
- * d'annulation d'une transaction via l'API EasyTransac.
+ * This entity contains the information returned after a transaction
+ * cancellation through the EasyTransac API.
  *
  * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * 
  */
 class CancellationInfos extends Entity
 {
     /**
-     * Identifiant (TID) de la transaction d'annulation.
+     * Identifier (TID) of the cancellation transaction.
      *
      * @var string|null
      * @map:Tid
@@ -22,7 +22,7 @@ class CancellationInfos extends Entity
     protected $tid = null;
 
     /**
-     * Identifiant (TID) de la transaction initiale avant annulation.
+     * Identifier (TID) of the original payment transaction before cancellation.
      *
      * @var string|null
      * @map:OriginalPaymentTid
@@ -30,9 +30,9 @@ class CancellationInfos extends Entity
     protected $originalPaymentTid = null;
 
     /**
-     * Date de l'opération d'annulation.
+     * Date of the cancellation operation.
      *
-     * Format attendu : YYYY-MM-DD HH:MM:SS
+     * Expected format: YYYY-MM-DD HH:MM:SS
      *
      * @var string|null
      * @map:Date
@@ -40,7 +40,8 @@ class CancellationInfos extends Entity
     protected $date = null;
 
     /**
-     * Message associé à la réponse de l'annulation (peut contenir un statut ou une explication).
+     * Message associated with the cancellation response
+     * (may include a status or explanation).
      *
      * @var string|null
      * @map:Message
@@ -48,7 +49,7 @@ class CancellationInfos extends Entity
     protected $message = null;
 
     /**
-     * Retourne l'identifiant de la transaction d'annulation.
+     * Returns the identifier of the cancellation transaction.
      *
      * @return string|null
      */
@@ -58,7 +59,7 @@ class CancellationInfos extends Entity
     }
 
     /**
-     * Retourne l'identifiant de la transaction initiale annulée.
+     * Returns the identifier of the original (pre-cancellation) transaction.
      *
      * @return string|null
      */
@@ -68,9 +69,9 @@ class CancellationInfos extends Entity
     }
 
     /**
-     * Retourne la date de l'annulation.
+     * Returns the cancellation date.
      *
-     * @return string|null Date au format YYYY-MM-DD HH:MM:SS
+     * @return string|null Date in format YYYY-MM-DD HH:MM:SS
      */
     public function getDate()
     {
@@ -78,7 +79,7 @@ class CancellationInfos extends Entity
     }
 
     /**
-     * Retourne le message d'information associé à la réponse.
+     * Returns the informational message associated with the response.
      *
      * @return string|null
      */

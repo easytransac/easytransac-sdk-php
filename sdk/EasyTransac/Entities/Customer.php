@@ -3,18 +3,18 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente un client de la plateforme EasyTransac.
+ * Represents a customer of the EasyTransac platform.
  *
- * Cette entité contient les informations personnelles, professionnelles
- * et bancaires d'un client, utilisées dans le cadre des transactions.
+ * This entity contains the customer's personal, professional,
+ * and banking information used for transactions.
  *
- * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * @package EasyTransac\
+ * 
  */
 class Customer extends Entity
 {
     /**
-     * Identifiant interne du client.
+     * Internal customer identifier.
      *
      * @var string|null
      * @map:Id
@@ -22,7 +22,7 @@ class Customer extends Entity
     protected $id = null;
 
     /**
-     * Adresse email du client.
+     * Customer email address.
      *
      * @var string|null
      * @map:Email
@@ -30,7 +30,7 @@ class Customer extends Entity
     protected $email = null;
 
     /**
-     * Prénom du client.
+     * Customer first name.
      *
      * @var string|null
      * @map:Firstname
@@ -38,7 +38,7 @@ class Customer extends Entity
     protected $firstname = null;
 
     /**
-     * Nom de famille du client.
+     * Customer last name.
      *
      * @var string|null
      * @map:Lastname
@@ -46,7 +46,7 @@ class Customer extends Entity
     protected $lastname = null;
 
     /**
-     * Indicatif téléphonique international (ex : +33).
+     * International dialing code (e.g., +33).
      *
      * @var string|null
      * @map:CallingCode
@@ -54,7 +54,7 @@ class Customer extends Entity
     protected $callingCode = null;
 
     /**
-     * Numéro de téléphone du client.
+     * Customer phone number.
      *
      * @var string|null
      * @map:Phone
@@ -62,7 +62,7 @@ class Customer extends Entity
     protected $phone = null;
 
     /**
-     * Date de naissance du client (format YYYY-MM-DD).
+     * Customer date of birth (format YYYY-MM-DD).
      *
      * @var string|null
      * @map:BirthDate
@@ -70,7 +70,7 @@ class Customer extends Entity
     protected $birthDate = null;
 
     /**
-     * Nationalité du client (code pays ISO).
+     * Customer nationality (ISO country code).
      *
      * @var string|null
      * @map:Nationality
@@ -78,7 +78,7 @@ class Customer extends Entity
     protected $nationality = null;
 
     /**
-     * Adresse postale du client.
+     * Customer postal address.
      *
      * @var string|null
      * @map:Address
@@ -86,7 +86,7 @@ class Customer extends Entity
     protected $address = null;
 
     /**
-     * Code postal.
+     * ZIP/postal code.
      *
      * @var string|null
      * @map:ZipCode
@@ -94,7 +94,7 @@ class Customer extends Entity
     protected $zipCode = null;
 
     /**
-     * Ville.
+     * City.
      *
      * @var string|null
      * @map:City
@@ -102,7 +102,7 @@ class Customer extends Entity
     protected $city = null;
 
     /**
-     * Pays (code ISO, ex : FR, BE).
+     * Country (ISO code, e.g., FR, BE).
      *
      * @var string|null
      * @map:Country
@@ -110,7 +110,7 @@ class Customer extends Entity
     protected $country = null;
 
     /**
-     * UID interne (identifiant unique généré).
+     * Internal UID (generated unique identifier).
      *
      * @var string|null
      * @map:Uid
@@ -118,7 +118,7 @@ class Customer extends Entity
     protected $uid = null;
 
     /**
-     * Identifiant client dans l’environnement partenaire.
+     * Customer identifier in the partner environment.
      *
      * @var string|null
      * @map:ClientId
@@ -126,7 +126,7 @@ class Customer extends Entity
     protected $clientId = null;
 
     /**
-     * Nom de la société du client (si personne morale).
+     * Customer company name (if a legal entity).
      *
      * @var string|null
      * @map:Company
@@ -134,7 +134,7 @@ class Customer extends Entity
     protected $company = null;
 
     /**
-     * IBAN du compte bancaire du client.
+     * Customer bank account IBAN.
      *
      * @var string|null
      * @map:Iban
@@ -142,7 +142,7 @@ class Customer extends Entity
     protected $iban = null;
 
     /**
-     * Code BIC/SWIFT de la banque du client.
+     * Customer bank BIC/SWIFT code.
      *
      * @var string|null
      * @map:Bic
@@ -150,7 +150,7 @@ class Customer extends Entity
     protected $bic = null;
 
     /**
-     * Message personnalisé ou champ de communication.
+     * Custom message or communication field.
      *
      * @var string|null
      * @map:Communication
@@ -158,7 +158,7 @@ class Customer extends Entity
     protected $communication = null;
 
     /**
-     * Date de création du client (format YYYY-MM-DD).
+     * Customer creation date (format YYYY-MM-DD).
      *
      * @var string|null
      * @map:CreationDate
@@ -166,7 +166,7 @@ class Customer extends Entity
     protected $creationDate = null;
 
     /**
-     * Retourne la date de création du client.
+     * Returns the customer's creation date.
      *
      * @return string|null
      */
@@ -176,7 +176,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit l'UID du client.
+     * Sets the customer's UID.
      *
      * @param string $value
      * @return $this
@@ -188,7 +188,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne l'ID interne du client.
+     * Returns the internal customer ID.
      *
      * @return string|null
      */
@@ -198,7 +198,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit l'ID interne du client.
+     * Sets the internal customer ID.
      *
      * @param string $value
      * @return $this
@@ -210,7 +210,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne l'UID du client.
+     * Returns the customer's UID.
      *
      * @return string|null
      */
@@ -220,7 +220,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit la ville du client.
+     * Sets the city.
      *
      * @param string $value
      * @return $this
@@ -232,7 +232,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne la ville du client.
+     * Returns the city.
      *
      * @return string|null
      */
@@ -242,7 +242,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit le code postal.
+     * Sets the ZIP/postal code.
      *
      * @param string $value
      * @return $this
@@ -254,7 +254,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne le code postal.
+     * Returns the ZIP/postal code.
      *
      * @return string|null
      */
@@ -264,7 +264,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit l'adresse postale.
+     * Sets the postal address.
      *
      * @param string $value
      * @return $this
@@ -276,7 +276,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne le pays.
+     * Returns the country.
      *
      * @return string|null
      */
@@ -286,7 +286,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne l'adresse postale.
+     * Returns the postal address.
      *
      * @return string|null
      */
@@ -296,7 +296,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit la nationalité.
+     * Sets the nationality.
      *
      * @param string $value
      * @return $this
@@ -308,7 +308,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne la nationalité.
+     * Returns the nationality.
      *
      * @return string|null
      */
@@ -318,7 +318,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit la date de naissance.
+     * Sets the date of birth.
      *
      * @param string $value Format YYYY-MM-DD
      * @return $this
@@ -330,7 +330,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne la date de naissance.
+     * Returns the date of birth.
      *
      * @return string|null
      */
@@ -340,7 +340,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit le numéro de téléphone.
+     * Sets the phone number.
      *
      * @param string $value
      * @return $this
@@ -352,7 +352,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne le numéro de téléphone.
+     * Returns the phone number.
      *
      * @return string|null
      */
@@ -362,7 +362,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit l’indicatif téléphonique international.
+     * Sets the international dialing code.
      *
      * @param string $value
      * @return $this
@@ -374,7 +374,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne l’indicatif téléphonique international.
+     * Returns the international dialing code.
      *
      * @return string|null
      */
@@ -384,7 +384,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit le nom de famille.
+     * Sets the last name.
      *
      * @param string $value
      * @return $this
@@ -396,7 +396,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit le pays.
+     * Sets the country.
      *
      * @param string $value
      * @return $this
@@ -408,7 +408,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne le nom de famille.
+     * Returns the last name.
      *
      * @return string|null
      */
@@ -418,7 +418,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit le prénom.
+     * Sets the first name.
      *
      * @param string $value
      * @return $this
@@ -430,7 +430,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne le prénom.
+     * Returns the first name.
      *
      * @return string|null
      */
@@ -440,7 +440,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit l'adresse email.
+     * Sets the email address.
      *
      * @param string $value
      * @return $this
@@ -452,7 +452,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne l'adresse email.
+     * Returns the email address.
      *
      * @return string|null
      */
@@ -462,7 +462,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne l'identifiant client côté partenaire.
+     * Returns the partner-side client identifier.
      *
      * @return string|null
      */
@@ -472,7 +472,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit l'identifiant client côté partenaire.
+     * Sets the partner-side client identifier.
      *
      * @param string $clientId
      * @return $this
@@ -484,7 +484,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne le nom de la société.
+     * Returns the company name.
      *
      * @return string|null
      */
@@ -494,7 +494,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne l'IBAN.
+     * Returns the IBAN.
      *
      * @return string|null
      */
@@ -504,7 +504,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne le code BIC.
+     * Returns the BIC.
      *
      * @return string|null
      */
@@ -514,7 +514,7 @@ class Customer extends Entity
     }
 
     /**
-     * Retourne le message ou champ de communication.
+     * Returns the custom message / communication field.
      *
      * @return string|null
      */
@@ -524,7 +524,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit le nom de la société.
+     * Sets the company name.
      *
      * @param string $company
      * @return $this
@@ -536,7 +536,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit l'IBAN.
+     * Sets the IBAN.
      *
      * @param string $iban
      * @return $this
@@ -548,7 +548,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit le BIC.
+     * Sets the BIC.
      *
      * @param string $bic
      * @return $this
@@ -560,7 +560,7 @@ class Customer extends Entity
     }
 
     /**
-     * Définit le message de communication.
+     * Sets the custom message / communication field.
      *
      * @param string $communication
      * @return $this

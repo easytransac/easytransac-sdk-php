@@ -3,18 +3,18 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les paramètres de la requête "adddocument".
+ * Represents the parameters for the "adddocument" request.
  *
- * Cette entité permet d'associer un document à un client ou à un utilisateur,
- * dans le cadre de l’envoi ou de la gestion de justificatifs via l’API.
+ * This entity makes it possible to associate a document with a customer or a user
+ * when sending or managing supporting documents via the API.
  *
  * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * 
  */
 class DocumentRequest extends Entity
 {
     /**
-     * Client auquel le document est lié.
+     * Customer the document is linked to.
      *
      * @var Customer|null
      * @object:Customer
@@ -22,7 +22,7 @@ class DocumentRequest extends Entity
     protected $customer = null;
 
     /**
-     * Utilisateur auquel le document est lié.
+     * User the document is linked to.
      *
      * @var User|null
      * @object:User
@@ -30,7 +30,7 @@ class DocumentRequest extends Entity
     protected $User = null;
 
     /**
-     * Document à ajouter ou mettre à jour.
+     * Document to add or update.
      *
      * @var Document|null
      * @object:Document
@@ -38,7 +38,7 @@ class DocumentRequest extends Entity
     protected $document = null;
 
     /**
-     * Identifiant d’un document existant (pour mise à jour ou référence).
+     * Identifier of an existing document (for update/reference).
      *
      * @var string|null
      * @map:DocumentId
@@ -46,7 +46,7 @@ class DocumentRequest extends Entity
     protected $documentId = null;
 
     /**
-     * Indique si le contenu du document doit être retourné.
+     * Whether the document content should be returned.
      *
      * @var bool|null
      * @map:ShowContent
@@ -54,7 +54,7 @@ class DocumentRequest extends Entity
     protected $showContent = null;
 
     /**
-     * Définit le client associé à la requête.
+     * Sets the customer associated with the request.
      *
      * @param Customer $customer
      * @return $this
@@ -66,7 +66,7 @@ class DocumentRequest extends Entity
     }
 
     /**
-     * Définit l'utilisateur associé à la requête.
+     * Sets the user associated with the request.
      *
      * @param User $User
      * @return $this
@@ -78,7 +78,7 @@ class DocumentRequest extends Entity
     }
 
     /**
-     * Définit le document à envoyer ou modifier.
+     * Sets the document to send or modify.
      *
      * @param Document $document
      * @return $this
@@ -90,7 +90,7 @@ class DocumentRequest extends Entity
     }
 
     /**
-     * Définit l’identifiant d’un document existant.
+     * Sets the identifier of an existing document.
      *
      * @param string $documentId
      * @return $this
@@ -102,7 +102,7 @@ class DocumentRequest extends Entity
     }
 
     /**
-     * Indique si le contenu du document doit être retourné dans la réponse.
+     * Indicates whether the document content should be returned in the response.
      *
      * @param bool $showContent
      * @return $this

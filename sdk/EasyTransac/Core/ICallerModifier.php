@@ -5,33 +5,33 @@ namespace EasyTransac\Core;
 /**
  * Interface ICallerModifier
  *
- * Permet de modifier dynamiquement le comportement des appels HTTP
- * effectués via un objet ICaller, par exemple en changeant le nom
- * de la méthode appelée ou les paramètres transmis.
+ * Allows dynamic modification of HTTP calls performed through an ICaller
+ * implementation, e.g., by changing the target method name or the parameters
+ * sent with the request.
  *
  * @package EasyTransac\Core
  */
 interface ICallerModifier
 {
     /**
-     * Applique des modifications avant l'appel.
+     * Applies modifications before the call is executed.
      *
-     * @param $services Instance du gestionnaire de services.
-     * @param $funcName Nom de la méthode à modifier.
-     * @param $params Paramètres initiaux de l'appel.
+     * @param mixed  $services  Instance of the service manager.
+     * @param string $funcName  Name of the method to modify (or resolve).
+     * @param array  $params    Initial call parameters.
      * @return void
      */
     public function execute($services, $funcName, $params);
 
     /**
-     * Retourne le nom de la méthode modifiée ou l'URL complète à appeler.
+     * Returns the modified method name or the full URL to call.
      *
      * @return string
      */
     public function getFuncName();
 
     /**
-     * Retourne les paramètres modifiés à envoyer à l'appel.
+     * Returns the modified parameters to send with the call.
      *
      * @return array
      */

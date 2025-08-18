@@ -3,18 +3,16 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les paramètres de la requête "Payment requests".
- * Cette entité permet de filtrer les résultats lors de la récupération de l'historique des demandes de paiement
- * via l’API EasyTransac.
+ * Represents the parameters for the "Payment requests" endpoint.
+ * This entity lets you filter results when retrieving the history of payment requests
+ * via the EasyTransac API.
  *
- * Documentation : https://www.easytransac.com/fr/documentation#tag/API-Payment/paths/~1api~1payment~1requests/post
- * 
- * @copyright EasyTransac
+ * Docs: https://www.easytransac.com/fr/documentation#tag/API-Payment/paths/~1api~1payment~1requests/post
  */
 class PaymentRequestsHistoryRequest extends Entity
 {
     /**
-     * Nombre maximum de résultats à retourner.
+     * Maximum number of results to return.
      *
      * @var int|null
      * @map:Limit
@@ -22,7 +20,7 @@ class PaymentRequestsHistoryRequest extends Entity
     protected $limit = null;
 
     /**
-     * Numéro de page des résultats à récupérer.
+     * Results page number to retrieve.
      *
      * @var int|null
      * @map:Page
@@ -30,7 +28,7 @@ class PaymentRequestsHistoryRequest extends Entity
     protected $page = null;
 
     /**
-     * Indique si la requête a été effectuée à distance (via API par exemple).
+     * Indicates whether the request was performed remotely (e.g., via API).
      *
      * @var bool|null
      * @map:Remote
@@ -38,7 +36,7 @@ class PaymentRequestsHistoryRequest extends Entity
     protected $remote = null;
 
     /**
-     * Date de début à partir de laquelle les demandes doivent être listées (format : YYYY-MM-DD).
+     * Start date from which requests should be listed (format: YYYY-MM-DD).
      *
      * @var string|null
      * @map:DateFrom
@@ -46,7 +44,7 @@ class PaymentRequestsHistoryRequest extends Entity
     protected $dateFrom = null;
 
     /**
-     * Adresse email associée aux demandes de paiement à filtrer.
+     * Email address associated with the payment requests to filter.
      *
      * @var string|null
      * @map:Email
@@ -54,7 +52,7 @@ class PaymentRequestsHistoryRequest extends Entity
     protected $email = null;
 
     /**
-     * Identifiant d'une demande de paiement spécifique à récupérer.
+     * Identifier of a specific payment request to retrieve.
      *
      * @var string|null
      * @map:Id
@@ -62,10 +60,10 @@ class PaymentRequestsHistoryRequest extends Entity
     protected $id = null;
 
     /**
-     * Définit la limite du nombre de résultats.
+     * Sets the maximum number of results to return.
      *
-     * @param int $limit Nombre maximum de résultats à retourner.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param int $limit
+     * @return $this
      */
     public function setLimit($limit)
     {
@@ -74,10 +72,10 @@ class PaymentRequestsHistoryRequest extends Entity
     }
 
     /**
-     * Définit le numéro de page de résultats à récupérer.
+     * Sets the results page number to retrieve.
      *
-     * @param int $page Numéro de page.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param int $page
+     * @return $this
      */
     public function setPage($page)
     {
@@ -86,10 +84,10 @@ class PaymentRequestsHistoryRequest extends Entity
     }
 
     /**
-     * Définit si la demande est distante (remote).
+     * Sets whether the request is remote.
      *
-     * @param bool $remote Indique si la demande provient d'un appel distant.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param bool $remote Indicates if the request comes from a remote call.
+     * @return $this
      */
     public function setRemote($remote)
     {
@@ -98,10 +96,10 @@ class PaymentRequestsHistoryRequest extends Entity
     }
 
     /**
-     * Définit la date de début du filtre.
+     * Sets the start date filter.
      *
-     * @param string $dateFrom Date au format YYYY-MM-DD.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param string $dateFrom Date in YYYY-MM-DD format.
+     * @return $this
      */
     public function setDateFrom($dateFrom)
     {
@@ -110,10 +108,10 @@ class PaymentRequestsHistoryRequest extends Entity
     }
 
     /**
-     * Définit l'adresse email à filtrer.
+     * Sets the email address to filter by.
      *
-     * @param string $email Adresse email du destinataire.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param string $email Recipient email address.
+     * @return $this
      */
     public function setEmail($email)
     {
@@ -122,10 +120,10 @@ class PaymentRequestsHistoryRequest extends Entity
     }
 
     /**
-     * Définit l’identifiant spécifique d’une demande à récupérer.
+     * Sets the specific payment request identifier to retrieve.
      *
-     * @param string $id Identifiant de la demande.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param string $id Request identifier.
+     * @return $this
      */
     public function setId($id)
     {

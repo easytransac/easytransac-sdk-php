@@ -3,10 +3,11 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente la réponse des requêtes "DirectPayment", "OneClickPayment", "PaymentStatus" et "PaymentRefund".
- * Cette entité regroupe toutes les informations relatives à une transaction réalisée via EasyTransac.
+ * Represents the response for the "DirectPayment", "OneClickPayment",
+ * "PaymentStatus", and "PaymentRefund" requests.
  *
- * @copyright EasyTransac
+ * This entity aggregates all information related to a transaction
+ * performed via EasyTransac.
  */
 class DoneTransaction extends Entity
 {
@@ -101,9 +102,9 @@ class DoneTransaction extends Entity
     protected $test = null;
 
     /**
-     * Retourne l'URL 3D Secure si disponible.
+     * Returns the 3D Secure URL, if available.
      *
-     * @return string|null URL 3DSecure ou null si non disponible.
+     * @return string|null 3DS URL or null if unavailable.
      */
     public function getSecureUrl()
     {
@@ -111,9 +112,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne le nombre de tentatives de la requête.
+     * Returns the number of request attempts.
      *
-     * @return int|null Nombre de tentatives ou null.
+     * @return int|null Number of attempts or null.
      */
     public function getRequestAttempt()
     {
@@ -121,9 +122,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne l'identifiant de la requête d'origine.
+     * Returns the original request identifier.
      *
-     * @return string|null Identifiant de la requête d'origine ou null.
+     * @return string|null Original request ID or null.
      */
     public function getOriginalRequestId()
     {
@@ -131,9 +132,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne le type d'opération de la transaction.
+     * Returns the transaction operation type.
      *
-     * @return string|null Type d'opération ou null.
+     * @return string|null Operation type or null.
      */
     public function getOperationType()
     {
@@ -141,9 +142,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne l'erreur additionnelle éventuelle.
+     * Returns the additional error message, if any.
      *
-     * @return string|null Message d'erreur additionnelle ou null.
+     * @return string|null Additional error message or null.
      */
     public function getAdditionalError()
     {
@@ -151,9 +152,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne le message d'erreur éventuel.
+     * Returns the error message, if any.
      *
-     * @return string|null Message d'erreur ou null.
+     * @return string|null Error message or null.
      */
     public function getError()
     {
@@ -161,9 +162,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne l'alias de la transaction.
+     * Returns the transaction alias.
      *
-     * @return string|null Alias ou null.
+     * @return string|null Alias or null.
      */
     public function getAlias()
     {
@@ -171,9 +172,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne l'identifiant du paiement original.
+     * Returns the original payment TID.
      *
-     * @return string|null Identifiant du paiement original ou null.
+     * @return string|null Original payment TID or null.
      */
     public function getOriginalPaymentTid()
     {
@@ -181,9 +182,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Indique si la transaction est un réabonnement.
+     * Indicates whether the transaction is a rebill.
      *
-     * @return bool|null True si réabonnement, sinon null.
+     * @return bool|null True if rebill, otherwise null.
      */
     public function getRebill()
     {
@@ -191,9 +192,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Indique si la transaction fait partie d'un paiement multiple.
+     * Indicates whether the transaction is part of multiple payments.
      *
-     * @return bool|null True si paiement multiple, sinon null.
+     * @return bool|null True if multiple payments, otherwise null.
      */
     public function getMultiplePayments()
     {
@@ -201,9 +202,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Indique si la transaction est un paiement OneClick.
+     * Indicates whether the transaction is a OneClick payment.
      *
-     * @return bool|null True si OneClick, sinon null.
+     * @return bool|null True if OneClick, otherwise null.
      */
     public function getOneClick()
     {
@@ -211,9 +212,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Indique si la transaction a été sécurisée 3D Secure.
+     * Indicates whether the transaction used 3D Secure.
      *
-     * @return bool|null True si 3DSecure, sinon null.
+     * @return bool|null True if 3D Secure, otherwise null.
      */
     public function getSecure()
     {
@@ -221,9 +222,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne le message associé à la transaction.
+     * Returns the message associated with the transaction.
      *
-     * @return string|null Message ou null.
+     * @return string|null Message or null.
      */
     public function getMessage()
     {
@@ -231,9 +232,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne les frais fixes appliqués à la transaction.
+     * Returns the fixed fees applied to the transaction.
      *
-     * @return float|null Montant des frais fixes ou null.
+     * @return float|null Fixed fee amount or null.
      */
     public function getFixFees()
     {
@@ -241,9 +242,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne le montant de la transaction.
+     * Returns the transaction amount.
      *
-     * @return float|null Montant ou null.
+     * @return float|null Amount or null.
      */
     public function getAmount()
     {
@@ -251,9 +252,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne la date de représentation (en cas de rejet).
+     * Returns the representment date (in case of dispute).
      *
-     * @return string|null Date de représentation ou null.
+     * @return string|null Representment date or null.
      */
     public function getDateRepresentment()
     {
@@ -261,9 +262,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne la date de chargeback (rétrofacturation).
+     * Returns the chargeback date.
      *
-     * @return string|null Date de chargeback ou null.
+     * @return string|null Chargeback date or null.
      */
     public function getDateChargeback()
     {
@@ -271,9 +272,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne la date de remboursement.
+     * Returns the refund date.
      *
-     * @return string|null Date de remboursement ou null.
+     * @return string|null Refund date or null.
      */
     public function getDateRefund()
     {
@@ -281,9 +282,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne le montant remboursé.
+     * Returns the refunded amount.
      *
-     * @return float|null Montant remboursé ou null.
+     * @return float|null Refunded amount or null.
      */
     public function getAMountRefund()
     {
@@ -291,9 +292,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne la date de la transaction.
+     * Returns the transaction date.
      *
-     * @return string|null Date ou null.
+     * @return string|null Date or null.
      */
     public function getDate()
     {
@@ -301,9 +302,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne le statut de la transaction.
+     * Returns the transaction status.
      *
-     * @return string|null Statut ou null.
+     * @return string|null Status or null.
      */
     public function getStatus()
     {
@@ -311,9 +312,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne l'identifiant de la commande associée.
+     * Returns the associated order identifier.
      *
-     * @return string|null OrderId ou null.
+     * @return string|null OrderId or null.
      */
     public function getOrderId()
     {
@@ -321,9 +322,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne l'identifiant utilisateur.
+     * Returns the user identifier.
      *
-     * @return string|null Uid ou null.
+     * @return string|null Uid or null.
      */
     public function getUid()
     {
@@ -331,9 +332,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne l'identifiant de transaction.
+     * Returns the transaction identifier.
      *
-     * @return string|null Tid ou null.
+     * @return string|null Tid or null.
      */
     public function getTid()
     {
@@ -341,9 +342,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne l'identifiant de la requête.
+     * Returns the request identifier.
      *
-     * @return string|null RequestId ou null.
+     * @return string|null RequestId or null.
      */
     public function getRequestId()
     {
@@ -351,9 +352,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne l'URL du mandat SEPA si disponible.
+     * Returns the SEPA mandate URL, if available.
      *
-     * @return string|null URL du mandat ou null.
+     * @return string|null Mandate URL or null.
      */
     public function getMandateUrl()
     {
@@ -361,9 +362,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne l'URL de redirection si disponible.
+     * Returns the redirect URL, if available.
      *
-     * @return string|null URL de redirection ou null.
+     * @return string|null Redirect URL or null.
      */
     public function getRedirectUrl()
     {
@@ -371,9 +372,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Indique si la transaction est en mode test.
+     * Indicates whether the transaction is in test mode.
      *
-     * @return bool|null True si test, sinon null.
+     * @return bool|null True if test, otherwise null.
      */
     public function getTest()
     {
@@ -381,9 +382,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne la méthode de paiement utilisée.
+     * Returns the payment method used.
      *
-     * @return string|null Méthode de paiement ou null.
+     * @return string|null Payment method or null.
      */
     public function getPaymentMethod()
     {
@@ -391,9 +392,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Retourne le client associé à la transaction.
+     * Returns the client associated with the transaction.
      *
-     * @return Client|null Objet Client ou null.
+     * @return Client|null Client object or null.
      */
     public function getClient()
     {
@@ -401,9 +402,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Indique si la transaction a été capturée.
+     * Indicates whether the transaction is captured.
      *
-     * @return bool True si capturée, sinon false.
+     * @return bool True if captured, otherwise false.
      */
     public function isCaptured()
     {
@@ -411,9 +412,9 @@ class DoneTransaction extends Entity
     }
 
     /**
-     * Indique si la transaction est en attente.
+     * Indicates whether the transaction is pending.
      *
-     * @return bool True si en attente, sinon false.
+     * @return bool True if pending, otherwise false.
      */
     public function isPending()
     {

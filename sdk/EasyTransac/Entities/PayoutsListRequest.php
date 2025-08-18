@@ -3,16 +3,14 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les paramètres de la requête "Payouts list".
- * Cette entité permet de filtrer les résultats lors de la récupération de la liste des virements (payouts)
- * via l’API EasyTransac.
- *
- * @copyright EasyTransac
+ * Represents the parameters for the "Payouts list" request.
+ * This entity lets you filter results when retrieving the list of payouts
+ * via the EasyTransac API.
  */
 class PayoutsListRequest extends Entity
 {
     /**
-     * Numéro de la page de résultats à récupérer.
+     * Results page number to retrieve.
      *
      * @var int|null
      * @map:Page
@@ -20,7 +18,7 @@ class PayoutsListRequest extends Entity
     protected $page = null;
 
     /**
-     * Date de début pour filtrer les virements (format : YYYY-MM-DD).
+     * Start date to filter payouts (format: YYYY-MM-DD).
      *
      * @var string|null
      * @map:DateFrom
@@ -28,7 +26,7 @@ class PayoutsListRequest extends Entity
     protected $dateFrom = null;
 
     /**
-     * Indique si l'on souhaite filtrer les virements en environnement live (production).
+     * Whether to filter payouts in the live (production) environment.
      *
      * @var bool|null
      * @map:Live
@@ -36,7 +34,7 @@ class PayoutsListRequest extends Entity
     protected $live = null;
 
     /**
-     * Adresse email associée aux virements à filtrer.
+     * Email address associated with the payouts to filter.
      *
      * @var string|null
      * @map:Email
@@ -44,7 +42,7 @@ class PayoutsListRequest extends Entity
     protected $email = null;
 
     /**
-     * Identifiant du virement à rechercher.
+     * Identifier of the payout to retrieve.
      *
      * @var string|null
      * @map:Id
@@ -52,7 +50,7 @@ class PayoutsListRequest extends Entity
     protected $id = null;
 
     /**
-     * Nombre maximum de résultats à retourner.
+     * Maximum number of results to return.
      *
      * @var int|null
      * @map:Limit
@@ -60,10 +58,10 @@ class PayoutsListRequest extends Entity
     protected $limit = null;
 
     /**
-     * Définit la limite de résultats à retourner.
+     * Sets the maximum number of results to return.
      *
-     * @param int $limit Nombre maximum de résultats.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param int $limit
+     * @return $this
      */
     public function setLimit($limit)
     {
@@ -72,10 +70,10 @@ class PayoutsListRequest extends Entity
     }
 
     /**
-     * Définit le numéro de page à récupérer.
+     * Sets the results page number to retrieve.
      *
-     * @param int $page Numéro de la page de résultats.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param int $page
+     * @return $this
      */
     public function setPage($page)
     {
@@ -84,10 +82,10 @@ class PayoutsListRequest extends Entity
     }
 
     /**
-     * Définit la date de début pour filtrer les virements.
+     * Sets the start date to filter payouts.
      *
-     * @param string $dateFrom Date au format YYYY-MM-DD.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param string $dateFrom Date in YYYY-MM-DD format.
+     * @return $this
      */
     public function setDateFrom($dateFrom)
     {
@@ -96,10 +94,10 @@ class PayoutsListRequest extends Entity
     }
 
     /**
-     * Définit l'adresse email associée au virement.
+     * Sets the email address associated with the payout.
      *
-     * @param string $email Adresse email du bénéficiaire ou de l’expéditeur.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param string $email Beneficiary or sender email address.
+     * @return $this
      */
     public function setEmail($email)
     {
@@ -108,10 +106,10 @@ class PayoutsListRequest extends Entity
     }
 
     /**
-     * Définit l’identifiant du virement.
+     * Sets the payout identifier.
      *
-     * @param string $id Identifiant unique du payout.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param string $id Unique payout identifier.
+     * @return $this
      */
     public function setId($id)
     {

@@ -3,59 +3,57 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les arguments pour la requête "PaymentHistoryRequest".
- * Cette entité permet de configurer les paramètres nécessaires à la consultation
- * de l'historique des paiements via l'API EasyTransac.
- *
- * @copyright EasyTransac
+ * Represents the arguments for a "PaymentHistoryRequest".
+ * This entity configures the parameters needed to fetch the payment
+ * history through the EasyTransac API.
  */
 class PaymentHistoryRequest extends Entity
 {
-    /** 
-     * Numéro de la page des résultats à récupérer.
-     * 
+    /**
+     * Results page number to retrieve.
+     *
      * @var int|null
-     * @map:Page 
+     * @map:Page
      */
     protected $page = null;
 
-    /** 
-     * Date de début pour filtrer les paiements (format attendu : YYYY-MM-DD).
-     * 
+    /**
+     * Start date to filter payments (expected format: YYYY-MM-DD).
+     *
      * @var string|null
-     * @map:DateFrom 
+     * @map:DateFrom
      */
     protected $dateFrom = null;
 
-    /** 
-     * Adresse email associée au paiement à filtrer.
-     * 
+    /**
+     * Email address associated with the payments to filter.
+     *
      * @var string|null
-     * @map:Email 
+     * @map:Email
      */
     protected $email = null;
 
-    /** 
-     * Identifiant du paiement à rechercher.
-     * 
+    /**
+     * Identifier of the specific payment to fetch.
+     *
      * @var string|null
-     * @map:Id 
+     * @map:Id
      */
     protected $id = null;
 
-    /** 
-     * Nombre maximum de résultats à retourner.
-     * 
+    /**
+     * Maximum number of results to return.
+     *
      * @var int|null
-     * @map:Limit 
+     * @map:Limit
      */
     protected $limit = null;
 
     /**
-     * Définit le nombre maximum de résultats à retourner.
+     * Sets the maximum number of results to return.
      *
-     * @param int $limit Nombre maximum de résultats.
-     * @return $this Retourne l'instance courante pour chaînage.
+     * @param int $limit
+     * @return $this
      */
     public function setLimit($limit)
     {
@@ -64,10 +62,10 @@ class PaymentHistoryRequest extends Entity
     }
 
     /**
-     * Définit le numéro de page à récupérer.
+     * Sets the results page number to retrieve.
      *
-     * @param int $page Numéro de la page.
-     * @return $this Retourne l'instance courante pour chaînage.
+     * @param int $page
+     * @return $this
      */
     public function setPage($page)
     {
@@ -76,10 +74,10 @@ class PaymentHistoryRequest extends Entity
     }
 
     /**
-     * Définit la date de début pour le filtrage des résultats.
+     * Sets the start date for filtering results.
      *
-     * @param string $dateFrom Date de début au format YYYY-MM-DD.
-     * @return $this Retourne l'instance courante pour chaînage.
+     * @param string $dateFrom Date in YYYY-MM-DD format.
+     * @return $this
      */
     public function setDateFrom($dateFrom)
     {
@@ -88,10 +86,10 @@ class PaymentHistoryRequest extends Entity
     }
 
     /**
-     * Définit l'adresse email à filtrer.
+     * Sets the email address to filter by.
      *
-     * @param string $email Adresse email liée au paiement.
-     * @return $this Retourne l'instance courante pour chaînage.
+     * @param string $email
+     * @return $this
      */
     public function setEmail($email)
     {
@@ -100,10 +98,10 @@ class PaymentHistoryRequest extends Entity
     }
 
     /**
-     * Définit l'identifiant du paiement.
+     * Sets the payment identifier.
      *
-     * @param string $id Identifiant du paiement.
-     * @return $this Retourne l'instance courante pour chaînage.
+     * @param string $id
+     * @return $this
      */
     public function setId($id)
     {

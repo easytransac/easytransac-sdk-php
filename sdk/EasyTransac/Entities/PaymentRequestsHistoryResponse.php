@@ -3,19 +3,18 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente la réponse de l’historique des demandes de paiement.
- * Cette entité contient les informations retournées par l’API EasyTransac 
- * concernant les requêtes de paiement effectuées.
+ * Represents the response for the payment requests history.
+ * This entity contains the information returned by the EasyTransac API
+ * regarding performed payment requests.
  *
- * URL de la documentation :
+ * Documentation URL:
  * https://www.easytransac.com/fr/documentation#tag/API-Payment/paths/~1api~1payment~1requests/post
- *
- * @copyright EasyTransac
+ * 
  */
 class PaymentRequestsHistoryResponse extends Entity
 {
     /**
-     * Identifiant unique de la demande de paiement.
+     * Unique identifier of the payment request.
      *
      * @var string|null
      * @map:RequestId
@@ -23,7 +22,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $requestId = null;
 
     /**
-     * Type d’opération (ex. : debit, refund...).
+     * Operation type (e.g., debit, refund).
      *
      * @var string|null
      * @map:OperationType
@@ -31,7 +30,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $operationType = null;
 
     /**
-     * Méthode de paiement utilisée (CB, SEPA, etc.).
+     * Payment method used (e.g., CB, SEPA).
      *
      * @var string|null
      * @map:PaymentMethod
@@ -39,7 +38,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $paymentMethod = null;
 
     /**
-     * Statut actuel de la demande (ex. : captured, pending, done...).
+     * Current request status (e.g., captured, pending, done).
      *
      * @var string|null
      * @map:Status
@@ -47,7 +46,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $status = null;
 
     /**
-     * Date de création de la demande.
+     * Request creation date.
      *
      * @var string|null
      * @map:Date
@@ -55,7 +54,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $date = null;
 
     /**
-     * Date d’envoi de la demande.
+     * Date when the request was sent.
      *
      * @var string|null
      * @map:DateSent
@@ -63,7 +62,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $dateSent = null;
 
     /**
-     * Montant de la demande (en centimes).
+     * Requested amount (in cents).
      *
      * @var int|null
      * @map:Amount
@@ -71,7 +70,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $amount = null;
 
     /**
-     * Indique si la demande est protégée par 3D Secure.
+     * Whether the request is protected by 3D Secure.
      *
      * @var bool|null
      * @map:3DSecure
@@ -79,7 +78,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $secure = null;
 
     /**
-     * URL de la page de paiement générée.
+     * URL of the generated payment page.
      *
      * @var string|null
      * @map:PageUrl
@@ -87,7 +86,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $pageUrl = null;
 
     /**
-     * Adresse email associée à la demande.
+     * Email address associated with the request.
      *
      * @var string|null
      * @map:Email
@@ -95,7 +94,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $email = null;
 
     /**
-     * Numéro de téléphone du destinataire.
+     * Recipient phone number.
      *
      * @var string|null
      * @map:Phone
@@ -103,7 +102,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $phone = null;
 
     /**
-     * Indique si la transaction est en environnement de production.
+     * Indicates whether the request is in production (live) environment.
      *
      * @var bool|null
      * @map:Live
@@ -111,7 +110,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $live = null;
 
     /**
-     * Langue utilisée pour la demande.
+     * Language used for the request.
      *
      * @var string|null
      * @map:Language
@@ -119,7 +118,7 @@ class PaymentRequestsHistoryResponse extends Entity
     protected $language = null;
 
     /**
-     * Récupère l’identifiant de la demande.
+     * Returns the request identifier.
      *
      * @return string|null
      */
@@ -129,7 +128,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le type d’opération.
+     * Returns the operation type.
      *
      * @return string|null
      */
@@ -139,7 +138,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Récupère la méthode de paiement.
+     * Returns the payment method.
      *
      * @return string|null
      */
@@ -149,7 +148,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le statut de la demande.
+     * Returns the current request status.
      *
      * @return string|null
      */
@@ -159,7 +158,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Récupère la date de création.
+     * Returns the creation date.
      *
      * @return string|null
      */
@@ -169,7 +168,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Récupère la date d’envoi de la demande.
+     * Returns the date the request was sent.
      *
      * @return string|null
      */
@@ -179,7 +178,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le montant demandé.
+     * Returns the requested amount.
      *
      * @return int|null
      */
@@ -189,7 +188,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Indique si la demande est en 3D Secure.
+     * Indicates whether 3D Secure is enabled.
      *
      * @return bool|null
      */
@@ -199,7 +198,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Récupère l’URL de la page de paiement.
+     * Returns the payment page URL.
      *
      * @return string|null
      */
@@ -209,7 +208,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Récupère l’adresse email du destinataire.
+     * Returns the recipient email address.
      *
      * @return string|null
      */
@@ -219,7 +218,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Récupère le numéro de téléphone du destinataire.
+     * Returns the recipient phone number.
      *
      * @return string|null
      */
@@ -229,7 +228,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Indique si la demande a été faite en environnement live.
+     * Indicates whether the request was made in a live environment.
      *
      * @return bool|null
      */
@@ -239,7 +238,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Récupère la langue de la demande.
+     * Returns the request language.
      *
      * @return string|null
      */
@@ -249,7 +248,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Vérifie si la demande a été capturée.
+     * Checks whether the request has been captured.
      *
      * @return bool
      */
@@ -259,7 +258,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Vérifie si la demande est en attente.
+     * Checks whether the request is pending.
      *
      * @return bool
      */
@@ -269,7 +268,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Vérifie si la demande est expirée.
+     * Checks whether the request is expired.
      *
      * @return bool
      */
@@ -279,7 +278,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Vérifie si la demande a été annulée.
+     * Checks whether the request has been cancelled.
      *
      * @return bool
      */
@@ -289,7 +288,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Vérifie si la demande est encore à envoyer.
+     * Checks whether the request is still to be sent.
      *
      * @return bool
      */
@@ -299,7 +298,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Vérifie si la demande est verrouillée.
+     * Checks whether the request is locked.
      *
      * @return bool
      */
@@ -309,7 +308,7 @@ class PaymentRequestsHistoryResponse extends Entity
     }
 
     /**
-     * Vérifie si la demande est finalisée.
+     * Checks whether the request is done/finalized.
      *
      * @return bool
      */

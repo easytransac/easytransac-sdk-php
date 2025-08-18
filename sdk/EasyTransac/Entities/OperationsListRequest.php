@@ -3,18 +3,18 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les paramètres d'une requête "OperationsListRequest".
+ * Represents the parameters for an "OperationsListRequest".
  *
- * Cette entité permet de filtrer la liste des opérations selon différents critères
- * comme la date, l'adresse e-mail, l'identifiant de la transaction, etc.
+ * This entity allows filtering the list of operations by various criteria
+ * such as date, email address, transaction identifier, etc.
  *
  * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * 
  */
 class OperationsListRequest extends Entity
 {
     /**
-     * Numéro de page pour la pagination des résultats.
+     * Page number for paginating results.
      *
      * @var int|null
      * @map:Page
@@ -22,7 +22,7 @@ class OperationsListRequest extends Entity
     protected $page = null;
 
     /**
-     * Date de début pour filtrer les opérations (au format YYYY-MM-DD).
+     * Start date to filter operations (format YYYY-MM-DD).
      *
      * @var string|null
      * @map:DateFrom
@@ -30,7 +30,7 @@ class OperationsListRequest extends Entity
     protected $dateFrom = null;
 
     /**
-     * Adresse e-mail utilisée pour filtrer les opérations.
+     * Email address used to filter operations.
      *
      * @var string|null
      * @map:Email
@@ -38,7 +38,7 @@ class OperationsListRequest extends Entity
     protected $email = null;
 
     /**
-     * Identifiant spécifique de l'opération à récupérer.
+     * Specific operation identifier to retrieve.
      *
      * @var string|null
      * @map:Id
@@ -46,7 +46,7 @@ class OperationsListRequest extends Entity
     protected $id = null;
 
     /**
-     * Nombre maximal de résultats à retourner.
+     * Maximum number of results to return.
      *
      * @var int|null
      * @map:Limit
@@ -54,7 +54,7 @@ class OperationsListRequest extends Entity
     protected $limit = null;
 
     /**
-     * Définit la limite maximale de résultats à retourner.
+     * Sets the maximum number of results to return.
      *
      * @param int $limit
      * @return $this
@@ -66,7 +66,7 @@ class OperationsListRequest extends Entity
     }
 
     /**
-     * Définit la page de pagination souhaitée.
+     * Sets the desired pagination page.
      *
      * @param int $page
      * @return $this
@@ -78,9 +78,9 @@ class OperationsListRequest extends Entity
     }
 
     /**
-     * Définit la date de début pour filtrer les opérations.
+     * Sets the start date to filter operations.
      *
-     * @param string $dateFrom Date au format YYYY-MM-DD
+     * @param string $dateFrom Date in YYYY-MM-DD format.
      * @return $this
      */
     public function setDateFrom($dateFrom)
@@ -90,7 +90,7 @@ class OperationsListRequest extends Entity
     }
 
     /**
-     * Définit l'adresse e-mail associée à la recherche.
+     * Sets the email address associated with the search.
      *
      * @param string $email
      * @return $this
@@ -102,7 +102,7 @@ class OperationsListRequest extends Entity
     }
 
     /**
-     * Définit l'identifiant de l'opération recherchée.
+     * Sets the identifier of the operation to retrieve.
      *
      * @param string $id
      * @return $this

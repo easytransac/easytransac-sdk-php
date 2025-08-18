@@ -5,37 +5,37 @@ namespace EasyTransac\Core;
 /**
  * Logger
  *
- * Classe utilitaire pour la journalisation des événements, à des fins de débogage.
- * Utilise le design pattern Singleton.
+ * Utility class for event logging, mainly for debugging purposes.
+ * Implements the Singleton design pattern.
  *
  * @package EasyTransac\Core
  */
 class Logger
 {
-    /** @var bool Active ou non */
+    /** @var bool Whether logging is enabled */
     protected $active = false;
 
-    /** @var string Nom du fichier de log */
+    /** @var string Log file name */
     protected $logName = 'easytransac-sdk.txt';
 
-    /** @var string Chemin d'enregistrement du fichier */
+    /** @var string Directory path where the log file is stored */
     protected $filePath = '';
 
-    /** @var self|null Instance unique du Logger */
+    /** @var self|null Singleton instance */
     protected static $instance = null;
 
-    /** Constructeur privé (singleton) */
+    /** Private constructor (singleton) */
     protected function __construct()
     {
     }
 
-    /** Empêche le clonage */
+    /** Prevent cloning */
     protected function __clone()
     {
     }
 
     /**
-     * Récupère l'instance unique du logger.
+     * Returns the singleton logger instance.
      *
      * @return self
      */
@@ -49,9 +49,9 @@ class Logger
     }
 
     /**
-     * Active ou désactive le logger.
+     * Enables or disables the logger.
      *
-     * @param $active
+     * @param bool $active
      * @return $this
      */
     public function setActive($active): self
@@ -61,7 +61,7 @@ class Logger
     }
 
     /**
-     * Vérifie si le logger est actif.
+     * Checks whether the logger is enabled.
      *
      * @return bool
      */
@@ -71,9 +71,10 @@ class Logger
     }
 
     /**
-     * Définit le chemin vers le dossier du fichier de log.
+     * Sets the directory path for the log file.
+     * Note: Ensure the path includes the trailing directory separator.
      *
-     * @param $path
+     * @param string $path
      * @return $this
      */
     public function setFilePath($path): self
@@ -83,7 +84,7 @@ class Logger
     }
 
     /**
-     * Récupère le chemin complet vers le fichier de log.
+     * Gets the full directory path for the log file.
      *
      * @return string
      */
@@ -93,7 +94,7 @@ class Logger
     }
 
     /**
-     * Supprime le fichier de log s'il existe.
+     * Deletes the log file if it exists.
      *
      * @return void
      */
@@ -106,10 +107,10 @@ class Logger
     }
 
     /**
-     * Écrit un message dans le fichier de log (si activé).
+     * Writes a message to the log file (if enabled).
      *
-     * @param $message
-     * @return $this|null
+     * @param mixed $message Message to log; arrays/objects will be stringified via print_r.
+     * @return self|null Returns $this when written, or null if logging is disabled.
      */
     public function write($message): ?self
     {

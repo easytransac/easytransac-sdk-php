@@ -4,12 +4,12 @@ namespace EasyTransac\Core;
 use EasyTransac\Core\Security;
 
 /**
- * Singleton permettant d'appeler l'API EasyTransac avec une clé API.
+ * Singleton used to call the EasyTransac API with an API key.
  *
- * Cette classe gère la configuration de la requête, le choix du caller,
- * le modifier éventuel, et le traitement de la signature.
- * 
- * Compatible PHP 7 et 8 sans modification logique.
+ * This class manages request configuration, the chosen caller,
+ * an optional modifier, and signature handling.
+ *
+ * Compatible with PHP 7 and 8 without logical changes.
  *
  * @copyright EasyTransac
  * @package EasyTransac\Core
@@ -17,70 +17,77 @@ use EasyTransac\Core\Security;
 class Services
 {
     /**
-     * Instance unique du singleton
+     * Singleton instance.
      * @var Services|null
      */
     private static $instance = null;
 
     /**
-     * Clé API utilisée pour les appels
+     * API key used for calls.
      * @var string|null
      */
     private $key = null;
 
     /**
-     * Objet caller qui exécute les requêtes HTTP
+     * HTTP caller object that performs requests.
      * @var ICaller|null
      */
     private $caller = null;
 
     /**
-     * Modificateur optionnel pour modifier le comportement des appels
+     * Optional modifier to change call behavior.
      * @var ICallerModifier|null
      */
     private $modifier = null;
 
-    /** Environnements */
+    /** Environments */
     public const ENV_SANDBOX    = 'sandbox';
     public const ENV_PRODUCTION = 'production';
 
-    /** URLs de base */
+    /** Base URLs */
     public const URL_SANDBOX    = 'https://sandbox.easytransac.com/api';
     public const URL_PRODUCTION = 'https://www.easytransac.com/api';
 
-    /** @var string */
-    private $url = self::URL_PRODUCTION; // défaut: prod
+    /** @var string Base URL (defaults to production) */
+    private $url = self::URL_PRODUCTION;
 
     /**
-     * Timeout en secondes pour les requêtes
+     * Request timeout in seconds.
      * @var int
      */
     private $timeout = 10;
 
     /**
-     * Définit l'environnement d'appel (sandbox ou production)
+     * Sets the environment.
      *
-     * @param string $env "sandbox" ou "production"
+     * @param string $env self::ENV_SANDBOX | self::ENV_PRODUCTION
+     * @return $this
+     * @throws \InvalidArgumentException
      */
     public function setEnvironment($env)
     {
-        // Normalise (garde la compatibilité avec les strings existantes)
         $env = strtolower((string) $env);
 
         if ($env === self::ENV_SANDBOX) {
             $this->url = self::URL_SANDBOX;
-        } else {
-            // par défaut, production
+        } elseif ($env === self::ENV_PRODUCTION) {
             $this->url = self::URL_PRODUCTION;
+        } else {
+            throw new \InvalidArgumentException(sprintf(
+                'Invalid environment: %s (expected: "%s" or "%s")',
+                $env,
+                self::ENV_SANDBOX,
+                self::ENV_PRODUCTION
+            ));
         }
 
         return $this;
     }
-    
+
     /**
-     * Ajoute un modificateur pour le caller
-     * 
-     * @param ICallerModifier $modifier Modificateur à appliquer
+     * Sets a modifier to be applied to the caller.
+     *
+     * @param ICallerModifier $modifier Modifier to apply.
      * @return self
      */
     public function setModifier(ICallerModifier $modifier)
@@ -90,8 +97,8 @@ class Services
     }
 
     /**
-     * Retourne le modificateur actuellement défini
-     * 
+     * Returns the currently configured modifier.
+     *
      * @return ICallerModifier|null
      */
     public function getModifier()
@@ -100,9 +107,9 @@ class Services
     }
 
     /**
-     * Définit le caller utilisé pour les appels HTTP
-     * 
-     * @param ICaller $caller Instance implémentant ICaller
+     * Sets the caller used for HTTP requests.
+     *
+     * @param ICaller $caller Instance implementing ICaller.
      * @return self
      */
     public function setCaller(ICaller $caller)
@@ -112,8 +119,8 @@ class Services
     }
 
     /**
-     * Supprime le modificateur actuel
-     * 
+     * Removes the current modifier.
+     *
      * @return self
      */
     public function removeModifier()
@@ -123,8 +130,8 @@ class Services
     }
 
     /**
-     * Supprime le caller actuel
-     * 
+     * Removes the current caller.
+     *
      * @return self
      */
     public function removeCaller()
@@ -134,8 +141,8 @@ class Services
     }
 
     /**
-     * Récupère le caller actuel
-     * 
+     * Returns the current caller.
+     *
      * @return ICaller|null
      */
     public function getCaller()
@@ -144,9 +151,9 @@ class Services
     }
 
     /**
-     * Définit l'URL de base pour les requêtes API
-     * 
-     * @param string $url URL complète ou de base
+     * Sets the base URL for API requests.
+     *
+     * @param string $url Full or base URL.
      * @return self
      */
     public function setUrl($url)
@@ -156,9 +163,9 @@ class Services
     }
 
     /**
-     * Définit le timeout (en secondes) des requêtes
-     * 
-     * @param int $timeout Durée maximale d'attente en secondes
+     * Sets the request timeout (in seconds).
+     *
+     * @param int $timeout Max wait time in seconds.
      * @return self
      */
     public function setRequestTimeout($timeout)
@@ -168,9 +175,9 @@ class Services
     }
 
     /**
-     * Fournit la clé API à utiliser pour les appels
-     * 
-     * @param string $key Clé API EasyTransac
+     * Provides the API key to use for calls.
+     *
+     * @param string $key EasyTransac API key.
      * @return self
      */
     public function provideAPIKey($key)
@@ -180,8 +187,8 @@ class Services
     }
 
     /**
-     * Récupère la clé API configurée
-     * 
+     * Returns the configured API key.
+     *
      * @return string|null
      */
     public function getAPIKey()
@@ -190,8 +197,8 @@ class Services
     }
 
     /**
-     * Vérifie si le mode debug est activé via le Logger
-     * 
+     * Checks whether debug mode is enabled via the Logger.
+     *
      * @return bool
      */
     public function isDebug()
@@ -200,9 +207,9 @@ class Services
     }
 
     /**
-     * Active ou désactive le mode debug
-     * 
-     * @param bool $debugMode True pour activer, false sinon
+     * Enables or disables debug mode.
+     *
+     * @param bool $debugMode True to enable, false otherwise.
      * @return self
      */
     public function setDebug($debugMode)
@@ -212,31 +219,32 @@ class Services
     }
 
     /**
-     * Effectue un appel vers la fonction API EasyTransac spécifiée
-     * 
-     * @param string $funcName Nom de la fonction à appeler
-     * @param array &$params Paramètres à transmettre (par référence, peuvent être modifiés par un modifier)
-     * @return string Réponse brute retournée par l'appel HTTP
-     * @throws \RuntimeException Si la clé API ou le caller ne sont pas définis
-     * @throws \Exception Pour toute autre erreur durant l'appel
+     * Performs a call to the specified EasyTransac API function.
+     *
+     * @param string $funcName Function name to call.
+     * @param array  $params   Parameters to send (by reference; may be modified by a modifier).
+     * @return string Raw response returned by the HTTP call.
+     *
+     * @throws \RuntimeException If the API key or the caller is not supplied.
+     * @throws \Exception For any other error during the call.
      */
     public function call($funcName, array &$params)
     {
-        // Vérification que la clé API est fournie
+        // Ensure the API key is provided
         if (empty($this->key)) {
             throw new \RuntimeException("API key not supplied");
         }
 
-        // Vérification que le caller est défini
+        // Ensure the caller is provided
         if (empty($this->caller)) {
             throw new \RuntimeException("Caller not supplied");
         }
 
-        // Configuration du timeout et des headers pour le caller
+        // Configure timeout and headers on the caller
         $this->caller->setTimeout($this->timeout);
         $this->caller->setHeaders(['EASYTRANSAC-API-KEY:' . $this->key]);
 
-        // Si un modificateur est défini, on l'exécute pour potentiellement modifier la cible et les params
+        // If a modifier is set, let it adjust the target and parameters
         if (!empty($this->modifier)) {
             try {
                 $this->modifier->execute($this, $funcName, $params);
@@ -247,40 +255,40 @@ class Services
                 throw $e;
             }
         } else {
-            // Sinon la cible est l'URL de base + nom de fonction
+            // Otherwise, target is base URL + function name
             $target = $this->url . $funcName;
         }
 
-        // Ajout d'un paramètre Version si absent
+        // Add a Version parameter if missing
         if (!isset($params['Version'])) {
             $params['Version'] = 'easytransac-sdk-php';
         }
 
-        // Génération et ajout de la signature de sécurité
+        // Generate and add the security signature
         $params['Signature'] = Security::getSignature($params, $this->key);
 
-        // Logging de l'URL appelée et des paramètres
+        // Log the called URL and parameters
         Logger::getInstance()->write('Called url: ' . $target);
         Logger::getInstance()->write($params);
 
         try {
-            // Réalisation de l'appel HTTP via le caller
+            // Perform the HTTP call through the caller
             $response = $this->caller->call($target, $params);
 
-            // Log de la réponse brute reçue
+            // Log the raw response
             Logger::getInstance()->write($response);
 
             return $response;
         } catch (\Exception $e) {
-            // Log en cas d'erreur et propagation
+            // Log and rethrow on error
             Logger::getInstance()->write('Exception: ' . $e->getMessage() . ', Code: ' . $e->getCode());
             throw $e;
         }
     }
 
     /**
-     * Retourne l'instance unique (singleton) de la classe Services
-     * 
+     * Returns the singleton instance of the Services class.
+     *
      * @return self
      */
     public static function getInstance()
@@ -293,7 +301,7 @@ class Services
     }
 
     /**
-     * Destructeur : libère la référence au caller
+     * Destructor: releases the caller reference.
      */
     public function __destruct()
     {
@@ -301,9 +309,9 @@ class Services
     }
 
     /**
-     * Constructeur privé du singleton.
-     * Initialise un caller par défaut, de préférence CurlCaller si disponible,
-     * sinon FgcCaller.
+     * Private constructor for the singleton.
+     * Initializes a default caller, preferring CurlCaller if available,
+     * otherwise falling back to FgcCaller.
      */
     private function __construct()
     {
@@ -315,7 +323,7 @@ class Services
     }
 
     /**
-     * Clone non disponible pour ce singleton
+     * Cloning is not available for this singleton.
      */
     private function __clone()
     {

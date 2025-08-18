@@ -3,16 +3,14 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente la réponse de la requête "cancelpage".
- * Cette entité contient les informations renvoyées après une tentative 
- * d’annulation d’une page de paiement via l’API EasyTransac.
- *
- * @copyright EasyTransac
+ * Represents the response for the "cancelpage" request.
+ * This entity contains the information returned after attempting
+ * to cancel a payment page via the EasyTransac API.
  */
 class PaymentPageCancellationInfos extends Entity
 {
     /**
-     * Identifiant unique de la requête d’annulation.
+     * Unique identifier of the cancellation request.
      *
      * @var string|null
      * @map:RequestId
@@ -20,7 +18,7 @@ class PaymentPageCancellationInfos extends Entity
     protected $requestId = null;
 
     /**
-     * Type d'opération concernée (ex. : debit, refund...).
+     * Type of operation concerned (e.g., debit, refund).
      *
      * @var string|null
      * @map:OperationType
@@ -28,7 +26,7 @@ class PaymentPageCancellationInfos extends Entity
     protected $operationType = null;
 
     /**
-     * Statut actuel de l’opération (ex. : success, failed...).
+     * Current status of the operation (e.g., success, failed).
      *
      * @var string|null
      * @map:Status
@@ -36,7 +34,7 @@ class PaymentPageCancellationInfos extends Entity
     protected $status = null;
 
     /**
-     * Date de l’opération d’annulation.
+     * Date of the cancellation operation.
      *
      * @var string|null
      * @map:Date
@@ -44,7 +42,7 @@ class PaymentPageCancellationInfos extends Entity
     protected $date = null;
 
     /**
-     * Date d’envoi de la requête.
+     * Date when the request was sent.
      *
      * @var string|null
      * @map:DateSent
@@ -52,7 +50,7 @@ class PaymentPageCancellationInfos extends Entity
     protected $dateSent = null;
 
     /**
-     * Montant concerné par l’annulation (en centimes).
+     * Amount affected by the cancellation (in cents).
      *
      * @var int|null
      * @map:Amount
@@ -60,7 +58,7 @@ class PaymentPageCancellationInfos extends Entity
     protected $amount = null;
 
     /**
-     * Statut de l'utilisation du 3D Secure pour l'opération.
+     * Indicates whether 3D Secure was used for the operation.
      *
      * @var bool|null
      * @map:3DSecure
@@ -68,7 +66,7 @@ class PaymentPageCancellationInfos extends Entity
     protected $secure = null;
 
     /**
-     * URL de la page de paiement annulée.
+     * URL of the cancelled payment page.
      *
      * @var string|null
      * @map:PageUrl
@@ -76,7 +74,7 @@ class PaymentPageCancellationInfos extends Entity
     protected $pageUrl = null;
 
     /**
-     * Adresse e-mail liée à la transaction.
+     * Email address linked to the transaction.
      *
      * @var string|null
      * @map:Email
@@ -84,7 +82,7 @@ class PaymentPageCancellationInfos extends Entity
     protected $email = null;
 
     /**
-     * Langue utilisée pour l'opération.
+     * Language used for the operation.
      *
      * @var string|null
      * @map:Language
@@ -92,7 +90,7 @@ class PaymentPageCancellationInfos extends Entity
     protected $language = null;
 
     /**
-     * Récupère l'identifiant de la requête.
+     * Returns the request identifier.
      *
      * @return string|null
      */
@@ -102,7 +100,7 @@ class PaymentPageCancellationInfos extends Entity
     }
 
     /**
-     * Récupère le type d’opération.
+     * Returns the operation type.
      *
      * @return string|null
      */
@@ -112,7 +110,7 @@ class PaymentPageCancellationInfos extends Entity
     }
 
     /**
-     * Récupère le statut de l’opération.
+     * Returns the operation status.
      *
      * @return string|null
      */
@@ -122,7 +120,7 @@ class PaymentPageCancellationInfos extends Entity
     }
 
     /**
-     * Récupère la date de l’opération.
+     * Returns the operation date.
      *
      * @return string|null
      */
@@ -132,7 +130,7 @@ class PaymentPageCancellationInfos extends Entity
     }
 
     /**
-     * Récupère la date d’envoi de la requête.
+     * Returns the date the request was sent.
      *
      * @return string|null
      */
@@ -142,7 +140,7 @@ class PaymentPageCancellationInfos extends Entity
     }
 
     /**
-     * Récupère le montant concerné par l’annulation.
+     * Returns the amount affected by the cancellation.
      *
      * @return int|null
      */
@@ -152,7 +150,7 @@ class PaymentPageCancellationInfos extends Entity
     }
 
     /**
-     * Indique si 3D Secure a été utilisé.
+     * Indicates whether 3D Secure was used.
      *
      * @return bool|null
      */
@@ -162,7 +160,7 @@ class PaymentPageCancellationInfos extends Entity
     }
 
     /**
-     * Récupère l’URL de la page de paiement annulée.
+     * Returns the URL of the cancelled payment page.
      *
      * @return string|null
      */
@@ -172,7 +170,7 @@ class PaymentPageCancellationInfos extends Entity
     }
 
     /**
-     * Récupère l’adresse email liée à la transaction.
+     * Returns the email address linked to the transaction.
      *
      * @return string|null
      */
@@ -182,7 +180,7 @@ class PaymentPageCancellationInfos extends Entity
     }
 
     /**
-     * Récupère la langue utilisée.
+     * Returns the language used.
      *
      * @return string|null
      */

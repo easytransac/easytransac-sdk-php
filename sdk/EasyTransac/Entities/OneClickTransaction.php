@@ -3,129 +3,127 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les arguments de la requête "OneClickPayment"
+ * Represents the arguments for the "OneClickPayment" request.
  *
- * Cette entité est utilisée pour effectuer une transaction par carte bancaire enregistrée (paiement en un clic).
- * Elle contient toutes les informations nécessaires à la création d'une requête OneClick.
- *
- * @copyright EasyTransac
+ * This entity is used to perform a transaction using a stored card (one-click payment).
+ * It contains all the information required to create a OneClick request.
  */
 class OneClickTransaction extends Entity
 {
     /**
-     * Montant de la transaction (en centimes).
+     * Transaction amount (in cents).
      * @var int|null
      * @map:Amount
      */
     protected $amount = null;
 
     /**
-     * Identifiant unique du client (UID).
+     * Customer unique identifier (UID).
      * @var string|null
      * @map:Uid
      */
     protected $uid = null;
 
     /**
-     * Identifiant de la commande.
+     * Order identifier.
      * @var string|null
      * @map:OrderId
      */
     protected $orderId = null;
 
     /**
-     * Description de la transaction.
+     * Transaction description.
      * @var string|null
      * @map:Description
      */
     protected $description = null;
 
     /**
-     * Adresse IP du client.
+     * Client IP address.
      * @var string|null
      * @map:ClientIp
      */
     protected $clientIp = null;
 
     /**
-     * Alias de la carte enregistrée.
+     * Stored card alias.
      * @var string|null
      * @map:Alias
      */
     protected $alias = null;
 
     /**
-     * Adresse email du destinataire du paiement.
+     * Recipient email address.
      * @var string|null
      * @map:PayToEmail
      */
     protected $payToEmail = null;
 
     /**
-     * Identifiant du commerçant destinataire du paiement.
+     * Recipient (merchant) identifier.
      * @var string|null
      * @map:PayToId
      */
     protected $payToId = null;
 
     /**
-     * User-Agent du navigateur de l'utilisateur.
+     * User’s browser User-Agent.
      * @var string|null
      * @map:UserAgent
      */
     protected $userAgent = null;
 
     /**
-     * Langue de l'utilisateur.
+     * User language.
      * @var string|null
      * @map:Language
      */
     protected $language = null;
 
     /**
-     * Identifiant client fourni par le commerçant.
+     * Merchant-side customer identifier.
      * @var string|null
      * @map:ClientId
      */
     protected $clientId = null;
 
     /**
-     * Indique si le paiement doit être sécurisé avec 3D Secure.
+     * Whether to secure the payment with 3D Secure.
      * @var bool|null
      * @map:3DS
      */
     protected $secure = null;
 
     /**
-     * URL de retour après le paiement.
+     * Return URL after payment.
      * @var string|null
      * @map:ReturnUrl
      */
     protected $returnUrl = null;
 
     /**
-     * Code de sécurité CVV de la carte.
+     * Card security code (CVV).
      * @var string|null
      * @map:CardCVV
      */
     protected $CVV = null;
 
     /**
-     * Indique si la transaction est une pré-autorisation.
+     * Indicates whether the transaction is a pre-authorization.
      * @var bool|null
      * @map:PreAuth
      */
     protected $preAuth = null;
 
     /**
-     * Durée de validité de la pré-autorisation (en jours).
+     * Pre-authorization validity period (in days).
      * @var int|null
      * @map:PreAuthDuration
      */
     protected $preAuthDuration = null;
 
     /**
-     * Constructeur : initialise automatiquement l'IP et le user-agent si disponibles.
+     * Constructor: auto-initializes IP and User-Agent when available.
      */
     public function __construct()
     {
@@ -141,7 +139,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $value Alias de la carte enregistrée
+     * @param string $value Stored card alias
      * @return $this
      */
     public function setAlias($value)
@@ -151,7 +149,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $value Adresse IP du client
+     * @param string $value Client IP address
      * @return $this
      */
     public function setClientIp($value)
@@ -161,7 +159,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $value Description de la transaction
+     * @param string $value Transaction description
      * @return $this
      */
     public function setDescription($value)
@@ -171,7 +169,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $value Identifiant de la commande
+     * @param string $value Order identifier
      * @return $this
      */
     public function setOrderId($value)
@@ -181,7 +179,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $value UID du client
+     * @param string $value Customer UID
      * @return $this
      */
     public function setUid($value)
@@ -191,7 +189,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param int $value Montant de la transaction en centimes
+     * @param int $value Transaction amount in cents
      * @return $this
      */
     public function setAmount($value)
@@ -201,7 +199,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $payToEmail Email du destinataire
+     * @param string $payToEmail Recipient email
      * @return $this
      */
     public function setPayToEmail($payToEmail)
@@ -211,7 +209,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $payToId Identifiant du destinataire
+     * @param string $payToId Recipient identifier
      * @return $this
      */
     public function setPayToId($payToId)
@@ -221,7 +219,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $userAgent User-Agent du navigateur
+     * @param string $userAgent Browser User-Agent
      * @return $this
      */
     public function setUserAgent($userAgent)
@@ -231,7 +229,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $language Langue utilisée
+     * @param string $language Language used
      * @return $this
      */
     public function setLanguage($language)
@@ -241,7 +239,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $clientId Identifiant du client
+     * @param string $clientId Merchant-side client identifier
      * @return $this
      */
     public function setClientId($clientId)
@@ -251,7 +249,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param bool $secure Activation de 3D Secure
+     * @param bool $secure Enable 3D Secure
      * @return $this
      */
     public function setSecure($secure)
@@ -261,7 +259,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $returnUrl URL de retour après paiement
+     * @param string $returnUrl Return URL after payment
      * @return $this
      */
     public function setReturnUrl($returnUrl)
@@ -271,7 +269,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param string $cvv Code de sécurité CVV
+     * @param string $cvv Card security code (CVV)
      * @return $this
      */
     public function setCVV($cvv)
@@ -281,7 +279,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param bool $preAuth Mode pré-autorisation
+     * @param bool $preAuth Pre-authorization mode
      * @return $this
      */
     public function setPreAuth($preAuth)
@@ -291,7 +289,7 @@ class OneClickTransaction extends Entity
     }
 
     /**
-     * @param int $preAuthDuration Durée de la pré-autorisation (jours)
+     * @param int $preAuthDuration Pre-authorization duration (days)
      * @return $this
      */
     public function setPreAuthDuration($preAuthDuration)

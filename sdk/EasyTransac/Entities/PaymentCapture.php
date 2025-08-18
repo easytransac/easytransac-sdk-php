@@ -3,40 +3,39 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les arguments de la requête "Capture" (capture d'un paiement pré-autorisé).
- * 
- * @copyright EasyTransac
+ * Represents the arguments for the "Capture" request
+ * (capturing a pre-authorized payment).
  */
 class PaymentCapture extends Entity
 {
     /**
-     * Identifiant unique de la transaction à capturer.
-     * 
+     * Unique identifier of the transaction to capture.
+     *
      * @var string|null
      * @map:Tid
      */
     protected $tid = null;
 
     /**
-     * Montant à capturer (en centimes).
-     * 
+     * Amount to capture (in cents).
+     *
      * @var int|null
      * @map:Amount
      */
     protected $amount = null;
 
     /**
-     * Langue de la requête (ex : 'fr', 'en').
-     * 
+     * Request language (e.g., 'fr', 'en').
+     *
      * @var string|null
      * @map:Language
      */
     protected $language = null;
 
     /**
-     * Définit le montant à capturer.
+     * Sets the amount to capture.
      *
-     * @param int $amount Montant en centimes.
+     * @param int $amount Amount in cents.
      * @return $this
      */
     public function setAmount($amount)
@@ -46,9 +45,9 @@ class PaymentCapture extends Entity
     }
 
     /**
-     * Définit l'identifiant de la transaction à capturer.
+     * Sets the transaction identifier to capture.
      *
-     * @param string $tid Identifiant de la transaction.
+     * @param string $tid Transaction identifier.
      * @return $this
      */
     public function setTid($tid)
@@ -58,9 +57,9 @@ class PaymentCapture extends Entity
     }
 
     /**
-     * Définit la langue de la requête.
+     * Sets the request language.
      *
-     * @param string $language Code langue (ex : 'fr').
+     * @param string $language Language code (e.g., 'fr').
      * @return $this
      */
     public function setLanguage($language)

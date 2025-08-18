@@ -3,18 +3,18 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente un document lié à un client ou à une transaction.
+ * Represents a document linked to a customer or a transaction.
  *
- * Cette entité permet de stocker et de manipuler des documents transmis
- * pour vérification (justificatifs, pièces d’identité, etc.).
+ * This entity is used to store and handle documents submitted for
+ * verification (proofs, IDs, etc.).
  *
- * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * @package EasyTransac\
+ * 
  */
 class Document extends Entity
 {
     /**
-     * Identifiant unique du document.
+     * Unique document identifier.
      *
      * @var string|null
      * @map:Id
@@ -22,7 +22,7 @@ class Document extends Entity
     protected $id = null;
 
     /**
-     * Type du document (ex : 'IDCard', 'Invoice', etc.).
+     * Document type (e.g., 'IDCard', 'Invoice', etc.).
      *
      * @var string|null
      * @map:DocumentType
@@ -30,7 +30,7 @@ class Document extends Entity
     protected $documentType = null;
 
     /**
-     * Statut du document (ex : 'Pending', 'Validated', 'Refused').
+     * Document status (e.g., 'Pending', 'Validated', 'Refused').
      *
      * @var string|null
      * @map:Status
@@ -38,7 +38,7 @@ class Document extends Entity
     protected $status = null;
 
     /**
-     * Date de création du document.
+     * Document creation date.
      *
      * @var string|null
      * @map:Date
@@ -46,7 +46,7 @@ class Document extends Entity
     protected $date = null;
 
     /**
-     * Date de la dernière mise à jour du document.
+     * Last update date of the document.
      *
      * @var string|null
      * @map:DateUpdated
@@ -54,7 +54,7 @@ class Document extends Entity
     protected $dateUpdated = null;
 
     /**
-     * Contenu encodé du document (souvent en base64).
+     * Encoded document content (often base64).
      *
      * @var string|null
      * @map:Content
@@ -62,7 +62,7 @@ class Document extends Entity
     protected $content = null;
 
     /**
-     * Commentaire associé au document (souvent utile en cas de refus).
+     * Comment associated with the document (useful in case of refusal).
      *
      * @var string|null
      * @map:Comment
@@ -70,7 +70,7 @@ class Document extends Entity
     protected $comment = null;
 
     /**
-     * Extension du fichier (ex : 'pdf', 'jpg', 'png').
+     * File extension (e.g., 'pdf', 'jpg', 'png').
      *
      * @var string|null
      * @map:Extension
@@ -78,7 +78,7 @@ class Document extends Entity
     protected $extension = null;
 
     /**
-     * Retourne l'identifiant du document.
+     * Returns the document identifier.
      *
      * @return string|null
      */
@@ -88,7 +88,7 @@ class Document extends Entity
     }
 
     /**
-     * Retourne le type du document.
+     * Returns the document type.
      *
      * @return string|null
      */
@@ -98,7 +98,7 @@ class Document extends Entity
     }
 
     /**
-     * Retourne le statut du document.
+     * Returns the document status.
      *
      * @return string|null
      */
@@ -108,7 +108,7 @@ class Document extends Entity
     }
 
     /**
-     * Retourne la date de création du document.
+     * Returns the document creation date.
      *
      * @return string|null
      */
@@ -118,7 +118,7 @@ class Document extends Entity
     }
 
     /**
-     * Retourne la date de dernière mise à jour du document.
+     * Returns the document last update date.
      *
      * @return string|null
      */
@@ -128,7 +128,7 @@ class Document extends Entity
     }
 
     /**
-     * Retourne le contenu encodé du document.
+     * Returns the encoded document content.
      *
      * @return string|null
      */
@@ -138,7 +138,7 @@ class Document extends Entity
     }
 
     /**
-     * Retourne le commentaire associé au document.
+     * Returns the comment associated with the document.
      *
      * @return string|null
      */
@@ -148,7 +148,7 @@ class Document extends Entity
     }
 
     /**
-     * Retourne l’extension du fichier.
+     * Returns the file extension.
      *
      * @return string|null
      */
@@ -158,9 +158,9 @@ class Document extends Entity
     }
 
     /**
-     * Définit le contenu du document.
+     * Sets the document content.
      *
-     * @param string $content Contenu encodé (base64 par exemple).
+     * @param string $content Encoded content (e.g., base64).
      * @return $this
      */
     public function setContent($content)
@@ -170,9 +170,9 @@ class Document extends Entity
     }
 
     /**
-     * Définit le type du document.
+     * Sets the document type.
      *
-     * @param string $documentType Type attendu (ex : 'IDCard').
+     * @param string $documentType Expected type (e.g., 'IDCard').
      * @return $this
      */
     public function setDocumentType($documentType)
@@ -182,9 +182,9 @@ class Document extends Entity
     }
 
     /**
-     * Définit l'extension du document.
+     * Sets the document extension.
      *
-     * @param string $extension Extension de fichier (ex : 'jpg', 'pdf').
+     * @param string $extension File extension (e.g., 'jpg', 'pdf').
      * @return $this
      */
     public function setExtension($extension)

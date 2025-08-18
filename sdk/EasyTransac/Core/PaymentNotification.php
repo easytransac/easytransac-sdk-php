@@ -6,19 +6,20 @@ use EasyTransac\Entities\Notification;
 use RuntimeException;
 
 /**
- * Gère la validation et le parsing d'une notification de paiement.
+ * Handles validation and parsing of a payment notification.
  *
  * @package EasyTransac\Core
  */
 class PaymentNotification
 {
     /**
-     * Traite une notification de paiement et retourne une entité Notification si valide.
+     * Processes a payment notification and returns a Notification entity if valid.
      *
-     * @param $data Données reçues (par défaut $_POST si vide)
-     * @param $apiKey Clé API utilisée pour vérifier la signature
+     * @param mixed  $data   Received payload (defaults to $_POST when empty).
+     * @param string $apiKey API key used to verify the signature.
      * @return Notification
-     * @throws RuntimeException Si les champs requis sont manquants ou la signature est invalide
+     *
+     * @throws RuntimeException If required fields are missing or the signature is invalid.
      */
     public static function getContent($data, $apiKey): Notification
     {
@@ -49,9 +50,9 @@ class PaymentNotification
     }
 
     /**
-     * Vérifie que les champs requis pour une notification sont présents.
+     * Ensures the required fields for a notification are present.
      *
-     * @param $fields
+     * @param array $fields
      * @return bool
      */
     protected static function checkRequiredFields($fields): bool

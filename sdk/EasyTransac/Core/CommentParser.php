@@ -3,31 +3,31 @@ namespace EasyTransac\Core;
 
 /**
  * Class CommentParser
- * 
- * Cette classe permet d'analyser les commentaires des propriétés protégées
- * d'une classe donnée pour extraire des métadonnées sous forme de tags.
- * 
- * Les tags doivent être sous la forme :
- * @map:FieldName
- * @object:FieldName
- * @array:FieldName
- * 
- * Utilisé notamment pour l'auto-mapping dans l'API EasyTransac.
- * 
+ *
+ * Parses DocBlock comments of a given class's protected properties
+ * to extract metadata tags.
+ *
+ * Supported tags:
+ *   @map:FieldName
+ *   @object:FieldName
+ *   @array:FieldName
+ *
+ * Used notably for auto-mapping in the EasyTransac API.
+ *
  * @author EasyTransac
  */
 class CommentParser
 {
     /**
-     * Nom de la classe cible à analyser
+     * Fully-qualified class name to inspect.
      * @var string
      */
     protected $class;
 
     /**
-     * Constructeur
+     * Constructor.
      *
-     * @param string $class Nom complet de la classe (avec namespace) à analyser
+     * @param string $class Fully-qualified class name (with namespace) to analyze.
      */
     public function __construct($class)
     {
@@ -35,29 +35,30 @@ class CommentParser
     }
 
     /**
-     * Analyse les propriétés protégées de la classe et extrait les tags spécifiques
-     * trouvés dans les commentaires DocBlock.
-     * 
-     * @return \Generator Retourne un générateur d'associations sous forme :
-     *                   ['field' => nomAttribut, 'name' => nomTag, 'type' => typeTag]
+     * Parses the class's protected properties and extracts supported tags
+     * found in their DocBlock comments.
+     *
+     * @return \Generator Yields associative arrays in the form:
+     *                    ['field' => propertyName, 'name' => tagName, 'type' => tagType]
      */
     public function parse(): \Generator
     {
         $r = new \ReflectionClass($this->class);
 
-        // On récupère toutes les propriétés protégées
+        // Retrieve all protected properties
         $props = $r->getProperties(\ReflectionProperty::IS_PROTECTED);
-        // 2025-07-22 [FIX]  (Mirana) Modifie cette partie de parse() pour ignorer les propriétés sans commentaire PHPDoc
+
+        // 2025-07-22 [FIX] (Mirana) Adjust this part of parse() to ignore properties without PHPDoc comments
         foreach ($props as $prop) {
-            // Récupère le commentaire de la propriété
+            // Get the property's DocBlock comment
             $value = $r->getProperty($prop->getName())->getDocComment();
 
-            // ✅ Évite l'erreur si aucun commentaire
+            // ✅ Avoid errors when there is no comment
             if ($value === false) {
                 continue;
             }
 
-            // Recherche d'un tag spécifique sous la forme @type:Nom
+            // Look for a specific tag in the form @type:Name
             preg_match('#@(map|object|array):([_a-zA-Z0-9]+)#', $value, $matches);
 
             if (!$matches || count($matches) !== 3) {
@@ -66,8 +67,8 @@ class CommentParser
 
             yield [
                 'field' => $prop->getName(),
-                'name' => $matches[2],
-                'type' => $matches[1]
+                'name'  => $matches[2],
+                'type'  => $matches[1]
             ];
         }
     }

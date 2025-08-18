@@ -3,20 +3,20 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les détails d'une carte bancaire.
+ * Represents credit card details.
  *
- * Cette entité fournit des informations enrichies sur une carte,
- * telles que le BIN, le pays, la banque émettrice, le type de carte,
- * ainsi que sa date d’expiration et son alias.
+ * This entity provides enriched information about a card, such as the BIN,
+ * issuing country, issuing bank, card type, as well as its expiration date
+ * and alias.
  *
  * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * 
  */
 class CreditCardInfo extends Entity
 {
     /**
-     * Bank Identification Number (BIN) de la carte.
-     * Correspond aux 6 premiers chiffres de la carte.
+     * Card Bank Identification Number (BIN).
+     * Corresponds to the first 6 digits of the card.
      *
      * @var string|null
      * @map:CardBIN
@@ -24,7 +24,7 @@ class CreditCardInfo extends Entity
     protected $cardBin = null;
 
     /**
-     * Pays d’émission de la carte (code ISO, ex : FR, US).
+     * Card issuing country (ISO code, e.g., FR, US).
      *
      * @var string|null
      * @map:CardCountry
@@ -32,7 +32,7 @@ class CreditCardInfo extends Entity
     protected $cardCountry = null;
 
     /**
-     * Type de carte (ex : Visa, MasterCard, Amex).
+     * Card type (e.g., Visa, MasterCard, Amex).
      *
      * @var string|null
      * @map:CardType
@@ -40,7 +40,7 @@ class CreditCardInfo extends Entity
     protected $cardType = null;
 
     /**
-     * Nom de la banque émettrice de la carte.
+     * Name of the card’s issuing bank.
      *
      * @var string|null
      * @map:CardBank
@@ -48,7 +48,7 @@ class CreditCardInfo extends Entity
     protected $cardBank = null;
 
     /**
-     * Alias de la carte, utilisé pour des paiements ultérieurs.
+     * Card alias, used for subsequent payments.
      *
      * @var string|null
      * @map:Alias
@@ -56,7 +56,7 @@ class CreditCardInfo extends Entity
     protected $alias = null;
 
     /**
-     * Mois d’expiration de la carte (01 à 12).
+     * Card expiration month (01 to 12).
      *
      * @var string|null
      * @map:CardMonth
@@ -64,7 +64,7 @@ class CreditCardInfo extends Entity
     protected $cardMonth = null;
 
     /**
-     * Année d’expiration de la carte (format YYYY).
+     * Card expiration year (YYYY format).
      *
      * @var string|null
      * @map:CardYear
@@ -72,7 +72,7 @@ class CreditCardInfo extends Entity
     protected $cardYear = null;
 
     /**
-     * Retourne le BIN (Bank Identification Number) de la carte.
+     * Returns the card BIN (Bank Identification Number).
      *
      * @return string|null
      */
@@ -82,7 +82,7 @@ class CreditCardInfo extends Entity
     }
 
     /**
-     * Retourne le pays d’émission de la carte.
+     * Returns the card issuing country.
      *
      * @return string|null
      */
@@ -92,7 +92,7 @@ class CreditCardInfo extends Entity
     }
 
     /**
-     * Retourne le type de la carte (Visa, MasterCard, etc.).
+     * Returns the card type (Visa, MasterCard, etc.).
      *
      * @return string|null
      */
@@ -102,7 +102,7 @@ class CreditCardInfo extends Entity
     }
 
     /**
-     * Retourne le nom de la banque émettrice de la carte.
+     * Returns the name of the issuing bank.
      *
      * @return string|null
      */
@@ -112,7 +112,7 @@ class CreditCardInfo extends Entity
     }
 
     /**
-     * Retourne l’alias de la carte.
+     * Returns the card alias.
      *
      * @return string|null
      */
@@ -122,7 +122,7 @@ class CreditCardInfo extends Entity
     }
 
     /**
-     * Retourne le mois d’expiration de la carte.
+     * Returns the card expiration month.
      *
      * @return string|null
      */
@@ -132,7 +132,7 @@ class CreditCardInfo extends Entity
     }
 
     /**
-     * Retourne l’année d’expiration de la carte.
+     * Returns the card expiration year.
      *
      * @return string|null
      */

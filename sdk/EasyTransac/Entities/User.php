@@ -3,7 +3,7 @@
 namespace EasyTransac\Entities;
 
 /**
- * Represents arguments for the requests "FindUser", "AddUser", "UpdateUser"
+ * Represents the arguments for the "FindUser", "AddUser", and "UpdateUser".
  * @copyright EasyTransac
  */
 class User extends Entity

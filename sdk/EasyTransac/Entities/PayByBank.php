@@ -3,15 +3,16 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les arguments de la requête "Pay by bank" (paiement par virement bancaire).
- * Permet de définir les données nécessaires à la création de cette requête.
+ * Represents the parameters for a "Pay by bank" request (bank transfer payment).
+ * Allows defining the data required to create this request.
  *
- * @copyright EasyTransac
+ * @package EasyTransac\Entities
+ * 
  */
 class PayByBank extends Entity
 {
     /**
-     * Montant à débiter (en centimes).
+     * Amount to debit (in cents).
      *
      * @var int|null
      * @map:Amount
@@ -19,7 +20,7 @@ class PayByBank extends Entity
     protected $amount = null;
 
     /**
-     * Adresse IP du client.
+     * Client IP address.
      *
      * @var string|null
      * @map:ClientIp
@@ -27,7 +28,7 @@ class PayByBank extends Entity
     protected $clientIp = null;
 
     /**
-     * Identifiant de commande associé au paiement.
+     * Order identifier associated with the payment.
      *
      * @var string|null
      * @map:OrderId
@@ -35,7 +36,7 @@ class PayByBank extends Entity
     protected $orderId = null;
 
     /**
-     * Description de la transaction.
+     * Transaction description.
      *
      * @var string|null
      * @map:Description
@@ -43,7 +44,7 @@ class PayByBank extends Entity
     protected $description = null;
 
     /**
-     * URL de retour après le paiement.
+     * Return URL after payment.
      *
      * @var string|null
      * @map:ReturnUrl
@@ -51,7 +52,7 @@ class PayByBank extends Entity
     protected $returnUrl = null;
 
     /**
-     * Objet client contenant les informations personnelles.
+     * Customer object containing personal information.
      *
      * @var Customer|null
      * @object:Customer
@@ -59,7 +60,7 @@ class PayByBank extends Entity
     protected $customer = null;
 
     /**
-     * Adresse email du destinataire du paiement.
+     * Recipient email address.
      *
      * @var string|null
      * @map:PayToEmail
@@ -67,7 +68,7 @@ class PayByBank extends Entity
     protected $payToEmail = null;
 
     /**
-     * Identifiant du destinataire du paiement.
+     * Recipient identifier.
      *
      * @var string|null
      * @map:PayToId
@@ -75,7 +76,7 @@ class PayByBank extends Entity
     protected $payToId = null;
 
     /**
-     * User-Agent du navigateur du client.
+     * Client browser User-Agent.
      *
      * @var string|null
      * @map:UserAgent
@@ -83,7 +84,7 @@ class PayByBank extends Entity
     protected $userAgent = null;
 
     /**
-     * Langue à utiliser pour l'interface de paiement.
+     * Language to use for the payment interface.
      *
      * @var string|null
      * @map:Language
@@ -91,7 +92,7 @@ class PayByBank extends Entity
     protected $language = null;
 
     /**
-     * Méthode de retour (éventuellement POST ou GET).
+     * Return method (e.g., POST or GET).
      *
      * @var string|null
      * @map:ReturnMethod
@@ -99,9 +100,9 @@ class PayByBank extends Entity
     protected $returnMethod = null;
 
     /**
-     * Définit le montant de la transaction.
+     * Sets the transaction amount.
      *
-     * @param int $amount Montant en centimes
+     * @param int $amount Amount in cents
      * @return $this
      */
     public function setAmount($amount)
@@ -111,9 +112,9 @@ class PayByBank extends Entity
     }
 
     /**
-     * Définit la langue de l'interface.
+     * Sets the interface language.
      *
-     * @param string $language Code de langue (ex : "fr")
+     * @param string $language Language code (e.g., "fr")
      * @return $this
      */
     public function setLanguage($language)
@@ -123,7 +124,7 @@ class PayByBank extends Entity
     }
 
     /**
-     * Définit l'adresse IP du client.
+     * Sets the client IP address.
      *
      * @param string $clientIp
      * @return $this
@@ -135,7 +136,7 @@ class PayByBank extends Entity
     }
 
     /**
-     * Définit l'identifiant de la commande.
+     * Sets the order identifier.
      *
      * @param string $orderId
      * @return $this
@@ -147,7 +148,7 @@ class PayByBank extends Entity
     }
 
     /**
-     * Définit la description du paiement.
+     * Sets the payment description.
      *
      * @param string $description
      * @return $this
@@ -159,7 +160,7 @@ class PayByBank extends Entity
     }
 
     /**
-     * Définit l'URL de retour après le paiement.
+     * Sets the return URL after payment.
      *
      * @param string $returnUrl
      * @return $this
@@ -171,7 +172,7 @@ class PayByBank extends Entity
     }
 
     /**
-     * Associe un objet client à la transaction.
+     * Associates a customer object with the transaction.
      *
      * @param Customer $customer
      * @return $this
@@ -183,7 +184,7 @@ class PayByBank extends Entity
     }
 
     /**
-     * Définit l'adresse email du destinataire du paiement.
+     * Sets the recipient email address.
      *
      * @param string $payToEmail
      * @return $this
@@ -195,7 +196,7 @@ class PayByBank extends Entity
     }
 
     /**
-     * Définit l'identifiant du destinataire du paiement.
+     * Sets the recipient identifier.
      *
      * @param string $payToId
      * @return $this
@@ -207,7 +208,7 @@ class PayByBank extends Entity
     }
 
     /**
-     * Définit le User-Agent du navigateur du client.
+     * Sets the client's browser User-Agent.
      *
      * @param string $userAgent
      * @return $this
@@ -219,7 +220,7 @@ class PayByBank extends Entity
     }
 
     /**
-     * Définit la méthode de retour.
+     * Sets the return method.
      *
      * @param string $returnMethod
      * @return $this

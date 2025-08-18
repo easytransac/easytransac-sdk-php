@@ -3,21 +3,21 @@
 namespace EasyTransac\Core;
 
 /**
- * Classe utilitaire fournissant des outils de sécurité pour les échanges avec l'API EasyTransac.
+ * Utility class providing security helpers for exchanges with the EasyTransac API.
  *
- * Elle est utilisée pour générer une signature sécurisée permettant de vérifier
- * l'intégrité et l'authenticité des données reçues ou envoyées.
+ * Used to generate a secure signature to verify the integrity and authenticity
+ * of data received or sent.
  *
  * @package EasyTransac\Core
  */
 class Security
 {
     /**
-     * Génère une signature SHA1 basée sur les paramètres de la requête et la clé API.
+     * Generates a SHA1 signature based on the request parameters and the API key.
      *
-     * @param $params Données à signer (array associatif, objet ou string brute)
-     * @param $apiKey Clé API privée fournie par EasyTransac
-     * @return string La signature calculée en SHA1
+     * @param mixed  $params Data to sign (associative array, object, or raw string).
+     * @param string $apiKey Private API key provided by EasyTransac.
+     * @return string The computed SHA1 signature.
      */
     public static function getSignature($params, $apiKey): string
     {

@@ -3,20 +3,20 @@ namespace EasyTransac\Converters;
 
 /**
  * Interface IConverter
- * 
- * Déclare la méthode pour convertir une valeur d'un type à un autre.
- * Cette interface sert de contrat pour toute classe convertisseuse.
+ *
+ * Declares a method to convert a value from one representation to another.
+ * This interface acts as a contract for any concrete converter class.
  */
 interface IConverter
 {
     /**
-     * Convertit une valeur donnée en une autre représentation.
-     * 
-     * Le type exact de la valeur en entrée et en sortie peut varier selon
-     * la logique de conversion mise en œuvre dans la classe concrète.
-     * 
-     * @param mixed $value Valeur à convertir, de type variable.
-     * @return mixed Valeur convertie, de type variable.
+     * Converts a given value to another representation.
+     *
+     * The exact input and output types may vary depending on the conversion
+     * logic implemented by the concrete class.
+     *
+     * @param mixed $value Value to convert (type may vary).
+     * @return mixed Converted value (type may vary).
      */
     public function convert($value);
 }

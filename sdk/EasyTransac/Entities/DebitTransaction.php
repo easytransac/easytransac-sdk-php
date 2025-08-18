@@ -3,18 +3,18 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les arguments de la requête "DebitPayment".
+ * Represents the arguments for a "DebitPayment" request.
  *
- * Cette entité est utilisée pour configurer les informations nécessaires
- * à un paiement par débit, incluant montant, client, récurrence, etc.
+ * This entity is used to configure the information required for a debit
+ * payment, including amount, customer, recurrence, etc.
  *
  * @package EasyTransac\Entities
- * @copyright EasyTransac
+ * 
  */
 class DebitTransaction extends Entity
 {
     /**
-     * Montant de la transaction (en centimes, ex : 1000 = 10.00€).
+     * Transaction amount in cents (e.g., 1000 = 10.00).
      *
      * @var int|null
      * @map:Amount
@@ -22,7 +22,7 @@ class DebitTransaction extends Entity
     protected $amount = null;
 
     /**
-     * Identifiant de commande associé à la transaction.
+     * Order identifier associated with the transaction.
      *
      * @var string|null
      * @map:OrderId
@@ -30,7 +30,7 @@ class DebitTransaction extends Entity
     protected $orderId = null;
 
     /**
-     * Description libre de la transaction.
+     * Free-form transaction description.
      *
      * @var string|null
      * @map:Description
@@ -38,7 +38,7 @@ class DebitTransaction extends Entity
     protected $description = null;
 
     /**
-     * Adresse IP du client effectuant la transaction.
+     * Client IP address performing the transaction.
      *
      * @var string|null
      * @map:ClientIp
@@ -46,7 +46,7 @@ class DebitTransaction extends Entity
     protected $clientIp = null;
 
     /**
-     * Indique si la transaction est destinée à un client professionnel (B2B).
+     * Whether the transaction targets a business customer (B2B).
      *
      * @var bool|null
      * @map:B2B
@@ -54,7 +54,7 @@ class DebitTransaction extends Entity
     protected $b2b = null;
 
     /**
-     * Montant de l'acompte si applicable (en centimes).
+     * Down payment amount, if applicable (in cents).
      *
      * @var int|null
      * @map:DownPayment
@@ -62,7 +62,7 @@ class DebitTransaction extends Entity
     protected $downPayment = null;
 
     /**
-     * Indique si un paiement en plusieurs fois est demandé.
+     * Whether installment payments are requested.
      *
      * @var bool|null
      * @map:MultiplePayments
@@ -70,7 +70,7 @@ class DebitTransaction extends Entity
     protected $multiplePayments = null;
 
     /**
-     * Nombre de répétitions du paiement multiple.
+     * Number of repetitions for installment payments.
      *
      * @var int|null
      * @map:MultiplePaymentsRepeat
@@ -78,7 +78,7 @@ class DebitTransaction extends Entity
     protected $multiplePaymentsRepeat = null;
 
     /**
-     * Active un paiement récurrent.
+     * Enables a recurring payment.
      *
      * @var bool|null
      * @map:Rebill
@@ -86,7 +86,7 @@ class DebitTransaction extends Entity
     protected $rebill = null;
 
     /**
-     * Fréquence de récurrence si active (ex : 'monthly', 'weekly').
+     * Recurrence frequency if enabled (e.g., 'monthly', 'weekly').
      *
      * @var string|null
      * @map:Recurrence
@@ -94,7 +94,7 @@ class DebitTransaction extends Entity
     protected $recurrence = null;
 
     /**
-     * Adresse email du destinataire du paiement (si envoi direct).
+     * Recipient email for direct send.
      *
      * @var string|null
      * @map:PayToEmail
@@ -102,7 +102,7 @@ class DebitTransaction extends Entity
     protected $payToEmail = null;
 
     /**
-     * Identifiant EasyTransac du destinataire (si envoi direct).
+     * EasyTransac recipient identifier for direct send.
      *
      * @var string|null
      * @map:PayToId
@@ -110,7 +110,7 @@ class DebitTransaction extends Entity
     protected $payToId = null;
 
     /**
-     * User Agent du navigateur du client.
+     * Client browser User-Agent.
      *
      * @var string|null
      * @map:UserAgent
@@ -118,7 +118,7 @@ class DebitTransaction extends Entity
     protected $userAgent = null;
 
     /**
-     * Code de langue (ex : 'fr', 'en') pour les retours.
+     * Language code for responses (e.g., 'fr', 'en').
      *
      * @var string|null
      * @map:Language
@@ -126,7 +126,7 @@ class DebitTransaction extends Entity
     protected $language = null;
 
     /**
-     * Code BIC de la banque pour prélèvement SEPA.
+     * Bank BIC code for SEPA Direct Debit.
      *
      * @var string|null
      * @map:Bic
@@ -134,7 +134,7 @@ class DebitTransaction extends Entity
     protected $bic = null;
 
     /**
-     * Numéro IBAN du client.
+     * Customer IBAN.
      *
      * @var string|null
      * @map:Iban
@@ -142,7 +142,7 @@ class DebitTransaction extends Entity
     protected $iban = null;
 
     /**
-     * Informations sur le client.
+     * Customer information.
      *
      * @var Customer|null
      * @object:Customer
@@ -150,7 +150,7 @@ class DebitTransaction extends Entity
     protected $customer = null;
 
     /**
-     * Nom du titulaire du compte bancaire.
+     * Account holder name.
      *
      * @var string|null
      * @map:AccountOwner
@@ -158,7 +158,7 @@ class DebitTransaction extends Entity
     protected $accountOwner = null;
 
     /**
-     * URL de redirection après paiement.
+     * Redirect URL after payment.
      *
      * @var string|null
      * @map:ReturnUrl
@@ -166,7 +166,7 @@ class DebitTransaction extends Entity
     protected $returnUrl = null;
 
     /**
-     * Indicatif téléphonique international pour SDD.
+     * International dialing code for SDD.
      *
      * @var string|null
      * @map:SddCallingCode
@@ -174,7 +174,7 @@ class DebitTransaction extends Entity
     protected $sddCallingCode = null;
 
     /**
-     * Numéro de téléphone pour SDD.
+     * Phone number for SDD.
      *
      * @var string|null
      * @map:SddPhone
@@ -182,8 +182,8 @@ class DebitTransaction extends Entity
     protected $sddPhone = null;
 
     /**
-     * Constructeur qui initialise automatiquement l’IP client
-     * et le User-Agent à partir des en-têtes HTTP si disponibles.
+     * Constructor that auto-initializes client IP and User-Agent
+     * from HTTP headers when available.
      */
     public function __construct()
     {
@@ -199,7 +199,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit l’URL de retour après paiement.
+     * Sets the return URL after payment.
      *
      * @param string $returnUrl
      * @return $this
@@ -211,7 +211,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit le client associé à la transaction.
+     * Sets the customer associated with the transaction.
      *
      * @param Customer $value
      * @return $this
@@ -223,7 +223,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit le nom du titulaire du compte.
+     * Sets the account holder name.
      *
      * @param string $value
      * @return $this
@@ -235,7 +235,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Active ou désactive le paiement en plusieurs fois.
+     * Enables or disables installment payments.
      *
      * @param bool $value
      * @return $this
@@ -247,7 +247,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit le montant de l'acompte.
+     * Sets the down payment amount.
      *
      * @param int $value
      * @return $this
@@ -259,7 +259,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit l’adresse IP du client.
+     * Sets the client IP address.
      *
      * @param string $value
      * @return $this
@@ -271,7 +271,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit la description de la transaction.
+     * Sets the transaction description.
      *
      * @param string $value
      * @return $this
@@ -283,7 +283,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit l’identifiant de commande.
+     * Sets the order identifier.
      *
      * @param string $value
      * @return $this
@@ -295,7 +295,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit le montant de la transaction.
+     * Sets the transaction amount.
      *
      * @param int $value
      * @return $this
@@ -307,7 +307,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit le BIC bancaire.
+     * Sets the bank BIC.
      *
      * @param string $bic
      * @return $this
@@ -319,7 +319,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit l’IBAN.
+     * Sets the IBAN.
      *
      * @param string $iban
      * @return $this
@@ -331,7 +331,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Active ou désactive le mode B2B.
+     * Enables or disables B2B mode.
      *
      * @param bool $b2b
      * @return $this
@@ -343,7 +343,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit le nombre de répétitions pour le paiement multiple.
+     * Sets the number of repetitions for installment payments.
      *
      * @param int $multiplePaymentsRepeat
      * @return $this
@@ -355,7 +355,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Active ou désactive le paiement récurrent.
+     * Enables or disables recurring payment.
      *
      * @param bool $rebill
      * @return $this
@@ -367,7 +367,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit la fréquence de récurrence.
+     * Sets the recurrence frequency.
      *
      * @param string $recurrence
      * @return $this
@@ -379,7 +379,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit l'adresse email du destinataire.
+     * Sets the recipient email.
      *
      * @param string $payToEmail
      * @return $this
@@ -391,7 +391,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit l'identifiant du destinataire.
+     * Sets the recipient identifier.
      *
      * @param string $payToId
      * @return $this
@@ -403,7 +403,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit le User-Agent du client.
+     * Sets the client User-Agent.
      *
      * @param string $userAgent
      * @return $this
@@ -415,7 +415,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit le code de langue.
+     * Sets the language code.
      *
      * @param string $language
      * @return $this
@@ -427,7 +427,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit l’indicatif téléphonique SDD.
+     * Sets the SDD international dialing code.
      *
      * @param string $sddCallingCode
      * @return $this
@@ -439,7 +439,7 @@ class DebitTransaction extends Entity
     }
 
     /**
-     * Définit le numéro de téléphone SDD.
+     * Sets the SDD phone number.
      *
      * @param string $sddPhone
      * @return $this

@@ -3,15 +3,13 @@
 namespace EasyTransac\Entities;
 
 /**
- * Représente les paramètres de la requête "PaymentPageResend".
- * Cette entité permet de renvoyer un lien de page de paiement existante via l’API EasyTransac.
- *
- * @copyright EasyTransac
+ * Represents the parameters for the "PaymentPageResend" request.
+ * This entity allows resending an existing payment page link via the EasyTransac API.
  */
 class PaymentPageResend extends Entity
 {
     /**
-     * Identifiant unique de la demande de paiement à renvoyer.
+     * Unique identifier of the payment request to resend.
      *
      * @var string|null
      * @map:RequestId
@@ -19,7 +17,7 @@ class PaymentPageResend extends Entity
     protected $requestId = null;
 
     /**
-     * Langue à utiliser pour le lien renvoyé (ex. : fr, en).
+     * Language to use for the resent link (e.g., 'fr', 'en').
      *
      * @var string|null
      * @map:Language
@@ -27,10 +25,10 @@ class PaymentPageResend extends Entity
     protected $language = null;
 
     /**
-     * Définit l'identifiant de la demande de paiement à renvoyer.
+     * Sets the identifier of the payment request to resend.
      *
-     * @param string $requestId Identifiant unique généré lors de la création initiale.
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param string $requestId Unique identifier generated during initial creation.
+     * @return $this Fluent interface.
      */
     public function setRequestId($requestId)
     {
@@ -39,10 +37,10 @@ class PaymentPageResend extends Entity
     }
 
     /**
-     * Définit la langue à utiliser pour le renvoi du lien.
+     * Sets the language to use for the resent link.
      *
-     * @param string $language Code langue (ex. : fr, en).
-     * @return $this Retourne l’instance courante pour chaînage.
+     * @param string $language Language code (e.g., 'fr', 'en').
+     * @return $this Fluent interface.
      */
     public function setLanguage($language)
     {
