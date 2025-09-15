@@ -20,13 +20,6 @@ class OneClickPayment extends Request
      */
     public function execute(Entity $entity)
     {
-        // Pre-validate mandatory fields before calling the API
-        $params = $entity->toArray();
-        if (!array_key_exists('ClientId', $params) || empty($params['ClientId'])) {
-            $sr = new \EasyTransac\Responses\StandardResponse();
-            return $sr->setErrorMessage('Missing required field: ClientId');
-        }
-        
         return $this->call('/payment/oneclick', $entity);
     }
 }

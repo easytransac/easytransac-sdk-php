@@ -18,7 +18,7 @@ $customer = (new Customer())
     ->setAddress('204 avenue de Colmar')
     ->setZipCode('67100')
     ->setCountry('FRA')
-    ->setPhone('+33123456789') // <-- requis
+    ->setPhone('+33123456789') // <-- required
     ->setUid('a1b2c3d4');
 
 $transaction = (new DebitTransaction())
