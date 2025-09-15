@@ -20,6 +20,12 @@ class DebitPayment extends Request
      */
     public function execute(Entity $entity)
     {
+        // Pre-validate mandatory fields before calling the API
+        $params = $entity->toArray();
+        if (!array_key_exists('Phone', $params) || empty($params['Phone'])) {
+            $sr = new \EasyTransac\Responses\StandardResponse();
+            return $sr->setErrorMessage('Missing required field: Phone (customer phone number)');
+        }
         return $this->call('/payment/debit', $entity);
     }
 }
