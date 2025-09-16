@@ -22,7 +22,7 @@ class Cancellation extends Entity
      * @map:RequestId
      */
     protected $requestId = null;
-
+  
     /**
      * Preferred language code for the request (e.g., 'fr', 'en').
      *
