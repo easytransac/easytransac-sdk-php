@@ -14,7 +14,7 @@ The EasyTransac SDK is a tool to process payments with the [EasyTransac API](htt
 ## What's New (v2.1.0)
 
 - ✅ Added `setEnvironment('sandbox')` for clean sandbox/production separation
-- ✅ Full PHP **7.0 to 8.3** compatibility
+- ✅ Full PHP **7.0 to 8.4** compatibility
 - ✅ Deprecated PHP 5.6 support
 - ✅ Improved response helpers and strict typing
 - ✅ Updated documentation
