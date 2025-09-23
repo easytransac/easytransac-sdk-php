@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  * transaction, customer, and credit card details, etc.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class DirectTransaction extends Entity
 {

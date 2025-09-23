@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  * such as number, expiration date, CVV, etc.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class CreditCard extends Entity
 {

@@ -7,7 +7,7 @@ namespace EasyTransac\Entities;
  * Allows defining the data required to create this request.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class PayByBank extends Entity
 {

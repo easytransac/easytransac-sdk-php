@@ -11,9 +11,8 @@ namespace EasyTransac\Entities;
  * It inherits all properties and methods from the Customer class.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class Client extends Customer
 {
-    
 }

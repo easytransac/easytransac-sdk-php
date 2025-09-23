@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  * cancellation through the EasyTransac API.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class CancellationInfos extends Entity
 {

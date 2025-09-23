@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  * changes state: confirmation, cancellation, refund, chargeback, etc.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class Notification extends Entity
 {

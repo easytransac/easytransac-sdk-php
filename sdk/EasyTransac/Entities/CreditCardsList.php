@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  * containing multiple {@see \EasyTransac\Entities\CreditCard} objects.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class CreditCardsList extends Entity
 {

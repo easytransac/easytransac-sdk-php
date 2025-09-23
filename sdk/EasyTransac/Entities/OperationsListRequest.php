@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  * such as date, email address, transaction identifier, etc.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class OperationsListRequest extends Entity
 {

@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  * verification (proofs, IDs, etc.).
  *
  * @package EasyTransac\
- * 
+ *
  */
 class Document extends Entity
 {

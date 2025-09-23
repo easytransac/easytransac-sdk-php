@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  * payment, including amount, customer, recurrence, etc.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class DebitTransaction extends Entity
 {

@@ -1,4 +1,5 @@
 <?php
+
 namespace EasyTransac\Core;
 
 use EasyTransac\Core\Security;
@@ -21,43 +22,35 @@ class Services
      * @var Services|null
      */
     private static $instance = null;
-
-    /**
+/**
      * API key used for calls.
      * @var string|null
      */
     private $key = null;
-
-    /**
+/**
      * HTTP caller object that performs requests.
      * @var ICaller|null
      */
     private $caller = null;
-
-    /**
+/**
      * Optional modifier to change call behavior.
      * @var ICallerModifier|null
      */
     private $modifier = null;
-
-    /** Environments */
+/** Environments */
     public const ENV_SANDBOX    = 'sandbox';
     public const ENV_PRODUCTION = 'production';
-
-    /** Base URLs */
+/** Base URLs */
     public const URL_SANDBOX    = 'https://sandbox.easytransac.com/api';
     public const URL_PRODUCTION = 'https://www.easytransac.com/api';
-
-    /** @var string Base URL (defaults to production) */
+/** @var string Base URL (defaults to production) */
     private $url = self::URL_PRODUCTION;
-
-    /**
+/**
      * Request timeout in seconds.
      * @var int
      */
     private $timeout = 10;
-
-    /**
+/**
      * Sets the environment.
      *
      * @param string $env self::ENV_SANDBOX | self::ENV_PRODUCTION
@@ -67,18 +60,12 @@ class Services
     public function setEnvironment($env)
     {
         $env = strtolower((string) $env);
-
         if ($env === self::ENV_SANDBOX) {
             $this->url = self::URL_SANDBOX;
         } elseif ($env === self::ENV_PRODUCTION) {
             $this->url = self::URL_PRODUCTION;
         } else {
-            throw new \InvalidArgumentException(sprintf(
-                'Invalid environment: %s (expected: "%s" or "%s")',
-                $env,
-                self::ENV_SANDBOX,
-                self::ENV_PRODUCTION
-            ));
+            throw new \InvalidArgumentException(sprintf('Invalid environment: %s (expected: "%s" or "%s")', $env, self::ENV_SANDBOX, self::ENV_PRODUCTION));
         }
 
         return $this;
@@ -243,8 +230,7 @@ class Services
         // Configure timeout and headers on the caller
         $this->caller->setTimeout($this->timeout);
         $this->caller->setHeaders(['EASYTRANSAC-API-KEY:' . $this->key]);
-
-        // If a modifier is set, let it adjust the target and parameters
+// If a modifier is set, let it adjust the target and parameters
         if (!empty($this->modifier)) {
             try {
                 $this->modifier->execute($this, $funcName, $params);
@@ -255,7 +241,7 @@ class Services
                 throw $e;
             }
         } else {
-            // Otherwise, target is base URL + function name
+        // Otherwise, target is base URL + function name
             $target = $this->url . $funcName;
         }
 
@@ -266,21 +252,17 @@ class Services
 
         // Generate and add the security signature
         $params['Signature'] = Security::getSignature($params, $this->key);
-
-        // Log the called URL and parameters
+// Log the called URL and parameters
         Logger::getInstance()->write('Called url: ' . $target);
         Logger::getInstance()->write($params);
-
         try {
-            // Perform the HTTP call through the caller
+        // Perform the HTTP call through the caller
             $response = $this->caller->call($target, $params);
-
-            // Log the raw response
+        // Log the raw response
             Logger::getInstance()->write($response);
-
             return $response;
         } catch (\Exception $e) {
-            // Log and rethrow on error
+        // Log and rethrow on error
             Logger::getInstance()->write('Exception: ' . $e->getMessage() . ', Code: ' . $e->getCode());
             throw $e;
         }
@@ -316,7 +298,6 @@ class Services
     private function __construct()
     {
         $this->caller = new CurlCaller();
-
         if (!$this->caller->isAvailable()) {
             $this->caller = new FgcCaller();
         }

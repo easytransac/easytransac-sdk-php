@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  * when sending or managing supporting documents via the API.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class DocumentRequest extends Entity
 {

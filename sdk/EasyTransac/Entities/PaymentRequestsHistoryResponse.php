@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  *
  * Documentation URL:
  * https://www.easytransac.com/fr/documentation#tag/API-Payment/paths/~1api~1payment~1requests/post
- * 
+ *
  */
 class PaymentRequestsHistoryResponse extends Entity
 {

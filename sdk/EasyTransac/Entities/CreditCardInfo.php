@@ -10,7 +10,7 @@ namespace EasyTransac\Entities;
  * and alias.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class CreditCardInfo extends Entity
 {

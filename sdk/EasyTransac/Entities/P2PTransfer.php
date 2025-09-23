@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  * identifiers, amount, language, etc.
  *
  * @package EasyTransac\Entities
- * 
+ *
  */
 class P2PTransfer extends Entity
 {

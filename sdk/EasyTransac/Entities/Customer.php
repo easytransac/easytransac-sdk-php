@@ -9,7 +9,7 @@ namespace EasyTransac\Entities;
  * and banking information used for transactions.
  *
  * @package EasyTransac\
- * 
+ *
  */
 class Customer extends Entity
 {
