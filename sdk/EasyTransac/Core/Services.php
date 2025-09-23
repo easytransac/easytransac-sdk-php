@@ -71,9 +71,7 @@ class Services
                 self::ENV_SANDBOX,
                 self::ENV_PRODUCTION
             ));
-
         }
-
         return $this;
     }
 
