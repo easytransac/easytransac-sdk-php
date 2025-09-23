@@ -1,32 +1,32 @@
-name: PHP Composer
+﻿name: PHP Composer
 
 on:
   push:
-    paths-ignore:
-      - '**.md'
+    paths-ignore: ['**.md']
   pull_request:
-    paths-ignore:
-      - '**.md'
-    # Allow manually triggering the workflow
+    paths-ignore: ['**.md']
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        php-version: ['7.0', '7.4', '8.0', '8.1', '8.2', '8.3', '8.4']
+        php-version: ['7.4', '8.4']
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Set PHP version ${{ matrix.php-version }}
+      - name: Setup PHP ${{ matrix.php-version }}
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
+          tools: composer:v2
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
+        run: composer install --prefer-dist --no-progress --no-interaction
 
       - name: Validate composer.json and composer.lock
         run: composer validate --strict
