@@ -65,7 +65,13 @@ class Services
         } elseif ($env === self::ENV_PRODUCTION) {
             $this->url = self::URL_PRODUCTION;
         } else {
-            throw new \InvalidArgumentException(sprintf('Invalid environment: %s (expected: "%s" or "%s")', $env, self::ENV_SANDBOX, self::ENV_PRODUCTION));
+            throw new \InvalidArgumentException(sprintf(
+                'Invalid environment: %s (expected: "%s" or "%s")',
+                $env,
+                self::ENV_SANDBOX,
+                self::ENV_PRODUCTION
+            ));
+
         }
 
         return $this;
