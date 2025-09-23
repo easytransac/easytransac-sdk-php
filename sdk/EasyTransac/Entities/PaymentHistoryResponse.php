@@ -3,224 +3,497 @@
 namespace EasyTransac\Entities;
 
 /**
- * Represents the response of Payment history
- * @copyright EasyTransac
+ * Represents the response of a payment history request.
+ * This entity aggregates the information returned by EasyTransac
+ * after querying the payment history.
+ *
+ * @package EasyTransac\Entities
  */
 class PaymentHistoryResponse extends Entity
 {
-    /** @map:OperationType **/
+    /**
+     * Operation type (e.g., debit, refund).
+     *
+     * @var string|null
+     * @map:OperationType
+     */
     protected $operationType = null;
 
-    /** @map:PaymentMethod **/
+    /**
+     * Payment method used (e.g., CB, SEPA).
+     *
+     * @var string|null
+     * @map:PaymentMethod
+     */
     protected $paymentMethod = null;
 
-    /** @map ApplicationType */
+    /**
+     * Type of application that initiated the payment.
+     *
+     * @var string|null
+     * @map:ApplicationType
+     */
     protected $applicationType = null;
 
-    /** @map:Tid **/
+    /**
+     * Transaction ID.
+     *
+     * @var string|null
+     * @map:Tid
+     */
     protected $tid = null;
 
-    /** @map:Uid **/
+    /**
+     * Unique user identifier.
+     *
+     * @var string|null
+     * @map:Uid
+     */
     protected $uid = null;
 
-    /** @map:OrderId **/
+    /**
+     * Order identifier.
+     *
+     * @var string|null
+     * @map:OrderId
+     */
     protected $orderId = null;
 
-    /** @map:Status **/
+    /**
+     * Transaction status (e.g., captured, pending).
+     *
+     * @var string|null
+     * @map:Status
+     */
     protected $status = null;
 
-    /** @map:Date **/
+    /**
+     * Transaction date.
+     *
+     * @var string|null
+     * @map:Date
+     */
     protected $date = null;
 
-    /** @map:DateRefund **/
+    /**
+     * Refund date, if any.
+     *
+     * @var string|null
+     * @map:DateRefund
+     */
     protected $dateRefund = null;
 
-    /** @map:DateChargeback **/
+    /**
+     * Chargeback date, if any.
+     *
+     * @var string|null
+     * @map:DateChargeback
+     */
     protected $dateChargeback = null;
 
-    /** @map:DateRepresentment **/
+    /**
+     * Representment date, if applicable.
+     *
+     * @var string|null
+     * @map:DateRepresentment
+     */
     protected $dateRepresentment = null;
 
-    /** @map:Amount **/
+    /**
+     * Transaction amount (in cents).
+     *
+     * @var int|null
+     * @map:Amount
+     */
     protected $amount = null;
 
-    /** @map:ClientIp **/
+    /**
+     * Client IP address.
+     *
+     * @var string|null
+     * @map:ClientIp
+     */
     protected $clientIp = null;
 
-    /** @map:ClientIpCountry **/
+    /**
+     * Country associated with the client IP.
+     *
+     * @var string|null
+     * @map:ClientIpCountry
+     */
     protected $clientIpCountry = null;
 
-    /** @map:Currency **/
+    /**
+     * ISO currency code.
+     *
+     * @var string|null
+     * @map:Currency
+     */
     protected $currency = null;
 
-    /** @map:CurrencyText **/
+    /**
+     * Human-readable currency name.
+     *
+     * @var string|null
+     * @map:CurrencyText
+     */
     protected $currencyText = null;
 
-    /** @map:FixFees **/
+    /**
+     * Fixed fees applied to the transaction.
+     *
+     * @var float|null
+     * @map:FixFees
+     */
     protected $fixFees = null;
 
-    /** @map:Message **/
+    /**
+     * Additional API message.
+     *
+     * @var string|null
+     * @map:Message
+     */
     protected $message = null;
 
-    /** @map:3DSecure **/
+    /**
+     * Whether 3D Secure was used.
+     *
+     * @var bool|null
+     * @map:3DSecure
+     */
     protected $secure = null;
 
-    /** @map:OneClick **/
+    /**
+     * Whether the transaction is One Click.
+     *
+     * @var bool|null
+     * @map:OneClick
+     */
     protected $oneClick = null;
 
-    /** @object:CreditCard **/
+    /**
+     * Credit card details used for the transaction.
+     *
+     * @var CreditCard|null
+     * @object:CreditCard
+     */
     protected $creditCard = null;
 
-    /** @map:Test **/
+    /**
+     * Whether the transaction was performed in test mode.
+     *
+     * @var bool|null
+     * @map:Test
+     */
     protected $test = null;
 
-    /** @map:Language **/
+    /**
+     * Language used during the transaction.
+     *
+     * @var string|null
+     * @map:Language
+     */
     protected $language = null;
 
-    /** @map:Error **/
+    /**
+     * Error message, if any.
+     *
+     * @var string|null
+     * @map:Error
+     */
     protected $error = null;
 
-    /** @map:AdditionalError **/
+    /**
+     * Additional error details, if any.
+     *
+     * @var string|null
+     * @map:AdditionalError
+     */
     protected $additionalError = null;
 
-    /** @object:Client **/
+    /**
+     * Customer information.
+     *
+     * @var Client|null
+     * @object:Client
+     */
     protected $client = null;
 
+    /**
+     * Returns the operation type.
+     *
+     * @return string|null
+     */
     public function getOperationType()
     {
         return $this->operationType;
     }
 
+    /**
+     * Returns the payment method used.
+     *
+     * @return string|null
+     */
     public function getPaymentMethod()
     {
         return $this->paymentMethod;
     }
 
+    /**
+     * Returns the application type.
+     *
+     * @return string|null
+     */
     public function getApplicationType()
     {
         return $this->applicationType;
     }
 
+    /**
+     * Returns the transaction ID.
+     *
+     * @return string|null
+     */
     public function getTid()
     {
         return $this->tid;
     }
 
+    /**
+     * Returns the user identifier.
+     *
+     * @return string|null
+     */
     public function getUid()
     {
         return $this->uid;
     }
 
+    /**
+     * Returns the order identifier.
+     *
+     * @return string|null
+     */
     public function getOrderId()
     {
         return $this->orderId;
     }
 
+    /**
+     * Returns the transaction status.
+     *
+     * @return string|null
+     */
     public function getStatus()
     {
         return $this->status;
     }
 
+    /**
+     * Returns the transaction date.
+     *
+     * @return string|null
+     */
     public function getDate()
     {
         return $this->date;
     }
 
+    /**
+     * Returns the refund date.
+     *
+     * @return string|null
+     */
     public function getDateRefund()
     {
         return $this->dateRefund;
     }
 
+    /**
+     * Returns the chargeback date.
+     *
+     * @return string|null
+     */
     public function getDateChargeback()
     {
         return $this->dateChargeback;
     }
 
+    /**
+     * Returns the representment date.
+     *
+     * @return string|null
+     */
     public function getDateRepresentment()
     {
         return $this->dateRepresentment;
     }
 
+    /**
+     * Returns the transaction amount.
+     *
+     * @return int|null
+     */
     public function getAmount()
     {
         return $this->amount;
     }
 
+    /**
+     * Returns the client IP address.
+     *
+     * @return string|null
+     */
     public function getClientIp()
     {
         return $this->clientIp;
     }
 
+    /**
+     * Returns the country associated with the client IP.
+     *
+     * @return string|null
+     */
     public function getClientIpCountry()
     {
         return $this->clientIpCountry;
     }
 
+    /**
+     * Returns the currency code.
+     *
+     * @return string|null
+     */
     public function getCurrency()
     {
         return $this->currency;
     }
 
+    /**
+     * Returns the currency name.
+     *
+     * @return string|null
+     */
     public function getCurrencyText()
     {
         return $this->currencyText;
     }
 
+    /**
+     * Returns the fixed fees applied.
+     *
+     * @return float|null
+     */
     public function getFixFees()
     {
         return $this->fixFees;
     }
 
+    /**
+     * Returns the response message.
+     *
+     * @return string|null
+     */
     public function getMessage()
     {
         return $this->message;
     }
 
+    /**
+     * Indicates whether 3D Secure was used.
+     *
+     * @return bool|null
+     */
     public function getSecure()
     {
         return $this->secure;
     }
 
+    /**
+     * Indicates whether the transaction is One Click.
+     *
+     * @return bool|null
+     */
     public function getOneClick()
     {
         return $this->oneClick;
     }
 
+    /**
+     * Returns the credit card information.
+     *
+     * @return CreditCard|null
+     */
     public function getCreditCard()
     {
         return $this->creditCard;
     }
 
+    /**
+     * Indicates whether the transaction is in test mode.
+     *
+     * @return bool|null
+     */
     public function getTest()
     {
         return $this->test;
     }
 
+    /**
+     * Returns the transaction language.
+     *
+     * @return string|null
+     */
     public function getLanguage()
     {
         return $this->language;
     }
 
+    /**
+     * Returns the error message.
+     *
+     * @return string|null
+     */
     public function getError()
     {
         return $this->error;
     }
 
+    /**
+     * Returns the additional error details.
+     *
+     * @return string|null
+     */
     public function getAdditionalError()
     {
         return $this->additionalError;
     }
 
+    /**
+     * Returns the customer information.
+     *
+     * @return Client|null
+     */
     public function getClient()
     {
         return $this->client;
     }
 
+    /**
+     * Checks whether the payment was captured.
+     *
+     * @return bool
+     */
     public function isCaptured()
     {
         return $this->status === 'captured';
     }
 
+    /**
+     * Checks whether the payment is pending.
+     *
+     * @return bool
+     */
     public function isPending()
     {
         return $this->status === 'pending';

@@ -3,184 +3,481 @@
 namespace EasyTransac\Entities;
 
 /**
- * Represents a payment notification
- * @copyright EasyTransac
+ * Represents a payment notification received by EasyTransac.
+ *
+ * This entity encapsulates all data from a notification sent when a transaction
+ * changes state: confirmation, cancellation, refund, chargeback, etc.
+ *
+ * @package EasyTransac\Entities
+ *
  */
 class Notification extends Entity
 {
-    /** @map:NotificationType **/
+    /**
+     * Type of notification received (e.g., 'payment', 'refund', etc.).
+     *
+     * @var string|null
+     * @map:NotificationType
+     */
     protected $notificationType = null;
 
-    /** @map:OperationType **/
+    /**
+     * Type of operation concerned (e.g., 'credit', 'debit').
+     *
+     * @var string|null
+     * @map:OperationType
+     */
     protected $operationType = null;
 
-    /** @map:RequestId **/
+    /**
+     * Unique request identifier.
+     *
+     * @var string|null
+     * @map:RequestId
+     */
     protected $requestId = null;
 
-    /** @map:Tid **/
+    /**
+     * Unique transaction identifier (TID).
+     *
+     * @var string|null
+     * @map:Tid
+     */
     protected $tid = null;
 
-    /** @map:Uid **/
+    /**
+     * Unique customer identifier (UID).
+     *
+     * @var string|null
+     * @map:Uid
+     */
     protected $uid = null;
 
-    /** @map:OrderId **/
+    /**
+     * Partner order identifier.
+     *
+     * @var string|null
+     * @map:OrderId
+     */
     protected $orderId = null;
 
-    /** @map:Status **/
+    /**
+     * Current transaction status (e.g., 'success', 'refused').
+     *
+     * @var string|null
+     * @map:Status
+     */
     protected $status = null;
 
-    /** @map:Date **/
+    /**
+     * Transaction or notification date.
+     *
+     * @var string|null
+     * @map:Date
+     */
     protected $date = null;
 
-    /** @map:Amount **/
+    /**
+     * Transaction amount (in cents).
+     *
+     * @var int|null
+     * @map:Amount
+     */
     protected $amount = null;
 
-    /** @map:Currency **/
+    /**
+     * Currency used (ISO 4217 code, e.g., 'EUR').
+     *
+     * @var string|null
+     * @map:Currency
+     */
     protected $currency = null;
 
-    /** @map:FixFees **/
+    /**
+     * Fixed fees applied.
+     *
+     * @var int|null
+     * @map:FixFees
+     */
     protected $fixFees = null;
 
-    /** @map:Message **/
+    /**
+     * Error message or additional information.
+     *
+     * @var string|null
+     * @map:Message
+     */
     protected $message = null;
 
-    /** @map:3DSecure **/
+    /**
+     * Indicates whether the transaction used 3D Secure.
+     *
+     * @var bool|null
+     * @map:3DSecure
+     */
     protected $secure = null;
 
-    /** @map:OneClick **/
+    /**
+     * Indicates whether OneClick was used.
+     *
+     * @var bool|null
+     * @map:OneClick
+     */
     protected $oneClick = null;
 
-    /** @map:Alias **/
+    /**
+     * Alias of the card used.
+     *
+     * @var string|null
+     * @map:Alias
+     */
     protected $alias = null;
 
-    /** @map:CardNumber **/
+    /**
+     * Partial (masked) card number.
+     *
+     * @var string|null
+     * @map:CardNumber
+     */
     protected $cardNumber = null;
 
-    /** @map:Test **/
+    /**
+     * Indicates whether the transaction was a test.
+     *
+     * @var bool|null
+     * @map:Test
+     */
     protected $test = null;
 
-    /** @map:Signature **/
+    /**
+     * Notification validation signature.
+     *
+     * @var string|null
+     * @map:Signature
+     */
     protected $signature = null;
 
-    /** @object:Client **/
+    /**
+     * Customer data (Client object).
+     *
+     * @var Client|null
+     * @object:Client
+     */
     protected $client = null;
 
-    /** @map:Error **/
+    /**
+     * Error message returned by the API.
+     *
+     * @var string|null
+     * @map:Error
+     */
     protected $error = null;
 
-    /** @map:AmountRefund **/
+    /**
+     * Refunded amount, if any.
+     *
+        * @var int|null
+     * @map:AmountRefund
+     */
     protected $amountRefund = null;
 
-    /** @map:RequestAttempt **/
+    /**
+     * Number of request attempts.
+     *
+     * @var int|null
+     * @map:RequestAttempt
+     */
     protected $requestAttempt = null;
 
-    /** @map:PaymentMethod **/
+    /**
+     * Payment method used (e.g., CB, SEPA).
+     *
+     * @var string|null
+     * @map:PaymentMethod
+     */
     protected $paymentMethod = null;
 
-    /** @map:UserId **/
+    /**
+     * User identifier.
+     *
+     * @var string|null
+     * @map:UserId
+     */
     protected $userId = null;
 
-    /** @map:Description **/
+    /**
+     * Description associated with the transaction.
+     *
+     * @var string|null
+     * @map:Description
+     */
     protected $description = null;
 
-    /** @map:DateRefund **/
+    /**
+     * Refund date, if applicable.
+     *
+     * @var string|null
+     * @map:DateRefund
+     */
     protected $dateRefund = null;
 
-    /** @map:CurrencyText **/
+    /**
+     * Full currency name (e.g., 'euro').
+     *
+     * @var string|null
+     * @map:CurrencyText
+     */
     protected $currencyText = null;
 
-    /** @map:CurrencySymbol **/
+    /**
+     * Currency symbol (e.g., '€').
+     *
+     * @var string|null
+     * @map:CurrencySymbol
+     */
     protected $currencySymbol = null;
 
-    /** @map:FeesPercent **/
+    /**
+     * Percentage fee applied.
+     *
+     * @var float|null
+     * @map:FeesPercent
+     */
     protected $feesPercent = null;
 
-    /** @map:FeesFixedPart **/
+    /**
+     * Fixed part of the applied fees.
+     *
+     * @var int|null
+     * @map:FeesFixedPart
+     */
     protected $feesFixedPart = null;
 
-    /** @map:CardCountry **/
+    /**
+     * Card issuing country.
+     *
+     * @var string|null
+     * @map:CardCountry
+     */
     protected $cardCountry = null;
 
-    /** @map:CardMonth **/
+    /**
+     * Card expiration month.
+     *
+     * @var string|null
+     * @map:CardMonth
+     */
     protected $cardMonth = null;
 
-    /** @map:CardYear **/
+    /**
+     * Card expiration year.
+     *
+     * @var string|null
+     * @map:CardYear
+     */
     protected $cardYear = null;
 
-    /** @map:ApplicationType **/
+    /**
+     * Type of application that initiated the transaction (e.g., API, BackOffice).
+     *
+     * @var string|null
+     * @map:ApplicationType
+     */
     protected $applicationType = null;
 
-    /** @map:OriginalRequestId **/
+    /**
+     * Identifier of the original request (in case of refund or rebill).
+     *
+     * @var string|null
+     * @map:OriginalRequestId
+     */
     protected $originalRequestId = null;
 
-    /** @map:OriginalPaymentTid **/
+    /**
+     * Identifier of the initial payment transaction.
+     *
+     * @var string|null
+     * @map:OriginalPaymentTid
+     */
     protected $originalPaymentTid = null;
 
-    /** @map:DateChargeback **/
+    /**
+     * Chargeback date, if occurred.
+     *
+     * @var string|null
+     * @map:DateChargeback
+     */
     protected $dateChargeback = null;
 
-    /** @map:DateRepresentment **/
+    /**
+     * Representment date, if applicable.
+     *
+     * @var string|null
+     * @map:DateRepresentment
+     */
     protected $dateRepresentment = null;
 
-    /** @map:AmountPreAuth **/
+    /**
+     * Pre-authorized amount.
+     *
+     * @var int|null
+     * @map:AmountPreAuth
+     */
     protected $amountPreAuth = null;
 
-    /** @map:ClientIP **/
+    /**
+     * Client IP address.
+     *
+     * @var string|null
+     * @map:ClientIP
+     */
     protected $clientIP = null;
 
-    /** @map:ClientIPCountry **/
+    /**
+     * Country of the client IP address.
+     *
+     * @var string|null
+     * @map:ClientIPCountry
+     */
     protected $clientIPCountry = null;
 
-    /** @map:PreAuth **/
+    /**
+     * Indicates whether the transaction is a pre-authorization.
+     *
+     * @var bool|null
+     * @map:PreAuth
+     */
     protected $preAuth = null;
 
-    /** @map:B2B **/
+    /**
+     * Indicates whether the transaction is B2B.
+     *
+     * @var bool|null
+     * @map:B2B
+     */
     protected $b2b = null;
 
-    /** @map:CardType **/
+    /**
+     * Type of card used (Visa, MasterCard, etc.).
+     *
+     * @var string|null
+     * @map:CardType
+     */
     protected $cardType = null;
 
-    /** @map:MultiplePayments **/
+    /**
+     * Indicates whether a multiple-payment schedule is in progress.
+     *
+     * @var bool|null
+     * @map:MultiplePayments
+     */
     protected $multiplePayments = null;
 
-    /** @map:MultiplePaymentsStatus **/
+    /**
+     * Status of the multiple-payment schedule.
+     *
+     * @var string|null
+     * @map:MultiplePaymentsStatus
+     */
     protected $multiplePaymentsStatus = null;
 
-    /** @map:MultiplePaymentsRecurrence **/
+    /**
+     * Recurrence of the multiple-payment schedule.
+     *
+     * @var string|null
+     * @map:MultiplePaymentsRecurrence
+     */
     protected $multiplePaymentsRecurrence = null;
 
-    /** @map:MultiplePaymentsRepeat **/
+    /**
+     * Number of repetitions of the multiple-payment schedule.
+     *
+     * @var int|null
+     * @map:MultiplePaymentsRepeat
+     */
     protected $multiplePaymentsRepeat = null;
 
-    /** @map:MultiplePaymentsCount **/
+    /**
+     * Total number of planned multiple payments.
+     *
+     * @var int|null
+     * @map:MultiplePaymentsCount
+     */
     protected $multiplePaymentsCount = null;
 
-    /** @map:RebillStatus **/
+    /**
+     * Rebill (recurring payment) status.
+     *
+     * @var string|null
+     * @map:RebillStatus
+     */
     protected $rebillStatus = null;
 
-    /** @map:RebillRecurrence **/
+    /**
+     * Rebill frequency (e.g., 'monthly').
+     *
+     * @var string|null
+     * @map:RebillRecurrence
+     */
     protected $rebillRecurrence = null;
 
-    /** @map:RebillCount **/
+    /**
+     * Number of rebill repetitions performed.
+     *
+     * @var int|null
+     * @map:RebillCount
+     */
     protected $rebillCount = null;
 
-    /** @map:AdditionalError **/
+    /**
+     * Additional error provided by the API.
+     *
+     * @var string|null
+     * @map:AdditionalError
+     */
     protected $additionalError = null;
 
-    /** @map:3DSecureUrl **/
+    /**
+     * Redirect URL to 3D Secure.
+     *
+     * @var string|null
+     * @map:3DSecureUrl
+     */
     protected $secureUrl = null;
 
-    /** @map:MandateUrl **/
+    /**
+     * SEPA mandate URL.
+     *
+     * @var string|null
+     * @map:MandateUrl
+     */
     protected $mandateUrl = null;
 
-    /** @map:RedirectUrl **/
+    /**
+     * General redirect URL.
+     *
+     * @var string|null
+     * @map:RedirectUrl
+     */
     protected $redirectUrl = null;
 
-    /** @map:QRCodeImage **/
+    /**
+     * Base64 image of a payment QR code.
+     *
+     * @var string|null
+     * @map:QRCodeImage
+     */
     protected $qrCodeImage = null;
 
-    /** @map:QRCodeUrl **/
+    /**
+     * URL to the payment QR code.
+     *
+     * @var string|null
+     * @map:QRCodeUrl
+     */
     protected $qrCodeUrl = null;
+
+    // Getters are kept below for read access to the properties.
 
     public function getNotificationType()
     {

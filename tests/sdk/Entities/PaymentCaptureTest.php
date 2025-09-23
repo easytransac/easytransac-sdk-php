@@ -6,7 +6,7 @@ class PaymentCaptureTest extends TestCase
 {
     protected $c;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->c = new EasyTransac\Entities\PaymentCapture();
         $this->c->setTid("1a2b3c");

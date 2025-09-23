@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../sdk/EasyTransac/autoload.php';
+require_once __DIR__ . '/../bootstrap.php';
 
 use EasyTransac\Core\Services;
 use EasyTransac\Entities\DebitTransaction;
@@ -17,6 +18,7 @@ $customer = (new Customer())
     ->setAddress('204 avenue de Colmar')
     ->setZipCode('67100')
     ->setCountry('FRA')
+    ->setPhone('+33123456789') // <-- required
     ->setUid('a1b2c3d4');
 
 $transaction = (new DebitTransaction())

@@ -2,50 +2,60 @@
 
 namespace EasyTransac\Core;
 
+use EasyTransac\Entities\Notification;
+use RuntimeException;
+
 /**
- * Parse a payment notification
- * @copyright EasyTransac
+ * Handles validation and parsing of a payment notification.
+ *
+ * @package EasyTransac\Core
  */
 class PaymentNotification
 {
     /**
-     * Returns a notification entity
-     * @return boolean|\EasyTransac\Entities\Notification
+     * Processes a payment notification and returns a Notification entity if valid.
+     *
+     * @param mixed  $data   Received payload (defaults to $_POST when empty).
+     * @param string $apiKey API key used to verify the signature.
+     * @return Notification
+     *
+     * @throws RuntimeException If required fields are missing or the signature is invalid.
      */
-    public static function getContent(array $data, $apiKey)
+    public static function getContent($data, $apiKey): Notification
     {
         if (empty($data)) {
             $data = $_POST;
         }
 
         if (empty($data)) {
-            throw new \RuntimeException('$data is empty');
+            throw new RuntimeException('$data is empty');
         }
 
         if (!self::checkRequiredFields($data)) {
-            throw new \RuntimeException('Missing required fields');
+            throw new RuntimeException('Missing required fields');
         }
 
-        $notif = new \EasyTransac\Entities\Notification();
+        $notif = new Notification();
         $notif->hydrate(json_decode(json_encode($data)));
 
-        if ($notif->getSignature() != Security::getSignature($data, $apiKey)) {
+        if ($notif->getSignature() !== Security::getSignature($data, $apiKey)) {
             Logger::getInstance()->write('Signature diff failed');
             Logger::getInstance()->write('Notification: ');
             Logger::getInstance()->write($data);
             Logger::getInstance()->write('Used api key: ' . $apiKey);
-            throw new \RuntimeException('The signature is incorrect', 12);
+            throw new RuntimeException('The signature is incorrect', 12);
         }
 
         return $notif;
     }
 
     /**
-     * Check required fields for the notif
+     * Ensures the required fields for a notification are present.
+     *
      * @param array $fields
-     * @return boolean
+     * @return bool
      */
-    protected static function checkRequiredFields($fields)
+    protected static function checkRequiredFields($fields): bool
     {
         $requiredFields = [
             'Tid',

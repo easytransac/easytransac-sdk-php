@@ -41,7 +41,7 @@ class LoggerTest extends TestCase
         $this->assertFalse(file_exists(__DIR__ . DIRECTORY_SEPARATOR . 'easytransac-sdk.txt'));
     }
 
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
         Logger::getInstance()->setActive(false);
     }

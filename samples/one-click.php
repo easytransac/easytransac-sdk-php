@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../sdk/EasyTransac/autoload.php';
+require_once __DIR__ . '/../bootstrap.php';
 
 use EasyTransac\Core\Services;
 use EasyTransac\Entities\OneClickTransaction;
@@ -13,6 +14,7 @@ $transaction = (new OneClickTransaction())
     ->setAmount(100)
     ->setUid('a1b2c3d4')
     ->setClientIp('127.0.0.1')
+    ->setClientId('client_abc') // <-- required
     ->setAlias('a1b2c3');
 
 $dp = new OneClickPayment();

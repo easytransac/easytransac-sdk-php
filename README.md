@@ -1,5 +1,5 @@
-EasyTransac SDK (PHP)
-=====================
+# EasyTransac SDK (PHP)
+
 
 [![Build](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/build.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/build.yml)
 [![PSR12](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/psr12.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/psr12.yml)
@@ -11,64 +11,79 @@ Make your EasyTransac API implementation easier with our SDK.
 
 The EasyTransac SDK is a tool to process payments with the [EasyTransac API](https://www.easytransac.com/).
 
-Requirements
-------------
+## What's New (v2.1.0)
+
+- ✅ Added `setEnvironment('sandbox')` for clean sandbox/production separation
+- ✅ Full PHP **7.0 to 8.4** compatibility
+- ✅ Deprecated PHP 5.6 support
+- ✅ Improved response helpers and strict typing
+- ✅ Updated documentation
+
+## Requirements
 
 You need at least:
-  - PHP >=5.6
-  - cURL in order to get clear error messages
-  - An API key provided by EasyTransac (register an account at [EasyTransac website](https://www.easytransac.com/))
-  - OpenSSL version 1.0.1 to support TLSv1.2 ciphers
+- PHP ≥ 7.0
+- cURL in order to get clear error messages
+- An API key provided by EasyTransac (register an account at [EasyTransac website](https://www.easytransac.com/))
+- OpenSSL version 1.0.1 to support TLSv1.2 ciphers
 
-Installation
-------------
+## Installation
 
 ### By composer
 
-Execute this command on your terminal in the project folder:
-
-    composer require easytransac/easytransac-sdk-php
+```bash
+composer require easytransac/easytransac-sdk-php
+```
 
 Or add this in your *composer.json*:
 
-    "require": {
-      ...
-      "easytransac/easytransac-sdk-php": "*",
-    }
+```json
+"require": {
+  "easytransac/easytransac-sdk-php": "*"
+}
+```
 
 ### Manually
 
 In order to use it, you only need to require the autoload file *easytransac/easytransac-sdk-php/sdk/EasyTransac/autoload.php*.
 
-Unit Testing
-------------
+## Unit Testing
 
-Our test cases are written under PHPUnit 4.4.1, also if you want to launch tests, please check your PHPUnit version for methods compatibility.
+Our test cases are written under PHPUnit. Please check the required PHPUnit version in the `composer.json` file.
 
-Samples
--------
+## Sandbox Support
 
-Samples are provided with the SDK.
+As of v2.0.0, the sandbox API is hosted separately at:
+
+```
+https://sandbox.easytransac.com
+```
+
+Use the new method to enable sandbox mode:
+
+```php
+\EasyTransac\Core\Services::getInstance()->setEnvironment('sandbox');
+```
+
+No need to override API URLs manually.
+
+## Samples
 
 ### Set up the configuration
+
 ```php
-// Don't forget to require the composer autoload or sdk's
 require_once(__DIR__.'/vendor/easytransac/easytransac-sdk-php/sdk/EasyTransac/autoload.php');
 
-// Provide the API key
-EasyTransac\Core\Services::getInstance()->provideAPIKey('YOUR_API_KEY_HERE');
+\EasyTransac\Core\Services::getInstance()->provideAPIKey('YOUR_API_KEY_HERE');
+\EasyTransac\Core\Services::getInstance()->setEnvironment('sandbox');
+\EasyTransac\Core\Services::getInstance()->setDebug(true);
+\EasyTransac\Core\Services::getInstance()->setRequestTimeout(30);
 
-// For testing, you can activate logs
-EasyTransac\Core\Services::getInstance()->setDebug(true);
-
-// Connexion timeout in second
-EasyTransac\Core\Services::getInstance()->setRequestTimeout(30);
-
-// You can change the log directory (by default the path is the running script path)
-Logger::getInstance()->setFilePath('YOU_CUSTOM_PATH');
+\EasyTransac\Logger::getInstance()->setFilePath('YOUR_CUSTOM_PATH');
 ```
 
 ### Make a direct payment request
+
 ```php
 $customer = (new EasyTransac\Entities\Customer())
     ->setFirstname('Demo')
@@ -79,7 +94,7 @@ $customer = (new EasyTransac\Entities\Customer())
 $card = (new EasyTransac\Entities\CreditCard())
     ->setNumber('1111111111111111')
     ->setMonth('10')
-    ->setYear('2017')
+    ->setYear('2025')
     ->setCVV('123');
 
 $transaction = (new EasyTransac\Entities\DirectTransaction())
@@ -93,55 +108,41 @@ $response = $dp->execute($transaction);
 
 if ($response->isSuccess())
 {
-	$transactionItem = $response->getContent();
+    $transactionItem = $response->getContent();
 
-	// Check if the 3DSecure is forced by the server on this transaction,
-	// if yes, then we must use the 3DS url to finish the transaction
-	if ($transactionItem->getSecure())
-	{
-	    // Using of the 3DS url
-	    // You have to call this url to proceed the 3DS process
-	    // $transactionItem->getSecureUrl();
-
-	}
-	else
-	{
-	    // Shows the transaction status and id      
-	    var_dump($transactionItem->getStatus());
-	    var_dump($transactionItem->getTid());
-	}
+    if ($transactionItem->getSecure())
+    {
+        // Use 3DS URL to complete the transaction
+        echo $transactionItem->getSecureUrl();
+    }
+    else
+    {
+        var_dump($transactionItem->getStatus());
+        var_dump($transactionItem->getTid());
+    }
 }
 else
 {
     var_dump($response->getErrorMessage());
 }
-
 ```
 
 ### Push payment notification
+
 ```php
-// EasyTransac notifies you for the payment status
-// Then in your website, you have to create a script to receive the notification
 $response = \EasyTransac\Core\PaymentNotification::getContent($_POST, $myApiKey);
 
-// Response of type \EasyTransac\Entities\Notification
 var_dump($response->toArray());
-
-// Payment status
 var_dump($response->getStatus());
-
-// If you have a doubt about a value that does not exist in the response, 
-// you can print the superglobal $_POST, all notification values are there:
-var_dump($_POST);
+var_dump($_POST); // raw dump for debug
 ```
 
 ### Get base API response in JSON and Array
+
 ```php
-// You can get the complete response from the api with these methods bellow
 $dp = new EasyTransac\Requests\DirectPayment();
 $response = $dp->execute($transaction);
 
-var_dump($response->getRealJsonResponse()); // Jsonified response (stdClass object)
-var_dump($response->getRealArrayResponse()); // Array item
-
+var_dump($response->getRealJsonResponse()); // stdClass
+var_dump($response->getRealArrayResponse()); // array
 ```

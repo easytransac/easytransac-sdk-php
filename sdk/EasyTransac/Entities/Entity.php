@@ -98,7 +98,7 @@ abstract class Entity
      */
     public function toArray()
     {
-        $out = array();
+        $out = [];
         foreach ($this->mapping as $key => $value) {
             if ($this->{$key} === null) {
                 continue;
@@ -107,7 +107,7 @@ abstract class Entity
             if ($value['type'] == 'map') {
                 $out[$value['name']] = $this->callConverters($this->{$key});
             } elseif ($value['type'] == 'array') {
-                $list = array();
+                $list = [];
                 foreach ($this->{$key} as $c) {
                     $list[] = $c->toArray();
                 }
@@ -156,7 +156,7 @@ abstract class Entity
             return;
         }
 
-        $list = array();
+        $list = [];
         foreach ($itemsList as $item) {
             $className = '\\EasyTransac\\Entities\\' . $field['name'];
             $e = new $className();
