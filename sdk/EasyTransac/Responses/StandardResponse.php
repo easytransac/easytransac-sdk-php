@@ -21,7 +21,7 @@ class StandardResponse
      * Need to receive the real api response
      * @param \stdClass $json
      */
-    public function __construct(\stdClass $json = null)
+    public function __construct(?\stdClass $json = null)
     {
         $this->json = $json;
     }

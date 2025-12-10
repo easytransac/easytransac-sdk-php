@@ -20,6 +20,6 @@ class DebitPayment extends Request
      */
     public function execute(Entity $entity)
     {
-        return $this->call('/payment/debit', $entity);
+        return $this->call('/payment/sdd/init', $entity);
     }
 }
