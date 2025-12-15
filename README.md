@@ -11,6 +11,15 @@ Make your EasyTransac API implementation easier with our SDK.
 
 The EasyTransac SDK is a tool to process payments with the [EasyTransac API](https://www.easytransac.com/).
 
+## What's New (v2.1.1)
+
+- ✅ Updated SEPA Direct Debit (SDD) endpoint  
+  - `api/payment/debit` → `api/payment/sdd/init`
+- ✅ Fixed card listing endpoint  
+  - `api/payment/listcards` → `api/payment/card/list`
+- 🧾 Documentation updated accordingly
+- ⚠️ No breaking changes in the SDK public API
+
 ## What's New (v2.1.0)
 
 - ✅ Added `setEnvironment('sandbox')` for clean sandbox/production separation
@@ -146,3 +155,4 @@ $response = $dp->execute($transaction);
 var_dump($response->getRealJsonResponse()); // stdClass
 var_dump($response->getRealArrayResponse()); // array
 ```
+
