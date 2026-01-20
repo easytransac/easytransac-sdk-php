@@ -29,7 +29,7 @@ The EasyTransac SDK is a tool to process payments with the [EasyTransac API](htt
 ## Requirements
 
 You need at least:
-- PHP ≥ 7.4 < 9.0
+- PHP ≥ 7.4
 - cURL in order to get clear error messages
 - An API key provided by EasyTransac (register an account at [EasyTransac website](https://www.easytransac.com/))
 - OpenSSL version 1.0.1 to support TLSv1.2 ciphers
@@ -153,6 +153,7 @@ $response = $dp->execute($transaction);
 var_dump($response->getRealJsonResponse()); // stdClass
 var_dump($response->getRealArrayResponse()); // array
 ```
+
 
 
 
