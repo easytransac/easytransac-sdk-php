@@ -23,7 +23,7 @@ The EasyTransac SDK is a tool to process payments with the [EasyTransac API](htt
 ## What's New (v2.1.0)
 
 - ✅ Added `setEnvironment('sandbox')` for clean sandbox/production separation
-- ✅ Full PHP **7.0 to 8.4** compatibility
+- ✅ Full PHP **7.4 to 8.4** compatibility
 - ✅ Deprecated PHP 5.6 support
 - ✅ Improved response helpers and strict typing
 - ✅ Updated documentation
@@ -31,7 +31,7 @@ The EasyTransac SDK is a tool to process payments with the [EasyTransac API](htt
 ## Requirements
 
 You need at least:
-- PHP ≥ 7.0
+- PHP ≥ 7.4 < 9.0
 - cURL in order to get clear error messages
 - An API key provided by EasyTransac (register an account at [EasyTransac website](https://www.easytransac.com/))
 - OpenSSL version 1.0.1 to support TLSv1.2 ciphers
@@ -48,7 +48,7 @@ Or add this in your *composer.json*:
 
 ```json
 "require": {
-  "easytransac/easytransac-sdk-php": "*"
+  "easytransac/easytransac-sdk-php": "2.1.1"
 }
 ```
 
@@ -155,4 +155,5 @@ $response = $dp->execute($transaction);
 var_dump($response->getRealJsonResponse()); // stdClass
 var_dump($response->getRealArrayResponse()); // array
 ```
+
 
