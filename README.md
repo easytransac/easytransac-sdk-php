@@ -11,7 +11,9 @@ Make your EasyTransac API implementation easier with our SDK.
 
 The EasyTransac SDK is a tool to process payments with the [EasyTransac API](https://www.easytransac.com/).
 
-## What's New (v2.1.1)
+## What's New (v2.2.0)
+
+- Added backend Drop-in session support
 
 - ✅ Updated SEPA Direct Debit (SDD) endpoint  
   - `api/payment/debit` → `api/payment/sdd/init`
@@ -46,7 +48,7 @@ Or add this in your *composer.json*:
 
 ```json
 "require": {
-  "easytransac/easytransac-sdk-php": "2.1.1"
+  "easytransac/easytransac-sdk-php": "2.2.0"
 }
 ```
 
@@ -153,6 +155,53 @@ $response = $dp->execute($transaction);
 var_dump($response->getRealJsonResponse()); // stdClass
 var_dump($response->getRealArrayResponse()); // array
 ```
+
+### Create a Drop-in session token
+
+```php
+$customer = (new EasyTransac\Entities\Customer())
+    ->setEmail('john.doe@example.com')
+    ->setFirstname('John')
+    ->setLastname('Doe');
+
+$transaction = (new EasyTransac\Entities\DropinSessionTransaction())
+    ->setOrderId('ORDER-123')
+    ->setAmount(1000)
+    ->setClientIP('127.0.0.1')
+    ->setDescription('Drop-in test order')
+    ->setLanguage('FRE')
+    ->setReturnUrl('https://merchant.test/return')
+    ->setCancelUrl('https://merchant.test/cancel')
+    ->setNotificationUrl('https://merchant.test/notify')
+    ->setCustomer($customer);
+
+$request = new EasyTransac\Requests\DropinSession();
+$response = $request->execute($transaction);
+
+if ($response->isSuccess())
+{
+    $session = $response->getContent();
+    $sessionToken = $session->getToken();
+
+    var_dump($sessionToken);
+    var_dump($session->getRequestId());
+}
+else
+{
+    var_dump($response->getErrorMessage());
+}
+```
+
+Use this flow when integrating the Drop-in widget:
+
+1. Create the session on your backend with the PHP SDK.
+2. Retrieve the token with `$session->getToken()`.
+3. Pass this token to your frontend page to initialize the Drop-in widget.
+
+The SDK is only responsible for the backend session creation. Rendering the
+Drop-in widget and handling frontend events must be done in your frontend code.
+
+A ready-to-run backend example is available in `samples/dropin-session.php`.
 
 
 
