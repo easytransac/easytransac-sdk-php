@@ -71,4 +71,54 @@ class DropinSessionTransactionTest extends TestCase
             'Language' => 'FRE',
         ];
     }
+
+     public function testSetProvidersWithString()
+    {
+        $entity = new EasyTransac\Entities\DropinSessionTransaction();
+
+        $entity->setProviders('card');
+
+        $this->assertEquals('card', $entity->getProviders());
+        $this->assertEquals('card', $entity->toArray()['Providers']);
+    }
+
+    public function testSetProvidersCleansString()
+    {
+        $entity = new EasyTransac\Entities\DropinSessionTransaction();
+
+        $entity->setProviders(' ApplePay,GooglePay ');
+
+        $this->assertEquals('applepay,googlepay', $entity->getProviders());
+        $this->assertEquals('applepay,googlepay', $entity->toArray()['Providers']);
+    }
+
+    public function testSetProvidersWithArray()
+    {
+        $entity = new EasyTransac\Entities\DropinSessionTransaction();
+
+        $entity->setProviders(['applepay', 'googlepay']);
+
+        $this->assertEquals('applepay,googlepay', $entity->getProviders());
+        $this->assertEquals('applepay,googlepay', $entity->toArray()['Providers']);
+    }
+
+    public function testSetProvidersCleansArray()
+    {
+        $entity = new EasyTransac\Entities\DropinSessionTransaction();
+
+        $entity->setProviders([' applepay ', 'googlepay', 'applepay', '', ' GooglePay ']);
+
+        $this->assertEquals('applepay,googlepay', $entity->getProviders());
+        $this->assertEquals('applepay,googlepay', $entity->toArray()['Providers']);
+    }
+
+    public function testSetProvidersDoesNotForceCard()
+    {
+        $entity = new EasyTransac\Entities\DropinSessionTransaction();
+
+        $entity->setProviders(['applepay', 'googlepay']);
+
+        $this->assertEquals('applepay,googlepay', $entity->getProviders());
+        $this->assertStringNotContainsString('card', $entity->toArray()['Providers']);
+    }
 }

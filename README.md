@@ -10,7 +10,7 @@ Make your EasyTransac API implementation easier with our SDK.
 
 The EasyTransac SDK is a tool to process payments with the [EasyTransac API](https://www.easytransac.com/).
 
-## What's New (v2.2.0)
+## What's New (v2.2.1)
 
 - Added `setEnvironment('sandbox')` for clean sandbox/production separation
 - Full PHP `7.0` to `8.4` compatibility
@@ -149,7 +149,9 @@ Important:
 
 - `Providers` is required by the EasyTransac API
 - pass it on the transaction with `->setProviders(...)`
-- values are comma-separated, for example `card` or `applepay,googlepay,card`
+- `setProviders()` accepts either a comma-separated string or an array
+- array values are trimmed, lowercased, deduplicated, and serialized for the API
+- examples: `card`, `applepay,googlepay,card`, or `['applepay', 'googlepay']`
 
 ```php
 use EasyTransac\Core\Services;
@@ -174,7 +176,7 @@ $transaction = (new DropinSessionTransaction())
     ->setReturnUrl('https://merchant.test/return')
     ->setCancelUrl('https://merchant.test/cancel')
     ->setNotificationUrl('https://merchant.test/notify')
-    ->setProviders('card')
+    ->setProviders(['applepay', 'googlepay'])
     ->setCustomer($customer);
 
 $response = (new DropinSession())->execute($transaction);
