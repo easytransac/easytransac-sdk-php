@@ -1,6 +1,5 @@
 # EasyTransac SDK (PHP)
 
-
 [![Build](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/build.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/build.yml)
 [![PSR12](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/psr12.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/psr12.yml)
 [![Test](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/test.yml/badge.svg)](https://github.com/easytransac/easytransac-sdk-php/actions/workflows/test.yml)
@@ -13,28 +12,21 @@ The EasyTransac SDK is a tool to process payments with the [EasyTransac API](htt
 
 ## What's New (v2.2.0)
 
+- Added `setEnvironment('sandbox')` for clean sandbox/production separation
+- Full PHP `7.0` to `8.4` compatibility
+- Deprecated PHP 5.6 support
+- Improved response helpers and strict typing
 - Added backend Drop-in session support
-
-- ✅ Updated SEPA Direct Debit (SDD) endpoint  
-  - `api/payment/debit` → `api/payment/sdd/init`
-- ✅ Fixed card listing endpoint  
-  - `api/payment/listcards` → `api/payment/card/list`
-- 🧾 Documentation updated accordingly
-- ⚠️ No breaking changes in the SDK public API
-
-- ✅ Added `setEnvironment('sandbox')` for clean sandbox/production separation
-- ✅ Full PHP **7.4 to 8.4** compatibility
-- ✅ Deprecated PHP 5.6 support
-- ✅ Improved response helpers and strict typing
-- ✅ Updated documentation
+- Updated documentation
 
 ## Requirements
 
 You need at least:
-- PHP ≥ 7.4
+
+- PHP >= 7.0
 - cURL in order to get clear error messages
-- An API key provided by EasyTransac (register an account at [EasyTransac website](https://www.easytransac.com/))
-- OpenSSL version 1.0.1 to support TLSv1.2 ciphers
+- An API key provided by EasyTransac
+- OpenSSL version 1.0.1 to support TLS v1.2 ciphers
 
 ## Installation
 
@@ -44,17 +36,19 @@ You need at least:
 composer require easytransac/easytransac-sdk-php
 ```
 
-Or add this in your *composer.json*:
+Or add this in your `composer.json`:
 
 ```json
-"require": {
-  "easytransac/easytransac-sdk-php": "2.2.0"
+{
+  "require": {
+    "easytransac/easytransac-sdk-php": "*"
+  }
 }
 ```
 
 ### Manually
 
-In order to use it, you only need to require the autoload file *easytransac/easytransac-sdk-php/sdk/EasyTransac/autoload.php*.
+In order to use it, you only need to require the autoload file `easytransac/easytransac-sdk-php/sdk/EasyTransac/autoload.php`.
 
 ## Unit Testing
 
@@ -64,7 +58,7 @@ Our test cases are written under PHPUnit. Please check the required PHPUnit vers
 
 As of v2.0.0, the sandbox API is hosted separately at:
 
-```
+```text
 https://sandbox.easytransac.com
 ```
 
@@ -81,14 +75,12 @@ No need to override API URLs manually.
 ### Set up the configuration
 
 ```php
-require_once(__DIR__.'/vendor/easytransac/easytransac-sdk-php/sdk/EasyTransac/autoload.php');
+require_once(__DIR__ . '/vendor/easytransac/easytransac-sdk-php/sdk/EasyTransac/autoload.php');
 
 \EasyTransac\Core\Services::getInstance()->provideAPIKey('YOUR_API_KEY_HERE');
 \EasyTransac\Core\Services::getInstance()->setEnvironment('sandbox');
 \EasyTransac\Core\Services::getInstance()->setDebug(true);
 \EasyTransac\Core\Services::getInstance()->setRequestTimeout(30);
-
-\EasyTransac\Logger::getInstance()->setFilePath('YOUR_CUSTOM_PATH');
 ```
 
 ### Make a direct payment request
@@ -112,26 +104,19 @@ $transaction = (new EasyTransac\Entities\DirectTransaction())
     ->setCustomer($customer)
     ->setCreditCard($card);
 
-$dp = new EasyTransac\Requests\DirectPayment();
-$response = $dp->execute($transaction);
+$request = new EasyTransac\Requests\DirectPayment();
+$response = $request->execute($transaction);
 
-if ($response->isSuccess())
-{
+if ($response->isSuccess()) {
     $transactionItem = $response->getContent();
 
-    if ($transactionItem->getSecure())
-    {
-        // Use 3DS URL to complete the transaction
+    if ($transactionItem->getSecure()) {
         echo $transactionItem->getSecureUrl();
-    }
-    else
-    {
+    } else {
         var_dump($transactionItem->getStatus());
         var_dump($transactionItem->getTid());
     }
-}
-else
-{
+} else {
     var_dump($response->getErrorMessage());
 }
 ```
@@ -143,66 +128,68 @@ $response = \EasyTransac\Core\PaymentNotification::getContent($_POST, $myApiKey)
 
 var_dump($response->toArray());
 var_dump($response->getStatus());
-var_dump($_POST); // raw dump for debug
+var_dump($_POST);
 ```
 
 ### Get base API response in JSON and Array
 
 ```php
-$dp = new EasyTransac\Requests\DirectPayment();
-$response = $dp->execute($transaction);
+$request = new EasyTransac\Requests\DirectPayment();
+$response = $request->execute($transaction);
 
-var_dump($response->getRealJsonResponse()); // stdClass
-var_dump($response->getRealArrayResponse()); // array
+var_dump($response->getRealJsonResponse());
+var_dump($response->getRealArrayResponse());
 ```
 
 ### Create a Drop-in session token
 
-```php
-$customer = (new EasyTransac\Entities\Customer())
-    ->setEmail('john.doe@example.com')
-    ->setFirstname('John')
-    ->setLastname('Doe');
+The Drop-in flow starts on the backend with `POST /api/dropin/session`.
 
-$transaction = (new EasyTransac\Entities\DropinSessionTransaction())
+Important:
+
+- `Providers` is required by the EasyTransac API
+- pass it on the transaction with `->setProviders(...)`
+- values are comma-separated, for example `card` or `applepay,googlepay,card`
+
+```php
+use EasyTransac\Core\Services;
+use EasyTransac\Entities\Customer;
+use EasyTransac\Entities\DropinSessionTransaction;
+use EasyTransac\Requests\DropinSession;
+
+Services::getInstance()
+    ->provideAPIKey('your_api_key')
+    ->setEnvironment(Services::ENV_SANDBOX);
+
+$customer = (new Customer())
+    ->setFirstname('John')
+    ->setLastname('Doe')
+    ->setEmail('john.doe@example.com');
+
+$transaction = (new DropinSessionTransaction())
     ->setOrderId('ORDER-123')
     ->setAmount(1000)
-    ->setClientIP('127.0.0.1')
     ->setDescription('Drop-in test order')
     ->setLanguage('FRE')
     ->setReturnUrl('https://merchant.test/return')
     ->setCancelUrl('https://merchant.test/cancel')
     ->setNotificationUrl('https://merchant.test/notify')
+    ->setProviders('card')
     ->setCustomer($customer);
 
-$request = new EasyTransac\Requests\DropinSession();
-$response = $request->execute($transaction);
+$response = (new DropinSession())->execute($transaction);
 
-if ($response->isSuccess())
-{
-    $session = $response->getContent();
-    $sessionToken = $session->getToken();
+if (!$response->isSuccess()) {
+    var_dump($response->getErrorCode(), $response->getErrorMessage());
+    exit(1);
+}
 
-    var_dump($sessionToken);
-    var_dump($session->getRequestId());
-}
-else
-{
-    var_dump($response->getErrorMessage());
-}
+$session = $response->getContent();
+var_dump([
+    'token' => $session->getToken(),
+    'request_id' => $session->getRequestId(),
+    'status' => $session->getStatus(),
+]);
 ```
 
-Use this flow when integrating the Drop-in widget:
-
-1. Create the session on your backend with the PHP SDK.
-2. Retrieve the token with `$session->getToken()`.
-3. Pass this token to your frontend page to initialize the Drop-in widget.
-
-The SDK is only responsible for the backend session creation. Rendering the
-Drop-in widget and handling frontend events must be done in your frontend code.
-
-A ready-to-run backend example is available in `samples/dropin-session.php`.
-
-
-
-
+You can now pass the returned session token to the EasyTransac frontend Drop-in widget.
