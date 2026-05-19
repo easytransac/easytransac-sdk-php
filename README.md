@@ -10,10 +10,10 @@ Make your EasyTransac API implementation easier with our SDK.
 
 The EasyTransac SDK is a tool to process payments with the [EasyTransac API](https://www.easytransac.com/).
 
-## What's New (v2.2.1)
+## What's New (v2.2.2)
 
 - Added `setEnvironment('sandbox')` for clean sandbox/production separation
-- Full PHP `7.0` to `8.4` compatibility
+- Full PHP `7.4` to `8.4` compatibility
 - Deprecated PHP 5.6 support
 - Improved response helpers and strict typing
 - Added backend Drop-in session support
@@ -23,7 +23,7 @@ The EasyTransac SDK is a tool to process payments with the [EasyTransac API](htt
 
 You need at least:
 
-- PHP >= 7.0
+- PHP >= 7.4
 - cURL in order to get clear error messages
 - An API key provided by EasyTransac
 - OpenSSL version 1.0.1 to support TLS v1.2 ciphers
